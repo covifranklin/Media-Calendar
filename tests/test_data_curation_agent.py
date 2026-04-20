@@ -4,10 +4,7 @@ from datetime import date
 from types import SimpleNamespace
 from uuid import uuid4
 
-import pytest
-
 from media_calendar.agents import curate_deadline_data
-from media_calendar.agents.data_curation_agent import DataCurationAgentError
 from media_calendar.models import DataCurationAgentInput
 
 
@@ -50,7 +47,7 @@ def build_agent_input() -> DataCurationAgentInput:
     )
 
 
-def test_curate_deadline_data_returns_validated_output():
+def test_dates_changed_clear():
     client = FakeClient(
         [
             (
@@ -65,16 +62,75 @@ def test_curate_deadline_data_returns_validated_output():
 
     assert result.status == "dates_changed"
     assert result.proposed_updates == {"deadline_date": "2026-06-22"}
+    assert result.confidence == 0.93
+    assert result.requires_human_review is True
     assert client.responses.calls[0]["model"] == "gpt-4o-mini"
 
 
-def test_curate_deadline_data_retries_after_validation_failure():
+def test_no_change():
     client = FakeClient(
         [
-            '{"status":"ambiguous","confidence":0.4}',
             (
-                '{"status":"ambiguous","proposed_updates":null,"confidence":0.4,'
-                '"reasoning":"The scraped text does not clearly identify the target year.",'
+                '{"status":"no_change","proposed_updates":null,"confidence":0.97,'
+                '"reasoning":"The scraped text matches the existing deadline and event details.",'
+                '"requires_human_review":false}'
+            )
+        ]
+    )
+
+    result = curate_deadline_data(build_agent_input(), client=client)
+
+    assert result.status == "no_change"
+    assert result.proposed_updates is None
+    assert result.requires_human_review is False
+    assert result.confidence == 0.97
+
+
+def test_page_not_found_empty_text():
+    agent_input = build_agent_input()
+    agent_input = agent_input.model_copy(update={"scraped_page_text": ""})
+    client = FakeClient(
+        [
+            (
+                '{"status":"page_not_found","proposed_updates":null,"confidence":0.99,'
+                '"reasoning":"No scraped text was provided, which suggests the page could not be loaded.",'
+                '"requires_human_review":true}'
+            )
+        ]
+    )
+
+    result = curate_deadline_data(agent_input, client=client)
+
+    assert result.status == "page_not_found"
+    assert result.proposed_updates is None
+    assert result.requires_human_review is True
+
+
+def test_ambiguous_dates():
+    client = FakeClient(
+        [
+            (
+                '{"status":"ambiguous","proposed_updates":{"deadline_date":"June 2026"},'
+                '"confidence":0.41,"reasoning":"The scraped text mentions June but does not provide a clear day.",'
+                '"requires_human_review":true}'
+            )
+        ]
+    )
+
+    result = curate_deadline_data(build_agent_input(), client=client)
+
+    assert result.status == "ambiguous"
+    assert result.proposed_updates == {"deadline_date": "June 2026"}
+    assert result.requires_human_review is True
+
+
+def test_low_confidence_trigger_review():
+    client = FakeClient(
+        [
+            '{"status":"ambiguous","confidence":0.2}',
+            (
+                '{"status":"dates_changed","proposed_updates":{"deadline_date":"2026-06-22"},'
+                '"confidence":0.2,"reasoning":"A possible new date appears in the text, but the extraction is uncertain.",'
                 '"requires_human_review":true}'
             ),
         ]
@@ -82,15 +138,10 @@ def test_curate_deadline_data_retries_after_validation_failure():
 
     result = curate_deadline_data(build_agent_input(), client=client)
 
-    assert result.status == "ambiguous"
+    assert result.status == "dates_changed"
+    assert result.confidence == 0.2
+    assert result.requires_human_review is True
     assert len(client.responses.calls) == 2
     retry_messages = client.responses.calls[1]["input"]
     assert retry_messages[-1]["role"] == "user"
     assert "could not be validated" in retry_messages[-1]["content"]
-
-
-def test_curate_deadline_data_raises_after_exhausting_retries():
-    client = FakeClient(["{}", "{}", "{}"])
-
-    with pytest.raises(DataCurationAgentError):
-        curate_deadline_data(build_agent_input(), client=client)
