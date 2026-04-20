@@ -70,4 +70,7 @@ def _resolve_input_files(
 ):
     if deadline_files is None:
         return sorted((root / "data" / "deadlines").glob("*.yaml"))
-    return [Path(path) if Path(path).is_absolute() else root / Path(path) for path in deadline_files]
+    return [
+        Path(path) if Path(path).is_absolute() else root / Path(path)
+        for path in deadline_files
+    ]

@@ -8,10 +8,10 @@ import pytest
 
 from media_calendar.agents import compose_notification
 from media_calendar.agents.notification_composer import NotificationComposerError
-from media_calendar.models import NotificationComposerInput
+from media_calendar.models import NotificationComposerInput, NotificationItem
 
 
-class FakeResponsesAPI:
+class FakeChatCompletionsAPI:
     def __init__(self, payloads):
         self.payloads = payloads
         self.calls = []
@@ -19,33 +19,35 @@ class FakeResponsesAPI:
     def create(self, **kwargs):
         self.calls.append(kwargs)
         payload = self.payloads[len(self.calls) - 1]
-        return SimpleNamespace(output_text=payload)
+        return SimpleNamespace(
+            choices=[SimpleNamespace(message=SimpleNamespace(content=payload))]
+        )
 
 
 class FakeClient:
     def __init__(self, payloads):
-        self.responses = FakeResponsesAPI(payloads)
+        self.chat = SimpleNamespace(completions=FakeChatCompletionsAPI(payloads))
 
 
 def build_notification_input() -> NotificationComposerInput:
     return NotificationComposerInput(
         deadlines=[
-            {
-                "id": uuid4(),
-                "name": "Festival Submission Deadline",
-                "category": "festival_submission",
-                "organization": "Example Festival",
-                "url": "https://example.com/festival",
-                "deadline_date": date(2026, 5, 20),
-                "description": "Final day to submit feature films.",
-                "notification_windows": [30, 14, 3],
-                "status": "confirmed",
-                "last_verified_date": date(2026, 4, 20),
-                "source_url": "https://example.com/source",
-                "tags": ["festival", "feature"],
-                "year": 2026,
-                "notification_type": "upcoming_30d",
-            }
+            NotificationItem(
+                id=uuid4(),
+                name="Festival Submission Deadline",
+                category="festival_submission",
+                organization="Example Festival",
+                url="https://example.com/festival",
+                deadline_date=date(2026, 5, 20),
+                description="Final day to submit feature films.",
+                notification_windows=[30, 14, 3],
+                status="confirmed",
+                last_verified_date=date(2026, 4, 20),
+                source_url="https://example.com/source",
+                tags=["festival", "feature"],
+                year=2026,
+                notification_type="upcoming_30d",
+            )
         ]
     )
 
@@ -64,7 +66,7 @@ def test_compose_notification_returns_validated_output():
 
     assert result.subject_line == "30-day reminder"
     assert result.priority_level == "normal"
-    assert client.responses.calls[0]["model"] == "gpt-4o-mini"
+    assert client.chat.completions.calls[0]["model"] == "gpt-4o-mini"
 
 
 def test_compose_notification_retries_after_validation_failure():
@@ -81,8 +83,8 @@ def test_compose_notification_retries_after_validation_failure():
     result = compose_notification(build_notification_input(), client=client)
 
     assert result.priority_level == "high"
-    assert len(client.responses.calls) == 2
-    retry_messages = client.responses.calls[1]["input"]
+    assert len(client.chat.completions.calls) == 2
+    retry_messages = client.chat.completions.calls[1]["messages"]
     assert retry_messages[-1]["role"] == "user"
     assert "could not be validated" in retry_messages[-1]["content"]
 

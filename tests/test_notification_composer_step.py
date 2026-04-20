@@ -4,8 +4,6 @@ import logging
 from datetime import date
 from uuid import uuid4
 
-import pytest
-
 from media_calendar.agents.notification_composer import NotificationComposerError
 from media_calendar.models import NotificationComposerOutput, NotificationItem
 from media_calendar.orchestration import orchestration_step_notification_composer
@@ -55,7 +53,9 @@ def test_orchestration_step_notification_composer_enqueues_agent_output(monkeypa
     assert queue[0]["email"]["subject_line"] == "Upcoming deadline reminder"
 
 
-def test_orchestration_step_notification_composer_uses_fallback_and_logs(monkeypatch, caplog):
+def test_orchestration_step_notification_composer_uses_fallback_and_logs(
+    monkeypatch, caplog
+):
     def fake_compose(agent_input, *, client=None, max_attempts=3):
         raise NotificationComposerError("bad output")
 

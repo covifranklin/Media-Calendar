@@ -1,5 +1,4 @@
 from datetime import date
-from pathlib import Path
 from uuid import uuid4
 
 import pytest
@@ -11,7 +10,6 @@ from media_calendar.services import (
     load_dotenv_file,
     load_smtp_settings,
 )
-from media_calendar.services.notifications import SMTPSettings
 
 
 def build_deadline(*, deadline_date: date, windows, status="confirmed") -> Deadline:
@@ -42,7 +40,12 @@ def test_group_upcoming_notifications_creates_expected_buckets():
 
     grouped = group_upcoming_notifications(deadlines, current_date=current_date)
 
-    assert sorted(grouped.keys()) == ["upcoming_14d", "upcoming_30d", "upcoming_3d", "weekly_digest"]
+    assert sorted(grouped.keys()) == [
+        "upcoming_14d",
+        "upcoming_30d",
+        "upcoming_3d",
+        "weekly_digest",
+    ]
     assert grouped["upcoming_30d"][0].notification_type == "upcoming_30d"
     assert grouped["upcoming_14d"][0].notification_type == "upcoming_14d"
     assert grouped["upcoming_3d"][0].notification_type == "upcoming_3d"
@@ -50,7 +53,9 @@ def test_group_upcoming_notifications_creates_expected_buckets():
 
 def test_load_dotenv_file_sets_environment(tmp_path, monkeypatch):
     dotenv_path = tmp_path / ".env"
-    dotenv_path.write_text("SMTP_HOST=smtp.example.com\nSMTP_PORT=2525\n", encoding="utf-8")
+    dotenv_path.write_text(
+        "SMTP_HOST=smtp.example.com\nSMTP_PORT=2525\n", encoding="utf-8"
+    )
     monkeypatch.delenv("SMTP_HOST", raising=False)
     monkeypatch.delenv("SMTP_PORT", raising=False)
 

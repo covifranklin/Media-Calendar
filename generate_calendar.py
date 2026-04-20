@@ -8,13 +8,17 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 SRC_PATH = PROJECT_ROOT / "src"
-if str(SRC_PATH) not in sys.path:
-    sys.path.insert(0, str(SRC_PATH))
 
-from media_calendar.orchestration import orchestration_step_calendar_generator
+
+def _ensure_src_path() -> None:
+    if str(SRC_PATH) not in sys.path:
+        sys.path.insert(0, str(SRC_PATH))
 
 
 def main() -> int:
+    _ensure_src_path()
+    from media_calendar.orchestration import orchestration_step_calendar_generator
+
     parser = argparse.ArgumentParser(
         description="Generate build/calendar.html from data/deadlines/*.yaml."
     )

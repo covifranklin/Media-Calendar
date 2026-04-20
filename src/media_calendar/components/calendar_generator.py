@@ -6,10 +6,9 @@ from calendar import month_name
 from datetime import date
 from html import escape
 from pathlib import Path
-from typing import Iterable, List, Sequence
+from typing import Iterable, Sequence
 
 from media_calendar.components.deadline_store import (
-    DEFAULT_DATA_DIR,
     load_deadlines,
     resolve_deadline_files,
 )
@@ -54,7 +53,9 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
         f'<option value="{month}">{escape(month_name[month])}</option>'
         for month in range(1, 13)
     )
-    deadline_cards = "\n".join(_render_deadline_card(deadline) for deadline in deadlines)
+    deadline_cards = "\n".join(
+        _render_deadline_card(deadline) for deadline in deadlines
+    )
     total_count = len(deadlines)
 
     return f"""<!DOCTYPE html>
@@ -352,7 +353,9 @@ def _render_deadline_card(deadline: Deadline) -> str:
     deadline_month = str(deadline.deadline_date.month)
     deadline_date = _format_date(deadline.deadline_date)
     early_deadline = _format_optional_date(deadline.early_deadline_date)
-    event_window = _format_event_window(deadline.event_start_date, deadline.event_end_date)
+    event_window = _format_event_window(
+        deadline.event_start_date, deadline.event_end_date
+    )
     tags = ", ".join(deadline.tags) if deadline.tags else "None"
 
     details = [
@@ -375,7 +378,7 @@ def _render_deadline_card(deadline: Deadline) -> str:
         <p class="organization">{escape(deadline.organization)}</p>
         <p class="description">{escape(deadline.description)}</p>
         <div class="details">
-          {''.join(details)}
+          {"".join(details)}
         </div>
         <a href="{escape(deadline.url, quote=True)}" target="_blank" rel="noreferrer">View source page</a>
       </article>
@@ -395,4 +398,8 @@ def _format_event_window(start: date | None, end: date | None) -> str:
         return "Not specified"
     if start is not None and end is not None:
         return f"{_format_date(start)} to {_format_date(end)}"
-    return _format_date(start or end)  # pragma: no cover - defensive fallback
+    if start is not None:
+        return _format_date(start)
+    if end is not None:
+        return _format_date(end)
+    return "Not specified"  # pragma: no cover - defensive fallback

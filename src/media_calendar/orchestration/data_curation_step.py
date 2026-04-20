@@ -8,7 +8,11 @@ from datetime import date
 from typing import Callable, List, Sequence
 
 from media_calendar.agents import curate_deadline_data
-from media_calendar.models import DataCurationAgentInput, DataCurationAgentOutput, Deadline
+from media_calendar.models import (
+    DataCurationAgentInput,
+    DataCurationAgentOutput,
+    Deadline,
+)
 
 STEP_NAME = "Cure Deadlines"
 AGENT_NAME = "data_curation_agent"

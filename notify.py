@@ -11,20 +11,29 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 SRC_PATH = PROJECT_ROOT / "src"
-if str(SRC_PATH) not in sys.path:
-    sys.path.insert(0, str(SRC_PATH))
 
-from media_calendar.components.deadline_store import load_deadlines, resolve_deadline_files
-from media_calendar.orchestration import orchestration_step_notification_composer
-from media_calendar.services import (
-    dispatch_notification_queue,
-    group_upcoming_notifications,
-    load_dotenv_file,
-    load_smtp_settings,
-)
+
+def _ensure_src_path() -> None:
+    if str(SRC_PATH) not in sys.path:
+        sys.path.insert(0, str(SRC_PATH))
 
 
 def main() -> int:
+    _ensure_src_path()
+    from media_calendar.components.deadline_store import (
+        load_deadlines,
+        resolve_deadline_files,
+    )
+    from media_calendar.orchestration import (
+        orchestration_step_notification_composer,
+    )
+    from media_calendar.services import (
+        dispatch_notification_queue,
+        group_upcoming_notifications,
+        load_dotenv_file,
+        load_smtp_settings,
+    )
+
     parser = argparse.ArgumentParser(
         description="Compose and optionally send upcoming deadline notifications."
     )
@@ -80,7 +89,9 @@ def main() -> int:
 
     recipient = args.recipient or os.environ.get("NOTIFICATION_TO_EMAIL")
     if not recipient:
-        raise SystemExit("Missing recipient email. Set NOTIFICATION_TO_EMAIL or pass --recipient.")
+        raise SystemExit(
+            "Missing recipient email. Set NOTIFICATION_TO_EMAIL or pass --recipient."
+        )
 
     smtp_settings = None if args.dry_run else load_smtp_settings()
     results = dispatch_notification_queue(

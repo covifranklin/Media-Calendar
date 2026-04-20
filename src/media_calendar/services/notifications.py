@@ -8,12 +8,20 @@ from dataclasses import dataclass
 from datetime import date, datetime, timezone
 from email.message import EmailMessage
 from pathlib import Path
-from typing import Dict, List, Mapping, Optional, Sequence
-from uuid import uuid4
+from typing import Dict, List, Literal, Mapping, Optional, Sequence, cast
+from uuid import UUID, uuid4
 
 from media_calendar.models import Deadline, NotificationItem, NotificationLog
 
 NotificationGroupMap = Dict[str, List[NotificationItem]]
+NotificationType = Literal[
+    "upcoming_30d",
+    "upcoming_14d",
+    "upcoming_3d",
+    "weekly_digest",
+    "annual_refresh_reminder",
+]
+NotificationStatus = Literal["sent", "failed", "bounced"]
 
 
 @dataclass
@@ -39,7 +47,7 @@ def load_dotenv_file(path: str | Path) -> dict:
     """Load a simple .env file into process environment."""
 
     dotenv_path = Path(path)
-    loaded = {}
+    loaded: dict[str, str] = {}
     if not dotenv_path.exists():
         return loaded
 
@@ -106,9 +114,7 @@ def group_upcoming_notifications(
                 _to_notification_item(deadline, "upcoming_14d")
             )
         if 3 in deadline.notification_windows and days_until_deadline == 3:
-            groups["upcoming_3d"].append(
-                _to_notification_item(deadline, "upcoming_3d")
-            )
+            groups["upcoming_3d"].append(_to_notification_item(deadline, "upcoming_3d"))
 
         if current_date.weekday() == 0 and 0 <= days_until_deadline <= 14:
             groups["weekly_digest"].append(
@@ -131,11 +137,12 @@ def dispatch_notification_queue(
 
     for queue_item in queue:
         email_payload = queue_item["email"]
+        notification_type = cast(NotificationType, queue_item["notification_type"])
         logs = _build_notification_logs(
             deadline_ids=queue_item["deadline_ids"],
-            notification_type=queue_item["notification_type"],
+            notification_type=notification_type,
             recipient_email=recipient_email,
-            status="sent" if not dry_run else "sent",
+            status="sent",
         )
 
         if not dry_run:
@@ -153,7 +160,7 @@ def dispatch_notification_queue(
             NotificationDispatchResult(
                 queue_item=queue_item,
                 recipient_email=recipient_email,
-                status="sent" if not dry_run else "sent",
+                status="sent",
                 logs=logs,
             )
         )
@@ -161,7 +168,10 @@ def dispatch_notification_queue(
     return results
 
 
-def _to_notification_item(deadline: Deadline, notification_type: str) -> NotificationItem:
+def _to_notification_item(
+    deadline: Deadline,
+    notification_type: NotificationType,
+) -> NotificationItem:
     payload = deadline.model_dump()
     payload["notification_type"] = notification_type
     return NotificationItem.model_validate(payload)
@@ -170,15 +180,15 @@ def _to_notification_item(deadline: Deadline, notification_type: str) -> Notific
 def _build_notification_logs(
     *,
     deadline_ids: Sequence[str],
-    notification_type: str,
+    notification_type: NotificationType,
     recipient_email: str,
-    status: str,
+    status: NotificationStatus,
 ) -> List[NotificationLog]:
     sent_at = datetime.now(timezone.utc)
     return [
         NotificationLog(
             id=uuid4(),
-            deadline_id=deadline_id,
+            deadline_id=UUID(deadline_id),
             notification_type=notification_type,
             sent_at=sent_at,
             recipient_email=recipient_email,

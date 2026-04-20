@@ -93,7 +93,9 @@ def test_orchestration_step_data_curation_handles_page_not_found(monkeypatch, ca
     assert "failed to fetch source_url=" in caplog.text
 
 
-def test_orchestration_step_data_curation_falls_back_on_agent_failure(monkeypatch, caplog):
+def test_orchestration_step_data_curation_falls_back_on_agent_failure(
+    monkeypatch, caplog
+):
     def fake_scrape_page(url: str) -> str:
         return "Some unclear content"
 

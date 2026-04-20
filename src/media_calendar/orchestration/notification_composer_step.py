@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import logging
-from typing import Callable, Dict, Iterable, List, Sequence
+from typing import Callable, List, Mapping, Sequence
 
 from media_calendar.agents import compose_notification
 from media_calendar.models import NotificationComposerInput, NotificationItem
@@ -14,14 +14,12 @@ DESCRIPTION = (
     "Invokes the notification composer agent to generate email content for "
     "identified upcoming deadlines."
 )
-INPUT_SOURCE = (
-    "Filtered upcoming deadlines from the database, grouped by notification window/type."
-)
+INPUT_SOURCE = "Filtered upcoming deadlines from the database, grouped by notification window/type."
 OUTPUT_DESTINATION = "Queue for email sender."
 CONDITION = "Triggered daily by scheduler if upcoming deadlines are found."
 ERROR_HANDLING = "LLM output validation, fallback to template, log failures."
 
-NotificationGroupMap = Dict[str, Sequence[NotificationItem]]
+NotificationGroupMap = Mapping[str, Sequence[NotificationItem]]
 QueueWriter = Callable[[dict], None]
 
 

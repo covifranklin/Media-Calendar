@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Any, List
+from typing import Any
 
 from pydantic import ValidationError
 
@@ -62,9 +62,9 @@ def curate_deadline_data(
     last_error: Exception | None = None
 
     for attempt in range(max_attempts):
-        response = active_client.responses.create(
+        response = active_client.chat.completions.create(
             model=MODEL_NAME,
-            input=messages,
+            messages=messages,
         )
 
         try:
@@ -109,25 +109,14 @@ def _build_user_prompt(agent_input: DataCurationAgentInput) -> str:
 
 
 def _extract_response_text(response: Any, *, default: str | None = None) -> str:
-    """Extract text content from an OpenAI Responses API object."""
+    """Extract text content from an OpenAI Chat Completions response."""
 
-    output_text = getattr(response, "output_text", None)
-    if isinstance(output_text, str) and output_text.strip():
-        return output_text
-
-    output = getattr(response, "output", None)
-    if isinstance(output, list):
-        parts: List[str] = []
-        for item in output:
-            contents = getattr(item, "content", None)
-            if not isinstance(contents, list):
-                continue
-            for content_item in contents:
-                text = getattr(content_item, "text", None)
-                if isinstance(text, str) and text:
-                    parts.append(text)
-        if parts:
-            return "".join(parts)
+    choices = getattr(response, "choices", None)
+    if isinstance(choices, list) and choices:
+        message = getattr(choices[0], "message", None)
+        content = getattr(message, "content", None)
+        if isinstance(content, str) and content.strip():
+            return content
 
     if default is not None:
         return default

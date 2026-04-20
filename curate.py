@@ -11,18 +11,17 @@ from urllib.request import Request, urlopen
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 SRC_PATH = PROJECT_ROOT / "src"
-if str(SRC_PATH) not in sys.path:
-    sys.path.insert(0, str(SRC_PATH))
 
-from media_calendar.components.deadline_store import load_deadlines, resolve_deadline_files
-from media_calendar.orchestration import orchestration_step_data_curation
-from media_calendar.services import load_dotenv_file
+
+def _ensure_src_path() -> None:
+    if str(SRC_PATH) not in sys.path:
+        sys.path.insert(0, str(SRC_PATH))
 
 
 class _HTMLTextExtractor(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
-        self._parts = []
+        self._parts: list[str] = []
         self._ignore_depth = 0
 
     def handle_starttag(self, tag, attrs):
@@ -45,10 +44,23 @@ class _HTMLTextExtractor(HTMLParser):
 
 
 def main() -> int:
+    _ensure_src_path()
+    from media_calendar.components.deadline_store import (
+        load_deadlines,
+        resolve_deadline_files,
+    )
+    from media_calendar.orchestration import orchestration_step_data_curation
+    from media_calendar.services import load_dotenv_file
+
     parser = argparse.ArgumentParser(
         description="Run the annual data curation pass for a given deadline year."
     )
-    parser.add_argument("--year", type=int, required=True, help="Deadline year to curate.")
+    parser.add_argument(
+        "--year",
+        type=int,
+        required=True,
+        help="Deadline year to curate.",
+    )
     parser.add_argument(
         "--root-dir",
         type=Path,
@@ -109,7 +121,9 @@ def main() -> int:
 def _fetch_page_text(url: str) -> str:
     request = Request(
         url,
-        headers={"User-Agent": "MediaCalendarBot/0.1 (+https://github.com/covifranklin/Media-Calendar)"},
+        headers={
+            "User-Agent": "MediaCalendarBot/0.1 (+https://github.com/covifranklin/Media-Calendar)"
+        },
     )
     with urlopen(request, timeout=20) as response:
         content_type = response.headers.get_content_charset() or "utf-8"

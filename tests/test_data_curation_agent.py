@@ -5,10 +5,10 @@ from types import SimpleNamespace
 from uuid import uuid4
 
 from media_calendar.agents import curate_deadline_data
-from media_calendar.models import DataCurationAgentInput
+from media_calendar.models import DataCurationAgentInput, Deadline
 
 
-class FakeResponsesAPI:
+class FakeChatCompletionsAPI:
     def __init__(self, payloads):
         self.payloads = payloads
         self.calls = []
@@ -16,31 +16,33 @@ class FakeResponsesAPI:
     def create(self, **kwargs):
         self.calls.append(kwargs)
         payload = self.payloads[len(self.calls) - 1]
-        return SimpleNamespace(output_text=payload)
+        return SimpleNamespace(
+            choices=[SimpleNamespace(message=SimpleNamespace(content=payload))]
+        )
 
 
 class FakeClient:
     def __init__(self, payloads):
-        self.responses = FakeResponsesAPI(payloads)
+        self.chat = SimpleNamespace(completions=FakeChatCompletionsAPI(payloads))
 
 
 def build_agent_input() -> DataCurationAgentInput:
     return DataCurationAgentInput(
-        current_deadline={
-            "id": uuid4(),
-            "name": "Documentary Lab",
-            "category": "lab_application",
-            "organization": "Example Institute",
-            "url": "https://example.com/lab",
-            "deadline_date": date(2026, 6, 15),
-            "description": "Applications for the annual documentary lab.",
-            "notification_windows": [30, 14, 3],
-            "status": "confirmed",
-            "last_verified_date": date(2026, 4, 20),
-            "source_url": "https://example.com/source",
-            "tags": ["lab", "documentary"],
-            "year": 2026,
-        },
+        current_deadline=Deadline(
+            id=uuid4(),
+            name="Documentary Lab",
+            category="lab_application",
+            organization="Example Institute",
+            url="https://example.com/lab",
+            deadline_date=date(2026, 6, 15),
+            description="Applications for the annual documentary lab.",
+            notification_windows=[30, 14, 3],
+            status="confirmed",
+            last_verified_date=date(2026, 4, 20),
+            source_url="https://example.com/source",
+            tags=["lab", "documentary"],
+            year=2026,
+        ),
         scraped_page_text="Applications close June 22, 2026. Notification in July.",
         current_date=date(2026, 4, 20),
         target_year=2026,
@@ -64,7 +66,7 @@ def test_dates_changed_clear():
     assert result.proposed_updates == {"deadline_date": "2026-06-22"}
     assert result.confidence == 0.93
     assert result.requires_human_review is True
-    assert client.responses.calls[0]["model"] == "gpt-4o-mini"
+    assert client.chat.completions.calls[0]["model"] == "gpt-4o-mini"
 
 
 def test_no_change():
@@ -141,7 +143,7 @@ def test_low_confidence_trigger_review():
     assert result.status == "dates_changed"
     assert result.confidence == 0.2
     assert result.requires_human_review is True
-    assert len(client.responses.calls) == 2
-    retry_messages = client.responses.calls[1]["input"]
+    assert len(client.chat.completions.calls) == 2
+    retry_messages = client.chat.completions.calls[1]["messages"]
     assert retry_messages[-1]["role"] == "user"
     assert "could not be validated" in retry_messages[-1]["content"]
