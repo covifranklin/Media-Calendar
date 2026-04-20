@@ -1,0 +1,122 @@
+"""CLI entry point for annual deadline curation."""
+
+from __future__ import annotations
+
+import argparse
+import sys
+from datetime import date
+from html.parser import HTMLParser
+from pathlib import Path
+from urllib.request import Request, urlopen
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+SRC_PATH = PROJECT_ROOT / "src"
+if str(SRC_PATH) not in sys.path:
+    sys.path.insert(0, str(SRC_PATH))
+
+from media_calendar.components.deadline_store import load_deadlines, resolve_deadline_files
+from media_calendar.orchestration import orchestration_step_data_curation
+
+
+class _HTMLTextExtractor(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self._parts = []
+        self._ignore_depth = 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag in {"script", "style"}:
+            self._ignore_depth += 1
+
+    def handle_endtag(self, tag):
+        if tag in {"script", "style"} and self._ignore_depth:
+            self._ignore_depth -= 1
+
+    def handle_data(self, data):
+        if self._ignore_depth:
+            return
+        text = " ".join(data.split())
+        if text:
+            self._parts.append(text)
+
+    def get_text(self) -> str:
+        return "\n".join(self._parts)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(
+        description="Run the annual data curation pass for a given deadline year."
+    )
+    parser.add_argument("--year", type=int, required=True, help="Deadline year to curate.")
+    parser.add_argument(
+        "--root-dir",
+        type=Path,
+        default=Path.cwd(),
+        help="Project root containing data/deadlines/ and build/.",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=None,
+        help="Optional output directory for curation reports. Defaults to build/.",
+    )
+    args = parser.parse_args()
+
+    deadline_paths = resolve_deadline_files(
+        [f"data/deadlines/{args.year}.yaml"],
+        root=args.root_dir,
+    )
+    if not deadline_paths or not deadline_paths[0].exists():
+        raise SystemExit(f"Missing deadline file: data/deadlines/{args.year}.yaml")
+
+    deadlines = load_deadlines(deadline_paths)
+    output_dir = args.output_dir or args.root_dir / "build"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    report = orchestration_step_data_curation(
+        deadlines,
+        scrape_page=_fetch_page_text,
+        target_year=args.year,
+        current_date=date.today(),
+    )
+
+    markdown_path = output_dir / f"curation-{args.year}.md"
+    jsonl_path = output_dir / f"curation-{args.year}.jsonl"
+
+    markdown_parts = [
+        f"# Deadline Curation Report {args.year}",
+        "",
+        f"Generated on {date.today().isoformat()}",
+        "",
+    ]
+    for item in report:
+        markdown_parts.append(item["markdown"])
+        markdown_parts.append("")
+
+    markdown_path.write_text("\n".join(markdown_parts), encoding="utf-8")
+    jsonl_path.write_text(
+        "".join(f"{item['jsonl']}\n" for item in report),
+        encoding="utf-8",
+    )
+
+    print(f"Wrote markdown report: {markdown_path}")
+    print(f"Wrote JSONL report: {jsonl_path}")
+    return 0
+
+
+def _fetch_page_text(url: str) -> str:
+    request = Request(
+        url,
+        headers={"User-Agent": "MediaCalendarBot/0.1 (+https://github.com/covifranklin/Media-Calendar)"},
+    )
+    with urlopen(request, timeout=20) as response:
+        content_type = response.headers.get_content_charset() or "utf-8"
+        html = response.read().decode(content_type, errors="replace")
+
+    extractor = _HTMLTextExtractor()
+    extractor.feed(html)
+    return extractor.get_text()
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
