@@ -6,7 +6,6 @@ import logging
 from typing import Callable, Dict, Iterable, List, Sequence
 
 from media_calendar.agents import compose_notification
-from media_calendar.agents.notification_composer import NotificationComposerError
 from media_calendar.models import NotificationComposerInput, NotificationItem
 
 STEP_NAME = "Compose Notifications"
@@ -47,7 +46,7 @@ def orchestration_step_notification_composer(
         try:
             output = compose_notification(composer_input, client=client)
             used_fallback = False
-        except NotificationComposerError as exc:
+        except Exception:
             active_logger.exception(
                 "notification_composer failed for notification_type=%s",
                 notification_type,

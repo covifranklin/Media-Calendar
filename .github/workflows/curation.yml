@@ -1,0 +1,40 @@
+name: Manual Curation
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "Deadline year to curate"
+        required: true
+        default: "2026"
+        type: string
+
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install project
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+
+      - name: Run curation
+        run: python curate.py --year "${{ inputs.year }}"
+
+      - name: Upload curation artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: curation-report-${{ inputs.year }}
+          path: build/

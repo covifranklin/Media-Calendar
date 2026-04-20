@@ -16,6 +16,7 @@ if str(SRC_PATH) not in sys.path:
 
 from media_calendar.components.deadline_store import load_deadlines, resolve_deadline_files
 from media_calendar.orchestration import orchestration_step_data_curation
+from media_calendar.services import load_dotenv_file
 
 
 class _HTMLTextExtractor(HTMLParser):
@@ -62,6 +63,7 @@ def main() -> int:
     )
     args = parser.parse_args()
 
+    load_dotenv_file(args.root_dir / ".env")
     deadline_paths = resolve_deadline_files(
         [f"data/deadlines/{args.year}.yaml"],
         root=args.root_dir,

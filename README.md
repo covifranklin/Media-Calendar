@@ -8,12 +8,14 @@ Media Calendar is a small Python project for tracking deadline data, generating 
 - `notification_composer` and `data_curation_agent` agent implementations
 - deterministic static calendar generation
 - orchestration steps for notifications, data curation, and calendar generation
-- GitHub Actions CI for tests and GitHub Pages deployment
+- SMTP-backed notification sending
+- GitHub Actions for tests, GitHub Pages deployment, daily notifications, and manual curation
 
 ## Requirements
 
 - Python 3.10 or newer recommended
-- an OpenAI API key for LLM-backed commands such as annual curation
+- an OpenAI API key for LLM-backed commands such as annual curation and notification composition
+- SMTP credentials if you want the project to send email automatically
 
 ## Local setup
 
@@ -45,7 +47,13 @@ python -m pip install --upgrade pip
 python -m pip install -e .
 ```
 
-4. Run the test suite:
+4. Copy the example environment file and fill in your secrets:
+
+```bash
+cp .env.example .env
+```
+
+5. Run the test suite:
 
 ```bash
 python -m pytest -q
@@ -71,6 +79,35 @@ This writes:
 - `build/calendar.html`
 
 You can then open the file in a browser.
+
+## Compose and send notifications locally
+
+The notifications CLI loads all deadline YAML files, finds deadlines that match the current reminder windows, composes email content, and optionally sends it.
+
+Preview without sending:
+
+```bash
+python notify.py --dry-run
+```
+
+Send for real:
+
+```bash
+python notify.py
+```
+
+Optional flags:
+
+```bash
+python notify.py --date 2026-05-04
+python notify.py --recipient friend@example.com
+python notify.py --input data/deadlines/2026.yaml
+```
+
+This writes:
+
+- `build/notification-queue.json`
+- `build/notification-log.jsonl`
 
 ## Run annual curation locally
 
@@ -103,11 +140,32 @@ And writes:
 
 ## GitHub Actions
 
-The workflow at `.github/workflows/ci.yml` does three things:
+The repo now includes three workflows:
 
-1. Runs `pytest` on pull requests and pushes.
-2. On pushes to `main`, generates `build/calendar.html`.
-3. Deploys the `build/` directory to GitHub Pages.
+1. `.github/workflows/ci.yml`
+   Runs `pytest` on pull requests and pushes, generates `build/calendar.html` on pushes to `main`, and deploys it to GitHub Pages.
+2. `.github/workflows/notifications.yml`
+   Runs daily on a schedule and can also be started manually to compose/send notifications.
+3. `.github/workflows/curation.yml`
+   Runs manually for a chosen year and uploads curation reports as workflow artifacts.
+
+### GitHub secrets to configure
+
+For notifications:
+
+- `OPENAI_API_KEY`
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_FROM_EMAIL`
+- `SMTP_USERNAME`
+- `SMTP_PASSWORD`
+- `SMTP_USE_STARTTLS`
+- `SMTP_USE_SSL`
+- `NOTIFICATION_TO_EMAIL`
+
+For manual curation:
+
+- `OPENAI_API_KEY`
 
 ## Data format
 
@@ -115,6 +173,6 @@ Each deadline YAML entry should match the `Deadline` model. The included sample 
 
 ## Current limitations
 
-- There is no email sender service wired up yet.
 - The curation CLI fetches page text directly from source URLs and depends on a valid OpenAI key.
-- Notification composition is implemented as library/orchestration code, not yet as a standalone end-user CLI.
+- The daily notification flow sends one email per notification bucket, not one email per deadline.
+- SMTP delivery assumes a working SMTP provider such as Gmail with an app password, Mailgun SMTP, or similar.

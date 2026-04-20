@@ -1,4 +1,4 @@
-name: CI
+name: CI and Pages
 
 on:
   pull_request:

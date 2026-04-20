@@ -8,7 +8,6 @@ from datetime import date
 from typing import Callable, List, Sequence
 
 from media_calendar.agents import curate_deadline_data
-from media_calendar.agents.data_curation_agent import DataCurationAgentError
 from media_calendar.models import DataCurationAgentInput, DataCurationAgentOutput, Deadline
 
 STEP_NAME = "Cure Deadlines"
@@ -58,7 +57,7 @@ def orchestration_step_data_curation(
 
         try:
             output = curate_deadline_data(agent_input, client=client)
-        except DataCurationAgentError:
+        except Exception:
             active_logger.exception(
                 "data_curation_agent failed for deadline_id=%s", deadline.id
             )
