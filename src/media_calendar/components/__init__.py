@@ -2,6 +2,7 @@
 
 from media_calendar.components.calendar_generator import generate_calendar
 from media_calendar.components.deadline_store import (
+    filter_upcoming_deadlines,
     load_deadlines,
     resolve_deadline_files,
     write_deadlines,
@@ -50,6 +51,7 @@ __all__ = [
     "detect_candidate_batches",
     "detect_candidates",
     "extract_source_text",
+    "filter_upcoming_deadlines",
     "fetch_registered_sources",
     "fetch_source",
     "fetch_sources",

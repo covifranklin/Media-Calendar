@@ -1,8 +1,9 @@
-"""Helpers for loading deadline data from YAML files."""
+"""Helpers for loading and filtering deadline data from YAML files."""
 
 from __future__ import annotations
 
 from collections import defaultdict
+from datetime import date
 from pathlib import Path
 from typing import Iterable, List, Sequence
 
@@ -51,6 +52,24 @@ def load_deadlines(deadline_files: Sequence[Path]) -> List[Deadline]:
 
     deadlines.sort(key=lambda item: (item.deadline_date, item.name.lower()))
     return deadlines
+
+
+def filter_upcoming_deadlines(
+    deadlines: Sequence[Deadline],
+    *,
+    current_date: date,
+) -> List[Deadline]:
+    """Keep only deadlines that are still upcoming and active."""
+
+    return sorted(
+        [
+            deadline
+            for deadline in deadlines
+            if deadline.status not in {"expired", "cancelled"}
+            and deadline.deadline_date >= current_date
+        ],
+        key=lambda item: (item.deadline_date, item.name.lower()),
+    )
 
 
 def write_deadlines(

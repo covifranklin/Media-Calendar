@@ -48,8 +48,9 @@ def test_orchestration_step_discovery_refresh_apply_mode_writes_yaml(tmp_path):
             "</body></html>",
         )
 
-    def fake_calendar_generator(*, root_dir=None, deadline_files=None):
+    def fake_calendar_generator(*, root_dir=None, deadline_files=None, current_date=None):
         assert root_dir == tmp_path
+        assert current_date == date(2026, 4, 21)
         output_path = tmp_path / "build" / "calendar.html"
         output_path.parent.mkdir(parents=True, exist_ok=True)
         output_path.write_text("<html></html>", encoding="utf-8")
@@ -115,8 +116,9 @@ def test_orchestration_step_discovery_refresh_dry_run_does_not_write_yaml(tmp_pa
             "</body></html>",
         )
 
-    def fake_calendar_generator(*, root_dir=None, deadline_files=None):
+    def fake_calendar_generator(*, root_dir=None, deadline_files=None, current_date=None):
         assert root_dir == tmp_path
+        assert current_date == date(2026, 4, 21)
         output_path = tmp_path / "build" / "calendar.html"
         output_path.parent.mkdir(parents=True, exist_ok=True)
         output_path.write_text("<html></html>", encoding="utf-8")
@@ -161,7 +163,7 @@ def test_orchestration_step_discovery_refresh_falls_back_when_llm_fails(
             "</body></html>",
         )
 
-    def fake_calendar_generator(*, root_dir=None, deadline_files=None):
+    def fake_calendar_generator(*, root_dir=None, deadline_files=None, current_date=None):
         output_path = tmp_path / "build" / "calendar.html"
         output_path.parent.mkdir(parents=True, exist_ok=True)
         output_path.write_text("<html></html>", encoding="utf-8")
@@ -214,7 +216,7 @@ def test_orchestration_step_discovery_refresh_appends_decision_logs(tmp_path):
             "</body></html>",
         )
 
-    def fake_calendar_generator(*, root_dir=None, deadline_files=None):
+    def fake_calendar_generator(*, root_dir=None, deadline_files=None, current_date=None):
         output_path = tmp_path / "build" / "calendar.html"
         output_path.parent.mkdir(parents=True, exist_ok=True)
         output_path.write_text("<html></html>", encoding="utf-8")
@@ -245,3 +247,65 @@ def test_orchestration_step_discovery_refresh_appends_decision_logs(tmp_path):
     second = json.loads(lines[1])
     assert first["promotion_action"] == "promoted_new"
     assert second["promotion_action"] in {"ignored_duplicate", "promoted_update", "rejected_uncertain"}
+
+
+def test_orchestration_step_discovery_refresh_apply_mode_prunes_past_deadlines(
+    tmp_path,
+):
+    _write_source_registry(tmp_path)
+    deadline_dir = tmp_path / "data" / "deadlines"
+    deadline_dir.mkdir(parents=True)
+    (deadline_dir / "2026.yaml").write_text(
+        dedent(
+            """
+            - id: "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+              name: "Past Market"
+              category: "industry_forum"
+              organization: "Example Org"
+              url: "https://example.com/past-market"
+              deadline_date: 2026-03-01
+              early_deadline_date:
+              event_start_date:
+              event_end_date:
+              description: "Old market deadline."
+              eligibility_notes:
+              notification_windows: [30, 14, 3]
+              status: "confirmed"
+              last_verified_date: 2026-02-15
+              source_url: "https://example.com/past-market-source"
+              tags: ["market"]
+              year: 2026
+            """
+        ).strip(),
+        encoding="utf-8",
+    )
+
+    def fake_fetch_url(url: str):
+        return (
+            200,
+            "text/html",
+            "<html><body><p>Example Documentary Lab 2026 "
+            "Applications open now Deadline: June 1, 2026</p>"
+            "</body></html>",
+        )
+
+    def fake_calendar_generator(*, root_dir=None, deadline_files=None, current_date=None):
+        assert current_date == date(2026, 4, 21)
+        output_path = tmp_path / "build" / "calendar.html"
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text("<html></html>", encoding="utf-8")
+        return output_path
+
+    orchestration_step_discovery_refresh(
+        root_dir=tmp_path,
+        current_date=date(2026, 4, 21),
+        mode="apply",
+        llm_mode="off",
+        fetch_url=fake_fetch_url,
+        calendar_generator=fake_calendar_generator,
+    )
+
+    written_file = deadline_dir / "2026.yaml"
+    contents = written_file.read_text(encoding="utf-8")
+    assert "Past Market" not in contents
+    assert "Example Documentary Lab 2026" in contents

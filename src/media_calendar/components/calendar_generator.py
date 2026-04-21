@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Iterable, Sequence
 
 from media_calendar.components.deadline_store import (
+    filter_upcoming_deadlines,
     load_deadlines,
     resolve_deadline_files,
 )
@@ -31,12 +32,16 @@ def generate_calendar(
     deadline_files: Iterable[str | Path] | None = None,
     *,
     root_dir: str | Path | None = None,
+    current_date: date | None = None,
 ) -> Path:
     """Read deadline YAML files and write a static HTML calendar page."""
 
     root = Path(root_dir) if root_dir is not None else Path.cwd()
     data_files = resolve_deadline_files(deadline_files, root=root)
-    deadlines = load_deadlines(data_files)
+    deadlines = filter_upcoming_deadlines(
+        load_deadlines(data_files),
+        current_date=current_date or date.today(),
+    )
     html = _render_calendar_html(deadlines)
 
     output_path = root / DEFAULT_OUTPUT_PATH

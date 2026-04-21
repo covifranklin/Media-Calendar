@@ -15,6 +15,7 @@ from media_calendar.components import (
     build_source_freshness_report,
     compare_candidate_batch,
     detect_candidate_batches,
+    filter_upcoming_deadlines,
     fetch_sources,
     generate_calendar,
     load_deadlines,
@@ -156,6 +157,11 @@ def orchestration_step_discovery_refresh(
         }
         batch_summaries.append(batch_summary)
 
+    current_deadlines = filter_upcoming_deadlines(
+        current_deadlines,
+        current_date=active_date,
+    )
+
     if mode == "apply":
         written_deadline_files = write_deadlines(current_deadlines, root=root)
     else:
@@ -170,7 +176,10 @@ def orchestration_step_discovery_refresh(
         freshness_report,
         root_dir=root,
     )
-    calendar_path = calendar_generator(root_dir=root)
+    calendar_path = calendar_generator(
+        root_dir=root,
+        current_date=active_date,
+    )
     promoted_new_count = sum(
         1 for decision in all_decisions if decision.action == "promoted_new"
     )

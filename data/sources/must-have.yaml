@@ -3,12 +3,60 @@
   program_name: "Artist Opportunities"
   source_url: "https://www.sundance.org/apply"
   source_type: "lab"
-  deadline_categories: ["lab_application", "fellowship"]
+  deadline_categories: ["lab_application", "fellowship", "funding_round"]
+  regions: ["North America", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Umbrella Sundance opportunity hub. Useful as a catch-all page, but complemented below with more specific Sundance program pages for stronger discovery coverage."
+
+- id: "0a2c4d38-5f48-45e2-a67d-6f3186f84701"
+  organization: "Sundance Institute"
+  program_name: "Documentary Fund"
+  source_url: "https://www.sundance.org/documentary-fund/"
+  source_type: "fund"
+  deadline_categories: ["funding_round"]
+  regions: ["North America", "Global"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_application_page"
+  notes: "High-priority Sundance funding opportunity for nonfiction projects worldwide, with clear annual open-call timing."
+
+- id: "eb56c498-3dd6-4ca2-8b15-8971fd73e79a"
+  organization: "Sundance Institute"
+  program_name: "Catalyst"
+  source_url: "https://www.sundance.org/initiatives/catalyst/"
+  source_type: "market"
+  deadline_categories: ["industry_forum", "funding_round"]
+  regions: ["North America", "Global"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_application_page"
+  notes: "Sundance's financing initiative for independent filmmakers, including pre-application and forum timelines for projects seeking investment."
+
+- id: "6f95610d-27c7-4c3b-9263-e5245d5d4a4a"
+  organization: "Sundance Institute"
+  program_name: "Producers Program"
+  source_url: "https://www.sundance.org/initiatives/producers-program/"
+  source_type: "lab"
+  deadline_categories: ["lab_application", "fellowship", "funding_round"]
   regions: ["North America", "Global"]
   cadence: "annual"
   coverage_priority: "must_have"
   discovery_strategy: "official_program_page"
-  notes: "Central hub for Sundance labs, fellowships, grants, and artist programs across film and episodic storytelling."
+  notes: "Important Sundance pathway for fiction and nonfiction producers across labs, fellowships, networking, and producer-focused support."
+
+- id: "8db0dc71-d25d-4f67-9947-6aa568d6fbc8"
+  organization: "Sundance Institute"
+  program_name: "Episodic Program"
+  source_url: "https://www.sundance.org/programs/episodic-storytelling/"
+  source_type: "lab"
+  deadline_categories: ["lab_application", "fellowship"]
+  regions: ["North America", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Tracks the Sundance Episodic Lab and related intensives for original series creators and writers."
 
 - id: "7552ea7e-efbd-4ad4-badf-39e5cd19ed6d"
   organization: "Tribeca Festival"
@@ -44,7 +92,19 @@
   cadence: "annual"
   coverage_priority: "high"
   discovery_strategy: "official_program_page"
-  notes: "Central application page for Film Independent labs, intensives, sponsorship, and career-development programs."
+  notes: "Central application page for Film Independent labs and grants. Useful as a catch-all, but complemented below with more specific Film Independent programme pages."
+
+- id: "4b2fd372-cf24-4383-b8a8-0ff7af48ecdd"
+  organization: "Film Independent"
+  program_name: "Documentary Producing Lab"
+  source_url: "https://www.filmindependent.org/programs/applications/"
+  source_type: "lab"
+  deadline_categories: ["lab_application", "fellowship"]
+  regions: ["North America"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "High-signal Film Independent documentary producer development programme with concrete annual application timing."
 
 - id: "54b62ab0-5a0e-40af-8d3d-c829ca019723"
   organization: "Film Independent"
@@ -57,6 +117,18 @@
   coverage_priority: "high"
   discovery_strategy: "official_program_page"
   notes: "Finance-market style opportunity for feature producer-director teams seeking partners and financing."
+
+- id: "d0eb5984-a408-4d77-a21f-41c6ee4a53d7"
+  organization: "Film Independent"
+  program_name: "Episodic Lab"
+  source_url: "https://www.filmindependent.org/programs/artist-development/episodic-lab/"
+  source_type: "lab"
+  deadline_categories: ["lab_application", "fellowship"]
+  regions: ["North America"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Dedicated scripted episodic writing programme with clearer application details than the general Film Independent hub."
 
 - id: "ce375728-e636-4c7d-afd0-46f5cd044594"
   organization: "TorinoFilmLab"
@@ -140,7 +212,31 @@
   cadence: "annual"
   coverage_priority: "must_have"
   discovery_strategy: "official_program_page"
-  notes: "Important screen-industry marketplace spanning scripted, unscripted, kids, and career-acceleration initiatives."
+  notes: "Important screen-industry marketplace spanning scripted, unscripted, kids, and career-acceleration initiatives. Complemented below with programme-specific access opportunities."
+
+- id: "bbf61c0c-2fbe-47a1-b79e-33a6fe7ec1a7"
+  organization: "Banff World Media Festival"
+  program_name: "Diversity of Voices: Elevate"
+  source_url: "https://dov.banffmediafestival.playbackonline.ca/about"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "industry_forum", "other"]
+  regions: ["North America"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "BANFF access and advancement programme for underrepresented creators and producers, with festival pass, networking, and visibility benefits."
+
+- id: "6e49a905-64fb-4a51-b8f6-d4260b633ca1"
+  organization: "Banff World Media Festival"
+  program_name: "BANFF Spark"
+  source_url: "https://spark.banffmediafestival.playbackonline.ca/About"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "industry_forum", "other"]
+  regions: ["North America"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Access and training accelerator tied to BANFF for women and non-binary media entrepreneurs seeking business growth and market access."
 
 - id: "e3e6ef59-f05d-4655-a04d-5b76c00d2f3a"
   organization: "Festival de Cannes"
@@ -188,7 +284,7 @@
   cadence: "annual"
   coverage_priority: "high"
   discovery_strategy: "official_program_page"
-  notes: "Umbrella industry page covering CineMart, Darkroom, talent development, and related IFFR Pro opportunities."
+  notes: "Umbrella IFFR Pro page covering CineMart, Darkroom, talent development, and networking. Useful as a catch-all, but complemented below with more specific IFFR Pro programme pages."
 
 - id: "64175571-f9ec-4dc0-a966-cd448af07735"
   organization: "International Film Festival Rotterdam"
@@ -201,6 +297,30 @@
   coverage_priority: "must_have"
   discovery_strategy: "official_program_page"
   notes: "Premier co-production market and project-launch platform within the IFFR ecosystem."
+
+- id: "3eff76b2-749e-46c8-af3f-c85b4b87072c"
+  organization: "IFFR Pro"
+  program_name: "Darkroom"
+  source_url: "https://iffr.com/en/iffr-pro/darkroom"
+  source_type: "market"
+  deadline_categories: ["industry_forum", "funding_round"]
+  regions: ["Europe", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "IFFR's work-in-progress platform for near-complete projects seeking completion support, sales, and festival exposure."
+
+- id: "9a9301ce-1170-478d-a99f-c4770e0dbab2"
+  organization: "IFFR Pro"
+  program_name: "Rotterdam Lab"
+  source_url: "https://iffr.com/en/iffr-pro/talent-development/rotterdam-lab"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "lab_application"]
+  regions: ["Europe", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Important producer training and talent-development programme within IFFR Pro, including open-call or nomination-based access routes."
 
 - id: "492f104c-2aab-4c41-91c2-ab5f0eb7df25"
   organization: "MIPCOM CANNES"
@@ -320,7 +440,31 @@
   cadence: "periodic"
   coverage_priority: "high"
   discovery_strategy: "official_program_page"
-  notes: "Artist-development umbrella for grants, fellowships, residencies, and advisory support for independent filmmakers."
+  notes: "Artist-development umbrella for grants, fellowships, residencies, and advisory support. Useful as a catch-all, but complemented below with specific SFFILM grant pages."
+
+- id: "9d50483f-c702-4fa8-bc39-d6337868408a"
+  organization: "SFFILM"
+  program_name: "Documentary Film Fund"
+  source_url: "https://sffilm.org/documentary-film-fund/"
+  source_type: "fund"
+  deadline_categories: ["funding_round"]
+  regions: ["North America", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Specific SFFILM nonfiction funding opportunity with clear annual deadlines for documentary post-production support."
+
+- id: "1bb1f03c-79ce-4763-aad9-2d0b1b1cecd6"
+  organization: "SFFILM"
+  program_name: "Rainin Grant"
+  source_url: "https://sffilm.org/rainin-grant/"
+  source_type: "fund"
+  deadline_categories: ["funding_round", "fellowship"]
+  regions: ["North America", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Major SFFILM narrative feature grant programme with screenwriting, development, and post-production support."
 
 - id: "b9e227c6-a61a-46ef-bddc-f8c9403a7d4c"
   organization: "Netflix"
@@ -357,3 +501,111 @@
   coverage_priority: "watchlist"
   discovery_strategy: "official_program_page"
   notes: "Social-impact convening that may be relevant for documentary, impact-media, and mission-driven storytelling ecosystems."
+
+- id: "9206cab6-2658-48b5-9222-4a5641dad14f"
+  organization: "BAFTA"
+  program_name: "BAFTA Elevate"
+  source_url: "https://www.bafta.org/programmes/bafta-elevate"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "lab_application"]
+  regions: ["United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Tracks BAFTA's mid-career talent programme, including documentary and specialist factual producer opportunities when new cohorts open."
+
+- id: "7b0fc977-2352-421e-b2f4-d19fd5f598af"
+  organization: "BAFTA albert"
+  program_name: "Impact Producer Accelerator Programme"
+  source_url: "https://wearealbert.org/climate-content/impact-producers/"
+  source_type: "lab"
+  deadline_categories: ["lab_application", "fellowship", "other"]
+  regions: ["United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "High-signal impact producing programme from BAFTA albert, delivered with Together Films, covering workshops, training, and networking for film and TV professionals."
+
+- id: "9ca5853a-df6e-48c7-9efe-cddd9459f4ea"
+  organization: "Together Films"
+  program_name: "The Business of Impact Lab & Pitch"
+  source_url: "https://togetherfilms.org/lab/"
+  source_type: "lab"
+  deadline_categories: ["lab_application", "industry_forum", "funding_round"]
+  regions: ["United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Tracks Together Films' impact-focused producer lab and pitch programme for socially resonant scripted features."
+
+- id: "3c8ad061-281d-492a-a5b2-9b16bc8f5995"
+  organization: "Together Films"
+  program_name: "Climate Action Together"
+  source_url: "https://togetherfilms.org/fund/"
+  source_type: "fund"
+  deadline_categories: ["funding_round", "lab_application", "other"]
+  regions: ["United Kingdom", "North America", "Global"]
+  cadence: "periodic"
+  coverage_priority: "medium"
+  discovery_strategy: "official_program_page"
+  notes: "Impact distribution campaign fund and accelerator for finished documentary or scripted projects with climate-action goals."
+
+- id: "9504f682-61f6-4962-8c0c-24e1d82a9e45"
+  organization: "Chicken & Egg Pictures"
+  program_name: "Programs and Grants"
+  source_url: "https://chickeneggfilms.org/"
+  source_type: "fund"
+  deadline_categories: ["funding_round", "fellowship", "other"]
+  regions: ["North America", "Global"]
+  cadence: "periodic"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Umbrella Chicken & Egg programme page, complemented below with more specific funding and lab opportunities on the official site."
+
+- id: "cf0bdd91-3b88-47d7-9fdc-01d376694c2f"
+  organization: "Chicken & Egg Films"
+  program_name: "(Egg)celerator Lab"
+  source_url: "https://chickeneggfilms.org/"
+  source_type: "lab"
+  deadline_categories: ["lab_application", "funding_round", "fellowship"]
+  regions: ["North America", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Core Chicken & Egg lab for first- or second-time nonfiction feature filmmakers, combining mentorship and grant support."
+
+- id: "e7bbd1d4-b14d-49a2-bf97-e1dbef328e7c"
+  organization: "Chicken & Egg Films"
+  program_name: "Research & Development Grant"
+  source_url: "https://chickeneggfilms.org/"
+  source_type: "fund"
+  deadline_categories: ["funding_round"]
+  regions: ["North America", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Research and development grant supporting documentary filmmakers in the earliest funded stages of new feature work."
+
+- id: "dfaa7c75-e3fb-4c9a-ae37-099239fdd8f7"
+  organization: "The Whickers"
+  program_name: "Funding Award"
+  source_url: "https://www.whickerawards.com/apply/film-and-tv/"
+  source_type: "fund"
+  deadline_categories: ["funding_round", "fellowship", "other"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Director-led documentary funding award with clear annual application windows and DocFest-linked pitch timeline."
+
+- id: "e49f2a98-03cc-46b8-a211-9ed43f92fd9e"
+  organization: "The Whickers"
+  program_name: "Podcast Pitch"
+  source_url: "https://www.whickerawards.com/apply/the-podcast-pitch/"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "funding_round", "other"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Official Whickers audio-documentary funding programme with a clear annual pitch cycle and Sheffield DocFest tie-in."
