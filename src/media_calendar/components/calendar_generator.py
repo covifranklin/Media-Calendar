@@ -15,6 +15,7 @@ from media_calendar.components.deadline_store import (
 from media_calendar.models import Deadline
 
 DEFAULT_OUTPUT_PATH = Path("build/calendar.html")
+DEFAULT_INDEX_PATH = Path("build/index.html")
 
 CATEGORY_LABELS = {
     "festival_submission": "Festival Submission",
@@ -41,6 +42,7 @@ def generate_calendar(
     output_path = root / DEFAULT_OUTPUT_PATH
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(html, encoding="utf-8")
+    (root / DEFAULT_INDEX_PATH).write_text(html, encoding="utf-8")
     return output_path
 
 

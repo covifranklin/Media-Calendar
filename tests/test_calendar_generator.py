@@ -42,6 +42,9 @@ def test_basic_html_output(tmp_path):
     output_path = generate_calendar(root_dir=tmp_path)
 
     assert output_path == tmp_path / "build" / "calendar.html"
+    assert (tmp_path / "build" / "index.html").read_text(encoding="utf-8") == (
+        output_path.read_text(encoding="utf-8")
+    )
     html = output_path.read_text(encoding="utf-8")
     assert "<!DOCTYPE html>" in html
     assert "Media Calendar" in html
