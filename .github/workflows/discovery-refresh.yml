@@ -25,6 +25,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   refresh:
@@ -47,12 +49,20 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -e ".[dev]"
 
+      - name: Configure Pages
+        if: env.DISCOVERY_MODE == 'apply'
+        uses: actions/configure-pages@v5
+
       - name: Generate source coverage report
         run: python coverage_report.py
 
       - name: Run discovery refresh
         run: |
           python discover.py --mode "${DISCOVERY_MODE}" --llm-mode "${DISCOVERY_LLM_MODE}"
+
+      - name: Generate static calendar
+        if: env.DISCOVERY_MODE == 'apply'
+        run: python generate_calendar.py
 
       - name: Upload refresh artifacts
         if: always()
@@ -71,6 +81,12 @@ jobs:
             build/discovery-log.jsonl
             build/source_snapshots/
 
+      - name: Upload Pages artifact
+        if: env.DISCOVERY_MODE == 'apply'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
       - name: Commit refreshed deadline data
         if: env.DISCOVERY_MODE == 'apply'
         run: |
@@ -83,3 +99,18 @@ jobs:
           git add data/deadlines
           git commit -m "chore: refresh discovered deadlines"
           git push origin HEAD:main
+
+  deploy-pages:
+    if: ${{ github.event.inputs.mode != 'dry-run' }}
+    needs: refresh
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
