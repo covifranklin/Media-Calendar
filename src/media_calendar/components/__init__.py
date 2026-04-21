@@ -23,7 +23,10 @@ from media_calendar.components.source_fetcher import (
     fetch_source,
     fetch_sources,
 )
-from media_calendar.components.source_freshness import build_source_freshness_report
+from media_calendar.components.source_freshness import (
+    build_source_freshness_report,
+    write_source_freshness_report,
+)
 from media_calendar.components.source_health import build_source_health_report
 from media_calendar.components.source_detector import (
     detect_candidate_batches,
@@ -57,5 +60,6 @@ __all__ = [
     "resolve_source_files",
     "snapshot_fetch_results",
     "write_source_coverage_report",
+    "write_source_freshness_report",
     "write_deadlines",
 ]

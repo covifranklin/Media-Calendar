@@ -4,6 +4,7 @@ from datetime import datetime, timedelta, timezone
 from uuid import uuid4
 
 from media_calendar.components import build_source_freshness_report
+from media_calendar.components import write_source_freshness_report
 from media_calendar.models import (
     DiscoveryCandidate,
     DiscoveryCandidateBatch,
@@ -190,3 +191,20 @@ def test_build_source_freshness_report_includes_markdown_summary():
 
     assert "# Source Freshness Report" in report.markdown
     assert "## Example Org - Example Program" in report.markdown
+
+
+def test_write_source_freshness_report_writes_json_and_markdown(tmp_path):
+    source_entry = build_source_entry()
+    now = datetime(2026, 4, 21, 12, 0, tzinfo=timezone.utc)
+    snapshots = [build_snapshot_result(source_entry, fetched_at=now)]
+    batches = [build_candidate_batch(source_entry, candidate_count=1)]
+
+    report = build_source_freshness_report([source_entry], snapshots, batches)
+    paths = write_source_freshness_report(report, root_dir=tmp_path)
+
+    assert paths["json"].exists()
+    assert paths["markdown"].exists()
+    assert '"total_sources": 1' in paths["json"].read_text(encoding="utf-8")
+    assert "# Source Freshness Report" in paths["markdown"].read_text(
+        encoding="utf-8"
+    )

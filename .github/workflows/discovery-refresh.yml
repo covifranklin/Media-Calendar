@@ -45,7 +45,10 @@ jobs:
       - name: Install project
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -e .
+          python -m pip install -e ".[dev]"
+
+      - name: Generate source coverage report
+        run: python coverage_report.py
 
       - name: Run discovery refresh
         run: |
@@ -54,8 +57,18 @@ jobs:
       - name: Upload refresh artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: discovery-refresh-artifacts
-          path: build/
+          name: discovery-monitoring-artifacts
+          path: |
+            build/coverage-report.json
+            build/coverage-report.md
+            build/source-freshness.json
+            build/source-freshness.md
+            build/discovery-refresh.json
+            build/discovery-refresh.md
+            build/discovery-metrics.json
+            build/discovery-metrics.md
+            build/discovery-log.jsonl
+            build/source_snapshots/
 
       - name: Commit refreshed deadline data
         if: env.DISCOVERY_MODE == 'apply'

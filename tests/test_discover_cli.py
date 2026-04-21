@@ -26,6 +26,14 @@ def test_discover_cli_defaults_to_dry_run(tmp_path, monkeypatch, capsys):
             "calendar_path": str(tmp_path / "build" / "calendar.html"),
             "report_json_path": str(tmp_path / "build" / "discovery-refresh.json"),
             "report_markdown_path": str(tmp_path / "build" / "discovery-refresh.md"),
+            "metrics_json_path": str(tmp_path / "build" / "discovery-metrics.json"),
+            "metrics_markdown_path": str(tmp_path / "build" / "discovery-metrics.md"),
+            "freshness_report_json_path": str(
+                tmp_path / "build" / "source-freshness.json"
+            ),
+            "freshness_report_markdown_path": str(
+                tmp_path / "build" / "source-freshness.md"
+            ),
             "promoted_new_count": 0,
             "promoted_update_count": 0,
             "ignored_duplicate_count": 0,
@@ -70,6 +78,14 @@ def test_discover_cli_accepts_apply_mode(tmp_path, monkeypatch):
             "calendar_path": str(tmp_path / "build" / "calendar.html"),
             "report_json_path": str(tmp_path / "build" / "discovery-refresh.json"),
             "report_markdown_path": str(tmp_path / "build" / "discovery-refresh.md"),
+            "metrics_json_path": str(tmp_path / "build" / "discovery-metrics.json"),
+            "metrics_markdown_path": str(tmp_path / "build" / "discovery-metrics.md"),
+            "freshness_report_json_path": str(
+                tmp_path / "build" / "source-freshness.json"
+            ),
+            "freshness_report_markdown_path": str(
+                tmp_path / "build" / "source-freshness.md"
+            ),
             "promoted_new_count": 1,
             "promoted_update_count": 0,
             "ignored_duplicate_count": 0,

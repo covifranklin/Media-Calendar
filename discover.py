@@ -100,6 +100,10 @@ def main() -> int:
     print(f"Calendar written to: {payload['calendar_path']}")
     print(f"JSON report: {payload['report_json_path']}")
     print(f"Markdown report: {payload['report_markdown_path']}")
+    print(f"Metrics JSON: {payload['metrics_json_path']}")
+    print(f"Metrics Markdown: {payload['metrics_markdown_path']}")
+    print(f"Freshness JSON: {payload['freshness_report_json_path']}")
+    print(f"Freshness Markdown: {payload['freshness_report_markdown_path']}")
     return 0
 
 

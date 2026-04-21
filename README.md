@@ -102,10 +102,32 @@ python discover.py
 
 This writes:
 
-- `data/deadlines/<year>.yaml`
+- `data/deadlines/<year>.yaml` when you pass `--mode apply`
 - `build/discovery-refresh.json`
 - `build/discovery-refresh.md`
+- `build/discovery-metrics.json`
+- `build/discovery-metrics.md`
+- `build/source-freshness.json`
+- `build/source-freshness.md`
 - `build/calendar.html`
+
+Safer weekly preview mode:
+
+```bash
+python discover.py --mode dry-run --llm-mode off
+```
+
+Explicit apply mode:
+
+```bash
+python discover.py --mode apply
+```
+
+To generate a source coverage snapshot separately:
+
+```bash
+python coverage_report.py
+```
 
 ## Compose and send notifications locally
 
@@ -183,7 +205,7 @@ The repo now includes four workflows:
 1. `.github/workflows/ci.yml`
    Runs `pytest` on pull requests and pushes, generates `build/calendar.html` on pushes to `main`, and deploys it to GitHub Pages.
 2. `.github/workflows/discovery-refresh.yml`
-   Runs weekly to fetch monitored sources, auto-promote safe discovery results into `data/deadlines/*.yaml`, and push those changes back to `main`.
+   Runs weekly in safe dry-run mode to fetch monitored sources and upload monitoring artifacts, including coverage, source freshness, discovery refresh, and discovery metrics reports. Manual runs can switch to apply mode to write and commit `data/deadlines/*.yaml`.
 3. `.github/workflows/notifications.yml`
    Runs weekly on Mondays and can also be started manually to compose/send notifications.
 4. `.github/workflows/curation.yml`
@@ -194,6 +216,14 @@ The repo now includes four workflows:
 For automated discovery:
 
 - `OPENAI_API_KEY` if you want `discover.py` to use the optional LLM-assisted source discovery mode
+
+The discovery workflow uploads these artifacts on each run:
+
+- `coverage-report.json` and `coverage-report.md`
+- `source-freshness.json` and `source-freshness.md`
+- `discovery-refresh.json` and `discovery-refresh.md`
+- `discovery-metrics.json` and `discovery-metrics.md`
+- `discovery-log.jsonl`
 
 For notifications:
 

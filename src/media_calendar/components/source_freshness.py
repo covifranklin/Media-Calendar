@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Dict, List, Sequence
 from uuid import UUID
 
@@ -74,6 +75,30 @@ def build_source_freshness_report(
         markdown="",
     )
     return report.model_copy(update={"markdown": _build_markdown_report(report)})
+
+
+def write_source_freshness_report(
+    report: SourceFreshnessReport,
+    *,
+    root_dir: str | Path | None = None,
+    output_dir: str | Path | None = None,
+) -> Dict[str, Path]:
+    """Persist a JSON and Markdown freshness report to the build directory."""
+
+    root = Path(root_dir) if root_dir is not None else Path.cwd()
+    target_dir = (
+        Path(output_dir)
+        if output_dir is not None and Path(output_dir).is_absolute()
+        else root / (Path(output_dir) if output_dir is not None else Path("build"))
+    )
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    json_path = target_dir / "source-freshness.json"
+    markdown_path = target_dir / "source-freshness.md"
+
+    json_path.write_text(report.model_dump_json(indent=2), encoding="utf-8")
+    markdown_path.write_text(report.markdown, encoding="utf-8")
+    return {"json": json_path, "markdown": markdown_path}
 
 
 def _build_entry(

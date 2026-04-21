@@ -12,6 +12,7 @@ from typing import Callable, Iterable, List, Literal, Optional
 from media_calendar.agents import discover_source_candidates
 from media_calendar.components import (
     auto_promote_discovery_results,
+    build_source_freshness_report,
     compare_candidate_batch,
     detect_candidate_batches,
     fetch_sources,
@@ -22,6 +23,7 @@ from media_calendar.components import (
     resolve_source_files,
     snapshot_fetch_results,
     write_deadlines,
+    write_source_freshness_report,
 )
 from media_calendar.models import DiscoveryAgentInput, DiscoveryDecisionLogEntry
 
@@ -35,7 +37,8 @@ DESCRIPTION = (
 )
 INPUT_SOURCE = "data/sources/*.yaml registry files plus data/deadlines/*.yaml."
 OUTPUT_DESTINATION = (
-    "build/discovery-refresh.json, build/calendar.html, and optionally updated "
+    "build/discovery-refresh.json, build/discovery-metrics.json, "
+    "build/source-freshness.json, build/calendar.html, and optionally updated "
     "data/deadlines/*.yaml files."
 )
 CONDITION = "Triggered weekly by scheduler or manually via CLI."
@@ -83,6 +86,7 @@ def orchestration_step_discovery_refresh(
     current_deadlines = list(deadlines)
     all_decisions = []
     batch_summaries = []
+    freshness_batches = []
     llm_batches_used = 0
     deterministic_fallback_batches = 0
 
@@ -127,6 +131,7 @@ def orchestration_step_discovery_refresh(
                 deterministic_fallback_batches += 1
 
         comparison_batch = compare_candidate_batch(effective_batch, current_deadlines)
+        freshness_batches.append(effective_batch)
         promotion_batch = auto_promote_discovery_results(
             comparison_batch.results,
             current_deadlines,
@@ -156,7 +161,28 @@ def orchestration_step_discovery_refresh(
     else:
         written_deadline_files = []
 
+    freshness_report = build_source_freshness_report(
+        source_entries,
+        snapshot_results,
+        freshness_batches,
+    )
+    freshness_paths = write_source_freshness_report(
+        freshness_report,
+        root_dir=root,
+    )
     calendar_path = calendar_generator(root_dir=root)
+    promoted_new_count = sum(
+        1 for decision in all_decisions if decision.action == "promoted_new"
+    )
+    promoted_update_count = sum(
+        1 for decision in all_decisions if decision.action == "promoted_update"
+    )
+    ignored_duplicate_count = sum(
+        1 for decision in all_decisions if decision.action == "ignored_duplicate"
+    )
+    rejected_uncertain_count = sum(
+        1 for decision in all_decisions if decision.action == "rejected_uncertain"
+    )
     report_paths = _write_refresh_reports(
         root=root,
         current_date=active_date,
@@ -167,6 +193,18 @@ def orchestration_step_discovery_refresh(
         calendar_path=calendar_path,
         llm_mode=llm_mode,
         llm_enabled=llm_enabled,
+    )
+    metrics_paths = _write_metrics_reports(
+        root=root,
+        current_date=active_date,
+        mode=mode,
+        batch_summaries=batch_summaries,
+        llm_mode=llm_mode,
+        llm_enabled=llm_enabled,
+        promoted_new_count=promoted_new_count,
+        promoted_update_count=promoted_update_count,
+        ignored_duplicate_count=ignored_duplicate_count,
+        rejected_uncertain_count=rejected_uncertain_count,
     )
     log_path = _append_decision_log(
         root=root,
@@ -189,23 +227,19 @@ def orchestration_step_discovery_refresh(
         "calendar_path": str(calendar_path),
         "report_json_path": str(report_paths["json"]),
         "report_markdown_path": str(report_paths["markdown"]),
+        "metrics_json_path": str(metrics_paths["json"]),
+        "metrics_markdown_path": str(metrics_paths["markdown"]),
+        "freshness_report_json_path": str(freshness_paths["json"]),
+        "freshness_report_markdown_path": str(freshness_paths["markdown"]),
         "decision_log_path": str(log_path),
         "llm_mode": llm_mode,
         "llm_enabled": llm_enabled,
         "llm_batches_used": llm_batches_used,
         "deterministic_fallback_batches": deterministic_fallback_batches,
-        "promoted_new_count": sum(
-            1 for decision in all_decisions if decision.action == "promoted_new"
-        ),
-        "promoted_update_count": sum(
-            1 for decision in all_decisions if decision.action == "promoted_update"
-        ),
-        "ignored_duplicate_count": sum(
-            1 for decision in all_decisions if decision.action == "ignored_duplicate"
-        ),
-        "rejected_uncertain_count": sum(
-            1 for decision in all_decisions if decision.action == "rejected_uncertain"
-        ),
+        "promoted_new_count": promoted_new_count,
+        "promoted_update_count": promoted_update_count,
+        "ignored_duplicate_count": ignored_duplicate_count,
+        "rejected_uncertain_count": rejected_uncertain_count,
         "decision_count": len(all_decisions),
         "batch_summaries": batch_summaries,
     }
@@ -214,6 +248,57 @@ def orchestration_step_discovery_refresh(
         report_writer(payload)
 
     return payload
+
+
+def _write_metrics_reports(
+    *,
+    root: Path,
+    current_date: date,
+    mode: RefreshMode,
+    batch_summaries: List[dict],
+    llm_mode: str,
+    llm_enabled: bool,
+    promoted_new_count: int,
+    promoted_update_count: int,
+    ignored_duplicate_count: int,
+    rejected_uncertain_count: int,
+) -> dict:
+    build_dir = root / "build"
+    build_dir.mkdir(parents=True, exist_ok=True)
+
+    json_path = build_dir / "discovery-metrics.json"
+    markdown_path = build_dir / "discovery-metrics.md"
+    total_candidates = sum(batch["candidate_count"] for batch in batch_summaries)
+    total_processed = (
+        promoted_new_count
+        + promoted_update_count
+        + ignored_duplicate_count
+        + rejected_uncertain_count
+    )
+    acceptance_rate = (
+        (promoted_new_count + promoted_update_count) / total_processed
+        if total_processed
+        else 0.0
+    )
+    metrics_payload = {
+        "generated_on": current_date.isoformat(),
+        "mode": mode,
+        "llm_mode": llm_mode,
+        "llm_enabled": llm_enabled,
+        "candidate_count": total_candidates,
+        "promoted_new_count": promoted_new_count,
+        "promoted_update_count": promoted_update_count,
+        "ignored_duplicate_count": ignored_duplicate_count,
+        "rejected_uncertain_count": rejected_uncertain_count,
+        "acceptance_rate": acceptance_rate,
+        "batches_by_source": batch_summaries,
+    }
+    json_path.write_text(json.dumps(metrics_payload, indent=2), encoding="utf-8")
+    markdown_path.write_text(
+        _build_metrics_markdown(metrics_payload),
+        encoding="utf-8",
+    )
+    return {"json": json_path, "markdown": markdown_path}
 
 
 def _resolve_llm_enabled(llm_mode: LlmMode, *, llm_client) -> bool:
@@ -384,6 +469,43 @@ def _build_markdown_report(
                 f"- Match score: `{comparison.match_score}`",
                 f"- Source URL: {comparison.candidate.source_url}",
                 f"- Rationale: {decision.rationale}",
+                "",
+            ]
+        )
+
+    return "\n".join(parts)
+
+
+def _build_metrics_markdown(metrics_payload: dict) -> str:
+    parts = [
+        "# Discovery Metrics Report",
+        "",
+        f"- Generated on: `{metrics_payload['generated_on']}`",
+        f"- Refresh mode: `{metrics_payload['mode']}`",
+        f"- LLM mode: `{metrics_payload['llm_mode']}`",
+        f"- LLM enabled: `{metrics_payload['llm_enabled']}`",
+        f"- Candidate count: `{metrics_payload['candidate_count']}`",
+        f"- Promoted new: `{metrics_payload['promoted_new_count']}`",
+        f"- Promoted updates: `{metrics_payload['promoted_update_count']}`",
+        f"- Ignored duplicates: `{metrics_payload['ignored_duplicate_count']}`",
+        f"- Rejected uncertain: `{metrics_payload['rejected_uncertain_count']}`",
+        f"- Acceptance rate: `{metrics_payload['acceptance_rate']:.2f}`",
+        "",
+        "## Source Batches",
+        "",
+    ]
+
+    for batch in metrics_payload["batches_by_source"]:
+        parts.extend(
+            [
+                f"### {batch['organization']} - {batch['program_name']}",
+                f"- Fetch status: `{batch['fetch_status']}`",
+                f"- Candidate batch mode: `{batch['candidate_batch_mode']}`",
+                f"- Candidate count: `{batch['candidate_count']}`",
+                f"- Promoted new: `{batch['promoted_new_count']}`",
+                f"- Promoted updates: `{batch['promoted_update_count']}`",
+                f"- Ignored duplicates: `{batch['ignored_duplicate_count']}`",
+                f"- Rejected uncertain: `{batch['rejected_uncertain_count']}`",
                 "",
             ]
         )

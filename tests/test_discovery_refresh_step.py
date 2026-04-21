@@ -77,6 +77,16 @@ def test_orchestration_step_discovery_refresh_apply_mode_writes_yaml(tmp_path):
     assert "Example Documentary Lab 2026" in written_file.read_text(encoding="utf-8")
     assert (tmp_path / "build" / "discovery-refresh.json").exists()
     assert (tmp_path / "build" / "discovery-refresh.md").exists()
+    assert (tmp_path / "build" / "discovery-metrics.json").exists()
+    assert (tmp_path / "build" / "discovery-metrics.md").exists()
+    assert (tmp_path / "build" / "source-freshness.json").exists()
+    assert (tmp_path / "build" / "source-freshness.md").exists()
+    assert payload["metrics_json_path"] == str(
+        tmp_path / "build" / "discovery-metrics.json"
+    )
+    assert payload["freshness_report_json_path"] == str(
+        tmp_path / "build" / "source-freshness.json"
+    )
     log_path = tmp_path / "build" / "discovery-log.jsonl"
     assert payload["decision_log_path"] == str(log_path)
     lines = log_path.read_text(encoding="utf-8").splitlines()
@@ -128,6 +138,10 @@ def test_orchestration_step_discovery_refresh_dry_run_does_not_write_yaml(tmp_pa
     assert written_file.read_text(encoding="utf-8") == original_contents
     assert (tmp_path / "build" / "discovery-refresh.json").exists()
     assert (tmp_path / "build" / "discovery-refresh.md").exists()
+    assert (tmp_path / "build" / "discovery-metrics.json").exists()
+    assert (tmp_path / "build" / "discovery-metrics.md").exists()
+    assert (tmp_path / "build" / "source-freshness.json").exists()
+    assert (tmp_path / "build" / "source-freshness.md").exists()
     assert (tmp_path / "build" / "calendar.html").exists()
     assert (tmp_path / "build" / "discovery-log.jsonl").exists()
 
