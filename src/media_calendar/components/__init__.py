@@ -14,11 +14,16 @@ from media_calendar.components.discovery_comparator import (
 from media_calendar.components.discovery_promoter import (
     auto_promote_discovery_results,
 )
+from media_calendar.components.source_coverage import (
+    build_source_coverage_report,
+    write_source_coverage_report,
+)
 from media_calendar.components.source_fetcher import (
     fetch_registered_sources,
     fetch_source,
     fetch_sources,
 )
+from media_calendar.components.source_freshness import build_source_freshness_report
 from media_calendar.components.source_health import build_source_health_report
 from media_calendar.components.source_detector import (
     detect_candidate_batches,
@@ -32,8 +37,10 @@ from media_calendar.components.source_snapshotter import snapshot_fetch_results
 from media_calendar.components.source_text import extract_source_text
 
 __all__ = [
-    "build_source_health_report",
     "auto_promote_discovery_results",
+    "build_source_coverage_report",
+    "build_source_freshness_report",
+    "build_source_health_report",
     "compare_candidate_batch",
     "compare_candidate_batches",
     "compare_candidates",
@@ -49,5 +56,6 @@ __all__ = [
     "resolve_deadline_files",
     "resolve_source_files",
     "snapshot_fetch_results",
+    "write_source_coverage_report",
     "write_deadlines",
 ]

@@ -13,6 +13,9 @@ from media_calendar.models.discovery_candidate_comparison import (
 from media_calendar.models.discovery_candidate_comparison_batch import (
     DiscoveryCandidateComparisonBatch,
 )
+from media_calendar.models.discovery_decision_log_entry import (
+    DiscoveryDecisionLogEntry,
+)
 from media_calendar.models.discovery_promotion_batch import DiscoveryPromotionBatch
 from media_calendar.models.discovery_promotion_decision import (
     DiscoveryPromotionDecision,
@@ -23,7 +26,16 @@ from media_calendar.models.notification_composer_output import (
 )
 from media_calendar.models.notification_item import NotificationItem
 from media_calendar.models.notification_log import NotificationLog
+from media_calendar.models.source_coverage_report import (
+    SourceCoverageGapSummary,
+    SourceCoverageReport,
+    SourceCoverageSourceSummary,
+)
 from media_calendar.models.source_fetch_result import SourceFetchResult
+from media_calendar.models.source_freshness_report import (
+    SourceFreshnessEntry,
+    SourceFreshnessReport,
+)
 from media_calendar.models.source_registry_entry import SourceRegistryEntry
 from media_calendar.models.source_snapshot_result import SourceSnapshotResult
 
@@ -37,13 +49,19 @@ __all__ = [
     "DiscoveryCandidateBatch",
     "DiscoveryCandidateComparison",
     "DiscoveryCandidateComparisonBatch",
+    "DiscoveryDecisionLogEntry",
     "DiscoveryPromotionBatch",
     "DiscoveryPromotionDecision",
     "NotificationComposerInput",
     "NotificationComposerOutput",
     "NotificationItem",
     "NotificationLog",
+    "SourceCoverageGapSummary",
+    "SourceCoverageReport",
+    "SourceCoverageSourceSummary",
     "SourceFetchResult",
+    "SourceFreshnessEntry",
+    "SourceFreshnessReport",
     "SourceRegistryEntry",
     "SourceSnapshotResult",
 ]

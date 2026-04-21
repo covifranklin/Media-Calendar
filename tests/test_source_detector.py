@@ -60,6 +60,7 @@ def test_detect_candidates_returns_new_opportunity_with_date():
     assert candidate.candidate_type == "new_opportunity"
     assert candidate.detected_deadline_text == "June 1, 2026"
     assert candidate.organization == "Example Festival"
+    assert candidate.name == "Festival"
 
 
 def test_detect_candidates_returns_update_signal_when_deadline_extended():
@@ -92,6 +93,7 @@ def test_detect_candidates_returns_update_signal_when_deadline_extended():
     assert candidate.candidate_type == "update_signal"
     assert candidate.category == "industry_forum"
     assert candidate.detected_deadline_text == "March 15, 2026"
+    assert candidate.name == "Co-Pro Pitching Sessions"
 
 
 def test_detect_candidates_returns_empty_batch_for_failed_fetch():
@@ -119,6 +121,147 @@ def test_detect_candidates_deduplicates_repeated_signals():
     batch = detect_candidates(snapshot_result, source_entry)
 
     assert len(batch.candidates) == 1
+
+
+def test_detect_candidates_uses_heading_when_deadline_is_on_adjacent_line():
+    source_entry = build_source_entry().model_copy(
+        update={
+            "organization": "Example Labs",
+            "program_name": "Artist Opportunities",
+            "source_url": "https://example.com/labs",
+            "source_type": "lab",
+            "deadline_categories": ["lab_application"],
+        }
+    )
+    snapshot_result = build_snapshot_result(
+        source_id=source_entry.id,
+        extracted_text=(
+            "Documentary Lab 2026\n"
+            "Applications open now\n"
+            "Deadline: June 1, 2026"
+        ),
+    ).model_copy(
+        update={
+            "organization": source_entry.organization,
+            "program_name": source_entry.program_name,
+            "source_url": source_entry.source_url,
+        }
+    )
+
+    batch = detect_candidates(snapshot_result, source_entry)
+
+    assert len(batch.candidates) == 1
+    candidate = batch.candidates[0]
+    assert candidate.name == "Documentary Lab 2026"
+    assert candidate.detected_deadline_text == "June 1, 2026"
+
+
+def test_detect_candidates_extracts_early_deadline_and_event_range():
+    source_entry = build_source_entry().model_copy(
+        update={
+            "organization": "Example Market",
+            "program_name": "MeetMarket",
+            "source_url": "https://example.com/meetmarket",
+            "source_type": "market",
+            "deadline_categories": ["industry_forum"],
+        }
+    )
+    snapshot_result = build_snapshot_result(
+        source_id=source_entry.id,
+        extracted_text=(
+            "MeetMarket 2026\n"
+            "Early deadline: May 10, 2026\n"
+            "Final deadline: June 1, 2026\n"
+            "Event dates: October 10-13, 2026"
+        ),
+    ).model_copy(
+        update={
+            "organization": source_entry.organization,
+            "program_name": source_entry.program_name,
+            "source_url": source_entry.source_url,
+        }
+    )
+
+    batch = detect_candidates(snapshot_result, source_entry)
+
+    assert len(batch.candidates) == 1
+    candidate = batch.candidates[0]
+    assert candidate.name == "MeetMarket 2026"
+    assert candidate.detected_early_deadline_text == "May 10, 2026"
+    assert candidate.detected_deadline_text == "June 1, 2026"
+    assert candidate.detected_event_date_text == "October 10-13, 2026"
+
+
+def test_detect_candidates_detects_revised_deadline_wording_as_update_signal():
+    source_entry = build_source_entry().model_copy(
+        update={
+            "organization": "Example Fellowship",
+            "program_name": "Fellows Program",
+            "source_url": "https://example.com/fellows",
+            "source_type": "fellowship",
+            "deadline_categories": ["fellowship"],
+        }
+    )
+    snapshot_result = build_snapshot_result(
+        source_id=source_entry.id,
+        extracted_text=(
+            "Fellows Program 2026\n"
+            "Applications reopened with revised deadline: April 2, 2026"
+        ),
+    ).model_copy(
+        update={
+            "organization": source_entry.organization,
+            "program_name": source_entry.program_name,
+            "source_url": source_entry.source_url,
+        }
+    )
+
+    batch = detect_candidates(snapshot_result, source_entry)
+
+    assert len(batch.candidates) == 1
+    candidate = batch.candidates[0]
+    assert candidate.candidate_type == "update_signal"
+    assert candidate.detected_deadline_text == "April 2, 2026"
+
+
+def test_detect_candidates_handles_realistic_high_value_market_fixture():
+    source_entry = build_source_entry().model_copy(
+        update={
+            "organization": "Sheffield DocFest",
+            "program_name": "MeetMarket",
+            "source_url": "https://example.com/sheffield-meetmarket",
+            "source_type": "market",
+            "deadline_categories": ["industry_forum"],
+        }
+    )
+    snapshot_result = build_snapshot_result(
+        source_id=source_entry.id,
+        extracted_text=(
+            "MeetMarket\n"
+            "Sheffield DocFest 2026\n"
+            "Applications open now for documentary projects seeking "
+            "financiers, broadcasters, and partners.\n"
+            "Early deadline: November 20, 2025\n"
+            "Final deadline: December 12, 2025\n"
+            "Event dates: June 18-23, 2026"
+        ),
+    ).model_copy(
+        update={
+            "organization": source_entry.organization,
+            "program_name": source_entry.program_name,
+            "source_url": source_entry.source_url,
+        }
+    )
+
+    batch = detect_candidates(snapshot_result, source_entry)
+
+    assert len(batch.candidates) == 1
+    candidate = batch.candidates[0]
+    assert candidate.name == "MeetMarket"
+    assert candidate.detected_early_deadline_text == "November 20, 2025"
+    assert candidate.detected_deadline_text == "December 12, 2025"
+    assert candidate.detected_event_date_text == "June 18-23, 2026"
+    assert candidate.category == "industry_forum"
 
 
 def test_detect_candidate_batches_matches_snapshots_by_source_id():
