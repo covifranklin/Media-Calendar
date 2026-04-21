@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections import defaultdict
 from pathlib import Path
 from typing import Iterable, List, Sequence
 
@@ -50,6 +51,45 @@ def load_deadlines(deadline_files: Sequence[Path]) -> List[Deadline]:
 
     deadlines.sort(key=lambda item: (item.deadline_date, item.name.lower()))
     return deadlines
+
+
+def write_deadlines(
+    deadlines: Sequence[Deadline],
+    *,
+    root: Path,
+    output_dir: str | Path | None = None,
+) -> List[Path]:
+    """Write deadlines back to year-based YAML files deterministically."""
+
+    yaml = import_yaml()
+    target_dir = (
+        Path(output_dir)
+        if output_dir is not None and Path(output_dir).is_absolute()
+        else root / (Path(output_dir) if output_dir is not None else DEFAULT_DATA_DIR)
+    )
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    grouped: dict[int, List[Deadline]] = defaultdict(list)
+    for deadline in deadlines:
+        grouped[deadline.year].append(deadline)
+
+    written_paths: List[Path] = []
+    for year in sorted(grouped):
+        path = target_dir / f"{year}.yaml"
+        records = [
+            deadline.model_dump(mode="json")
+            for deadline in sorted(
+                grouped[year],
+                key=lambda item: (item.deadline_date, item.name.lower()),
+            )
+        ]
+        path.write_text(
+            yaml.safe_dump(records, sort_keys=False, allow_unicode=False),
+            encoding="utf-8",
+        )
+        written_paths.append(path)
+
+    return written_paths
 
 
 def import_yaml():

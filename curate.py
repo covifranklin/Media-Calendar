@@ -5,7 +5,6 @@ from __future__ import annotations
 import argparse
 import sys
 from datetime import date
-from html.parser import HTMLParser
 from pathlib import Path
 from urllib.request import Request, urlopen
 
@@ -16,31 +15,6 @@ SRC_PATH = PROJECT_ROOT / "src"
 def _ensure_src_path() -> None:
     if str(SRC_PATH) not in sys.path:
         sys.path.insert(0, str(SRC_PATH))
-
-
-class _HTMLTextExtractor(HTMLParser):
-    def __init__(self) -> None:
-        super().__init__()
-        self._parts: list[str] = []
-        self._ignore_depth = 0
-
-    def handle_starttag(self, tag, attrs):
-        if tag in {"script", "style"}:
-            self._ignore_depth += 1
-
-    def handle_endtag(self, tag):
-        if tag in {"script", "style"} and self._ignore_depth:
-            self._ignore_depth -= 1
-
-    def handle_data(self, data):
-        if self._ignore_depth:
-            return
-        text = " ".join(data.split())
-        if text:
-            self._parts.append(text)
-
-    def get_text(self) -> str:
-        return "\n".join(self._parts)
 
 
 def main() -> int:
@@ -119,6 +93,9 @@ def main() -> int:
 
 
 def _fetch_page_text(url: str) -> str:
+    _ensure_src_path()
+    from media_calendar.components import extract_source_text
+
     request = Request(
         url,
         headers={
@@ -126,12 +103,11 @@ def _fetch_page_text(url: str) -> str:
         },
     )
     with urlopen(request, timeout=20) as response:
-        content_type = response.headers.get_content_charset() or "utf-8"
-        html = response.read().decode(content_type, errors="replace")
+        charset = response.headers.get_content_charset() or "utf-8"
+        content_type = response.headers.get("Content-Type")
+        html = response.read().decode(charset, errors="replace")
 
-    extractor = _HTMLTextExtractor()
-    extractor.feed(html)
-    return extractor.get_text()
+    return extract_source_text(html, content_type=content_type)
 
 
 if __name__ == "__main__":

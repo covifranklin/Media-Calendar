@@ -1,0 +1,310 @@
+"""Deterministic discovery candidate detection from source snapshots."""
+
+from __future__ import annotations
+
+import re
+from typing import Iterable, List, Sequence
+from uuid import UUID, uuid5
+
+from media_calendar.models import (
+    DiscoveryCandidate,
+    DiscoveryCandidateBatch,
+    SourceRegistryEntry,
+    SourceSnapshotResult,
+)
+
+_CANDIDATE_NAMESPACE = UUID("b76566c9-6ca0-4a73-8c30-ccbc541483da")
+
+_DATE_PATTERNS = [
+    re.compile(
+        r"\b(?:deadline|early deadline|extended deadline|submissions open|"
+        r"applications open|deadline to apply)\b[:\s-]*"
+        r"([A-Z][a-z]+ \d{1,2}, \d{4})",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        r"\b(?:deadline|early deadline|extended deadline|submissions open|"
+        r"applications open|deadline to apply)\b[:\s-]*"
+        r"(\d{1,2} [A-Z][a-z]+ \d{4})",
+        re.IGNORECASE,
+    ),
+    re.compile(r"\b([A-Z][a-z]+ \d{1,2}, \d{4})\b"),
+    re.compile(r"\b(\d{1,2} [A-Z][a-z]+ \d{4})\b"),
+    re.compile(r"\b(\d{1,2}/\d{1,2}/\d{2,4})\b"),
+]
+
+_EVENT_DATE_PATTERNS = [
+    re.compile(r"\b([A-Z][a-z]+ \d{1,2}\s+to\s+\d{1,2}, \d{4})\b"),
+    re.compile(r"\b([A-Z][a-z]+ \d{1,2}\s*-\s*\d{1,2}, \d{4})\b"),
+]
+
+_OPEN_CALL_RE = re.compile(
+    r"\b(open call|call for applications|applications open|submissions open|"
+    r"submit|deadline|deadline to apply|apply now|register now|pitching sessions|"
+    r"grant|fund|lab|fellowship|market|forum)\b",
+    re.IGNORECASE,
+)
+
+_UPDATE_SIGNAL_RE = re.compile(
+    r"\b(deadline extended|extended deadline|new deadline|applications reopened|"
+    r"submissions reopened|updated deadline)\b",
+    re.IGNORECASE,
+)
+
+_CATEGORY_KEYWORDS = {
+    "festival_submission": re.compile(
+        r"\b(festival|submit your film|submissions|filmfreeway|eventival)\b",
+        re.IGNORECASE,
+    ),
+    "funding_round": re.compile(
+        r"\b(fund|grant|funding|award|financing)\b",
+        re.IGNORECASE,
+    ),
+    "lab_application": re.compile(
+        r"\b(lab|residency|intensive|workshop|program)\b",
+        re.IGNORECASE,
+    ),
+    "fellowship": re.compile(
+        r"\b(fellowship|fellows|fellow)\b",
+        re.IGNORECASE,
+    ),
+    "industry_forum": re.compile(
+        r"\b(forum|market|pitching|co-production|co-pro|industry)\b",
+        re.IGNORECASE,
+    ),
+}
+
+
+def detect_candidates(
+    snapshot_result: SourceSnapshotResult,
+    source_entry: SourceRegistryEntry,
+) -> DiscoveryCandidateBatch:
+    """Detect likely opportunity candidates from one source snapshot."""
+
+    if snapshot_result.status != "success":
+        return DiscoveryCandidateBatch(
+            source_id=str(source_entry.id),
+            source_url=source_entry.source_url,
+            organization=source_entry.organization,
+            program_name=source_entry.program_name,
+            candidates=[],
+            notes="No candidates generated because the source fetch did not succeed.",
+        )
+
+    extracted_text = (snapshot_result.extracted_text or "").strip()
+    if not extracted_text:
+        return DiscoveryCandidateBatch(
+            source_id=str(source_entry.id),
+            source_url=source_entry.source_url,
+            organization=source_entry.organization,
+            program_name=source_entry.program_name,
+            candidates=[],
+            notes="No candidates generated because the extracted source text was empty.",
+        )
+
+    candidates = _detect_from_text(
+        extracted_text,
+        source_entry=source_entry,
+    )
+    notes = (
+        f"Detected {len(candidates)} deterministic candidate(s) from extracted text."
+        if candidates
+        else "No strong deterministic opportunity signals were found."
+    )
+    return DiscoveryCandidateBatch(
+        source_id=str(source_entry.id),
+        source_url=source_entry.source_url,
+        organization=source_entry.organization,
+        program_name=source_entry.program_name,
+        candidates=candidates,
+        notes=notes,
+    )
+
+
+def detect_candidate_batches(
+    snapshot_results: Sequence[SourceSnapshotResult],
+    source_entries: Sequence[SourceRegistryEntry],
+) -> List[DiscoveryCandidateBatch]:
+    """Detect candidates for multiple source snapshots matched by source id."""
+
+    by_source_id = {entry.id: entry for entry in source_entries}
+    batches: List[DiscoveryCandidateBatch] = []
+
+    for snapshot_result in snapshot_results:
+        source_entry = by_source_id.get(snapshot_result.source_id)
+        if source_entry is None:
+            continue
+        batches.append(detect_candidates(snapshot_result, source_entry))
+
+    return batches
+
+
+def _detect_from_text(
+    extracted_text: str,
+    *,
+    source_entry: SourceRegistryEntry,
+) -> List[DiscoveryCandidate]:
+    lines = [line.strip() for line in extracted_text.splitlines() if line.strip()]
+    candidates: List[DiscoveryCandidate] = []
+    seen_keys: set[str] = set()
+
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        next_line = lines[index + 1] if index + 1 < len(lines) else None
+
+        combined_excerpt = " ".join(
+            part for part in [line, next_line] if part is not None
+        )
+        if next_line is not None and _is_candidate_excerpt(combined_excerpt):
+            _append_candidate_from_excerpt(
+                combined_excerpt,
+                source_entry=source_entry,
+                candidates=candidates,
+                seen_keys=seen_keys,
+            )
+            index += 2
+            continue
+
+        _append_candidate_from_excerpt(
+            line,
+            source_entry=source_entry,
+            candidates=candidates,
+            seen_keys=seen_keys,
+        )
+        index += 1
+
+    return candidates
+
+
+def _is_candidate_excerpt(excerpt: str) -> bool:
+    if not _OPEN_CALL_RE.search(excerpt):
+        return False
+
+    date_text = _first_match(_DATE_PATTERNS, excerpt)
+    event_date_text = _first_match(_EVENT_DATE_PATTERNS, excerpt)
+    return (
+        date_text is not None
+        or event_date_text is not None
+        or bool(_UPDATE_SIGNAL_RE.search(excerpt))
+    )
+
+
+def _append_candidate_from_excerpt(
+    excerpt: str,
+    *,
+    source_entry: SourceRegistryEntry,
+    candidates: List[DiscoveryCandidate],
+    seen_keys: set[str],
+) -> bool:
+    if not _is_candidate_excerpt(excerpt):
+        return False
+
+    date_text = _first_match(_DATE_PATTERNS, excerpt)
+    event_date_text = _first_match(_EVENT_DATE_PATTERNS, excerpt)
+    candidate_type = (
+        "update_signal" if _UPDATE_SIGNAL_RE.search(excerpt) else "new_opportunity"
+    )
+    category = _infer_category(excerpt, source_entry)
+    name = _infer_name(excerpt, source_entry)
+    key = (
+        f"{candidate_type}|{category}|{name.lower()}|"
+        f"{date_text or ''}|{event_date_text or ''}"
+    )
+    if key in seen_keys:
+        return False
+    seen_keys.add(key)
+
+    confidence = 0.8 if date_text else 0.66
+    if candidate_type == "update_signal":
+        confidence = max(confidence, 0.72)
+
+    candidates.append(
+        DiscoveryCandidate(
+            id=uuid5(_CANDIDATE_NAMESPACE, key),
+            source_id=source_entry.id,
+            source_url=source_entry.source_url,
+            organization=source_entry.organization,
+            name=name,
+            category=category,
+            candidate_type=candidate_type,
+            confidence=confidence,
+            rationale=_build_rationale(
+                candidate_type,
+                category,
+                date_text,
+                event_date_text,
+            ),
+            detected_deadline_text=date_text,
+            detected_event_date_text=event_date_text,
+            eligibility_notes=source_entry.notes,
+            regions=list(source_entry.regions),
+            tags=_build_tags(source_entry, category, candidate_type),
+            raw_excerpt=excerpt,
+        )
+    )
+    return True
+
+
+def _first_match(
+    patterns: Iterable[re.Pattern[str]],
+    text: str,
+) -> str | None:
+    for pattern in patterns:
+        match = pattern.search(text)
+        if match:
+            return match.group(1).strip()
+    return None
+
+
+def _infer_category(excerpt: str, source_entry: SourceRegistryEntry):
+    for category, pattern in _CATEGORY_KEYWORDS.items():
+        if pattern.search(excerpt):
+            return category
+    return source_entry.deadline_categories[0]
+
+
+def _infer_name(excerpt: str, source_entry: SourceRegistryEntry) -> str:
+    cleaned = re.sub(r"\s+", " ", excerpt).strip()
+    cleaned = re.sub(
+        r"\b(deadline to apply|applications open|submissions open|open call|"
+        r"apply now|register now|deadline|extended deadline)\b[:\s-]*.*$",
+        "",
+        cleaned,
+        flags=re.IGNORECASE,
+    ).strip(" :-")
+
+    if cleaned and len(cleaned.split()) <= 12:
+        return cleaned
+    return f"{source_entry.organization} - {source_entry.program_name}"
+
+
+def _build_rationale(
+    candidate_type: str,
+    category: str,
+    date_text: str | None,
+    event_date_text: str | None,
+) -> str:
+    parts = [
+        f"Deterministic detection found a {candidate_type.replace('_', ' ')}",
+        f"for category {category}.",
+    ]
+    if date_text:
+        parts.append(f"Detected date text: {date_text}.")
+    if event_date_text:
+        parts.append(f"Detected event date text: {event_date_text}.")
+    return " ".join(parts)
+
+
+def _build_tags(
+    source_entry: SourceRegistryEntry,
+    category: str,
+    candidate_type: str,
+) -> List[str]:
+    tags = [
+        source_entry.source_type,
+        source_entry.coverage_priority,
+        category,
+        candidate_type,
+    ]
+    return list(dict.fromkeys(tags))
