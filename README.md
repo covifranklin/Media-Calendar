@@ -2,12 +2,28 @@
 
 Media Calendar is a small Python project for tracking deadline data, generating a static HTML calendar, and running AI-assisted annual curation and notification workflows.
 
+## Operator Guide
+
+If you are running the product in day-to-day use and do not want to inspect the codebase, start here:
+
+- [Operations Guide](docs/operations-guide.md)
+
+The operations guide covers:
+
+- what runs weekly
+- what files update automatically
+- where the public calendar lives
+- where discovery reports live
+- which GitHub secrets are required
+- how to run workflows manually
+- what to check when something fails
+
 ## What works today
 
 - Pydantic v2 models for deadlines, notifications, and curation logs
 - `notification_composer` and `data_curation_agent` agent implementations
 - deterministic static calendar generation
-- automated source discovery refresh with conservative auto-promotion
+- automated source discovery refresh with autonomy-first auto-promotion
 - orchestration steps for notifications, data curation, and calendar generation
 - Resend API-backed notification sending
 - GitHub Actions for tests, GitHub Pages deployment, weekly discovery refresh, weekly notifications, and manual curation
@@ -45,7 +61,7 @@ python -m venv .venv
 
 ```bash
 python -m pip install --upgrade pip
-python -m pip install -e .
+python -m pip install -e ".[dev]"
 ```
 
 4. Copy the example environment file and fill in your secrets:
@@ -83,10 +99,10 @@ You can then open the file in a browser.
 
 ## Run the automated discovery refresh locally
 
-This workflow fetches the monitored official sources, detects likely
+This workflow fetches monitored official sources, detects likely
 opportunities, compares them with the existing deadline database, auto-promotes
-only high-confidence results, writes updated YAML, and regenerates the
-calendar.
+matches with autonomy-first thresholds, writes reports, and can write updated
+deadline YAML and regenerate the calendar.
 
 Deterministic-only mode:
 
@@ -100,6 +116,12 @@ Automatic LLM mode when `OPENAI_API_KEY` is available:
 python discover.py
 ```
 
+Autonomous publish mode:
+
+```bash
+python discover.py --mode apply
+```
+
 This writes:
 
 - `data/deadlines/<year>.yaml` when you pass `--mode apply`
@@ -111,16 +133,10 @@ This writes:
 - `build/source-freshness.md`
 - `build/calendar.html`
 
-Safer weekly preview mode:
+Preview-only mode:
 
 ```bash
 python discover.py --mode dry-run --llm-mode off
-```
-
-Explicit apply mode:
-
-```bash
-python discover.py --mode apply
 ```
 
 To generate a source coverage snapshot separately:
@@ -205,11 +221,13 @@ The repo now includes four workflows:
 1. `.github/workflows/ci.yml`
    Runs `pytest` on pull requests and pushes, generates `build/calendar.html` on pushes to `main`, and deploys it to GitHub Pages.
 2. `.github/workflows/discovery-refresh.yml`
-   Runs weekly in safe dry-run mode to fetch monitored sources and upload monitoring artifacts, including coverage, source freshness, discovery refresh, and discovery metrics reports. Manual runs can switch to apply mode to write and commit `data/deadlines/*.yaml`.
+   Runs weekly in `apply` mode so discovered deadline updates are committed back to `main` automatically. It also uploads monitoring artifacts, including coverage, source freshness, discovery refresh, and discovery metrics reports. Manual runs can still switch to `dry-run` if you want a preview.
 3. `.github/workflows/notifications.yml`
    Runs weekly on Mondays and can also be started manually to compose/send notifications.
 4. `.github/workflows/curation.yml`
    Runs manually for a chosen year and uploads curation reports as workflow artifacts.
+
+For non-technical day-to-day use, see [docs/operations-guide.md](docs/operations-guide.md).
 
 ### GitHub secrets to configure
 
@@ -244,6 +262,7 @@ Each deadline YAML entry should match the `Deadline` model. The included sample 
 ## Current limitations
 
 - The curation CLI fetches page text directly from source URLs and depends on a valid OpenAI key.
-- The weekly discovery refresh is conservative by design and rejects uncertain candidates instead of queueing them for human review.
+- The weekly discovery refresh now favors autonomy, so a small number of low-quality or incorrect promotions are more likely than before.
+- The notification workflow depends on working Resend credentials and sender setup before live email sending will succeed.
 - The weekly notification flow sends one email per notification bucket, not one email per deadline.
 - The default `onboarding@resend.dev` sender is useful for testing, but for a polished production setup you will likely want a verified domain in Resend.

@@ -8,11 +8,11 @@ on:
       mode:
         description: "Discovery refresh mode"
         required: false
-        default: "dry-run"
+        default: "apply"
         type: choice
         options:
-          - dry-run
           - apply
+          - dry-run
       llm_mode:
         description: "Discovery LLM mode"
         required: false
@@ -30,7 +30,7 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     env:
-      DISCOVERY_MODE: ${{ github.event.inputs.mode || 'dry-run' }}
+      DISCOVERY_MODE: ${{ github.event.inputs.mode || 'apply' }}
       DISCOVERY_LLM_MODE: ${{ github.event.inputs.llm_mode || 'auto' }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     steps:
@@ -55,6 +55,7 @@ jobs:
           python discover.py --mode "${DISCOVERY_MODE}" --llm-mode "${DISCOVERY_LLM_MODE}"
 
       - name: Upload refresh artifacts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: discovery-monitoring-artifacts

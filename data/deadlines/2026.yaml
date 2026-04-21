@@ -1,34 +1,462 @@
-- id: "11111111-1111-4111-8111-111111111111"
-  name: "Example Fellowship"
-  category: "fellowship"
-  organization: "Example Arts"
-  url: "https://example.com/fellowship"
-  deadline_date: 2026-07-15
-  early_deadline_date:
-  event_start_date: 2026-09-01
-  event_end_date: 2026-09-10
-  description: "Annual fellowship for emerging creators."
-  eligibility_notes: "Open to first- and second-time applicants."
-  notification_windows: [30, 14, 3]
-  status: "confirmed"
-  last_verified_date: 2026-04-20
-  source_url: "https://example.com/fellowship"
-  tags: ["artists", "development"]
+- id: 898431f2-1682-5438-bde8-f9d148339bbb
+  name: Berlinale Co-Production Market 2026
+  category: funding_round
+  organization: Berlinale / European Film Market
+  url: https://www.efm-berlinale.de/en/copro-market/coproduction-market.html
+  deadline_date: '2026-02-14'
+  early_deadline_date: null
+  event_start_date: '2026-02-14'
+  event_end_date: '2026-02-17'
+  description: At the 23rd edition of the Berlinale Co-Production Market (February
+    14 to 17, 2026)...
+  eligibility_notes: Top-tier co-production market for feature film and drama series
+    projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.efm-berlinale.de/en/copro-market/coproduction-market.html
+  tags:
+  - market
+  - must_have
+  - funding_round
+  - new_opportunity
   year: 2026
-- id: "22222222-2222-4222-8222-222222222222"
-  name: "Documentary Lab"
-  category: "lab_application"
-  organization: "Doc Lab"
-  url: "https://example.com/lab"
-  deadline_date: 2026-03-10
-  early_deadline_date:
-  event_start_date:
-  event_end_date:
-  description: "Applications close in March for the annual documentary lab."
-  eligibility_notes:
-  notification_windows: [30, 14, 3]
-  status: "tentative"
-  last_verified_date: 2026-04-20
-  source_url: "https://example.com/lab"
-  tags: ["lab", "documentary"]
+- id: 11238335-181b-5f07-8b50-3b1a16a63897
+  name: Documentary Producing Lab 2026
+  category: lab_application
+  organization: Film Independent
+  url: https://www.filmindependent.org/programs/applications/
+  deadline_date: '2026-03-09'
+  early_deadline_date: '2026-05-04'
+  event_start_date: null
+  event_end_date: null
+  description: 'Applications Open: March 9, 2026 Non-Member Deadline: May 4, 2026
+    Film Independent Member Extended Deadline: May 18, 2026'
+  eligibility_notes: Open to members and non-members with varying deadlines.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.filmindependent.org/programs/applications/
+  tags:
+  - lab
+  - high
+  - lab_application
+  - new_opportunity
+  year: 2026
+- id: ea90cbce-4081-51f5-8b9e-4cec8dbd58bb
+  name: Fiction Producing Lab 2026
+  category: lab_application
+  organization: Film Independent
+  url: https://www.filmindependent.org/programs/applications/
+  deadline_date: '2026-03-09'
+  early_deadline_date: '2026-05-04'
+  event_start_date: null
+  event_end_date: null
+  description: 'Fiction Producing Lab 2026 Applications open: March 9, 2026 Non-Member
+    Deadline: May 4, 2026'
+  eligibility_notes: Open for both members and non-members with specific deadlines.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.filmindependent.org/programs/applications/
+  tags:
+  - lab
+  - high
+  - lab_application
+  - new_opportunity
+  year: 2026
+- id: 22222222-2222-4222-8222-222222222222
+  name: Documentary Lab
+  category: lab_application
+  organization: Doc Lab
+  url: https://example.com/lab
+  deadline_date: '2026-03-10'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Applications close in March for the annual documentary lab.
+  eligibility_notes: null
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: tentative
+  last_verified_date: '2026-04-20'
+  source_url: https://example.com/lab
+  tags:
+  - lab
+  - documentary
+  year: 2026
+- id: 1d3ca407-4d95-56a0-b311-6d4bfd3ea9bd
+  name: SXSW Film & TV Festival & Conference
+  category: industry_forum
+  organization: SXSW Film & TV Festival
+  url: https://www.sxsw.com/conference/film-and-tv-industry/
+  deadline_date: '2026-03-12'
+  early_deadline_date: null
+  event_start_date: '2026-03-12'
+  event_end_date: '2026-03-18'
+  description: SXSW Film & TV Festival & Conference provides an opportunity for film
+    and tv professionals at every level to participate, network, and advance their
+    careers. From March 12-18, explore festival and conference programming including
+    screenings, Keynotes and Featured Sessions, panels, workshops, and more.
+  eligibility_notes: Open to film and TV professionals at every level.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.sxsw.com/conference/film-and-tv-industry/
+  tags:
+  - festival
+  - networking
+  - workshops
+  year: 2026
+- id: 826ceec2-f3a7-5a01-88b5-6827b1215028
+  name: TFL Audience Design Fund 2026
+  category: funding_round
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-04-07'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: OPEN CALLS & SELECTIONS TorinoFilmLab unveils the 2 films selected
+    for the TFL Audience Design Fund 2026
+  eligibility_notes: International co-productions and projects nearing completion
+    are eligible.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - funding_round
+  - new_opportunity
+  year: 2026
+- id: ca812e8b-3335-5a4c-8966-2be2749c8537
+  name: Fast Track 2026
+  category: lab_application
+  organization: Film Independent
+  url: https://www.filmindependent.org/programs/applications/
+  deadline_date: '2026-04-13'
+  early_deadline_date: '2026-06-08'
+  event_start_date: null
+  event_end_date: null
+  description: 'Applications open: April 13, 2026 Non-Member Deadline: June 8, 2026'
+  eligibility_notes: Open to members and non-members with deadlines outlined.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.filmindependent.org/programs/applications/
+  tags:
+  - lab
+  - high
+  - lab_application
+  - new_opportunity
+  year: 2026
+- id: c6280106-f4a7-5128-a835-d4b66a812962
+  name: Reframing audiovisual landscapes
+  category: funding_round
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-04-14'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Reframing audiovisual landscapes TorinoFilmLab is an international
+    audiovisual lab supporting talents from all over the world through training, development,
+    funding and networking activities.
+  eligibility_notes: Open to international talents focusing on feature films and series,
+    with support for co-productions.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - funding_round
+  - new_opportunity
+  year: 2026
+- id: acf59650-5a4f-5fc0-a199-41229c606c43
+  name: Skoll World Forum 2026
+  category: industry_forum
+  organization: Skoll Foundation
+  url: https://skoll.org/skoll-world-forum/
+  deadline_date: '2026-04-20'
+  early_deadline_date: null
+  event_start_date: '2026-04-21'
+  event_end_date: '2026-04-24'
+  description: "The next Skoll World Forum will take place April 21\u201324, 2026.\
+    \ Join us to learn and collaborate with innovative leaders from across the globe."
+  eligibility_notes: Attendance is curated, but free virtual participation is open
+    to everyone.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://skoll.org/skoll-world-forum/
+  tags:
+  - social impact
+  - documentary
+  - storytelling
+  year: 2026
+- id: f5fba84f-addd-5b34-828d-81c07b4ad600
+  name: "Visions du R\xE9el 2026 Group Attendance: Meet the Producers"
+  category: funding_round
+  organization: BFI Doc Society Fund
+  url: https://bfi.docsociety.org/
+  deadline_date: '2026-04-23'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "We are delighted to introduce the five UK-based producers selected\
+    \ for a Group Attendance to Visions du R\xE9el (Nyon, Switzerland) from 19\u2013\
+    23 April 2026, supported by the BFI Doc Society Fund and the BFI National Lottery\
+    \ International Connections Fund."
+  eligibility_notes: Five UK-based producers selected through a UK-wide call for applications.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://bfi.docsociety.org/
+  tags:
+  - fund
+  - must_have
+  - funding_round
+  - networking
+  - international
+  - producers
+  - new_opportunity
+  year: 2026
+- id: e1f7ce2b-c654-5f45-8616-628ac75f350b
+  name: Hot Docs Forum
+  category: industry_forum
+  organization: Hot Docs
+  url: https://hotdocs.ca/industry/conference/hot-docs-forum
+  deadline_date: '2026-04-27'
+  early_deadline_date: null
+  event_start_date: '2026-04-27'
+  event_end_date: '2026-04-27'
+  description: Pitch at North America's most effective international documentary market.
+    Applications for 2026 Hot Docs Forum & Deal Maker are closed.
+  eligibility_notes: Projects selected include those in regular or rough cut categories,
+    with the necessity of having a Trigger Financier.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://hotdocs.ca/industry/conference/hot-docs-forum
+  tags:
+  - forum
+  - pitching
+  - financing
+  - new_opportunity
+  year: 2026
+- id: 6f3b5496-bfc5-5159-92be-8346743f1d80
+  name: Hot Docs Festival
+  category: festival_submission
+  organization: Hot Docs
+  url: https://hotdocs.ca/industry/conference/hot-docs-forum
+  deadline_date: '2026-05-03'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 115 films from 51 countries will screen at Hot Docs Festival April
+    23 to May 3, 2026.
+  eligibility_notes: Top-tier documentary pitching and financing forum within the
+    Hot Docs industry programme.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://hotdocs.ca/industry/conference/hot-docs-forum
+  tags:
+  - market
+  - must_have
+  - festival_submission
+  - new_opportunity
+  year: 2026
+- id: 3c968059-c8da-5cae-8900-5ddb4844b304
+  name: Join us in Cannes
+  category: industry_forum
+  organization: Festival de Cannes
+  url: https://www.marchedufilm.com/
+  deadline_date: '2026-05-20'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'The heart of the film industry Join us in Cannes, from 12 to 20 May
+    2026! > Watch the #MDF26 trailer! Register Now'
+  eligibility_notes: Core Cannes market and accreditation source for attendance, networking,
+    screenings, and business opportunities.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.marchedufilm.com/
+  tags:
+  - market
+  - must_have
+  - industry_forum
+  - new_opportunity
+  year: 2026
+- id: 92a04dda-1813-524d-8d4c-ed0e2dae9bd0
+  name: Organize a Conference
+  category: industry_forum
+  organization: Festival de Cannes
+  url: https://www.marchedufilm.com/
+  deadline_date: '2026-05-20'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "Organize a Conference > Close March\xE9 du Film 12-20 May 2026 Schedule\
+    \ Register Now"
+  eligibility_notes: Core Cannes market and accreditation source for attendance, networking,
+    screenings, and business opportunities.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.marchedufilm.com/
+  tags:
+  - market
+  - must_have
+  - industry_forum
+  - new_opportunity
+  year: 2026
+- id: 11111111-1111-4111-8111-111111111111
+  name: Example Fellowship
+  category: fellowship
+  organization: Example Arts
+  url: https://example.com/fellowship
+  deadline_date: '2026-07-15'
+  early_deadline_date: null
+  event_start_date: '2026-09-01'
+  event_end_date: '2026-09-10'
+  description: Annual fellowship for emerging creators.
+  eligibility_notes: Open to first- and second-time applicants.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-20'
+  source_url: https://example.com/fellowship
+  tags:
+  - artists
+  - development
+  year: 2026
+- id: a2c92f73-8bd0-5c91-8d7e-dc39b311b204
+  name: Venice Production Bridge Programs and Services
+  category: industry_forum
+  organization: Venice Biennale Cinema
+  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  deadline_date: '2026-07-30'
+  early_deadline_date: '2026-06-04'
+  event_start_date: null
+  event_end_date: null
+  description: On the occasion of the upcoming 83rd edition of the Venice International
+    Film Festival (2-12 September 2026), the Venice Production Bridge (3-9 September,
+    2026) will organize programmes such as the Venice Gap-Financing Market, the Book
+    Adaptation Rights Market, Final Cut in Venice, Meet the Streamers, and others.
+  eligibility_notes: Accreditation is reserved for film industry professionals and
+    those engaged in artistic or technical activities within the audiovisual sector.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  tags:
+  - industry_forum
+  - festival_submission
+  - networking
+  - funding_opportunity
+  year: 2026
+- id: 5268cca7-32dd-5c1a-8741-d2896641e5a1
+  name: MIPCOM CANNES - Practical Info Event
+  category: industry_forum
+  organization: MIPCOM CANNES
+  url: https://www.mipcom.com/
+  deadline_date: '2026-10-15'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Practical Info FAQ Networking with Participants Directory 12-15 October
+    2026 Palais des Festivals, Cannes, France The #1 Global Content Market'
+  eligibility_notes: Major international television and streaming content market spanning
+    buyers, creators, commissioners, and distributors.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.mipcom.com/
+  tags:
+  - market
+  - must_have
+  - industry_forum
+  - new_opportunity
+  year: 2026
+- id: a336400f-1818-5536-baef-398d6f2517d4
+  name: IDFA Forum 2026
+  category: industry_forum
+  organization: IDFA
+  url: https://professionals.idfa.nl/markets/co-producing-co-financing/about-idfa-forum/
+  deadline_date: '2026-11-15'
+  early_deadline_date: null
+  event_start_date: '2026-11-15'
+  event_end_date: '2026-11-18'
+  description: "IDFA Forum takes place from November 15\u201318, 2026. The Forum showcases\
+    \ a dynamic and diverse slate of documentary projects from around the world."
+  eligibility_notes: Open to filmmakers, creators, producers, and industry representatives
+    working on documentary projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://professionals.idfa.nl/markets/co-producing-co-financing/about-idfa-forum/
+  tags:
+  - documentary
+  - co-financing
+  - co-production
+  - networking
   year: 2026

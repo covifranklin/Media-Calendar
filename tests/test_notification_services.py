@@ -214,6 +214,54 @@ def test_dispatch_notification_queue_calls_resend_api(monkeypatch):
     assert payload["to"] == ["friend@example.com"]
     assert payload["subject"] == "Upcoming deadline"
     assert len(results) == 1
+    assert results[0].status == "sent"
+
+
+def test_dispatch_notification_queue_records_failed_send(monkeypatch):
+    def fake_send_email_via_resend(
+        *,
+        subject_line,
+        html_body,
+        plain_text_body,
+        recipient_email,
+        resend_settings,
+    ):
+        raise RuntimeError("resend unavailable")
+
+    monkeypatch.setattr(
+        "media_calendar.services.notifications._send_email_via_resend",
+        fake_send_email_via_resend,
+    )
+
+    deadline_id = str(uuid4())
+    queue = [
+        {
+            "notification_type": "upcoming_14d",
+            "deadline_ids": [deadline_id],
+            "email": {
+                "subject_line": "Upcoming deadline",
+                "html_body": "<p>Hello</p>",
+                "plain_text_body": "Hello",
+                "priority_level": "normal",
+            },
+        }
+    ]
+
+    results = dispatch_notification_queue(
+        queue,
+        recipient_email="friend@example.com",
+        resend_settings=load_resend_settings(
+            {
+                "RESEND_API_KEY": "re_test",
+                "RESEND_FROM_EMAIL": "onboarding@resend.dev",
+            }
+        ),
+        dry_run=False,
+    )
+
+    assert len(results) == 1
+    assert results[0].status == "failed"
+    assert results[0].logs[0].status == "failed"
 
 
 def test_dispatch_notification_queue_deduplicates_and_prioritizes_urgent_sends(

@@ -1,0 +1,25 @@
+- id: c371a3d4-9850-5fef-a641-48ead8b1a36d
+  name: Documentary Talent Fund 2024
+  category: funding_round
+  organization: Netflix
+  url: https://about.netflix.com/en/news/netflix-announces-winners-of-the-documentary-talent-fund
+  deadline_date: '2024-12-19'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Netflix Announces Winners of the Documentary Talent Fund - About Netflix
+    ...19 December 2024...
+  eligibility_notes: Netflix-backed documentary short funding and training opportunity
+    for emerging filmmakers in the UK and Ireland.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://about.netflix.com/en/news/netflix-announces-winners-of-the-documentary-talent-fund
+  tags:
+  - fellowship
+  - funding_round
+  - new_opportunity
+  year: 2024

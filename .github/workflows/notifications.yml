@@ -45,6 +45,7 @@ jobs:
           fi
 
       - name: Upload notification artifacts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: notification-artifacts

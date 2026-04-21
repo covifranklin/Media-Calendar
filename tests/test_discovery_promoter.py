@@ -198,9 +198,36 @@ def test_auto_promote_discovery_results_rejects_uncertain_items():
         current_date=date(2026, 4, 21),
     )
 
-    assert batch.rejected_uncertain_count == 2
+    assert batch.promoted_update_count == 1
+    assert batch.rejected_uncertain_count == 1
     assert [decision.action for decision in batch.decisions] == [
-        "rejected_uncertain",
+        "promoted_update",
         "rejected_uncertain",
     ]
-    assert batch.deadline_snapshot == [existing_deadline]
+    assert batch.deadline_snapshot[0].deadline_date == date(2026, 3, 10)
+
+
+def test_auto_promote_discovery_results_auto_applies_single_match_ambiguous_update():
+    existing_deadline = build_deadline(deadline_date=date(2026, 3, 10))
+    candidate = build_candidate(
+        candidate_type="update_signal",
+        confidence=0.74,
+        detected_deadline_text="April 8, 2026",
+        raw_excerpt="Updated application deadline: April 8, 2026.",
+    )
+    comparison = build_comparison(
+        candidate,
+        classification="ambiguous",
+        matched_deadline_ids=[existing_deadline.id],
+        match_score=0.75,
+    )
+
+    batch = auto_promote_discovery_results(
+        [comparison],
+        [existing_deadline],
+        current_date=date(2026, 4, 21),
+    )
+
+    assert batch.promoted_update_count == 1
+    assert batch.decisions[0].action == "promoted_update"
+    assert batch.deadline_snapshot[0].deadline_date == date(2026, 4, 8)

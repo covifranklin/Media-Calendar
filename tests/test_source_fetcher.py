@@ -1,10 +1,13 @@
 from __future__ import annotations
 
-from pathlib import Path
 from urllib.error import HTTPError, URLError
 from uuid import uuid4
 
-from media_calendar.components import fetch_registered_sources, fetch_source, fetch_sources
+from media_calendar.components import (
+    fetch_registered_sources,
+    fetch_source,
+    fetch_sources,
+)
 from media_calendar.models import SourceRegistryEntry
 
 

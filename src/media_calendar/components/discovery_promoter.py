@@ -20,10 +20,11 @@ _YEAR_RE = re.compile(r"\b(20\d{2})\b")
 _EVENT_RANGE_RE = re.compile(
     r"\b([A-Z][a-z]+) (\d{1,2})\s*(?:to|-)\s*(\d{1,2}), (\d{4})\b"
 )
-_NEW_CANDIDATE_CONFIDENCE_THRESHOLD = 0.8
-_UPDATE_CANDIDATE_CONFIDENCE_THRESHOLD = 0.8
-_UPDATE_MATCH_SCORE_THRESHOLD = 0.84
-_DUPLICATE_MATCH_SCORE_THRESHOLD = 0.85
+_NEW_CANDIDATE_CONFIDENCE_THRESHOLD = 0.72
+_UPDATE_CANDIDATE_CONFIDENCE_THRESHOLD = 0.7
+_UPDATE_MATCH_SCORE_THRESHOLD = 0.76
+_AUTO_APPLY_AMBIGUOUS_UPDATE_MATCH_SCORE_THRESHOLD = 0.72
+_DUPLICATE_MATCH_SCORE_THRESHOLD = 0.82
 _DEFAULT_NOTIFICATION_WINDOWS = [30, 14, 3]
 
 
@@ -33,13 +34,14 @@ def auto_promote_discovery_results(
     *,
     current_date: date,
 ) -> DiscoveryPromotionBatch:
-    """Apply a conservative automatic promotion policy to discovery results."""
+    """Apply an autonomy-first automatic promotion policy to discovery results."""
 
     deadline_map = {deadline.id: deadline for deadline in deadlines}
     decisions: List[DiscoveryPromotionDecision] = []
     notes = [
-        "Auto-promotion is conservative: uncertain items are rejected rather "
-        "than queued for human review."
+        "Auto-promotion favors autonomy: high-confidence candidates are "
+        "applied directly, and some single-target ambiguous updates are "
+        "promoted automatically when they include actionable dates."
     ]
 
     for comparison in comparisons:
@@ -103,10 +105,19 @@ def _apply_promotion_policy(
         )
 
     if comparison.classification == "ambiguous":
+        ambiguous_decision = _maybe_promote_ambiguous_update(
+            comparison,
+            deadline_map=deadline_map,
+            current_date=current_date,
+            parsed_fields=parsed_fields,
+        )
+        if ambiguous_decision is not None:
+            return ambiguous_decision
+
         return _reject_decision(
             comparison,
-            "Rejected because the candidate is ambiguous and the automation "
-            "policy does not promote uncertain items.",
+            "Rejected because the candidate remained too ambiguous for "
+            "automatic promotion.",
         )
 
     if comparison.classification == "likely_update":
@@ -189,6 +200,47 @@ def _apply_promotion_policy(
     return _reject_decision(
         comparison,
         "Rejected because the comparison classification was not recognized.",
+    )
+
+
+def _maybe_promote_ambiguous_update(
+    comparison: DiscoveryCandidateComparison,
+    *,
+    deadline_map: dict[UUID, Deadline],
+    current_date: date,
+    parsed_fields: dict,
+) -> DiscoveryPromotionDecision | None:
+    candidate = comparison.candidate
+    matched_ids = comparison.matched_deadline_ids
+    if len(matched_ids) != 1:
+        return None
+    if candidate.confidence < _UPDATE_CANDIDATE_CONFIDENCE_THRESHOLD:
+        return None
+    if comparison.match_score < _AUTO_APPLY_AMBIGUOUS_UPDATE_MATCH_SCORE_THRESHOLD:
+        return None
+    if not parsed_fields["has_actionable_date"]:
+        return None
+
+    existing_deadline = deadline_map.get(matched_ids[0])
+    if existing_deadline is None:
+        return None
+
+    promoted_deadline = _build_updated_deadline(
+        existing_deadline,
+        candidate,
+        parsed_fields,
+        current_date=current_date,
+    )
+    return DiscoveryPromotionDecision(
+        comparison=comparison,
+        action="promoted_update",
+        target_deadline_id=existing_deadline.id,
+        promoted_deadline=promoted_deadline,
+        rationale=(
+            "Automatically applied despite an ambiguous classification because "
+            "the candidate pointed to exactly one plausible existing deadline, "
+            "met the autonomy thresholds, and included actionable date data."
+        ),
     )
 
 

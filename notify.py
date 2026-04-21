@@ -110,10 +110,19 @@ def main() -> int:
 
     print(f"Wrote queue: {queue_path}")
     print(f"Wrote notification log: {log_path}")
+    failed_count = sum(1 for result in results if result.status != "sent")
     if args.dry_run:
         print(f"Dry run complete for {recipient}. No emails were sent.")
-    else:
-        print(f"Sent {len(results)} notification email(s) to {recipient}.")
+        return 0
+
+    sent_count = len(results) - failed_count
+    print(f"Sent {sent_count} notification email(s) to {recipient}.")
+    if failed_count:
+        print(
+            f"{failed_count} notification email(s) failed. "
+            "See build/notification-log.jsonl for details."
+        )
+        return 1
     return 0
 
 

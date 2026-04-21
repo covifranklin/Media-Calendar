@@ -1,0 +1,52 @@
+- id: 2200eaed-d0ae-55c1-b992-4a954d6dab68
+  name: Press Registrations for Series Mania Forum
+  category: industry_forum
+  organization: Series Mania Forum
+  url: https://seriesmania.com/forum/en/
+  deadline_date: '2027-03-23'
+  early_deadline_date: null
+  event_start_date: '2027-03-23'
+  event_end_date: '2027-03-25'
+  description: Press registrations Contacts OK From March 23 to 25, 2027 In Lille
+    and online SERIES MANIA FORUM
+  eligibility_notes: Press representatives are invited to register for coverage of
+    the forum events.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://seriesmania.com/forum/en/
+  tags:
+  - media
+  - must_have
+  - industry_forum
+  - new_opportunity
+  year: 2027
+- id: 4b1f322d-c324-5326-a712-aa77e3f6e281
+  name: Series Mania Forum
+  category: festival_submission
+  organization: Series Mania Forum
+  url: https://seriesmania.com/forum/en/
+  deadline_date: '2027-03-23'
+  early_deadline_date: null
+  event_start_date: '2027-03-23'
+  event_end_date: '2027-03-25'
+  description: Series Mania Forum LILLE / HAUTS-DE-FRANCE /// March 23 to 25, 2027
+    Festival Forum Institute FR
+  eligibility_notes: Open to series developers and creators looking for pitching and
+    financing opportunities.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://seriesmania.com/forum/en/
+  tags:
+  - market
+  - must_have
+  - festival_submission
+  - new_opportunity
+  year: 2027

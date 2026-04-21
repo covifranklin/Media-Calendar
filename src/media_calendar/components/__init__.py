@@ -18,6 +18,10 @@ from media_calendar.components.source_coverage import (
     build_source_coverage_report,
     write_source_coverage_report,
 )
+from media_calendar.components.source_detector import (
+    detect_candidate_batches,
+    detect_candidates,
+)
 from media_calendar.components.source_fetcher import (
     fetch_registered_sources,
     fetch_source,
@@ -28,10 +32,6 @@ from media_calendar.components.source_freshness import (
     write_source_freshness_report,
 )
 from media_calendar.components.source_health import build_source_health_report
-from media_calendar.components.source_detector import (
-    detect_candidate_batches,
-    detect_candidates,
-)
 from media_calendar.components.source_registry import (
     load_source_registry,
     resolve_source_files,

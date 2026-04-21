@@ -3,8 +3,10 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 from uuid import uuid4
 
-from media_calendar.components import build_source_freshness_report
-from media_calendar.components import write_source_freshness_report
+from media_calendar.components import (
+    build_source_freshness_report,
+    write_source_freshness_report,
+)
 from media_calendar.models import (
     DiscoveryCandidate,
     DiscoveryCandidateBatch,

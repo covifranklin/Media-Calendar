@@ -166,27 +166,52 @@ def dispatch_notification_queue(
             deadline_ids=queue_item["deadline_ids"],
             notification_type=notification_type,
             recipient_email=recipient_email,
-            status="sent",
+            status="sent" if dry_run else "failed",
         )
+        result_status: str = "sent" if dry_run else "failed"
 
         if not dry_run:
             if resend_settings is None:
                 raise ValueError(
                     "resend_settings are required when dry_run is False"
                 )
-            _send_email_via_resend(
-                subject_line=email_payload["subject_line"],
-                html_body=email_payload["html_body"],
-                plain_text_body=email_payload["plain_text_body"],
+            try:
+                _send_email_via_resend(
+                    subject_line=email_payload["subject_line"],
+                    html_body=email_payload["html_body"],
+                    plain_text_body=email_payload["plain_text_body"],
+                    recipient_email=recipient_email,
+                    resend_settings=resend_settings,
+                )
+            except Exception:
+                logs = _build_notification_logs(
+                    deadline_ids=queue_item["deadline_ids"],
+                    notification_type=notification_type,
+                    recipient_email=recipient_email,
+                    status="failed",
+                )
+                result_status = "failed"
+            else:
+                logs = _build_notification_logs(
+                    deadline_ids=queue_item["deadline_ids"],
+                    notification_type=notification_type,
+                    recipient_email=recipient_email,
+                    status="sent",
+                )
+                result_status = "sent"
+        else:
+            logs = _build_notification_logs(
+                deadline_ids=queue_item["deadline_ids"],
+                notification_type=notification_type,
                 recipient_email=recipient_email,
-                resend_settings=resend_settings,
+                status="sent",
             )
 
         results.append(
             NotificationDispatchResult(
                 queue_item=queue_item,
                 recipient_email=recipient_email,
-                status="sent",
+                status=result_status,
                 logs=logs,
             )
         )
