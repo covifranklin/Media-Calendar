@@ -132,28 +132,6 @@
   - industry_forum
   - new_opportunity
   year: 2026
-- id: 11111111-1111-4111-8111-111111111111
-  name: Example Fellowship
-  category: fellowship
-  organization: Example Arts
-  url: https://example.com/fellowship
-  deadline_date: '2026-07-15'
-  early_deadline_date: null
-  event_start_date: '2026-09-01'
-  event_end_date: '2026-09-10'
-  description: Annual fellowship for emerging creators.
-  eligibility_notes: Open to first- and second-time applicants.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-20'
-  source_url: https://example.com/fellowship
-  tags:
-  - artists
-  - development
-  year: 2026
 - id: a2c92f73-8bd0-5c91-8d7e-dc39b311b204
   name: Venice Production Bridge Programs and Services
   category: industry_forum
