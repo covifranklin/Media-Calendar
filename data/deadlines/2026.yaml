@@ -80,6 +80,32 @@
   - festival_submission
   - new_opportunity
   year: 2026
+- id: ea90cbce-4081-51f5-8b9e-4cec8dbd58bb
+  name: Fiction Producing Lab 2026
+  category: lab_application
+  organization: Film Independent
+  url: https://www.filmindependent.org/programs/applications/
+  deadline_date: '2026-05-18'
+  early_deadline_date: '2026-05-04'
+  event_start_date: null
+  event_end_date: null
+  description: 'Fiction Producing Lab 2026 Applications open: March 9, 2026'
+  eligibility_notes: High-signal Film Independent producer development programme with
+    annual application timing.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.filmindependent.org/programs/applications/
+  tags:
+  - lab
+  - high
+  - lab_application
+  - new_opportunity
+  - update_signal
+  year: 2026
 - id: 3c968059-c8da-5cae-8900-5ddb4844b304
   name: Join us in Cannes
   category: industry_forum
@@ -132,6 +158,104 @@
   - industry_forum
   - new_opportunity
   year: 2026
+- id: e7beb2c3-f449-5c36-93e6-ad903a131e6a
+  name: Documentary Fund Application
+  category: funding_round
+  organization: Sundance Institute
+  url: https://www.sundance.org/documentary-fund/
+  deadline_date: '2026-06-15'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: The Sundance Institute Documentary Fund supports filmmakers worldwide
+    in the development, production, and post-production of cinematic documentaries
+    on a wide range of contemporary topics and themes.
+  eligibility_notes: Open to filmmakers worldwide for documentaries that elevate cultural
+    dialogue and have the potential for social impact.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.sundance.org/documentary-fund/
+  tags:
+  - fund
+  - must_have
+  - funding_round
+  year: 2026
+- id: d9c15562-02af-5a2a-9f2e-7d515f0d4c87
+  name: SFFILM Documentary Film Fund
+  category: funding_round
+  organization: SFFILM
+  url: https://sffilm.org/documentary-film-fund/
+  deadline_date: '2026-07-07'
+  early_deadline_date: '2026-06-09'
+  event_start_date: null
+  event_end_date: null
+  description: The SFFILM Documentary Film Fund supports engaging documentaries in
+    post-production which exhibit compelling stories...
+  eligibility_notes: Open to filmmakers internationally who are in key creative roles
+    and whose projects are in post-production.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://sffilm.org/documentary-film-fund/
+  tags:
+  - fund
+  - documentary
+  - post-production
+  - new_opportunity
+  year: 2026
+- id: 92f9181f-9828-5905-a0ee-549bd5db747e
+  name: Feature Film Producers Lab
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/producers-program/
+  deadline_date: '2026-07-13'
+  early_deadline_date: null
+  event_start_date: '2026-07-13'
+  event_end_date: '2026-07-18'
+  description: Feature Film Producers Lab Ucross, Wyoming July 13-18, 2026
+  eligibility_notes: Producers working on feature-length projects in fiction and nonfiction.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.sundance.org/initiatives/producers-program/
+  tags:
+  - lab
+  - laboratory
+  - new_opportunity
+  year: 2026
+- id: a15c99b2-32c1-5c75-bf53-82ea39bc1689
+  name: Documentary Film Producers Lab
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/producers-program/
+  deadline_date: '2026-07-20'
+  early_deadline_date: null
+  event_start_date: '2026-07-20'
+  event_end_date: '2026-07-25'
+  description: Documentary Film Producers Lab Ucross, Wyoming July 20-25, 2026
+  eligibility_notes: Producers working on documentary feature-length projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-21'
+  source_url: https://www.sundance.org/initiatives/producers-program/
+  tags:
+  - lab
+  - laboratory
+  - new_opportunity
+  year: 2026
 - id: a2c92f73-8bd0-5c91-8d7e-dc39b311b204
   name: Venice Production Bridge Programs and Services
   category: industry_forum
@@ -145,8 +269,8 @@
     Film Festival (2-12 September 2026), the Venice Production Bridge (3-9 September,
     2026) will organize programmes such as the Venice Gap-Financing Market, the Book
     Adaptation Rights Market, Final Cut in Venice, Meet the Streamers, and others.
-  eligibility_notes: Accreditation is reserved for film industry professionals and
-    those engaged in artistic or technical activities within the audiovisual sector.
+  eligibility_notes: Applicants must prove their activity in the film industry, submitting
+    professional documents as required.
   notification_windows:
   - 30
   - 14
@@ -159,6 +283,8 @@
   - festival_submission
   - networking
   - funding_opportunity
+  - accreditation
+  - new_opportunity
   year: 2026
 - id: 5268cca7-32dd-5c1a-8741-d2896641e5a1
   name: MIPCOM CANNES - Practical Info Event
