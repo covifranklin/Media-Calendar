@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 import logging
 import os
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Callable, Iterable, List, Literal, Optional
 
@@ -23,30 +23,33 @@ from media_calendar.components import (
     snapshot_fetch_results,
     write_deadlines,
 )
-from media_calendar.models import DiscoveryAgentInput
+from media_calendar.models import DiscoveryAgentInput, DiscoveryDecisionLogEntry
 
 STEP_NAME = "Refresh Discovery Pipeline"
 AGENT_NAME = "source_discovery_pipeline"
 DESCRIPTION = (
     "Fetches monitored official sources, detects opportunity candidates, "
     "compares them to the deadline database, auto-promotes only high-confidence "
-    "results, writes updated YAML, and regenerates the static calendar."
+    "results, optionally writes updated YAML, and regenerates the static "
+    "calendar."
 )
 INPUT_SOURCE = "data/sources/*.yaml registry files plus data/deadlines/*.yaml."
 OUTPUT_DESTINATION = (
-    "Updated data/deadlines/*.yaml files, build/discovery-refresh.json, and "
-    "build/calendar.html."
+    "build/discovery-refresh.json, build/calendar.html, and optionally updated "
+    "data/deadlines/*.yaml files."
 )
 CONDITION = "Triggered weekly by scheduler or manually via CLI."
 ERROR_HANDLING = (
     "Fetch failures are skipped, LLM discovery falls back to deterministic "
-    "detection unless required, and uncertain candidates are rejected."
+    "detection unless required, uncertain candidates are rejected, and dry-run "
+    "mode avoids deadline YAML writes."
 )
 
 FetchUrl = Callable[[str], tuple[int, Optional[str], str]]
 CalendarGenerator = Callable[..., Path]
 ReportWriter = Callable[[dict], None]
 LlmMode = Literal["auto", "off", "required"]
+RefreshMode = Literal["dry-run", "apply"]
 
 
 def orchestration_step_discovery_refresh(
@@ -55,6 +58,7 @@ def orchestration_step_discovery_refresh(
     *,
     root_dir: str | Path | None = None,
     current_date: date | None = None,
+    mode: RefreshMode = "dry-run",
     llm_mode: LlmMode = "auto",
     llm_client=None,
     fetch_url: FetchUrl | None = None,
@@ -147,17 +151,26 @@ def orchestration_step_discovery_refresh(
         }
         batch_summaries.append(batch_summary)
 
-    written_deadline_files = write_deadlines(current_deadlines, root=root)
+    if mode == "apply":
+        written_deadline_files = write_deadlines(current_deadlines, root=root)
+    else:
+        written_deadline_files = []
+
     calendar_path = calendar_generator(root_dir=root)
     report_paths = _write_refresh_reports(
         root=root,
         current_date=active_date,
         decisions=all_decisions,
         batch_summaries=batch_summaries,
+        mode=mode,
         written_deadline_files=written_deadline_files,
         calendar_path=calendar_path,
         llm_mode=llm_mode,
         llm_enabled=llm_enabled,
+    )
+    log_path = _append_decision_log(
+        root=root,
+        decisions=all_decisions,
     )
 
     payload = {
@@ -169,11 +182,14 @@ def orchestration_step_discovery_refresh(
         "condition": CONDITION,
         "error_handling": ERROR_HANDLING,
         "current_date": active_date.isoformat(),
+        "mode": mode,
+        "applied_changes": mode == "apply",
         "source_files": [str(path) for path in source_paths],
         "deadline_files": [str(path) for path in written_deadline_files],
         "calendar_path": str(calendar_path),
         "report_json_path": str(report_paths["json"]),
         "report_markdown_path": str(report_paths["markdown"]),
+        "decision_log_path": str(log_path),
         "llm_mode": llm_mode,
         "llm_enabled": llm_enabled,
         "llm_batches_used": llm_batches_used,
@@ -221,6 +237,7 @@ def _write_refresh_reports(
     current_date: date,
     decisions,
     batch_summaries: List[dict],
+    mode: RefreshMode,
     written_deadline_files: List[Path],
     calendar_path: Path,
     llm_mode: str,
@@ -234,6 +251,8 @@ def _write_refresh_reports(
 
     report_payload = {
         "generated_on": current_date.isoformat(),
+        "mode": mode,
+        "applied_changes": mode == "apply",
         "llm_mode": llm_mode,
         "llm_enabled": llm_enabled,
         "written_deadline_files": [str(path) for path in written_deadline_files],
@@ -248,6 +267,7 @@ def _write_refresh_reports(
             current_date=current_date,
             decisions=decisions,
             batch_summaries=batch_summaries,
+            mode=mode,
             written_deadline_files=written_deadline_files,
             calendar_path=calendar_path,
             llm_mode=llm_mode,
@@ -259,11 +279,41 @@ def _write_refresh_reports(
     return {"json": json_path, "markdown": markdown_path}
 
 
+def _append_decision_log(
+    *,
+    root: Path,
+    decisions,
+) -> Path:
+    build_dir = root / "build"
+    build_dir.mkdir(parents=True, exist_ok=True)
+    log_path = build_dir / "discovery-log.jsonl"
+    timestamp = datetime.now(timezone.utc)
+
+    with log_path.open("a", encoding="utf-8") as handle:
+        for decision in decisions:
+            comparison = decision.comparison
+            entry = DiscoveryDecisionLogEntry(
+                timestamp=timestamp,
+                source_id=comparison.candidate.source_id,
+                candidate_id=comparison.candidate.id,
+                comparison_classification=comparison.classification,
+                promotion_action=decision.action,
+                match_score=comparison.match_score,
+                rationale=decision.rationale,
+                affected_deadline_id=decision.target_deadline_id,
+            )
+            handle.write(entry.model_dump_json())
+            handle.write("\n")
+
+    return log_path
+
+
 def _build_markdown_report(
     *,
     current_date: date,
     decisions,
     batch_summaries: List[dict],
+    mode: RefreshMode,
     written_deadline_files: List[Path],
     calendar_path: Path,
     llm_mode: str,
@@ -285,6 +335,8 @@ def _build_markdown_report(
         "",
         f"Generated on {current_date.isoformat()}",
         "",
+        f"- Refresh mode: `{mode}`",
+        f"- Applied deadline changes: `{mode == 'apply'}`",
         f"- LLM mode: `{llm_mode}`",
         f"- LLM enabled: `{llm_enabled}`",
         f"- Promoted new: `{promoted_new}`",

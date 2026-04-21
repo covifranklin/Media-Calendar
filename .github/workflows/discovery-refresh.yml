@@ -5,6 +5,14 @@ on:
     - cron: "0 7 * * 1"
   workflow_dispatch:
     inputs:
+      mode:
+        description: "Discovery refresh mode"
+        required: false
+        default: "dry-run"
+        type: choice
+        options:
+          - dry-run
+          - apply
       llm_mode:
         description: "Discovery LLM mode"
         required: false
@@ -22,6 +30,8 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     env:
+      DISCOVERY_MODE: ${{ github.event.inputs.mode || 'dry-run' }}
+      DISCOVERY_LLM_MODE: ${{ github.event.inputs.llm_mode || 'auto' }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     steps:
       - name: Check out repository
@@ -39,7 +49,7 @@ jobs:
 
       - name: Run discovery refresh
         run: |
-          python discover.py --llm-mode "${{ github.event.inputs.llm_mode || 'auto' }}"
+          python discover.py --mode "${DISCOVERY_MODE}" --llm-mode "${DISCOVERY_LLM_MODE}"
 
       - name: Upload refresh artifacts
         uses: actions/upload-artifact@v4
@@ -48,6 +58,7 @@ jobs:
           path: build/
 
       - name: Commit refreshed deadline data
+        if: env.DISCOVERY_MODE == 'apply'
         run: |
           if [ -z "$(git status --porcelain -- data/deadlines)" ]; then
             echo "No deadline data changes to commit."

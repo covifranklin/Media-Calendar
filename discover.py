@@ -24,7 +24,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
             "Refresh monitored opportunity sources, auto-promote safe changes, "
-            "write deadline YAML, and regenerate the calendar."
+            "write reports, and optionally update deadline YAML."
         )
     )
     parser.add_argument(
@@ -51,6 +51,16 @@ def main() -> int:
         help="Override current date in YYYY-MM-DD format.",
     )
     parser.add_argument(
+        "--mode",
+        choices=["dry-run", "apply"],
+        default="dry-run",
+        help=(
+            "Use `dry-run` to write discovery reports without changing "
+            "data/deadlines/*.yaml, or `apply` to write deadline YAML so a "
+            "workflow can commit it."
+        ),
+    )
+    parser.add_argument(
         "--llm-mode",
         choices=["auto", "off", "required"],
         default="auto",
@@ -71,6 +81,7 @@ def main() -> int:
         args.deadline_inputs,
         root_dir=args.root_dir,
         current_date=current_date,
+        mode=args.mode,
         llm_mode=args.llm_mode,
     )
 
@@ -81,7 +92,11 @@ def main() -> int:
         f"{payload['ignored_duplicate_count']} duplicate, "
         f"{payload['rejected_uncertain_count']} rejected."
     )
-    print(f"Updated deadline files: {', '.join(payload['deadline_files'])}")
+    print(f"Refresh mode: {payload['mode']}")
+    print(
+        "Updated deadline files: "
+        f"{', '.join(payload['deadline_files']) if payload['deadline_files'] else 'None'}"
+    )
     print(f"Calendar written to: {payload['calendar_path']}")
     print(f"JSON report: {payload['report_json_path']}")
     print(f"Markdown report: {payload['report_markdown_path']}")
