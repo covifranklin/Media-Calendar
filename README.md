@@ -8,14 +8,14 @@ Media Calendar is a small Python project for tracking deadline data, generating 
 - `notification_composer` and `data_curation_agent` agent implementations
 - deterministic static calendar generation
 - orchestration steps for notifications, data curation, and calendar generation
-- SMTP-backed notification sending
+- Resend API-backed notification sending
 - GitHub Actions for tests, GitHub Pages deployment, daily notifications, and manual curation
 
 ## Requirements
 
 - Python 3.10 or newer recommended
 - an OpenAI API key for LLM-backed commands such as annual curation and notification composition
-- SMTP credentials if you want the project to send email automatically
+- a Resend API key if you want the project to send email automatically
 
 ## Local setup
 
@@ -109,6 +109,17 @@ This writes:
 - `build/notification-queue.json`
 - `build/notification-log.jsonl`
 
+Set these environment variables in `.env`:
+
+```env
+RESEND_API_KEY=your_resend_api_key
+RESEND_FROM_EMAIL=onboarding@resend.dev
+RESEND_FROM_NAME=Media Calendar
+NOTIFICATION_TO_EMAIL=recipient@example.com
+```
+
+Resend supports a friendly sender name in the `from` field using the format `Your Name <sender@domain.com>`, and this project now builds that automatically from `RESEND_FROM_NAME` plus `RESEND_FROM_EMAIL`.
+
 ## Run annual curation locally
 
 Set your OpenAI API key first:
@@ -145,7 +156,7 @@ The repo now includes three workflows:
 1. `.github/workflows/ci.yml`
    Runs `pytest` on pull requests and pushes, generates `build/calendar.html` on pushes to `main`, and deploys it to GitHub Pages.
 2. `.github/workflows/notifications.yml`
-   Runs daily on a schedule and can also be started manually to compose/send notifications.
+   Runs weekly on Mondays and can also be started manually to compose/send notifications.
 3. `.github/workflows/curation.yml`
    Runs manually for a chosen year and uploads curation reports as workflow artifacts.
 
@@ -154,13 +165,9 @@ The repo now includes three workflows:
 For notifications:
 
 - `OPENAI_API_KEY`
-- `SMTP_HOST`
-- `SMTP_PORT`
-- `SMTP_FROM_EMAIL`
-- `SMTP_USERNAME`
-- `SMTP_PASSWORD`
-- `SMTP_USE_STARTTLS`
-- `SMTP_USE_SSL`
+- `RESEND_API_KEY`
+- `RESEND_FROM_EMAIL`
+- `RESEND_FROM_NAME`
 - `NOTIFICATION_TO_EMAIL`
 
 For manual curation:
@@ -174,5 +181,5 @@ Each deadline YAML entry should match the `Deadline` model. The included sample 
 ## Current limitations
 
 - The curation CLI fetches page text directly from source URLs and depends on a valid OpenAI key.
-- The daily notification flow sends one email per notification bucket, not one email per deadline.
-- SMTP delivery assumes a working SMTP provider such as Gmail with an app password, Mailgun SMTP, or similar.
+- The weekly notification flow sends one email per notification bucket, not one email per deadline.
+- The default `onboarding@resend.dev` sender is useful for testing, but for a polished production setup you will likely want a verified domain in Resend.

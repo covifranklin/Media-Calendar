@@ -1,8 +1,8 @@
-name: Daily Notifications
+name: Weekly Notifications
 
 on:
   schedule:
-    - cron: "0 12 * * *"
+    - cron: "0 9 * * 1"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -18,13 +18,9 @@ jobs:
       contents: read
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      SMTP_HOST: ${{ secrets.SMTP_HOST }}
-      SMTP_PORT: ${{ secrets.SMTP_PORT }}
-      SMTP_FROM_EMAIL: ${{ secrets.SMTP_FROM_EMAIL }}
-      SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
-      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-      SMTP_USE_STARTTLS: ${{ secrets.SMTP_USE_STARTTLS }}
-      SMTP_USE_SSL: ${{ secrets.SMTP_USE_SSL }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
+      RESEND_FROM_NAME: ${{ secrets.RESEND_FROM_NAME }}
       NOTIFICATION_TO_EMAIL: ${{ secrets.NOTIFICATION_TO_EMAIL }}
     steps:
       - name: Check out repository

@@ -3,19 +3,19 @@
 from media_calendar.services.notifications import (
     NotificationDispatchResult,
     NotificationGroupMap,
-    SMTPSettings,
+    ResendSettings,
     dispatch_notification_queue,
     group_upcoming_notifications,
     load_dotenv_file,
-    load_smtp_settings,
+    load_resend_settings,
 )
 
 __all__ = [
     "NotificationDispatchResult",
     "NotificationGroupMap",
-    "SMTPSettings",
+    "ResendSettings",
     "dispatch_notification_queue",
     "group_upcoming_notifications",
     "load_dotenv_file",
-    "load_smtp_settings",
+    "load_resend_settings",
 ]

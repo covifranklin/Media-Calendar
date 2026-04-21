@@ -31,7 +31,7 @@ def main() -> int:
         dispatch_notification_queue,
         group_upcoming_notifications,
         load_dotenv_file,
-        load_smtp_settings,
+        load_resend_settings,
     )
 
     parser = argparse.ArgumentParser(
@@ -93,11 +93,11 @@ def main() -> int:
             "Missing recipient email. Set NOTIFICATION_TO_EMAIL or pass --recipient."
         )
 
-    smtp_settings = None if args.dry_run else load_smtp_settings()
+    resend_settings = None if args.dry_run else load_resend_settings()
     results = dispatch_notification_queue(
         queue,
         recipient_email=recipient,
-        smtp_settings=smtp_settings,
+        resend_settings=resend_settings,
         dry_run=args.dry_run,
     )
 

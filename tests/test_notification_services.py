@@ -1,3 +1,4 @@
+import json
 from datetime import date
 from uuid import uuid4
 
@@ -8,7 +9,7 @@ from media_calendar.services import (
     dispatch_notification_queue,
     group_upcoming_notifications,
     load_dotenv_file,
-    load_smtp_settings,
+    load_resend_settings,
 )
 
 
@@ -54,34 +55,30 @@ def test_group_upcoming_notifications_creates_expected_buckets():
 def test_load_dotenv_file_sets_environment(tmp_path, monkeypatch):
     dotenv_path = tmp_path / ".env"
     dotenv_path.write_text(
-        "SMTP_HOST=smtp.example.com\nSMTP_PORT=2525\n", encoding="utf-8"
+        "RESEND_API_KEY=re_test\nRESEND_FROM_EMAIL=onboarding@resend.dev\n",
+        encoding="utf-8",
     )
-    monkeypatch.delenv("SMTP_HOST", raising=False)
-    monkeypatch.delenv("SMTP_PORT", raising=False)
+    monkeypatch.delenv("RESEND_API_KEY", raising=False)
+    monkeypatch.delenv("RESEND_FROM_EMAIL", raising=False)
 
     loaded = load_dotenv_file(dotenv_path)
 
-    assert loaded["SMTP_HOST"] == "smtp.example.com"
-    assert loaded["SMTP_PORT"] == "2525"
+    assert loaded["RESEND_API_KEY"] == "re_test"
+    assert loaded["RESEND_FROM_EMAIL"] == "onboarding@resend.dev"
 
 
-def test_load_smtp_settings_reads_required_values():
-    settings = load_smtp_settings(
+def test_load_resend_settings_reads_required_values():
+    settings = load_resend_settings(
         {
-            "SMTP_HOST": "smtp.example.com",
-            "SMTP_PORT": "2525",
-            "SMTP_FROM_EMAIL": "sender@example.com",
-            "SMTP_USERNAME": "user",
-            "SMTP_PASSWORD": "pass",
-            "SMTP_USE_STARTTLS": "true",
-            "SMTP_USE_SSL": "false",
+            "RESEND_API_KEY": "re_test",
+            "RESEND_FROM_EMAIL": "onboarding@resend.dev",
+            "RESEND_FROM_NAME": "Media Calendar",
         }
     )
 
-    assert settings.host == "smtp.example.com"
-    assert settings.port == 2525
-    assert settings.use_starttls is True
-    assert settings.use_ssl is False
+    assert settings.api_key == "re_test"
+    assert settings.from_email == "onboarding@resend.dev"
+    assert settings.from_name == "Media Calendar"
 
 
 def test_dispatch_notification_queue_supports_dry_run():
@@ -109,7 +106,7 @@ def test_dispatch_notification_queue_supports_dry_run():
     assert results[0].recipient_email == "friend@example.com"
 
 
-def test_dispatch_notification_queue_requires_smtp_settings_without_dry_run():
+def test_dispatch_notification_queue_requires_resend_settings_without_dry_run():
     queue = [
         {
             "notification_type": "upcoming_14d",
@@ -123,9 +120,67 @@ def test_dispatch_notification_queue_requires_smtp_settings_without_dry_run():
         }
     ]
 
-    with pytest.raises(ValueError, match="smtp_settings are required"):
+    with pytest.raises(ValueError, match="resend_settings are required"):
         dispatch_notification_queue(
             queue,
             recipient_email="friend@example.com",
             dry_run=False,
         )
+
+
+def test_dispatch_notification_queue_calls_resend_api(monkeypatch):
+    captured = {}
+
+    class FakeResponse:
+        def read(self):
+            return b'{"id":"email_123"}'
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, exc_type, exc, tb):
+            return False
+
+    def fake_urlopen(request, timeout=20):
+        captured["url"] = request.full_url
+        captured["headers"] = dict(request.header_items())
+        captured["body"] = request.data
+        captured["timeout"] = timeout
+        return FakeResponse()
+
+    monkeypatch.setattr("media_calendar.services.notifications.urlopen", fake_urlopen)
+
+    queue = [
+        {
+            "notification_type": "upcoming_14d",
+            "deadline_ids": [str(uuid4())],
+            "email": {
+                "subject_line": "Upcoming deadline",
+                "html_body": "<p>Hello</p>",
+                "plain_text_body": "Hello",
+                "priority_level": "normal",
+            },
+        }
+    ]
+
+    results = dispatch_notification_queue(
+        queue,
+        recipient_email="friend@example.com",
+        resend_settings=load_resend_settings(
+            {
+                "RESEND_API_KEY": "re_test",
+                "RESEND_FROM_EMAIL": "onboarding@resend.dev",
+                "RESEND_FROM_NAME": "Media Calendar",
+            }
+        ),
+        dry_run=False,
+    )
+
+    payload = json.loads(captured["body"].decode("utf-8"))
+    assert captured["url"] == "https://api.resend.com/emails"
+    assert captured["timeout"] == 20
+    assert captured["headers"]["Authorization"] == "Bearer re_test"
+    assert payload["from"] == "Media Calendar <onboarding@resend.dev>"
+    assert payload["to"] == ["friend@example.com"]
+    assert payload["subject"] == "Upcoming deadline"
+    assert len(results) == 1
