@@ -43,13 +43,43 @@ def test_group_upcoming_notifications_creates_expected_buckets():
 
     assert sorted(grouped.keys()) == [
         "upcoming_14d",
-        "upcoming_30d",
         "upcoming_3d",
         "weekly_digest",
     ]
-    assert grouped["upcoming_30d"][0].notification_type == "upcoming_30d"
     assert grouped["upcoming_14d"][0].notification_type == "upcoming_14d"
     assert grouped["upcoming_3d"][0].notification_type == "upcoming_3d"
+    assert grouped["weekly_digest"][0].notification_type == "weekly_digest"
+    assert grouped["weekly_digest"][0].deadline_date == date(2026, 6, 3)
+
+
+def test_group_upcoming_notifications_uses_30_day_alert_outside_digest_day():
+    current_date = date(2026, 5, 5)
+    deadlines = [
+        build_deadline(deadline_date=date(2026, 6, 4), windows=[30]),
+    ]
+
+    grouped = group_upcoming_notifications(deadlines, current_date=current_date)
+
+    assert sorted(grouped.keys()) == ["upcoming_30d"]
+    assert grouped["upcoming_30d"][0].notification_type == "upcoming_30d"
+
+
+def test_group_upcoming_notifications_sorts_digest_items_by_date():
+    current_date = date(2026, 5, 4)
+    earliest = build_deadline(deadline_date=date(2026, 5, 12), windows=[30])
+    latest = build_deadline(deadline_date=date(2026, 5, 20), windows=[30])
+    middle = build_deadline(deadline_date=date(2026, 5, 15), windows=[30])
+
+    grouped = group_upcoming_notifications(
+        [latest, middle, earliest],
+        current_date=current_date,
+    )
+
+    assert [item.deadline_date for item in grouped["weekly_digest"]] == [
+        date(2026, 5, 12),
+        date(2026, 5, 15),
+        date(2026, 5, 20),
+    ]
 
 
 def test_load_dotenv_file_sets_environment(tmp_path, monkeypatch):
@@ -184,3 +214,69 @@ def test_dispatch_notification_queue_calls_resend_api(monkeypatch):
     assert payload["to"] == ["friend@example.com"]
     assert payload["subject"] == "Upcoming deadline"
     assert len(results) == 1
+
+
+def test_dispatch_notification_queue_deduplicates_and_prioritizes_urgent_sends(
+    monkeypatch,
+):
+    sent_subjects = []
+
+    def fake_send_email_via_resend(
+        *,
+        subject_line,
+        html_body,
+        plain_text_body,
+        recipient_email,
+        resend_settings,
+    ):
+        sent_subjects.append(subject_line)
+
+    monkeypatch.setattr(
+        "media_calendar.services.notifications._send_email_via_resend",
+        fake_send_email_via_resend,
+    )
+
+    urgent_deadline_id = str(uuid4())
+    digest_deadline_id = str(uuid4())
+    duplicate_queue_item = {
+        "notification_type": "weekly_digest",
+        "deadline_ids": [digest_deadline_id],
+        "email": {
+            "subject_line": "Weekly digest",
+            "html_body": "<p>Digest</p>",
+            "plain_text_body": "Digest",
+            "priority_level": "normal",
+        },
+    }
+    queue = [
+        duplicate_queue_item,
+        {
+            "notification_type": "upcoming_3d",
+            "deadline_ids": [urgent_deadline_id],
+            "email": {
+                "subject_line": "Urgent reminder",
+                "html_body": "<p>Urgent</p>",
+                "plain_text_body": "Urgent",
+                "priority_level": "high",
+            },
+        },
+        dict(duplicate_queue_item),
+    ]
+
+    results = dispatch_notification_queue(
+        queue,
+        recipient_email="friend@example.com",
+        resend_settings=load_resend_settings(
+            {
+                "RESEND_API_KEY": "re_test",
+                "RESEND_FROM_EMAIL": "onboarding@resend.dev",
+            }
+        ),
+        dry_run=False,
+    )
+
+    assert [result.queue_item["notification_type"] for result in results] == [
+        "upcoming_3d",
+        "weekly_digest",
+    ]
+    assert sent_subjects == ["Urgent reminder", "Weekly digest"]

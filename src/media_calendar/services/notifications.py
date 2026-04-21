@@ -23,6 +23,14 @@ NotificationType = Literal[
 ]
 NotificationStatus = Literal["sent", "failed", "bounced"]
 RESEND_API_URL = "https://api.resend.com/emails"
+WEEKLY_DIGEST_LOOKAHEAD_DAYS = 30
+_NOTIFICATION_DISPATCH_ORDER: Dict[NotificationType, int] = {
+    "upcoming_3d": 0,
+    "upcoming_14d": 1,
+    "weekly_digest": 2,
+    "upcoming_30d": 3,
+    "annual_refresh_reminder": 4,
+}
 
 
 @dataclass
@@ -83,6 +91,7 @@ def group_upcoming_notifications(
 ) -> NotificationGroupMap:
     """Group deadlines into notification buckets for the current day."""
 
+    is_digest_day = current_date.weekday() == 0
     groups: NotificationGroupMap = {
         "upcoming_30d": [],
         "upcoming_14d": [],
@@ -98,25 +107,45 @@ def group_upcoming_notifications(
         if days_until_deadline < 0:
             continue
 
-        if 30 in deadline.notification_windows and days_until_deadline == 30:
+        has_upcoming_3d = 3 in deadline.notification_windows and days_until_deadline == 3
+        has_upcoming_14d = (
+            14 in deadline.notification_windows and days_until_deadline == 14
+        )
+        has_upcoming_30d = (
+            30 in deadline.notification_windows
+            and days_until_deadline == 30
+            and not is_digest_day
+        )
+
+        if has_upcoming_30d:
             groups["upcoming_30d"].append(
                 _to_notification_item(deadline, "upcoming_30d")
             )
-        if 14 in deadline.notification_windows and days_until_deadline == 14:
+        if has_upcoming_14d:
             groups["upcoming_14d"].append(
                 _to_notification_item(deadline, "upcoming_14d")
             )
-        if 3 in deadline.notification_windows and days_until_deadline == 3:
+        if has_upcoming_3d:
             groups["upcoming_3d"].append(
                 _to_notification_item(deadline, "upcoming_3d")
             )
 
-        if current_date.weekday() == 0 and 0 <= days_until_deadline <= 14:
+        if (
+            is_digest_day
+            and 0 <= days_until_deadline <= WEEKLY_DIGEST_LOOKAHEAD_DAYS
+            and not has_upcoming_3d
+            and not has_upcoming_14d
+        ):
             groups["weekly_digest"].append(
                 _to_notification_item(deadline, "weekly_digest")
             )
 
-    return {key: value for key, value in groups.items() if value}
+    normalized_groups = {
+        key: _sort_notification_items(value)
+        for key, value in groups.items()
+        if value
+    }
+    return normalized_groups
 
 
 def dispatch_notification_queue(
@@ -130,7 +159,7 @@ def dispatch_notification_queue(
 
     results: List[NotificationDispatchResult] = []
 
-    for queue_item in queue:
+    for queue_item in _prepare_queue_for_dispatch(queue):
         email_payload = queue_item["email"]
         notification_type = cast(NotificationType, queue_item["notification_type"])
         logs = _build_notification_logs(
@@ -165,6 +194,39 @@ def dispatch_notification_queue(
     return results
 
 
+def _prepare_queue_for_dispatch(queue: Sequence[dict]) -> List[dict]:
+    """Remove exact duplicates and send urgent notifications first."""
+
+    seen_signatures: set[tuple[str, tuple[str, ...], str, str]] = set()
+    prepared: List[dict] = []
+
+    for queue_item in queue:
+        notification_type = str(queue_item["notification_type"])
+        deadline_ids = tuple(sorted(str(deadline_id) for deadline_id in queue_item["deadline_ids"]))
+        email_payload = queue_item["email"]
+        signature = (
+            notification_type,
+            deadline_ids,
+            str(email_payload["subject_line"]),
+            str(email_payload["plain_text_body"]),
+        )
+        if signature in seen_signatures:
+            continue
+        seen_signatures.add(signature)
+        prepared.append(queue_item)
+
+    prepared.sort(
+        key=lambda item: (
+            _NOTIFICATION_DISPATCH_ORDER.get(
+                cast(NotificationType, item["notification_type"]),
+                len(_NOTIFICATION_DISPATCH_ORDER),
+            ),
+            str(item["email"]["subject_line"]).lower(),
+        )
+    )
+    return prepared
+
+
 def _to_notification_item(
     deadline: Deadline,
     notification_type: NotificationType,
@@ -193,6 +255,19 @@ def _build_notification_logs(
         )
         for deadline_id in deadline_ids
     ]
+
+
+def _sort_notification_items(
+    items: Sequence[NotificationItem],
+) -> List[NotificationItem]:
+    return sorted(
+        items,
+        key=lambda item: (
+            item.deadline_date,
+            item.organization.lower(),
+            item.name.lower(),
+        ),
+    )
 
 
 def _send_email_via_resend(
