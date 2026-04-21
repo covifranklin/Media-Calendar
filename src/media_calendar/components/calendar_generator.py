@@ -70,7 +70,7 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Media Calendar</title>
+  <title>Goose Industry Calendar</title>
   <style>
     :root {{
       --bg: #f6f2e8;
@@ -125,6 +125,7 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
       margin: 0;
       font-size: clamp(2.3rem, 5vw, 4rem);
       line-height: 0.95;
+      color: #ff1493;
     }}
 
     .hero p {{
@@ -282,11 +283,9 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
 <body>
   <main>
     <section class="hero">
-      <p class="eyebrow">Static Deadline Calendar</p>
-      <h1>Track film and media deadlines without the clutter.</h1>
+      <h1>Goose Industry Calendar</h1>
       <p>
-        Browse the latest industry dates, narrow the list by category or month,
-        and use the source links to verify details before planning your next move.
+        All key film and entertainment events and deadlines in one place...so Goose don't miss out on no tasty corn
       </p>
 
       <div class="filters">

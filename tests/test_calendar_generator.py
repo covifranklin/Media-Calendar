@@ -51,7 +51,7 @@ def test_basic_html_output(tmp_path):
     )
     html = output_path.read_text(encoding="utf-8")
     assert "<!DOCTYPE html>" in html
-    assert "Media Calendar" in html
+    assert "Goose Industry Calendar" in html
     assert 'id="category-filter"' in html
     assert 'id="month-filter"' in html
     assert "Example Fellowship" in html
