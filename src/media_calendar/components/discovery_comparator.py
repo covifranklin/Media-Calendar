@@ -18,8 +18,12 @@ from media_calendar.models import (
 
 _WORD_RE = re.compile(r"[a-z0-9]+")
 _YEAR_RE = re.compile(r"\b(20\d{2})\b")
-_EVENT_RANGE_RE = re.compile(
+_ORDINAL_SUFFIX_RE = re.compile(r"(\d{1,2})(st|nd|rd|th)\b", re.IGNORECASE)
+_EVENT_RANGE_MONTH_FIRST_RE = re.compile(
     r"\b([A-Z][a-z]+) (\d{1,2})\s*(?:to|-)\s*(\d{1,2}), (\d{4})\b"
+)
+_EVENT_RANGE_DAY_FIRST_RE = re.compile(
+    r"\b(\d{1,2})\s*(?:to|-)\s*(\d{1,2}) ([A-Z][a-z]+) (\d{4})\b"
 )
 _STOP_WORDS = {"a", "an", "and", "for", "of", "the", "to"}
 
@@ -359,33 +363,45 @@ def _parse_single_date(text: str | None) -> date | None:
     if not text:
         return None
 
-    for format_string in ("%B %d, %Y", "%d %B %Y", "%m/%d/%Y", "%m/%d/%y"):
+    normalized_text = _ORDINAL_SUFFIX_RE.sub(r"\1", text)
+
+    for format_string in (
+        "%B %d, %Y",
+        "%b %d, %Y",
+        "%d %B %Y",
+        "%d %b %Y",
+        "%m/%d/%Y",
+        "%m/%d/%y",
+    ):
         try:
-            return datetime.strptime(text, format_string).date()
+            return datetime.strptime(normalized_text, format_string).date()
         except ValueError:
             continue
     return None
 
 
 def _parse_event_dates(text: str) -> set[date]:
-    match = _EVENT_RANGE_RE.search(text)
-    if not match:
-        parsed_date = _parse_single_date(text)
-        return {parsed_date} if parsed_date is not None else set()
-
-    month_name, start_day, end_day, year = match.groups()
     dates: set[date] = set()
-    for day in (start_day, end_day):
-        try:
-            dates.add(
-                datetime.strptime(
-                    f"{month_name} {day}, {year}",
-                    "%B %d, %Y",
-                ).date()
-            )
-        except ValueError:
-            continue
-    return dates
+    month_first_match = _EVENT_RANGE_MONTH_FIRST_RE.search(text)
+    if month_first_match:
+        month_name, start_day, end_day, year = month_first_match.groups()
+        for day in (start_day, end_day):
+            parsed_date = _parse_single_date(f"{month_name} {day}, {year}")
+            if parsed_date is not None:
+                dates.add(parsed_date)
+        return dates
+
+    day_first_match = _EVENT_RANGE_DAY_FIRST_RE.search(text)
+    if day_first_match:
+        start_day, end_day, month_name, year = day_first_match.groups()
+        for day in (start_day, end_day):
+            parsed_date = _parse_single_date(f"{day} {month_name} {year}")
+            if parsed_date is not None:
+                dates.add(parsed_date)
+        return dates
+
+    parsed_date = _parse_single_date(text)
+    return {parsed_date} if parsed_date is not None else set()
 
 
 def _normalize_text(value: str) -> str:

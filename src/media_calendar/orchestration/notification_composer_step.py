@@ -12,11 +12,11 @@ STEP_NAME = "Compose Notifications"
 AGENT_NAME = "notification_composer"
 DESCRIPTION = (
     "Invokes the notification composer agent to generate email content for "
-    "identified upcoming deadlines."
+    "identified upcoming opportunities and events."
 )
-INPUT_SOURCE = "Filtered upcoming deadlines from the database, grouped by notification window/type."
+INPUT_SOURCE = "Filtered upcoming opportunities from the database, grouped by notification window/type."
 OUTPUT_DESTINATION = "Queue for email sender."
-CONDITION = "Triggered daily by scheduler if upcoming deadlines are found."
+CONDITION = "Triggered daily by scheduler if upcoming opportunities are found."
 ERROR_HANDLING = "LLM output validation, fallback to template, log failures."
 
 NotificationGroupMap = Mapping[str, Sequence[NotificationItem]]
@@ -80,7 +80,7 @@ def _build_fallback_output(
 ):
     from media_calendar.models import NotificationComposerOutput
 
-    subject = f"Upcoming deadlines: {len(deadlines)} item(s)"
+    subject = f"Upcoming opportunities: {len(deadlines)} item(s)"
 
     if notification_type == "weekly_digest":
         grouped = _group_deadlines_by_category(deadlines)
@@ -115,13 +115,13 @@ def _build_fallback_output(
         names = ", ".join(deadline.name for deadline in deadlines)
         plain_text = (
             f"Notification type: {notification_type}\n"
-            f"Upcoming deadlines: {names}\n"
+            f"Upcoming opportunities: {names}\n"
             "Please review the source records before sending."
         )
         html_body = (
             "<p><strong>Notification type:</strong> "
             f"{notification_type}</p>"
-            f"<p><strong>Upcoming deadlines:</strong> {names}</p>"
+            f"<p><strong>Upcoming opportunities:</strong> {names}</p>"
             "<p>Please review the source records before sending.</p>"
         )
 

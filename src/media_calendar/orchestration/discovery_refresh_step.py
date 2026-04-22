@@ -5,9 +5,11 @@ from __future__ import annotations
 import json
 import logging
 import os
+import re
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Callable, Iterable, List, Literal, Optional
+from uuid import UUID, uuid5
 
 from media_calendar.agents import discover_source_candidates
 from media_calendar.components import (
@@ -57,6 +59,8 @@ ReportWriter = Callable[[dict], None]
 LlmMode = Literal["auto", "off", "required"]
 RefreshMode = Literal["dry-run", "apply"]
 SourceScope = Literal["auto", "core", "all"]
+_MERGED_CANDIDATE_NAMESPACE = UUID("7d4cf9e1-e633-4669-8c07-e29c035ba47c")
+_WORD_RE = re.compile(r"[a-z0-9]+")
 
 
 def orchestration_step_discovery_refresh(
@@ -119,13 +123,17 @@ def orchestration_step_discovery_refresh(
 
         if llm_enabled:
             try:
-                effective_batch = discover_source_candidates(
+                llm_batch = discover_source_candidates(
                     DiscoveryAgentInput(
                         source_entry=source_entry,
                         snapshot_result=snapshot_result,
                         deterministic_candidates=deterministic_batch.candidates,
                     ),
                     client=llm_client,
+                )
+                effective_batch = _merge_candidate_batches(
+                    deterministic_batch,
+                    llm_batch,
                 )
                 batch_mode = "llm"
                 llm_batches_used += 1
@@ -274,6 +282,112 @@ def orchestration_step_discovery_refresh(
         report_writer(payload)
 
     return payload
+
+
+def _merge_candidate_batches(
+    deterministic_batch,
+    llm_batch,
+):
+    """Keep deterministic coverage while letting LLM output enrich candidates."""
+
+    merged_by_key = {}
+    ordered_keys = []
+
+    for batch in (deterministic_batch, llm_batch):
+        for candidate in batch.candidates:
+            key = _candidate_identity_key(candidate)
+            existing = merged_by_key.get(key)
+            if existing is None:
+                merged_by_key[key] = candidate
+                ordered_keys.append(key)
+                continue
+            merged_by_key[key] = _merge_candidate(existing, candidate)
+
+    notes = [note for note in [deterministic_batch.notes, llm_batch.notes] if note]
+    return deterministic_batch.model_copy(
+        update={
+            "candidates": [merged_by_key[key] for key in ordered_keys],
+            "notes": " ".join(notes) if notes else None,
+        }
+    )
+
+
+def _candidate_identity_key(candidate) -> str:
+    normalized_name = _normalize_identity_text(candidate.name)
+    return "|".join(
+        [
+            str(candidate.source_id),
+            candidate.organization.lower(),
+            normalized_name,
+            candidate.category,
+            candidate.candidate_type,
+        ]
+    )
+
+
+def _merge_candidate(existing, incoming):
+    preferred = existing if _candidate_quality(existing) >= _candidate_quality(incoming) else incoming
+    fallback = incoming if preferred is existing else existing
+    merged_key = _candidate_identity_key(preferred)
+
+    return preferred.model_copy(
+        update={
+            "id": uuid5(_MERGED_CANDIDATE_NAMESPACE, merged_key),
+            "confidence": max(existing.confidence, incoming.confidence),
+            "rationale": _prefer_richer_text(preferred.rationale, fallback.rationale),
+            "detected_deadline_text": _pick_better_date_text(
+                existing.detected_deadline_text,
+                incoming.detected_deadline_text,
+            ),
+            "detected_early_deadline_text": _pick_better_date_text(
+                existing.detected_early_deadline_text,
+                incoming.detected_early_deadline_text,
+            ),
+            "detected_event_date_text": _pick_better_date_text(
+                existing.detected_event_date_text,
+                incoming.detected_event_date_text,
+            ),
+            "eligibility_notes": _prefer_richer_text(
+                preferred.eligibility_notes,
+                fallback.eligibility_notes,
+            ),
+            "regions": list(dict.fromkeys([*existing.regions, *incoming.regions])),
+            "tags": list(dict.fromkeys([*existing.tags, *incoming.tags])),
+            "raw_excerpt": _prefer_richer_text(preferred.raw_excerpt, fallback.raw_excerpt),
+        }
+    )
+
+
+def _candidate_quality(candidate) -> tuple[float, int, int]:
+    return (
+        candidate.confidence,
+        sum(
+            1
+            for value in [
+                candidate.detected_deadline_text,
+                candidate.detected_early_deadline_text,
+                candidate.detected_event_date_text,
+            ]
+            if value
+        ),
+        len(candidate.raw_excerpt or ""),
+    )
+
+
+def _pick_better_date_text(left: str | None, right: str | None) -> str | None:
+    if left and right:
+        return left if len(left) >= len(right) else right
+    return left or right
+
+
+def _prefer_richer_text(primary: str | None, secondary: str | None) -> str | None:
+    if primary and secondary:
+        return primary if len(primary) >= len(secondary) else secondary
+    return primary or secondary
+
+
+def _normalize_identity_text(value: str) -> str:
+    return " ".join(_WORD_RE.findall(value.lower()))
 
 
 def _write_metrics_reports(

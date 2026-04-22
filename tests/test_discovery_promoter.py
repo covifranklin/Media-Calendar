@@ -165,6 +165,31 @@ def test_auto_promote_discovery_results_parses_ordinal_deadline_text():
     assert batch.deadline_snapshot[0].deadline_date == date(2026, 1, 30)
 
 
+def test_auto_promote_discovery_results_parses_abbreviated_event_ranges():
+    candidate = build_candidate(
+        name="Sheffield DocFest MeetMarket 2026",
+        category="industry_forum",
+        organization="Sheffield DocFest",
+        source_url="https://www.sheffdocfest.com/meetmarket",
+        confidence=0.93,
+        detected_deadline_text=None,
+        detected_event_date_text="10 - 15 Jun 2026",
+        raw_excerpt="MeetMarket runs 10 - 15 Jun 2026 during Sheffield DocFest.",
+    )
+    comparison = build_comparison(candidate, classification="likely_new")
+
+    batch = auto_promote_discovery_results(
+        [comparison],
+        [],
+        current_date=date(2026, 4, 21),
+    )
+
+    assert batch.promoted_new_count == 1
+    assert batch.deadline_snapshot[0].deadline_date == date(2026, 6, 10)
+    assert batch.deadline_snapshot[0].event_start_date == date(2026, 6, 10)
+    assert batch.deadline_snapshot[0].event_end_date == date(2026, 6, 15)
+
+
 def test_auto_promote_discovery_results_ignores_high_confidence_duplicates():
     existing_deadline = build_deadline()
     candidate = build_candidate(confidence=0.92)
@@ -224,12 +249,42 @@ def test_auto_promote_discovery_results_rejects_uncertain_items():
     )
 
     assert batch.promoted_update_count == 1
-    assert batch.rejected_uncertain_count == 1
+    assert batch.promoted_new_count == 1
+    assert batch.rejected_uncertain_count == 0
     assert [decision.action for decision in batch.decisions] == [
         "promoted_update",
-        "rejected_uncertain",
+        "promoted_new",
     ]
     assert batch.deadline_snapshot[0].deadline_date == date(2026, 3, 10)
+
+
+def test_auto_promote_discovery_results_auto_applies_ambiguous_future_dated_new_items():
+    candidate = build_candidate(
+        name="Relevant Market 2026",
+        category="industry_forum",
+        organization="Relevant Org",
+        source_url="https://example.org/relevant-market",
+        confidence=0.58,
+        detected_deadline_text=None,
+        detected_event_date_text="10 - 15 Jun 2026",
+        raw_excerpt="Relevant Market runs 10 - 15 Jun 2026 with project meetings and networking.",
+    )
+    comparison = build_comparison(
+        candidate,
+        classification="ambiguous",
+        matched_deadline_ids=[uuid4(), uuid4()],
+        match_score=0.61,
+    )
+
+    batch = auto_promote_discovery_results(
+        [comparison],
+        [],
+        current_date=date(2026, 4, 21),
+    )
+
+    assert batch.promoted_new_count == 1
+    assert batch.decisions[0].action == "promoted_new"
+    assert batch.deadline_snapshot[0].event_start_date == date(2026, 6, 10)
 
 
 def test_auto_promote_discovery_results_auto_applies_single_match_ambiguous_update():

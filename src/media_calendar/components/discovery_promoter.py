@@ -18,13 +18,17 @@ from media_calendar.models import (
 _PROMOTION_NAMESPACE = UUID("1d3c4bc9-6ed4-41b7-8db9-c88620d547d5")
 _YEAR_RE = re.compile(r"\b(20\d{2})\b")
 _ORDINAL_SUFFIX_RE = re.compile(r"(\d{1,2})(st|nd|rd|th)\b", re.IGNORECASE)
-_EVENT_RANGE_RE = re.compile(
+_EVENT_RANGE_MONTH_FIRST_RE = re.compile(
     r"\b([A-Z][a-z]+) (\d{1,2})\s*(?:to|-)\s*(\d{1,2}), (\d{4})\b"
 )
-_NEW_CANDIDATE_CONFIDENCE_THRESHOLD = 0.72
-_UPDATE_CANDIDATE_CONFIDENCE_THRESHOLD = 0.7
-_UPDATE_MATCH_SCORE_THRESHOLD = 0.76
-_AUTO_APPLY_AMBIGUOUS_UPDATE_MATCH_SCORE_THRESHOLD = 0.72
+_EVENT_RANGE_DAY_FIRST_RE = re.compile(
+    r"\b(\d{1,2})\s*(?:to|-)\s*(\d{1,2}) ([A-Z][a-z]+) (\d{4})\b"
+)
+_NEW_CANDIDATE_CONFIDENCE_THRESHOLD = 0.55
+_UPDATE_CANDIDATE_CONFIDENCE_THRESHOLD = 0.65
+_UPDATE_MATCH_SCORE_THRESHOLD = 0.72
+_AUTO_APPLY_AMBIGUOUS_UPDATE_MATCH_SCORE_THRESHOLD = 0.68
+_AUTO_APPLY_AMBIGUOUS_NEW_MATCH_SCORE_THRESHOLD = 0.72
 _DUPLICATE_MATCH_SCORE_THRESHOLD = 0.82
 _DEFAULT_NOTIFICATION_WINDOWS = [30, 14, 3]
 
@@ -114,6 +118,14 @@ def _apply_promotion_policy(
         )
         if ambiguous_decision is not None:
             return ambiguous_decision
+
+        ambiguous_new_decision = _maybe_promote_ambiguous_new(
+            comparison,
+            current_date=current_date,
+            parsed_fields=parsed_fields,
+        )
+        if ambiguous_new_decision is not None:
+            return ambiguous_new_decision
 
         return _reject_decision(
             comparison,
@@ -245,6 +257,42 @@ def _maybe_promote_ambiguous_update(
     )
 
 
+def _maybe_promote_ambiguous_new(
+    comparison: DiscoveryCandidateComparison,
+    *,
+    current_date: date,
+    parsed_fields: dict,
+) -> DiscoveryPromotionDecision | None:
+    candidate = comparison.candidate
+    if candidate.confidence < _NEW_CANDIDATE_CONFIDENCE_THRESHOLD:
+        return None
+    if comparison.match_score >= _AUTO_APPLY_AMBIGUOUS_NEW_MATCH_SCORE_THRESHOLD:
+        return None
+    if not parsed_fields["has_actionable_date"]:
+        return None
+    if parsed_fields["year"] is None:
+        return None
+    if not _has_future_relevant_date(parsed_fields, current_date=current_date):
+        return None
+
+    promoted_deadline = _build_new_deadline(
+        candidate,
+        parsed_fields,
+        current_date=current_date,
+    )
+    return DiscoveryPromotionDecision(
+        comparison=comparison,
+        action="promoted_new",
+        target_deadline_id=promoted_deadline.id,
+        promoted_deadline=promoted_deadline,
+        rationale=(
+            "Automatically promoted despite ambiguity because the candidate "
+            "surfaced a future relevant date and this workflow now favors "
+            "comprehensiveness over perfect source completeness."
+        ),
+    )
+
+
 def _reject_decision(
     comparison: DiscoveryCandidateComparison,
     rationale: str,
@@ -342,6 +390,7 @@ def _extract_candidate_fields(candidate: DiscoveryCandidate) -> dict:
     early_deadline_date = _parse_single_date(candidate.detected_early_deadline_text)
     event_start_date, event_end_date = _parse_event_range(candidate.detected_event_date_text)
     year = _extract_year(candidate, deadline_date, early_deadline_date, event_start_date)
+    primary_date = deadline_date or event_start_date or early_deadline_date
 
     return {
         "deadline_date": deadline_date,
@@ -349,6 +398,7 @@ def _extract_candidate_fields(candidate: DiscoveryCandidate) -> dict:
         "event_start_date": event_start_date,
         "event_end_date": event_end_date,
         "year": year,
+        "primary_date": primary_date,
         "has_actionable_date": any(
             value is not None
             for value in [
@@ -384,13 +434,25 @@ def _extract_year(
     return None
 
 
+def _has_future_relevant_date(parsed_fields: dict, *, current_date: date) -> bool:
+    primary_date = parsed_fields.get("primary_date")
+    return primary_date is not None and primary_date >= current_date
+
+
 def _parse_single_date(text: str | None) -> date | None:
     if not text:
         return None
 
     normalized_text = _ORDINAL_SUFFIX_RE.sub(r"\1", text)
 
-    for format_string in ("%B %d, %Y", "%d %B %Y", "%m/%d/%Y", "%m/%d/%y"):
+    for format_string in (
+        "%B %d, %Y",
+        "%b %d, %Y",
+        "%d %B %Y",
+        "%d %b %Y",
+        "%m/%d/%Y",
+        "%m/%d/%y",
+    ):
         try:
             return datetime.strptime(normalized_text, format_string).date()
         except ValueError:
@@ -402,29 +464,37 @@ def _parse_event_range(text: str | None) -> tuple[date | None, date | None]:
     if not text:
         return (None, None)
 
-    match = _EVENT_RANGE_RE.search(text)
-    if not match:
+    parsed_dates = _parse_event_range_dates(text)
+    if not parsed_dates:
         parsed_date = _parse_single_date(text)
         return (parsed_date, parsed_date)
 
-    month_name, start_day, end_day, year = match.groups()
-    parsed_dates: List[date] = []
-    for day in (start_day, end_day):
-        try:
-            parsed_dates.append(
-                datetime.strptime(
-                    f"{month_name} {day}, {year}",
-                    "%B %d, %Y",
-                ).date()
-            )
-        except ValueError:
-            continue
-
-    if not parsed_dates:
-        return (None, None)
     if len(parsed_dates) == 1:
         return (parsed_dates[0], parsed_dates[0])
     return (parsed_dates[0], parsed_dates[1])
+
+
+def _parse_event_range_dates(text: str) -> List[date]:
+    month_first_match = _EVENT_RANGE_MONTH_FIRST_RE.search(text)
+    if month_first_match:
+        month_name, start_day, end_day, year = month_first_match.groups()
+        return _parse_range_days(month_name, year, [start_day, end_day])
+
+    day_first_match = _EVENT_RANGE_DAY_FIRST_RE.search(text)
+    if not day_first_match:
+        return []
+
+    start_day, end_day, month_name, year = day_first_match.groups()
+    return _parse_range_days(month_name, year, [start_day, end_day])
+
+
+def _parse_range_days(month_name: str, year: str, days: List[str]) -> List[date]:
+    parsed_dates: List[date] = []
+    for day in days:
+        parsed_date = _parse_single_date(f"{day} {month_name} {year}")
+        if parsed_date is not None:
+            parsed_dates.append(parsed_date)
+    return parsed_dates
 
 
 def _dedupe_tags(tags: Sequence[str]) -> List[str]:

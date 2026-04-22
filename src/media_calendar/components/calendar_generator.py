@@ -269,6 +269,206 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
       text-align: center;
     }}
 
+    .goose-stage {{
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 30;
+      overflow: hidden;
+    }}
+
+    .goose-guide {{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 92px;
+      height: 92px;
+      transform: translate3d(20px, calc(100vh - 128px), 0);
+      transition: transform 2.8s cubic-bezier(0.22, 0.9, 0.24, 1);
+      will-change: transform;
+    }}
+
+    .goose-guide.is-waddling .goose {{
+      animation: goose-waddle 0.42s ease-in-out infinite alternate;
+    }}
+
+    .goose-guide.is-seated .goose {{
+      animation: goose-settle 0.9s ease-out forwards;
+    }}
+
+    .goose-shadow {{
+      position: absolute;
+      left: 18px;
+      bottom: 10px;
+      width: 50px;
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(27, 31, 35, 0.12);
+      filter: blur(1.5px);
+    }}
+
+    .goose {{
+      position: absolute;
+      inset: 0;
+      transform-origin: 50% 75%;
+    }}
+
+    .goose-body {{
+      position: absolute;
+      left: 20px;
+      top: 28px;
+      width: 46px;
+      height: 34px;
+      background: #fffdf8;
+      border: 2px solid #2f3d36;
+      border-radius: 58% 54% 48% 52%;
+    }}
+
+    .goose-wing {{
+      position: absolute;
+      left: 37px;
+      top: 36px;
+      width: 22px;
+      height: 16px;
+      background: #f3efe5;
+      border: 2px solid #2f3d36;
+      border-radius: 60% 70% 50% 70%;
+      transform: rotate(-14deg);
+    }}
+
+    .goose-neck {{
+      position: absolute;
+      left: 49px;
+      top: 10px;
+      width: 12px;
+      height: 28px;
+      background: #fffdf8;
+      border: 2px solid #2f3d36;
+      border-bottom: 0;
+      border-radius: 14px 14px 8px 8px;
+      transform: rotate(10deg);
+      transform-origin: bottom center;
+    }}
+
+    .goose-head {{
+      position: absolute;
+      left: 52px;
+      top: 4px;
+      width: 20px;
+      height: 18px;
+      background: #fffdf8;
+      border: 2px solid #2f3d36;
+      border-radius: 55% 50% 48% 52%;
+    }}
+
+    .goose-eye {{
+      position: absolute;
+      left: 64px;
+      top: 11px;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: #2f3d36;
+    }}
+
+    .goose-beak {{
+      position: absolute;
+      left: 68px;
+      top: 11px;
+      width: 12px;
+      height: 8px;
+      background: #f2a343;
+      border: 2px solid #2f3d36;
+      border-left: 0;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }}
+
+    .goose-leg {{
+      position: absolute;
+      top: 58px;
+      width: 3px;
+      height: 18px;
+      background: #d8802b;
+      border-radius: 3px;
+      transform-origin: top center;
+    }}
+
+    .goose-leg.left {{
+      left: 35px;
+    }}
+
+    .goose-leg.right {{
+      left: 48px;
+    }}
+
+    .goose-guide.is-waddling .goose-leg.left {{
+      animation: goose-step-left 0.42s ease-in-out infinite alternate;
+    }}
+
+    .goose-guide.is-waddling .goose-leg.right {{
+      animation: goose-step-right 0.42s ease-in-out infinite alternate;
+    }}
+
+    .goose-feet {{
+      position: absolute;
+      left: -3px;
+      bottom: -2px;
+      width: 10px;
+      height: 4px;
+      border-radius: 10px;
+      background: #d8802b;
+    }}
+
+    @keyframes goose-waddle {{
+      from {{
+        transform: translateY(0) rotate(-3deg);
+      }}
+      to {{
+        transform: translateY(-3px) rotate(3deg);
+      }}
+    }}
+
+    @keyframes goose-step-left {{
+      from {{
+        transform: rotate(14deg);
+      }}
+      to {{
+        transform: rotate(-10deg);
+      }}
+    }}
+
+    @keyframes goose-step-right {{
+      from {{
+        transform: rotate(-10deg);
+      }}
+      to {{
+        transform: rotate(14deg);
+      }}
+    }}
+
+    @keyframes goose-settle {{
+      0% {{
+        transform: rotate(0deg) translateY(0);
+      }}
+      55% {{
+        transform: rotate(-4deg) translateY(-2px);
+      }}
+      100% {{
+        transform: rotate(-7deg) translateY(0);
+      }}
+    }}
+
+    @media (prefers-reduced-motion: reduce) {{
+      .goose-guide,
+      .goose-guide.is-waddling .goose,
+      .goose-guide.is-waddling .goose-leg.left,
+      .goose-guide.is-waddling .goose-leg.right,
+      .goose-guide.is-seated .goose {{
+        animation: none;
+        transition-duration: 0.01ms;
+      }}
+    }}
+
     @media (max-width: 640px) {{
       main {{
         padding: 20px 14px 40px;
@@ -318,12 +518,30 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
     </section>
   </main>
 
+  <div class="goose-stage" aria-hidden="true">
+    <div id="goose-guide" class="goose-guide">
+      <div class="goose-shadow"></div>
+      <div class="goose">
+        <div class="goose-body"></div>
+        <div class="goose-wing"></div>
+        <div class="goose-neck"></div>
+        <div class="goose-head"></div>
+        <div class="goose-eye"></div>
+        <div class="goose-beak"></div>
+        <div class="goose-leg left"><div class="goose-feet"></div></div>
+        <div class="goose-leg right"><div class="goose-feet"></div></div>
+      </div>
+    </div>
+  </div>
+
   <script>
     const categoryFilter = document.getElementById('category-filter');
     const monthFilter = document.getElementById('month-filter');
     const cards = Array.from(document.querySelectorAll('.card'));
     const visibleCount = document.getElementById('visible-count');
     const resultsCopy = document.getElementById('results-copy');
+    const gooseGuide = document.getElementById('goose-guide');
+    let gooseArrivalTimeout = null;
 
     function applyFilters() {{
       const categoryValue = categoryFilter.value;
@@ -344,10 +562,62 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
 
       visibleCount.textContent = String(visible);
       resultsCopy.innerHTML = `Showing <strong>${{visible}}</strong> deadlines.`;
+      settleGooseOnVisibleCard();
+    }}
+
+    function getVisibleCards() {{
+      return cards.filter((card) => !card.hidden);
+    }}
+
+    function settleGooseOnVisibleCard() {{
+      if (!gooseGuide) {{
+        return;
+      }}
+
+      const visibleCards = getVisibleCards();
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const targetCard = visibleCards[0];
+
+      if (!targetCard) {{
+        gooseGuide.classList.remove('is-seated');
+        gooseGuide.classList.add('is-waddling');
+        gooseGuide.style.transform = `translate3d(20px, ${{Math.max(20, window.innerHeight - 128)}}px, 0)`;
+        return;
+      }}
+
+      const rect = targetCard.getBoundingClientRect();
+      const targetX = Math.min(
+        window.innerWidth - 104,
+        Math.max(16, rect.left + rect.width - 88)
+      );
+      const targetY = Math.min(
+        window.innerHeight - 104,
+        Math.max(12, rect.top - 18)
+      );
+
+      if (gooseArrivalTimeout) {{
+        window.clearTimeout(gooseArrivalTimeout);
+      }}
+
+      gooseGuide.classList.remove('is-seated');
+      gooseGuide.classList.add('is-waddling');
+      gooseGuide.style.transform = `translate3d(${{targetX}}px, ${{targetY}}px, 0)`;
+
+      if (prefersReducedMotion) {{
+        gooseGuide.classList.remove('is-waddling');
+        gooseGuide.classList.add('is-seated');
+        return;
+      }}
+
+      gooseArrivalTimeout = window.setTimeout(() => {{
+        gooseGuide.classList.remove('is-waddling');
+        gooseGuide.classList.add('is-seated');
+      }}, 2400);
     }}
 
     categoryFilter.addEventListener('change', applyFilters);
     monthFilter.addEventListener('change', applyFilters);
+    window.addEventListener('resize', settleGooseOnVisibleCard);
     applyFilters();
   </script>
 </body>
@@ -362,6 +632,7 @@ def _render_deadline_card(deadline: Deadline) -> str:
     event_window = _format_event_window(
         deadline.event_start_date, deadline.event_end_date
     )
+    primary_label = _primary_date_label(deadline)
     tags = ", ".join(deadline.tags) if deadline.tags else "None"
 
     details = [
@@ -379,7 +650,7 @@ def _render_deadline_card(deadline: Deadline) -> str:
           <span class="pill">{escape(CATEGORY_LABELS.get(deadline.category, deadline.category.title()))}</span>
           <span class="pill">{escape(month_name[deadline.deadline_date.month])}</span>
         </div>
-        <p class="deadline-date">Deadline {escape(deadline_date)}</p>
+        <p class="deadline-date">{escape(primary_label)} {escape(deadline_date)}</p>
         <h2>{escape(deadline.name)}</h2>
         <p class="organization">{escape(deadline.organization)}</p>
         <p class="description">{escape(deadline.description)}</p>
@@ -409,3 +680,9 @@ def _format_event_window(start: date | None, end: date | None) -> str:
     if end is not None:
         return _format_date(end)
     return "Not specified"  # pragma: no cover - defensive fallback
+
+
+def _primary_date_label(deadline: Deadline) -> str:
+    if deadline.event_start_date is not None and deadline.deadline_date == deadline.event_start_date:
+        return "Event Starts"
+    return "Deadline"

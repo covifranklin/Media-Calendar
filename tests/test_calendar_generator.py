@@ -54,8 +54,10 @@ def test_basic_html_output(tmp_path):
     assert "Goose Industry Calendar" in html
     assert 'id="category-filter"' in html
     assert 'id="month-filter"' in html
+    assert 'id="goose-guide"' in html
     assert "Example Fellowship" in html
     assert "Showing <strong>1</strong> deadlines." in html
+    assert "settleGooseOnVisibleCard" in html
 
 
 def test_filtering_by_category(tmp_path):
@@ -229,3 +231,36 @@ def test_past_deadlines_are_excluded_from_calendar(tmp_path):
     assert "Past Opportunity" not in html
     assert "Upcoming Opportunity" in html
     assert "Showing <strong>1</strong> deadlines." in html
+
+
+def test_event_led_entries_show_event_starts_label(tmp_path):
+    _write_deadline_yaml(
+        tmp_path,
+        "2026.yaml",
+        """
+        - id: "323e4567-e89b-12d3-a456-426614174000"
+          name: "Sheffield DocFest MeetMarket"
+          category: "industry_forum"
+          organization: "Sheffield DocFest"
+          url: "https://example.com/meetmarket"
+          deadline_date: 2026-06-10
+          early_deadline_date:
+          event_start_date: 2026-06-10
+          event_end_date: 2026-06-15
+          description: "Market event dates confirmed."
+          eligibility_notes:
+          notification_windows: [30, 14, 3]
+          status: "confirmed"
+          last_verified_date: 2026-04-20
+          source_url: "https://example.com/meetmarket-source"
+          tags: ["market"]
+          year: 2026
+        """,
+    )
+
+    html = generate_calendar(
+        root_dir=tmp_path,
+        current_date=date(2026, 4, 21),
+    ).read_text(encoding="utf-8")
+
+    assert "Event Starts June 10, 2026" in html

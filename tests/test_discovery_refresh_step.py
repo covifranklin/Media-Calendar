@@ -8,6 +8,7 @@ from textwrap import dedent
 import pytest
 
 from media_calendar.orchestration import orchestration_step_discovery_refresh
+from media_calendar.models import DiscoveryCandidate, DiscoveryCandidateBatch
 
 
 def _write_source_registry(tmp_path: Path) -> Path:
@@ -378,3 +379,73 @@ def test_orchestration_step_discovery_refresh_auto_scope_skips_watchlist_on_core
     assert payload["selected_source_count"] == 1
     assert payload["total_source_count"] == 2
     assert fetched_urls == ["https://example.com/core"]
+
+
+def test_orchestration_step_discovery_refresh_merges_deterministic_and_llm_candidates(
+    tmp_path,
+    monkeypatch,
+):
+    _write_source_registry(tmp_path)
+    (tmp_path / "data" / "deadlines").mkdir(parents=True)
+
+    def fake_fetch_url(url: str):
+        return (
+            200,
+            "text/html",
+            "<html><body><p>Example Documentary Lab 2026 "
+            "Applications open now Deadline: June 1, 2026</p>"
+            "</body></html>",
+        )
+
+    def fake_calendar_generator(*, root_dir=None, deadline_files=None, current_date=None):
+        output_path = tmp_path / "build" / "calendar.html"
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text("<html></html>", encoding="utf-8")
+        return output_path
+
+    def fake_discover(agent_input, *, client=None, max_attempts=3):
+        return DiscoveryCandidateBatch(
+            source_id=str(agent_input.source_entry.id),
+            source_url=agent_input.source_entry.source_url,
+            organization=agent_input.source_entry.organization,
+            program_name=agent_input.source_entry.program_name,
+            candidates=[
+                DiscoveryCandidate(
+                    id="11111111-1111-4111-8111-111111111111",
+                    source_id=agent_input.source_entry.id,
+                    source_url=agent_input.source_entry.source_url,
+                    organization=agent_input.source_entry.organization,
+                    name="Example Documentary Lab 2026",
+                    category="lab_application",
+                    candidate_type="new_opportunity",
+                    confidence=0.95,
+                    rationale="LLM found the same opportunity but missed the precise date.",
+                    detected_deadline_text=None,
+                    detected_early_deadline_text=None,
+                    detected_event_date_text=None,
+                    eligibility_notes=None,
+                    regions=["Global"],
+                    tags=["llm_reviewed"],
+                    raw_excerpt="Example Documentary Lab 2026 applications are open.",
+                )
+            ],
+            notes="LLM returned a partial candidate.",
+        )
+
+    monkeypatch.setattr(
+        "media_calendar.orchestration.discovery_refresh_step.discover_source_candidates",
+        fake_discover,
+    )
+
+    payload = orchestration_step_discovery_refresh(
+        root_dir=tmp_path,
+        current_date=date(2026, 4, 21),
+        llm_mode="auto",
+        llm_client=object(),
+        fetch_url=fake_fetch_url,
+        calendar_generator=fake_calendar_generator,
+    )
+
+    assert payload["llm_batches_used"] == 1
+    assert payload["promoted_new_count"] == 1
+    assert payload["rejected_uncertain_count"] == 0
