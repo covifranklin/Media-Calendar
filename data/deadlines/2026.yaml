@@ -28,33 +28,6 @@
   - producers
   - new_opportunity
   year: 2026
-- id: 77db99d2-c51f-5260-a21d-5e9d47535a4c
-  name: Meet & Match 2026 Submissions
-  category: festival_submission
-  organization: Sunny Side of the Doc
-  url: https://www.sunnysideofthedoc.com/
-  deadline_date: '2026-04-24'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "04/24/2026 Call for project \u2013 Meet & Match Submission Closing\
-    \ date: Meet & Match submissions for Sunny Side of the Doc will be accepted until\
-    \ 24th, April, 2026, 12pm CET."
-  eligibility_notes: Open to filmmakers and creators in the documentary and factual
-    genre who seek project support and partnerships.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-22'
-  source_url: https://www.sunnysideofthedoc.com/
-  tags:
-  - market
-  - documentary
-  - festival_submission
-  - new_opportunity
-  year: 2026
 - id: e1f7ce2b-c654-5f45-8616-628ac75f350b
   name: Hot Docs Forum
   category: industry_forum
@@ -80,31 +53,6 @@
   - financing
   - new_opportunity
   - industry_forum
-  year: 2026
-- id: 7d142f2f-8d32-59b6-b82a-b94552d64c16
-  name: Writing the TV Pilot
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-05-01'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'Writing the TV Pilot Cymru Wales 11 May/26 Application deadline: 1st
-    May 2026'
-  eligibility_notes: Large catalogue of professional skill-building opportunities
-    across film, TV, factual, and craft disciplines.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-22'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
   year: 2026
 - id: 6f3b5496-bfc5-5159-92be-8346743f1d80
   name: Hot Docs Festival
@@ -132,6 +80,60 @@
   - festival_submission
   - new_opportunity
   year: 2026
+- id: 8076d1e3-93f1-588a-97a3-1544fbb8c1ed
+  name: SFFILM Documentary Film Fund - SFFILM
+  category: festival_submission
+  organization: SFFILM
+  url: https://sffilm.org/documentary-film-fund/
+  deadline_date: '2026-05-04'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "SFFILM Documentary Film Fund - SFFILM About SFFILM Calendar Festival\
+    \ 2026 SFFILM FESTIVAL Join us for the 69th San Francisco International Film Festival,\
+    \ April 24\u2013May 4, 2026. Explore the program resources below."
+  eligibility_notes: Specific SFFILM nonfiction funding opportunity with clear annual
+    deadlines for documentary post-production support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://sffilm.org/documentary-film-fund/
+  tags:
+  - fund
+  - high
+  - festival_submission
+  - new_opportunity
+  year: 2026
+- id: 1715c697-1757-55ac-91c6-9c6110406330
+  name: Beacons Fund FAQs 2026
+  category: funding_round
+  organization: Ffilm Cymru Wales
+  url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
+  deadline_date: '2026-05-11'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Beacons Fund FAQs 2026 Beacons Fund Application Form 2026 - Live Action
+    Narrative Beacons Fund Application Form 2026 - Animation Beacons Fund Application
+    Form 2026 - Documentary Event 11 May 2026
+  eligibility_notes: BFI NETWORK Wales short film fund with mentoring and training
+    support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
+  tags:
+  - fund
+  - medium
+  - funding_round
+  - new_opportunity
+  year: 2026
 - id: e0929f25-25e2-5703-9743-821ba36cef56
   name: Beacons Short Film Fund Roundtable
   category: industry_forum
@@ -156,6 +158,35 @@
   - event
   - industry_forum
   - networking
+  year: 2026
+- id: ea90cbce-4081-51f5-8b9e-4cec8dbd58bb
+  name: Fiction Producing Lab 2026
+  category: lab_application
+  organization: Film Independent
+  url: https://www.filmindependent.org/programs/applications/
+  deadline_date: '2026-05-18'
+  early_deadline_date: '2026-05-04'
+  event_start_date: null
+  event_end_date: null
+  description: 'Fiction Producing Lab 2026 Applications open: March 9, 2026'
+  eligibility_notes: High-signal Film Independent documentary producer development
+    programme with concrete annual application timing.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://www.filmindependent.org/programs/applications/
+  tags:
+  - lab
+  - high
+  - lab_application
+  - new_opportunity
+  - update_signal
+  - episodic_directing
+  - documentary
+  - directing
   year: 2026
 - id: 3c968059-c8da-5cae-8900-5ddb4844b304
   name: Join us in Cannes
@@ -209,6 +240,89 @@
   - industry_forum
   - new_opportunity
   year: 2026
+- id: a564fab1-14fc-5bf8-acf2-bfa2c05e4179
+  name: Finalists Notified in late September 2025
+  category: funding_round
+  organization: SFFILM
+  url: https://sffilm.org/rainin-grant/
+  deadline_date: '2026-05-22'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Regular Deadline May 8th, 2026 (Application Fee $30) Final Deadline
+    May 22nd, 2026 (Application Fee $50) Finalists Notified in late September 2025
+    Recipients Announced in late October 2025 Who Can Apply Filmmakers must be at
+    least 18 years old.
+  eligibility_notes: Major SFFILM narrative feature grant programme with screenwriting,
+    development, and post-production support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://sffilm.org/rainin-grant/
+  tags:
+  - fund
+  - high
+  - funding_round
+  - new_opportunity
+  year: 2026
+- id: d9c15562-02af-5a2a-9f2e-7d515f0d4c87
+  name: SFFILM Documentary Film Fund
+  category: funding_round
+  organization: SFFILM
+  url: https://sffilm.org/rainin-grant/
+  deadline_date: '2026-05-22'
+  early_deadline_date: '2026-05-08'
+  event_start_date: null
+  event_end_date: null
+  description: The SFFILM Documentary Film Fund supports engaging documentaries in
+    post-production which exhibit compelling stories...
+  eligibility_notes: Applicants must focus on social justice issues and cannot be
+    affiliated with SFFILM.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://sffilm.org/rainin-grant/
+  tags:
+  - fund
+  - documentary
+  - post-production
+  - new_opportunity
+  - high
+  - funding_round
+  year: 2026
+- id: 2b2b2444-4f77-5bb2-b263-574c0ee4bc15
+  name: 'Film London Labs: The Script Sessions'
+  category: lab_application
+  organization: Film London
+  url: https://filmlondon.org.uk/film-london-labs
+  deadline_date: '2026-05-26'
+  early_deadline_date: null
+  event_start_date: '2026-05-26'
+  event_end_date: '2026-05-28'
+  description: "An exciting lab for scriptwriters, delivered by writer/producer Angeli\
+    \ Macfarlane! The Script Sessions offers writers, directors and other creatives\
+    \ the opportunity to dive more deeply into feature film script writing techniques.\
+    \ This year\u2019s focus will be on the relationship between ideas, world building\
+    \ and placing your characters in the right structure to tell your story."
+  eligibility_notes: 'Open to writers, directors, and creatives '
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://filmlondon.org.uk/film-london-labs
+  tags:
+  - scriptwriting
+  - training
+  - emerging talent
+  year: 2026
 - id: 7769e7fd-7550-5ccd-987d-fae536ed7895
   name: Tribeca Creators Market 2025
   category: industry_forum
@@ -216,11 +330,11 @@
   url: https://www.tribecafilm.com/creatorsmarket
   deadline_date: '2026-06-03'
   early_deadline_date: null
-  event_start_date: '2026-06-03'
-  event_end_date: '2026-06-14'
+  event_start_date: '2026-06-09'
+  event_end_date: '2026-06-09'
   description: The Creators Market puts a strong emphasis on diversity and forms of
     storytelling, providing industry with a group of fresh and provocative voices.
-  eligibility_notes: By invitation only for selected creators and industry representatives.
+  eligibility_notes: Open submissions accepted for the first time this year.
   notification_windows:
   - 30
   - 14
@@ -234,6 +348,9 @@
   - festival
   - creators
   - industry
+  - documentary
+  - narrative
+  - showcase
   year: 2026
 - id: fc53ca1c-210d-591f-b82d-0c0b3986087c
   name: Works in Progress Showcase
@@ -261,6 +378,194 @@
   - industry
   - development
   year: 2026
+- id: 18f147ae-2613-5d20-9025-0f63486d61d5
+  name: 2026 MeetMarket
+  category: industry_forum
+  organization: Sheffield DocFest
+  url: https://www.sheffdocfest.com/meetmarket
+  deadline_date: '2026-06-10'
+  early_deadline_date: null
+  event_start_date: '2026-06-10'
+  event_end_date: '2026-06-15'
+  description: The MeetMarket offers a unique way to pitch your project through thirty-minute
+    curated meetings between pitchers and industry representatives for creative and
+    financial discussions. It is open to all documentary makers, local and international...
+  eligibility_notes: Documentary makers of all levels, particularly those with projects
+    rooted in podcast storytelling.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://www.sheffdocfest.com/meetmarket
+  tags:
+  - documentary
+  - marketplace
+  - pitching
+  - funding
+  year: 2026
+- id: 624e0203-7b38-5e40-89cc-e6e3fe37e8bf
+  name: Beacons Short Film Fund Roundtable
+  category: funding_round
+  organization: Ffilm Cymru Wales
+  url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
+  deadline_date: '2026-06-12'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Beacons Short Film Fund Roundtable Join us for this free online round
+    table discussion to find out more about Beacons, open for applications now until
+    12pm on 12th June 2026. Related Work Our work Pink The true story of a son outed
+    by his bank robbing father in very unexpected circumstances.
+  eligibility_notes: BFI NETWORK Wales short film fund with mentoring and training
+    support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
+  tags:
+  - fund
+  - medium
+  - funding_round
+  - new_opportunity
+  year: 2026
+- id: 031ffb87-abf3-5598-a3df-3f175d3f2699
+  name: Beacons Short Film Funding
+  category: funding_round
+  organization: Ffilm Cymru Wales
+  url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
+  deadline_date: '2026-06-12'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Next Deadline: 12 June 2026. Ffilm Cymru funds the development and
+    production of live-action, documentary and animated short films for cinema audiences,
+    led by Wales born or based directors.'
+  eligibility_notes: Directors must be born in Wales or based in Wales; also requires
+    a creative track record but no prior feature film distribution.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
+  tags:
+  - fund
+  - funding_round
+  - new_opportunity
+  year: 2026
+- id: faae654a-b36d-53b1-a879-762d68a29f08
+  name: Breadcrumb
+  category: funding_round
+  organization: Ffilm Cymru Wales
+  url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
+  deadline_date: '2026-06-12'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Breadcrumb Home Funding and Training Beacons: Short Film Funding Beacons:
+    Short Film Funding Next Deadline: 12 June 2026'
+  eligibility_notes: BFI NETWORK Wales short film fund with mentoring and training
+    support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
+  tags:
+  - fund
+  - medium
+  - funding_round
+  - new_opportunity
+  year: 2026
+- id: 5a1f9bf9-79fa-532c-8605-e83ba47d4a0b
+  name: Directing sample
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/producers-program/
+  deadline_date: '2026-06-12'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: '(optional): If you have visual materials such as a lookbook or project
+    deck, you may upload a PDF of no more than 40 MB. Directing sample : You will
+    be asked to provide a link (and password, if applicable) to one directing sample
+    for the director attached to your project. This sample should be recent and relevant
+    to the project you are submitting, and it should also be a complete work (i.e.,
+    not a'
+  eligibility_notes: Important Sundance pathway for fiction and nonfiction producers
+    across labs, fellowships, networking, and producer-focused support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://www.sundance.org/initiatives/producers-program/
+  tags:
+  - lab
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2026
+- id: 81f1e636-a052-53e5-94c2-22519681df94
+  name: Download and complete the relevant application form
+  category: funding_round
+  organization: Ffilm Cymru Wales
+  url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
+  deadline_date: '2026-06-12'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: short filmmaker resources ) Download and complete the relevant application
+    form Email the completed form and any necessary supporting documents to applications@ffilmcymruwales.com
+    Deadline 12th June 2026, midday
+  eligibility_notes: BFI NETWORK Wales short film fund with mentoring and training
+    support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
+  tags:
+  - fund
+  - medium
+  - funding_round
+  - new_opportunity
+  year: 2026
+- id: 57218a2e-f75c-5a9c-ba6d-033c59a704ba
+  name: BANFF Spark 2026 Festival
+  category: industry_forum
+  organization: Banff World Media Festival
+  url: https://spark.banffmediafestival.playbackonline.ca/About
+  deadline_date: '2026-06-14'
+  early_deadline_date: null
+  event_start_date: '2026-06-14'
+  event_end_date: '2026-06-17'
+  description: A full-access pass to the 2026 Banff World Media Festival (June 14-17,
+    2026)
+  eligibility_notes: null
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://spark.banffmediafestival.playbackonline.ca/About
+  tags:
+  - industry_forum
+  - high
+  - event
+  year: 2026
 - id: e7beb2c3-f449-5c36-93e6-ad903a131e6a
   name: Documentary Fund Application
   category: funding_round
@@ -287,30 +592,82 @@
   - must_have
   - funding_round
   year: 2026
-- id: d9c15562-02af-5a2a-9f2e-7d515f0d4c87
-  name: SFFILM Documentary Film Fund
-  category: funding_round
-  organization: SFFILM
-  url: https://sffilm.org/documentary-film-fund/
-  deadline_date: '2026-07-07'
-  early_deadline_date: '2026-06-09'
+- id: 322889ca-ae79-581f-9cf5-4155f437c63e
+  name: "\xA9 2025 Sundance.org"
+  category: festival_submission
+  organization: Sundance Institute
+  url: https://www.sundance.org/documentary-fund/
+  deadline_date: '2026-06-15'
+  early_deadline_date: null
   event_start_date: null
   event_end_date: null
-  description: The SFFILM Documentary Film Fund supports engaging documentaries in
-    post-production which exhibit compelling stories...
-  eligibility_notes: Open to filmmakers internationally who are in key creative roles
-    and whose projects are in post-production.
+  description: "\xA9 2025 Sundance.org Please ensure Javascript is enabled for purposes\
+    \ of website accessibility Frequently Asked Questions Deadlines & Review Timeline\
+    \ The Sundance Institute Documentary Fund accepts submissions through an annual\
+    \ open call. Our next open call will launch on May 18 and close on June 15, 2026."
+  eligibility_notes: High-priority Sundance funding opportunity for nonfiction projects
+    worldwide, with clear annual open-call timing.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-21'
-  source_url: https://sffilm.org/documentary-film-fund/
+  last_verified_date: '2026-04-22'
+  source_url: https://www.sundance.org/documentary-fund/
   tags:
   - fund
-  - documentary
-  - post-production
+  - must_have
+  - festival_submission
+  - new_opportunity
+  year: 2026
+- id: f0f86ebe-2e9e-5d26-b2ae-5205568fdc55
+  name: Sunny Side of the Doc 2026
+  category: industry_forum
+  organization: Sunny Side of the Doc
+  url: https://www.sunnysideofthedoc.com/
+  deadline_date: '2026-06-22'
+  early_deadline_date: null
+  event_start_date: '2026-06-22'
+  event_end_date: '2026-06-24'
+  description: Join 37th edition of Sunny Side of the Doc, the international marketplace
+    for documentary taking place on 22-24 June 2026, La Rochelle.
+  eligibility_notes: Open to decision makers, producers, and filmmakers in the documentary
+    industry.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://www.sunnysideofthedoc.com/
+  tags:
+  - market
+  - industry_forum
+  - new_opportunity
+  year: 2026
+- id: 37bb5c0a-699e-57fc-b343-2f8139a2e5a2
+  name: 2 Days
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-06-28'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 2 Days Full-time In person Cymru Wales 06 Jul/26 Application deadline
+    28 Jun 2026
+  eligibility_notes: Large catalogue of professional skill-building opportunities
+    across film, TV, factual, and craft disciplines.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - high
   - new_opportunity
   year: 2026
 - id: 92f9181f-9828-5905-a0ee-549bd5db747e
@@ -336,6 +693,32 @@
   - laboratory
   - new_opportunity
   year: 2026
+- id: 119f2b58-ebbb-5353-912d-97a465458912
+  name: Opportunities
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/producers-program/
+  deadline_date: '2026-07-13'
+  early_deadline_date: null
+  event_start_date: '2026-07-13'
+  event_end_date: '2026-07-18'
+  description: Opportunities Location Details Dates Feature Film Producers Lab Ucross,
+    Wyoming July 13-18, 2026
+  eligibility_notes: Important Sundance pathway for fiction and nonfiction producers
+    across labs, fellowships, networking, and producer-focused support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://www.sundance.org/initiatives/producers-program/
+  tags:
+  - lab
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2026
 - id: a15c99b2-32c1-5c75-bf53-82ea39bc1689
   name: Documentary Film Producers Lab
   category: lab_application
@@ -359,48 +742,77 @@
   - laboratory
   - new_opportunity
   year: 2026
-- id: ea90cbce-4081-51f5-8b9e-4cec8dbd58bb
-  name: Fiction Producing Lab 2026
-  category: lab_application
-  organization: Film Independent
-  url: https://www.filmindependent.org/programs/applications/
-  deadline_date: '2026-07-27'
-  early_deadline_date: '2026-05-04'
-  event_start_date: null
-  event_end_date: null
-  description: 'Fiction Producing Lab 2026 Applications open: March 9, 2026'
-  eligibility_notes: High-signal Film Independent documentary producer development
-    programme with concrete annual application timing.
+- id: 5bdafdbc-3cae-5c65-baca-4c9c8d93b558
+  name: Documentary Film Producers Lab
+  category: festival_submission
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/producers-program/
+  deadline_date: '2026-07-20'
+  early_deadline_date: null
+  event_start_date: '2026-07-20'
+  event_end_date: '2026-07-25'
+  description: Documentary Film Producers Lab Ucross, Wyoming July 20-25, 2026 Awards
+    & Grants Feature Film and Documentary Film Producing fellows each receive a grant
+    that may be applied to personal expenses and unsupported costs for project advancement.
+    The Sundance Institute | Amazon MGM Studios Producers Awards recognize two producers
+    (and/or producing teams) with films premiering at the Sundance Film Festiv
+  eligibility_notes: Important Sundance pathway for fiction and nonfiction producers
+    across labs, fellowships, networking, and producer-focused support.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
   last_verified_date: '2026-04-22'
-  source_url: https://www.filmindependent.org/programs/applications/
+  source_url: https://www.sundance.org/initiatives/producers-program/
   tags:
   - lab
-  - high
-  - lab_application
+  - must_have
+  - festival_submission
   - new_opportunity
-  - update_signal
-  - episodic_directing
   year: 2026
-- id: a2c92f73-8bd0-5c91-8d7e-dc39b311b204
-  name: Venice Production Bridge Programs and Services
-  category: industry_forum
+- id: 7d142f2f-8d32-59b6-b82a-b94552d64c16
+  name: Writing the TV Pilot
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-07-20'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Writing the TV Pilot Cymru Wales 11 May/26 Application deadline: 1st
+    May 2026'
+  eligibility_notes: Large catalogue of professional skill-building opportunities
+    across film, TV, factual, and craft disciplines.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - high
+  - new_opportunity
+  year: 2026
+- id: 682013be-698d-5e1c-b6e2-60c42207bfa5
+  name: 3. Locations and services of the Venice Production Bridge
+  category: festival_submission
   organization: Venice Biennale Cinema
   url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
   deadline_date: '2026-09-12'
-  early_deadline_date: '2026-06-04'
+  early_deadline_date: null
   event_start_date: null
   event_end_date: null
-  description: On the occasion of the upcoming 83rd edition of the Venice International
-    Film Festival (2-12 September 2026), the Venice Production Bridge (3-9 September,
-    2026) will organize programmes such as the Venice Gap-Financing Market, the Book
-    Adaptation Rights Market, Final Cut in Venice, Meet the Streamers, and others.
-  eligibility_notes: Accreditation for film industry professionals and those engaged
-    in artistic or technical activities is required.
+  description: "The type of accreditation and the number of accreditations issued\
+    \ for each company are at the sole discretion of La Biennale di Venezia. 3. Locations\
+    \ and services of the Venice Production Bridge On the occasion of the upcoming\
+    \ 83 rd edition of the Venice International Film Festival (2\u201312 September\
+    \ 2026), the Venice Production Bridge (3-9 September, 2026) will organize programmes\
+    \ such as the Venice"
+  eligibility_notes: Tracks Venice industry accreditation windows and access into
+    Venice Production Bridge programs, screenings, and market activity.
   notification_windows:
   - 30
   - 14
@@ -410,12 +822,9 @@
   source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
   tags:
   - industry_forum
-  - festival_submission
-  - networking
-  - funding_opportunity
-  - accreditation
-  - new_opportunity
   - high
+  - festival_submission
+  - new_opportunity
   year: 2026
 - id: 5268cca7-32dd-5c1a-8741-d2896641e5a1
   name: MIPCOM CANNES - Practical Info Event
@@ -495,6 +904,33 @@
   - documentary
   - animated
   - co-production
+  year: 2026
+- id: 503dc2f3-2719-55e4-83b2-170487aadd46
+  name: "DOK Co-Pro Market \xB7 DOK Leipzig"
+  category: festival_submission
+  organization: DOK Leipzig
+  url: https://www.dok-leipzig.de/en/co-pro-market
+  deadline_date: '2026-11-01'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "DOK Co-Pro Market \xB7 DOK Leipzig Skip to main content Login International\
+    \ Leipzig Festival for Documentary and Animated Film 26 October to 1 November\
+    \ 2026 de"
+  eligibility_notes: International co-financing and networking event for creative
+    documentary and animated documentary projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://www.dok-leipzig.de/en/co-pro-market
+  tags:
+  - market
+  - high
+  - festival_submission
+  - new_opportunity
   year: 2026
 - id: 5760f051-ce6a-5f81-96d8-6f839f6e85da
   name: Saxon Award for the Best Documentary Project by a Female Director
