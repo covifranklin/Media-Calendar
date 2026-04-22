@@ -1,3 +1,28 @@
+- id: e62a52d9-82eb-5cd1-a537-c231b2c009ef
+  name: CPH:FORUM 2027
+  category: industry_forum
+  organization: CPH:DOX
+  url: https://cphdox.dk/cphforum/
+  deadline_date: '2027-03-10'
+  early_deadline_date: null
+  event_start_date: '2027-03-10'
+  event_end_date: '2027-03-21'
+  description: The next edition of CPH:FORUM (including CPH:ROUGHCUT and CHANGE) takes
+    place during the Industry week of CPH:DOX 2027 (March 10-21).
+  eligibility_notes: Focuses on creative nonfiction projects with international potential.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://cphdox.dk/cphforum/
+  tags:
+  - market
+  - must_have
+  - industry_forum
+  - new_opportunity
+  year: 2027
 - id: 2200eaed-d0ae-55c1-b992-4a954d6dab68
   name: Press Registrations for Series Mania Forum
   category: industry_forum

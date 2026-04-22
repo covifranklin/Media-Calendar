@@ -28,30 +28,82 @@
   - producers
   - new_opportunity
   year: 2026
-- id: e1f7ce2b-c654-5f45-8616-628ac75f350b
-  name: Hot Docs Forum
-  category: industry_forum
-  organization: Hot Docs
-  url: https://hotdocs.ca/industry/conference/hot-docs-forum
-  deadline_date: '2026-04-27'
+- id: 77db99d2-c51f-5260-a21d-5e9d47535a4c
+  name: Meet & Match 2026 Submissions
+  category: festival_submission
+  organization: Sunny Side of the Doc
+  url: https://www.sunnysideofthedoc.com/
+  deadline_date: '2026-04-24'
   early_deadline_date: null
-  event_start_date: '2026-04-27'
-  event_end_date: '2026-04-27'
-  description: Pitch at North America's most effective international documentary market.
-    Applications for 2026 Hot Docs Forum & Deal Maker are closed.
-  eligibility_notes: Projects selected include those in regular or rough cut categories,
-    with the necessity of having a Trigger Financier.
+  event_start_date: null
+  event_end_date: null
+  description: "04/24/2026 Call for project \u2013 Meet & Match Submission Closing\
+    \ date: Meet & Match submissions for Sunny Side of the Doc will be accepted until\
+    \ 24th, April, 2026, 12pm CET."
+  eligibility_notes: Open to filmmakers and creators in the documentary and factual
+    genre who seek project support and partnerships.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-21'
-  source_url: https://hotdocs.ca/industry/conference/hot-docs-forum
+  last_verified_date: '2026-04-22'
+  source_url: https://www.sunnysideofthedoc.com/
+  tags:
+  - market
+  - documentary
+  - festival_submission
+  - new_opportunity
+  year: 2026
+- id: e1f7ce2b-c654-5f45-8616-628ac75f350b
+  name: Hot Docs Forum
+  category: industry_forum
+  organization: Hot Docs
+  url: https://hotdocs.ca/industry/conference/register
+  deadline_date: '2026-04-27'
+  early_deadline_date: null
+  event_start_date: '2026-04-27'
+  event_end_date: '2026-04-29'
+  description: Pitch at North America's most effective international documentary market.
+    Applications for 2026 Hot Docs Forum & Deal Maker are closed.
+  eligibility_notes: Open to industry professionals looking to network and gain insights.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://hotdocs.ca/industry/conference/register
   tags:
   - forum
   - pitching
   - financing
+  - new_opportunity
+  - industry_forum
+  year: 2026
+- id: 7d142f2f-8d32-59b6-b82a-b94552d64c16
+  name: Writing the TV Pilot
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-05-01'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Writing the TV Pilot Cymru Wales 11 May/26 Application deadline: 1st
+    May 2026'
+  eligibility_notes: Large catalogue of professional skill-building opportunities
+    across film, TV, factual, and craft disciplines.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - high
   - new_opportunity
   year: 2026
 - id: 6f3b5496-bfc5-5159-92be-8346743f1d80
@@ -80,31 +132,30 @@
   - festival_submission
   - new_opportunity
   year: 2026
-- id: ea90cbce-4081-51f5-8b9e-4cec8dbd58bb
-  name: Fiction Producing Lab 2026
-  category: lab_application
-  organization: Film Independent
-  url: https://www.filmindependent.org/programs/applications/
-  deadline_date: '2026-05-18'
-  early_deadline_date: '2026-05-04'
-  event_start_date: null
-  event_end_date: null
-  description: 'Fiction Producing Lab 2026 Applications open: March 9, 2026'
-  eligibility_notes: High-signal Film Independent producer development programme with
-    annual application timing.
+- id: e0929f25-25e2-5703-9743-821ba36cef56
+  name: Beacons Short Film Fund Roundtable
+  category: industry_forum
+  organization: Ffilm Cymru Wales
+  url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
+  deadline_date: '2026-05-11'
+  early_deadline_date: null
+  event_start_date: '2026-05-11'
+  event_end_date: '2026-05-11'
+  description: Beacons Short Film Fund Roundtable. Join us for this free online round
+    table discussion to find out more about Beacons, open for applications now until
+    12pm on 12th June 2026.
+  eligibility_notes: null
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-21'
-  source_url: https://www.filmindependent.org/programs/applications/
+  last_verified_date: '2026-04-22'
+  source_url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
   tags:
-  - lab
-  - high
-  - lab_application
-  - new_opportunity
-  - update_signal
+  - event
+  - industry_forum
+  - networking
   year: 2026
 - id: 3c968059-c8da-5cae-8900-5ddb4844b304
   name: Join us in Cannes
@@ -157,6 +208,58 @@
   - must_have
   - industry_forum
   - new_opportunity
+  year: 2026
+- id: 7769e7fd-7550-5ccd-987d-fae536ed7895
+  name: Tribeca Creators Market 2025
+  category: industry_forum
+  organization: Tribeca Festival
+  url: https://www.tribecafilm.com/creatorsmarket
+  deadline_date: '2026-06-03'
+  early_deadline_date: null
+  event_start_date: '2026-06-03'
+  event_end_date: '2026-06-14'
+  description: The Creators Market puts a strong emphasis on diversity and forms of
+    storytelling, providing industry with a group of fresh and provocative voices.
+  eligibility_notes: By invitation only for selected creators and industry representatives.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://www.tribecafilm.com/creatorsmarket
+  tags:
+  - film
+  - television
+  - festival
+  - creators
+  - industry
+  year: 2026
+- id: fc53ca1c-210d-591f-b82d-0c0b3986087c
+  name: Works in Progress Showcase
+  category: other
+  organization: Tribeca Festival
+  url: https://www.tribecafilm.com/creatorsmarket
+  deadline_date: '2026-06-09'
+  early_deadline_date: null
+  event_start_date: '2026-06-09'
+  event_end_date: '2026-06-09'
+  description: The Market kicks off with the Works in Progress showcase on June 9th,
+    which, for the first time this year, accepted open submissions.
+  eligibility_notes: Open submissions accepted for the first time this year.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://www.tribecafilm.com/creatorsmarket
+  tags:
+  - film
+  - television
+  - showcase
+  - industry
+  - development
   year: 2026
 - id: e7beb2c3-f449-5c36-93e6-ad903a131e6a
   name: Documentary Fund Application
@@ -256,12 +359,39 @@
   - laboratory
   - new_opportunity
   year: 2026
+- id: ea90cbce-4081-51f5-8b9e-4cec8dbd58bb
+  name: Fiction Producing Lab 2026
+  category: lab_application
+  organization: Film Independent
+  url: https://www.filmindependent.org/programs/applications/
+  deadline_date: '2026-07-27'
+  early_deadline_date: '2026-05-04'
+  event_start_date: null
+  event_end_date: null
+  description: 'Fiction Producing Lab 2026 Applications open: March 9, 2026'
+  eligibility_notes: High-signal Film Independent documentary producer development
+    programme with concrete annual application timing.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://www.filmindependent.org/programs/applications/
+  tags:
+  - lab
+  - high
+  - lab_application
+  - new_opportunity
+  - update_signal
+  - episodic_directing
+  year: 2026
 - id: a2c92f73-8bd0-5c91-8d7e-dc39b311b204
   name: Venice Production Bridge Programs and Services
   category: industry_forum
   organization: Venice Biennale Cinema
   url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  deadline_date: '2026-07-30'
+  deadline_date: '2026-09-12'
   early_deadline_date: '2026-06-04'
   event_start_date: null
   event_end_date: null
@@ -269,14 +399,14 @@
     Film Festival (2-12 September 2026), the Venice Production Bridge (3-9 September,
     2026) will organize programmes such as the Venice Gap-Financing Market, the Book
     Adaptation Rights Market, Final Cut in Venice, Meet the Streamers, and others.
-  eligibility_notes: Applicants must prove their activity in the film industry, submitting
-    professional documents as required.
+  eligibility_notes: Accreditation for film industry professionals and those engaged
+    in artistic or technical activities is required.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-21'
+  last_verified_date: '2026-04-22'
   source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
   tags:
   - industry_forum
@@ -285,6 +415,7 @@
   - funding_opportunity
   - accreditation
   - new_opportunity
+  - high
   year: 2026
 - id: 5268cca7-32dd-5c1a-8741-d2896641e5a1
   name: MIPCOM CANNES - Practical Info Event
@@ -311,6 +442,83 @@
   - must_have
   - industry_forum
   - new_opportunity
+  year: 2026
+- id: 584a122a-0f38-56d3-9273-3e46b64b5eb7
+  name: Deutsche Welle Award
+  category: funding_round
+  organization: DOK Leipzig
+  url: https://www.dok-leipzig.de/en/co-pro-market
+  deadline_date: '2026-11-01'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "The Deutsche Welle Award worth \u20AC1,500... human rights, climate\
+    \ change, migration, etc."
+  eligibility_notes: For projects highlighting issues like human rights, climate change,
+    and migration.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://www.dok-leipzig.de/en/co-pro-market
+  tags:
+  - award
+  - social_issues
+  - documentary
+  year: 2026
+- id: aaf24859-ab19-5e6b-99ef-a3793a759b98
+  name: DOK Co-Pro Market
+  category: industry_forum
+  organization: DOK Leipzig
+  url: https://www.dok-leipzig.de/en/co-pro-market
+  deadline_date: '2026-11-01'
+  early_deadline_date: null
+  event_start_date: '2026-10-26'
+  event_end_date: '2026-10-26'
+  description: International Leipzig Festival for Documentary and Animated Film 26
+    October to 1 November 2026
+  eligibility_notes: Projects in development or early production seeking co-producers
+    or financiers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://www.dok-leipzig.de/en/co-pro-market
+  tags:
+  - market
+  - funding
+  - networking
+  - documentary
+  - animated
+  - co-production
+  year: 2026
+- id: 5760f051-ce6a-5f81-96d8-6f839f6e85da
+  name: Saxon Award for the Best Documentary Project by a Female Director
+  category: funding_round
+  organization: DOK Leipzig
+  url: https://www.dok-leipzig.de/en/co-pro-market
+  deadline_date: '2026-11-01'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "Saxon Award for the Best Documentary Project by a Female Director\
+    \ along with a 5,000 \u20AC prize."
+  eligibility_notes: Open to female directors of documentary projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-22'
+  source_url: https://www.dok-leipzig.de/en/co-pro-market
+  tags:
+  - award
+  - female_director
+  - documentary
   year: 2026
 - id: a336400f-1818-5536-baef-398d6f2517d4
   name: IDFA Forum 2026
