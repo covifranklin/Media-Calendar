@@ -55,9 +55,11 @@ def test_basic_html_output(tmp_path):
     assert 'id="category-filter"' in html
     assert 'id="month-filter"' in html
     assert 'id="goose-guide"' in html
+    assert 'id="goose-seat-label"' in html
     assert "Example Fellowship" in html
     assert "Showing <strong>1</strong> deadlines." in html
     assert "settleGooseOnVisibleCard" in html
+    assert "goose-sunglasses" in html
 
 
 def test_filtering_by_category(tmp_path):
