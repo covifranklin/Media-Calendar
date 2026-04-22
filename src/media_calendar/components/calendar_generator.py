@@ -270,26 +270,26 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
     }}
 
     .goose-stage {{
-      position: fixed;
-      inset: 0;
+      position: absolute;
+      inset: 0 0 auto 0;
       pointer-events: none;
       z-index: 30;
-      overflow: hidden;
+      overflow: visible;
     }}
 
     .goose-guide {{
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 92px;
       height: 92px;
-      transform: translate3d(20px, calc(100vh - 128px), 0);
-      transition: transform 1.25s cubic-bezier(0.22, 0.9, 0.24, 1);
+      transform: translate3d(20px, 160px, 0);
+      transition: transform 1.8s cubic-bezier(0.22, 0.9, 0.24, 1);
       will-change: transform;
     }}
 
     .goose-guide.is-waddling .goose {{
-      animation: goose-waddle 0.42s ease-in-out infinite alternate;
+      animation: goose-waddle 0.72s ease-in-out infinite alternate;
     }}
 
     .goose-guide.is-seated .goose {{
@@ -363,22 +363,23 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
 
     .goose-sunglasses {{
       position: absolute;
-      left: 52px;
-      top: 8px;
-      width: 18px;
-      height: 8px;
+      left: 51px;
+      top: 7px;
+      width: 22px;
+      height: 10px;
     }}
 
     .goose-sunglasses::before,
     .goose-sunglasses::after {{
       content: "";
       position: absolute;
-      top: 0;
-      width: 7px;
-      height: 7px;
+      top: 1px;
+      width: 8px;
+      height: 8px;
       border: 2px solid #2f3d36;
-      border-radius: 3px;
+      border-radius: 50%;
       background: #1b1f23;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
     }}
 
     .goose-sunglasses::before {{
@@ -391,9 +392,9 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
 
     .goose-sunglasses-bridge {{
       position: absolute;
-      left: 59px;
-      top: 11px;
-      width: 5px;
+      left: 60px;
+      top: 12px;
+      width: 4px;
       height: 2px;
       background: #2f3d36;
       border-radius: 999px;
@@ -401,12 +402,13 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
 
     .goose-eye {{
       position: absolute;
-      left: 64px;
-      top: 11px;
-      width: 3px;
-      height: 3px;
+      left: 58px;
+      top: 15px;
+      width: 2px;
+      height: 2px;
       border-radius: 50%;
-      background: #2f3d36;
+      background: rgba(255, 255, 255, 0.55);
+      box-shadow: 8px 0 0 rgba(255, 255, 255, 0.55);
     }}
 
     .goose-beak {{
@@ -440,11 +442,11 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
     }}
 
     .goose-guide.is-waddling .goose-leg.left {{
-      animation: goose-step-left 0.42s ease-in-out infinite alternate;
+      animation: goose-step-left 0.72s ease-in-out infinite alternate;
     }}
 
     .goose-guide.is-waddling .goose-leg.right {{
-      animation: goose-step-right 0.42s ease-in-out infinite alternate;
+      animation: goose-step-right 0.72s ease-in-out infinite alternate;
     }}
 
     .goose-feet {{
@@ -458,10 +460,10 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
     }}
 
     .goose-seat-label {{
-      position: fixed;
+      position: absolute;
       right: 18px;
-      bottom: 18px;
-      max-width: min(220px, calc(100vw - 36px));
+      top: 110px;
+      max-width: min(220px, calc(100% - 36px));
       padding: 10px 12px;
       border: 1px solid rgba(47, 61, 54, 0.18);
       border-radius: 16px;
@@ -650,32 +652,45 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
       gooseRouteTimeouts = [];
     }}
 
+    function getPageHeight() {{
+      return Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight,
+        window.innerHeight
+      );
+    }}
+
     function moveGooseTo(x, y) {{
       gooseGuide.style.transform = `translate3d(${{x}}px, ${{y}}px, 0)`;
     }}
 
     function getGoosePerch() {{
+      const cardWidth = 320;
       return {{
-        x: Math.max(14, window.innerWidth - 150),
-        y: Math.max(18, window.innerHeight - 166),
+        x: Math.max(14, Math.min(window.innerWidth - 150, cardWidth + 28)),
+        y: 170,
       }};
     }}
 
     function getGooseJourney(targetCard) {{
       const perch = getGoosePerch();
       const rect = targetCard ? targetCard.getBoundingClientRect() : null;
+      const scrollTop = window.scrollY || window.pageYOffset || 0;
+      const pageHeight = getPageHeight();
+      const cardTop = rect ? rect.top + scrollTop : 280;
       const scenicStopX = rect
-        ? Math.min(window.innerWidth - 124, Math.max(22, rect.left + Math.min(rect.width * 0.22, 72)))
-        : Math.max(40, Math.round(window.innerWidth * 0.28));
+        ? Math.min(window.innerWidth - 124, Math.max(44, rect.left + Math.min(rect.width * 0.32, 96)))
+        : Math.max(54, Math.round(window.innerWidth * 0.3));
       const scenicStopY = rect
-        ? Math.min(window.innerHeight - 132, Math.max(24, rect.top + Math.min(rect.height * 0.18, 56)))
-        : Math.max(30, Math.round(window.innerHeight * 0.22));
+        ? Math.min(pageHeight - 150, Math.max(210, cardTop + Math.min(rect.height * 0.16, 64)))
+        : 320;
 
       return [
-        {{ x: 18, y: Math.max(30, window.innerHeight - 132) }},
-        {{ x: Math.max(36, Math.round(window.innerWidth * 0.34)), y: Math.max(34, window.innerHeight - 228) }},
+        {{ x: 18, y: 160 }},
+        {{ x: Math.max(42, Math.round(window.innerWidth * 0.22)), y: 205 }},
         {{ x: scenicStopX, y: scenicStopY }},
-        {{ x: Math.max(58, Math.round(window.innerWidth * 0.58)), y: Math.max(28, window.innerHeight - 250) }},
+        {{ x: Math.max(68, Math.round(window.innerWidth * 0.48)), y: Math.min(pageHeight - 140, scenicStopY + 110) }},
+        {{ x: Math.max(36, Math.round(window.innerWidth * 0.18)), y: Math.max(190, Math.min(pageHeight - 180, scenicStopY - 65)) }},
         perch,
       ];
     }}
@@ -731,13 +746,13 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
       route.slice(1).forEach((stop, index) => {{
         gooseRouteTimeouts.push(window.setTimeout(() => {{
           moveGooseTo(stop.x, stop.y);
-        }}, 380 + index * 860));
+        }}, 900 + index * 1650));
       }});
 
       gooseRouteTimeouts.push(window.setTimeout(() => {{
         gooseGuide.classList.remove('is-waddling');
         gooseGuide.classList.add('is-seated');
-      }}, 380 + (route.length - 1) * 860));
+      }}, 900 + (route.length - 1) * 1650));
     }}
 
     categoryFilter.addEventListener('change', applyFilters);
