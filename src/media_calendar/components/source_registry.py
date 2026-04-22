@@ -75,7 +75,7 @@ def resolve_source_scope(
     """Resolve automatic source scope into an effective core/all scope."""
 
     if scope == "auto":
-        return "all" if current_date.isocalendar().week % 2 == 0 else "core"
+        return "all" if current_date.isocalendar().week % 2 == 1 else "core"
     return scope
 
 

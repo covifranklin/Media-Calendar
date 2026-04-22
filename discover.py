@@ -104,12 +104,22 @@ def main() -> int:
         f"{payload['rejected_uncertain_count']} rejected."
     )
     print(f"Refresh mode: {payload['mode']}")
-    print(
-        "Source scope: "
-        f"{payload['source_scope_requested']} "
-        f"(effective: {payload['source_scope_effective']}, "
-        f"{payload['selected_source_count']}/{payload['total_source_count']} sources)"
-    )
+    source_scope_requested = payload.get("source_scope_requested")
+    source_scope_effective = payload.get("source_scope_effective")
+    selected_source_count = payload.get("selected_source_count")
+    total_source_count = payload.get("total_source_count")
+    if (
+        source_scope_requested is not None
+        and source_scope_effective is not None
+        and selected_source_count is not None
+        and total_source_count is not None
+    ):
+        print(
+            "Source scope: "
+            f"{source_scope_requested} "
+            f"(effective: {source_scope_effective}, "
+            f"{selected_source_count}/{total_source_count} sources)"
+        )
     print(
         "Updated deadline files: "
         f"{', '.join(payload['deadline_files']) if payload['deadline_files'] else 'None'}"

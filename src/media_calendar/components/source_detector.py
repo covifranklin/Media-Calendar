@@ -38,6 +38,29 @@ _DEADLINE_PATTERNS = [
     ),
 ]
 
+_CLOSING_DATE_PATTERNS = [
+    re.compile(
+        r"\b(?:applications close|submissions close|entries close|closes|close on)\b"
+        r"[:\s-]*([A-Z][a-z]+ \d{1,2}(?:st|nd|rd|th)?, \d{4})",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        r"\b(?:applications close|submissions close|entries close|closes|close on)\b"
+        r"[:\s-]*(\d{1,2}(?:st|nd|rd|th)? [A-Z][a-z]+ \d{4})",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        r"([A-Z][a-z]+ \d{1,2}(?:st|nd|rd|th)?, \d{4})[:\s-]*"
+        r"(?:applications close|submissions close|entries close|closes)\b",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        r"(\d{1,2}(?:st|nd|rd|th)? [A-Z][a-z]+ \d{4})[:\s-]*"
+        r"(?:applications close|submissions close|entries close|closes)\b",
+        re.IGNORECASE,
+    ),
+]
+
 _EARLY_DEADLINE_PATTERNS = [
     re.compile(
         r"\b(?:early deadline|early bird deadline|early application deadline)\b"
@@ -395,13 +418,27 @@ def _first_match(
     return None
 
 
+def _last_match(
+    patterns: Iterable[re.Pattern[str]],
+    text: str,
+) -> str | None:
+    for pattern in patterns:
+        matches = list(pattern.finditer(text))
+        if matches:
+            return matches[-1].group(1).strip()
+    return None
+
+
 def _extract_deadline_text(excerpt: str) -> str | None:
     deadline_text = _first_match(_DEADLINE_PATTERNS, excerpt)
     if deadline_text is not None:
         return deadline_text
+    closing_date_text = _first_match(_CLOSING_DATE_PATTERNS, excerpt)
+    if closing_date_text is not None:
+        return closing_date_text
     if _extract_early_deadline_text(excerpt) is not None:
         return None
-    return _first_match(
+    return _last_match(
         _GENERIC_DATE_PATTERNS,
         excerpt,
     )
