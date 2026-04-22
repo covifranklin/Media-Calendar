@@ -1,0 +1,95 @@
+- id: "33273152-c577-484c-9d26-95bfec2019c6"
+  organization: "CPH:DOX"
+  program_name: "CPH:FORUM"
+  source_url: "https://cphdox.dk/cphforum/"
+  source_type: "market"
+  deadline_categories: ["industry_forum", "funding_round"]
+  regions: ["Europe", "Global"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_program_page"
+  notes: "Major international documentary co-financing and pitching platform for creative nonfiction projects."
+
+- id: "8b005b6d-6168-4e56-98d8-adb4b9865fc4"
+  organization: "Sunny Side of the Doc"
+  program_name: "Market and Calls for Projects"
+  source_url: "https://www.sunnysideofthedoc.com/"
+  source_type: "market"
+  deadline_categories: ["industry_forum", "funding_round", "lab_application"]
+  regions: ["Europe", "Global"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_program_page"
+  notes: "Important international documentary marketplace with active calls for projects, matchmaking, and training tracks."
+
+- id: "eb67abf4-76d7-417a-b5a8-6f3493833cf2"
+  organization: "EAVE"
+  program_name: "Producers Workshop"
+  source_url: "https://eave.org/programmes/eave-producers-workshop-2026"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "lab_application", "industry_forum"]
+  regions: ["Europe", "Global"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_application_page"
+  notes: "Prestigious international training and networking programme for film, documentary, and TV producers."
+
+- id: "45223989-8742-43fe-bf36-65d5c560803a"
+  organization: "EURODOC"
+  program_name: "International Training Programme"
+  source_url: "https://www.eurodoc-net.com/about"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "lab_application", "funding_round"]
+  regions: ["Europe", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Selective international training programme for documentary producers developing projects and careers."
+
+- id: "e1249f50-d01d-45b2-9693-b0dc5650d160"
+  organization: "DocsBarcelona"
+  program_name: "DocsBarcelona Pro"
+  source_url: "https://docsbarcelona.com/en/industry/"
+  source_type: "market"
+  deadline_categories: ["industry_forum", "lab_application", "funding_round"]
+  regions: ["Europe", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Southern Europe's major nonfiction industry hub spanning forum, training, public pitch, and speed meetings."
+
+- id: "fae109c5-7aa8-43e8-9851-0d77c99425e2"
+  organization: "DOK Leipzig"
+  program_name: "DOK Co-Pro Market"
+  source_url: "https://www.dok-leipzig.de/en/co-pro-market"
+  source_type: "market"
+  deadline_categories: ["industry_forum", "funding_round"]
+  regions: ["Europe", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "International co-financing and networking event for creative documentary and animated documentary projects."
+
+- id: "6cdab01d-3ab6-4ce8-8a6e-d7f377692165"
+  organization: "Doha Film Institute"
+  program_name: "Grants Programme"
+  source_url: "https://www.dohafilminstitute.com/financing/grants"
+  source_type: "fund"
+  deadline_categories: ["funding_round"]
+  regions: ["Middle East", "Global"]
+  cadence: "periodic"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_application_page"
+  notes: "Internationally relevant grants programme for feature films, shorts, documentaries, and some series projects."
+
+- id: "33273152-c577-484c-9d26-95bfec2019c7"
+  organization: "World Cinema Fund"
+  program_name: "Production Support"
+  source_url: "https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html"
+  source_type: "fund"
+  deadline_categories: ["funding_round"]
+  regions: ["Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Important international fund supporting artistic feature and documentary projects from regions with weaker film infrastructure."

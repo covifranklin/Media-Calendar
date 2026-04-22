@@ -1,0 +1,407 @@
+- id: "b01cfc31-7fbe-441a-a1f1-939f239f096d"
+  organization: "BBC Writersroom"
+  program_name: "Open Call and Access Programmes"
+  source_url: "https://www.bbc.co.uk/writersroom/"
+  source_type: "broadcaster_program"
+  deadline_categories: ["fellowship", "lab_application", "other"]
+  regions: ["United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_program_page"
+  notes: "Primary BBC route for emerging and underrepresented writers entering television and audio storytelling."
+
+- id: "ac238fad-ae7d-471e-ba5c-b8d1b27ec573"
+  organization: "Channel 4"
+  program_name: "4Skills"
+  source_url: "https://careers.channel4.com/4skills"
+  source_type: "broadcaster_program"
+  deadline_categories: ["fellowship", "lab_application", "other"]
+  regions: ["United Kingdom"]
+  cadence: "periodic"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_program_page"
+  notes: "Umbrella Channel 4 talent and access platform covering training schemes, work experience, apprenticeships, and industry routes."
+
+- id: "e80b85e3-17b7-4b01-9c6b-512dc4cd2d0d"
+  organization: "Channel 4"
+  program_name: "New Writers Scheme"
+  source_url: "https://careers.channel4.com/4skills/talent-schemes"
+  source_type: "broadcaster_program"
+  deadline_categories: ["fellowship", "lab_application"]
+  regions: ["United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Tracks Channel 4's new writers access route for unrepresented writers in the nations and regions."
+
+- id: "72990f7f-0cc9-48db-a327-67212ad1eacc"
+  organization: "Channel 4"
+  program_name: "4Screenwriting"
+  source_url: "https://careers.channel4.com/4skills/talent-schemes/4screenwriting"
+  source_type: "broadcaster_program"
+  deadline_categories: ["lab_application", "fellowship"]
+  regions: ["United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Structured drama-writing development route for writers new to television drama."
+
+- id: "e53b0877-c7f1-48d7-b16f-83d6dfcb7a97"
+  organization: "Channel 4"
+  program_name: "4Stories"
+  source_url: "https://careers.channel4.com/4skills/talent-schemes/4stories"
+  source_type: "broadcaster_program"
+  deadline_categories: ["lab_application", "fellowship", "other"]
+  regions: ["United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Channel 4 initiative for emerging writers and directors from underrepresented communities."
+
+- id: "fe68bd09-eaf4-4f67-8c5c-511448ff0598"
+  organization: "BFI NETWORK"
+  program_name: "Funding and Professional Development"
+  source_url: "https://www.bfi.org.uk/get-funding-support/bfi-network"
+  source_type: "fund"
+  deadline_categories: ["funding_round", "fellowship", "lab_application"]
+  regions: ["United Kingdom"]
+  cadence: "periodic"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_application_page"
+  notes: "Core early-career UK pathway for writers, directors, and producers via funding, labs, and professional development."
+
+- id: "b76f1b47-9401-44ee-b836-5d501b35bee9"
+  organization: "BFI NETWORK"
+  program_name: "BFI NETWORK@LFF"
+  source_url: "https://www.bfi.org.uk/get-funding-support/bfi-network/bfi-networklff"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "industry_forum"]
+  regions: ["United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Flagship BFI NETWORK professional development scheme connected to the BFI London Film Festival."
+
+- id: "651209da-6530-466f-92d3-edfbb40beffe"
+  organization: "BFI"
+  program_name: "BFI Film Academy"
+  source_url: "https://www.bfi.org.uk/bfi-film-academy-opportunities-young-people/"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "lab_application", "other"]
+  regions: ["United Kingdom"]
+  cadence: "periodic"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Major youth talent pipeline for screen careers, courses, and specialist training opportunities."
+
+- id: "43f74f74-659a-4314-ae9c-69f968dce89e"
+  organization: "BFI"
+  program_name: "BFI Film Audience Network"
+  source_url: "https://www.bfi.org.uk/get-funding-support/bring-film-wider-audience/bfi-film-audience-network"
+  source_type: "other"
+  deadline_categories: ["funding_round", "industry_forum", "other"]
+  regions: ["United Kingdom"]
+  cadence: "periodic"
+  coverage_priority: "medium"
+  discovery_strategy: "official_program_page"
+  notes: "Key exhibition and audience-development network with funding, training, and membership opportunities across the UK."
+
+- id: "c86829b6-02c0-47a0-b3f3-702a0c7cfb83"
+  organization: "BFI London Film Festival"
+  program_name: "Industry Forum"
+  source_url: "https://www.bfi.org.uk/explore-our-festivals/industry-forum-bfi-london-film-festival"
+  source_type: "industry_forum"
+  deadline_categories: ["industry_forum", "other"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_application_page"
+  notes: "Important annual UK convening point for film professionals, including accreditation, talks, networking, and curated industry activity."
+
+- id: "ff26b6e9-109c-48d1-8a75-983271724fe0"
+  organization: "Film London"
+  program_name: "Production Finance Market"
+  source_url: "https://filmlondon.org.uk/production-finance-market"
+  source_type: "market"
+  deadline_categories: ["industry_forum", "funding_round"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_program_page"
+  notes: "Major UK finance market for feature projects seeking co-production, sales, and financing partners."
+
+- id: "69ee1ed2-8a69-4665-88c1-c3d34e8ec4bd"
+  organization: "Film London"
+  program_name: "Film London Labs"
+  source_url: "https://filmlondon.org.uk/film-london-labs"
+  source_type: "lab"
+  deadline_categories: ["lab_application", "industry_forum", "other"]
+  regions: ["United Kingdom"]
+  cadence: "periodic"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Umbrella development and training platform covering producer, writer, IP, and market-readiness opportunities."
+
+- id: "bd8b58f4-73ed-4273-b407-3f5b52f559d9"
+  organization: "Film London"
+  program_name: "UPstream"
+  source_url: "https://filmlondon.org.uk/upstream"
+  source_type: "market"
+  deadline_categories: ["industry_forum", "other"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "periodic"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Film London's IP discovery and adaptation showcase for film, TV, and games producers."
+
+- id: "b5c60c51-eda1-493f-971e-251080f24e38"
+  organization: "Film London"
+  program_name: "Film Hub London"
+  source_url: "https://filmlondon.org.uk/film-hub-london"
+  source_type: "other"
+  deadline_categories: ["funding_round", "industry_forum", "other"]
+  regions: ["United Kingdom"]
+  cadence: "periodic"
+  coverage_priority: "medium"
+  discovery_strategy: "official_program_page"
+  notes: "Regional exhibition, audience, and membership network with funding and networking opportunities."
+
+- id: "4271159a-e5ae-4ed6-94da-f5464ef92085"
+  organization: "Screen Scotland"
+  program_name: "Film Development and Production Fund"
+  source_url: "https://www.screen.scot/funding-and-support/funding/film-development-and-production-fund"
+  source_type: "fund"
+  deadline_categories: ["funding_round"]
+  regions: ["Scotland", "United Kingdom"]
+  cadence: "periodic"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_application_page"
+  notes: "Core funding route for Scotland-based feature film and documentary development and production."
+
+- id: "6b14e539-d421-4ce0-8e18-d7fdd3c47f64"
+  organization: "Screen Scotland"
+  program_name: "Market and Festival Attendance Fund"
+  source_url: "https://www.screen.scot/funding-and-support/funding/market-and-festival-attendance-fund"
+  source_type: "fund"
+  deadline_categories: ["funding_round", "industry_forum"]
+  regions: ["Scotland", "United Kingdom", "Global"]
+  cadence: "rolling"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Supports Scotland-based producers, writers, and directors to attend key markets and festivals with project-specific goals."
+
+- id: "18d337ae-41e7-4070-9725-84a71b55c008"
+  organization: "Screen Scotland"
+  program_name: "STAS Mentoring"
+  source_url: "https://www.screen.scot/skills-and-talent/talent-development/stas-mentoring"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "other"]
+  regions: ["Scotland", "United Kingdom"]
+  cadence: "periodic"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Mentoring programme backed by Screen Training Alliance Scotland for Scottish screen-sector talent."
+
+- id: "6e857c7f-7d5d-4073-9671-5a6af49e0199"
+  organization: "Ffilm Cymru Wales"
+  program_name: "Feature Film Development"
+  source_url: "https://ffilmcymruwales.com/funding-and-training/feature-film-development"
+  source_type: "fund"
+  deadline_categories: ["funding_round"]
+  regions: ["Wales", "United Kingdom"]
+  cadence: "periodic"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Feature and documentary development fund for Wales-based or Wales-born writers, directors, and producers."
+
+- id: "8cd74c86-8f7f-4ca7-bee0-c994c0e1ea8a"
+  organization: "Ffilm Cymru Wales"
+  program_name: "Feature Film Production"
+  source_url: "https://ffilmcymruwales.com/funding-and-training/feature-film-production"
+  source_type: "fund"
+  deadline_categories: ["funding_round"]
+  regions: ["Wales", "United Kingdom"]
+  cadence: "periodic"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Feature-film and documentary production funding route for Wales-connected filmmakers."
+
+- id: "526214cf-3e8f-4d14-baa2-bff39ae8e149"
+  organization: "Ffilm Cymru Wales"
+  program_name: "Beacons Short Film Funding"
+  source_url: "https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding"
+  source_type: "fund"
+  deadline_categories: ["funding_round", "fellowship"]
+  regions: ["Wales", "United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "medium"
+  discovery_strategy: "official_application_page"
+  notes: "BFI NETWORK Wales short film fund with mentoring and training support."
+
+- id: "4fa3dc01-2aca-4b43-9e06-921819f33786"
+  organization: "Northern Ireland Screen"
+  program_name: "New Writer Focus"
+  source_url: "https://northernirelandscreen.co.uk/funding/new-writer-focus-25-26/"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "lab_application"]
+  regions: ["Northern Ireland", "United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Northern Ireland Screen's flagship script development scheme for emerging feature writers."
+
+- id: "2a974607-aa9c-4404-81f4-abc4d616a22f"
+  organization: "Northern Ireland Screen"
+  program_name: "New Shorts Focus"
+  source_url: "https://northernirelandscreen.co.uk/funding/short-film-calls/new-shorts-focus-2/"
+  source_type: "lab"
+  deadline_categories: ["lab_application", "funding_round"]
+  regions: ["Northern Ireland", "United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "medium"
+  discovery_strategy: "official_application_page"
+  notes: "Underrepresented-talent short film development scheme with potential production awards."
+
+- id: "8b699f65-f484-41e6-b7d9-607f8fb6f1be"
+  organization: "ScreenSkills"
+  program_name: "Trainee Finder"
+  source_url: "https://www.screenskills.com/training/trainee-finder/screenskills-trainee-finder/"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "other"]
+  regions: ["United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_application_page"
+  notes: "Major new-entrant placement and training programme across film, children's TV, and high-end TV."
+
+- id: "6581847f-18b3-47ad-9798-0dabf8f9e6aa"
+  organization: "ScreenSkills"
+  program_name: "Film Skills Fund"
+  source_url: "https://www.screenskills.com/industry/film-skills-fund/"
+  source_type: "other"
+  deadline_categories: ["fellowship", "lab_application", "other"]
+  regions: ["United Kingdom"]
+  cadence: "periodic"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Key film-workforce development infrastructure, highlighting new-entrant and progression opportunities."
+
+- id: "30b94279-8a2f-4668-91cd-c6c2fdb42fc7"
+  organization: "Doc Society"
+  program_name: "Impact Lab"
+  source_url: "https://docsociety.org/impact-lab/"
+  source_type: "lab"
+  deadline_categories: ["lab_application", "fellowship", "other"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "periodic"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_application_page"
+  notes: "Directly relevant impact-producing training and field-building opportunity for documentary and social-change storytellers."
+
+- id: "4c77b9a9-092c-4402-956e-71cd0d53dd44"
+  organization: "Good Pitch"
+  program_name: "Global Programme"
+  source_url: "https://goodpitch.org/"
+  source_type: "industry_forum"
+  deadline_categories: ["industry_forum", "fellowship", "other"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "periodic"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_program_page"
+  notes: "Global documentary-impact convening platform connecting filmmakers with changemakers, funders, and campaign partners."
+
+- id: "28cedcd3-bcac-4d74-bc67-fb3307820395"
+  organization: "BFI Doc Society Fund"
+  program_name: "Rise Producer Programme"
+  source_url: "https://bfi.docsociety.org/rise-2025/"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "lab_application"]
+  regions: ["United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_application_page"
+  notes: "Dedicated development route for emerging first-time feature documentary producers in the UK."
+
+- id: "16968a31-c768-4f0c-bc2d-5a0bfdcfb1b7"
+  organization: "The Grierson Trust"
+  program_name: "Grierson DocLab"
+  source_url: "https://griersontrust.org/about-us/news/new-entrants-2026-applications-open/"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "lab_application", "other"]
+  regions: ["United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Prestigious documentary and factual talent-development route for new entrants and specialist documentary roles."
+
+- id: "f8602aac-ec63-4374-ae0a-88dfac3020a1"
+  organization: "BAFTA"
+  program_name: "BAFTA Breakthrough UK"
+  source_url: "https://www.bafta.org/supporting-talent/breakthrough-brits"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "other"]
+  regions: ["United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_application_page"
+  notes: "High-status talent accelerator for emerging film, television, and games creatives navigating a breakthrough moment."
+
+- id: "6aa45800-1577-43da-a058-74f050597ecb"
+  organization: "Women in Film & TV (UK)"
+  program_name: "Four Nations Mentoring Scheme"
+  source_url: "https://www.wftv.org.uk/mentoring/mentees"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "other"]
+  regions: ["United Kingdom"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Major mid-career mentoring route for women in film, television, and digital media across the UK."
+
+- id: "6bea2229-15ce-4c7c-b77a-c6bde5a3e313"
+  organization: "NFTS"
+  program_name: "Short Courses"
+  source_url: "https://nfts.co.uk/courses/short-courses"
+  source_type: "fellowship"
+  deadline_categories: ["fellowship", "lab_application", "other"]
+  regions: ["United Kingdom"]
+  cadence: "rolling"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Large catalogue of professional skill-building opportunities across film, TV, factual, and craft disciplines."
+
+- id: "2d30eaf6-5a7d-430a-938d-e210de7d575f"
+  organization: "British Council"
+  program_name: "Festival Strategy Advice"
+  source_url: "https://film.britishcouncil.org/opportunities/film-festival-surgeries"
+  source_type: "other"
+  deadline_categories: ["industry_forum", "fellowship", "other"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "periodic"
+  coverage_priority: "medium"
+  discovery_strategy: "official_application_page"
+  notes: "Practical 1:1 strategy support for filmmakers navigating international festival launches."
+
+- id: "1fd1c33b-25d3-40e2-a8c5-45e9968c8e33"
+  organization: "British Council"
+  program_name: "Selector Screenings"
+  source_url: "https://film.britishcouncil.org/opportunities/screen-film"
+  source_type: "industry_forum"
+  deadline_categories: ["industry_forum", "other"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "periodic"
+  coverage_priority: "medium"
+  discovery_strategy: "official_application_page"
+  notes: "Direct route for UK feature films to screen for major international festival and market selectors."
+
+- id: "86c04139-6958-4f76-8a04-2847ae0cc81b"
+  organization: "Creative Access"
+  program_name: "Jobs, Internships and Mentoring"
+  source_url: "https://creativeaccess.org.uk/about/"
+  source_type: "other"
+  deadline_categories: ["fellowship", "other"]
+  regions: ["United Kingdom"]
+  cadence: "periodic"
+  coverage_priority: "medium"
+  discovery_strategy: "official_program_page"
+  notes: "Strong diversity and career-development organisation across UK creative industries including film and television."

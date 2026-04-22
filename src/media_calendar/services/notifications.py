@@ -141,7 +141,7 @@ def group_upcoming_notifications(
             )
 
     normalized_groups = {
-        key: _sort_notification_items(value)
+        key: _sort_notification_items(value, notification_type=key)
         for key, value in groups.items()
         if value
     }
@@ -284,7 +284,19 @@ def _build_notification_logs(
 
 def _sort_notification_items(
     items: Sequence[NotificationItem],
+    *,
+    notification_type: str,
 ) -> List[NotificationItem]:
+    if notification_type == "weekly_digest":
+        return sorted(
+            items,
+            key=lambda item: (
+                item.category,
+                item.deadline_date,
+                item.organization.lower(),
+                item.name.lower(),
+            ),
+        )
     return sorted(
         items,
         key=lambda item: (

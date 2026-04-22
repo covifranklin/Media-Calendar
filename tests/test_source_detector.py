@@ -96,6 +96,41 @@ def test_detect_candidates_returns_update_signal_when_deadline_extended():
     assert candidate.name == "Co-Pro Pitching Sessions"
 
 
+def test_detect_candidates_handles_ordinal_deadline_dates():
+    source_entry = build_source_entry().model_copy(
+        update={
+            "organization": "The Whickers",
+            "program_name": "Film & TV Funding Award",
+            "source_url": "https://www.whickerawards.com/apply/film-and-tv/",
+            "source_type": "fund",
+            "deadline_categories": ["funding_round"],
+        }
+    )
+    snapshot_result = build_snapshot_result(
+        source_id=source_entry.id,
+        extracted_text=(
+            "Film & TV Funding Award\n"
+            "Applications are now open.\n"
+            "19th November 2025: Applications open\n"
+            "30th January 2026: Applications close"
+        ),
+    ).model_copy(
+        update={
+            "organization": source_entry.organization,
+            "program_name": source_entry.program_name,
+            "source_url": source_entry.source_url,
+        }
+    )
+
+    batch = detect_candidates(snapshot_result, source_entry)
+
+    assert len(batch.candidates) == 1
+    candidate = batch.candidates[0]
+    assert candidate.name == "Film & TV Funding Award"
+    assert candidate.category == "funding_round"
+    assert candidate.detected_deadline_text == "30th January 2026"
+
+
 def test_detect_candidates_returns_empty_batch_for_failed_fetch():
     source_entry = build_source_entry()
     snapshot_result = build_snapshot_result(source_id=source_entry.id, status="http_error")

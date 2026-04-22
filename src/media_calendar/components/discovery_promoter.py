@@ -17,6 +17,7 @@ from media_calendar.models import (
 
 _PROMOTION_NAMESPACE = UUID("1d3c4bc9-6ed4-41b7-8db9-c88620d547d5")
 _YEAR_RE = re.compile(r"\b(20\d{2})\b")
+_ORDINAL_SUFFIX_RE = re.compile(r"(\d{1,2})(st|nd|rd|th)\b", re.IGNORECASE)
 _EVENT_RANGE_RE = re.compile(
     r"\b([A-Z][a-z]+) (\d{1,2})\s*(?:to|-)\s*(\d{1,2}), (\d{4})\b"
 )
@@ -387,9 +388,11 @@ def _parse_single_date(text: str | None) -> date | None:
     if not text:
         return None
 
+    normalized_text = _ORDINAL_SUFFIX_RE.sub(r"\1", text)
+
     for format_string in ("%B %d, %Y", "%d %B %Y", "%m/%d/%Y", "%m/%d/%y"):
         try:
-            return datetime.strptime(text, format_string).date()
+            return datetime.strptime(normalized_text, format_string).date()
         except ValueError:
             continue
     return None

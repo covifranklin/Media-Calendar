@@ -122,3 +122,42 @@ def test_orchestration_step_notification_composer_writes_to_queue_writer(monkeyp
 
     assert len(queue) == 1
     assert written == queue
+
+
+def test_orchestration_step_notification_composer_weekly_fallback_groups_by_category(
+    monkeypatch,
+):
+    def fake_compose(agent_input, *, client=None, max_attempts=3):
+        raise NotificationComposerError("bad output")
+
+    monkeypatch.setattr(
+        "media_calendar.orchestration.notification_composer_step.compose_notification",
+        fake_compose,
+    )
+
+    funding_item = build_notification_item("weekly_digest").model_copy(
+        update={
+            "category": "funding_round",
+            "name": "Funding Call",
+            "deadline_date": date(2026, 5, 20),
+        }
+    )
+    fellowship_item = build_notification_item("weekly_digest").model_copy(
+        update={
+            "category": "fellowship",
+            "name": "Fellowship Opportunity",
+            "deadline_date": date(2026, 5, 22),
+        }
+    )
+
+    queue = orchestration_step_notification_composer(
+        {"weekly_digest": [funding_item, fellowship_item]},
+    )
+
+    plain_text = queue[0]["email"]["plain_text_body"]
+    html_body = queue[0]["email"]["html_body"]
+
+    assert "funding_round" in plain_text
+    assert "fellowship" in plain_text
+    assert "<h2>funding_round</h2>" in html_body
+    assert "<h2>fellowship</h2>" in html_body

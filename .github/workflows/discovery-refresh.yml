@@ -22,6 +22,15 @@ on:
           - auto
           - off
           - required
+      source_scope:
+        description: "Source coverage scope"
+        required: false
+        default: "all"
+        type: choice
+        options:
+          - all
+          - core
+          - auto
 
 permissions:
   contents: write
@@ -34,6 +43,7 @@ jobs:
     env:
       DISCOVERY_MODE: ${{ github.event.inputs.mode || 'apply' }}
       DISCOVERY_LLM_MODE: ${{ github.event.inputs.llm_mode || 'auto' }}
+      DISCOVERY_SOURCE_SCOPE: ${{ github.event.inputs.source_scope || 'auto' }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     steps:
       - name: Check out repository
@@ -58,7 +68,7 @@ jobs:
 
       - name: Run discovery refresh
         run: |
-          python discover.py --mode "${DISCOVERY_MODE}" --llm-mode "${DISCOVERY_LLM_MODE}"
+          python discover.py --mode "${DISCOVERY_MODE}" --llm-mode "${DISCOVERY_LLM_MODE}" --source-scope "${DISCOVERY_SOURCE_SCOPE}"
 
       - name: Generate static calendar
         if: env.DISCOVERY_MODE == 'apply'

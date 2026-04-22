@@ -1,6 +1,13 @@
 from pathlib import Path
 
-from media_calendar.components import load_source_registry, resolve_source_files
+from datetime import date
+
+from media_calendar.components import (
+    load_source_registry,
+    resolve_source_files,
+    resolve_source_scope,
+    select_source_registry,
+)
 
 
 def test_load_source_registry_accepts_list_payload_and_sorts_by_priority(tmp_path):
@@ -83,6 +90,55 @@ def test_resolve_source_files_defaults_to_data_sources_directory(tmp_path):
     assert paths == [first, second]
 
 
+def test_resolve_source_scope_auto_switches_watchlist_on_even_weeks():
+    assert resolve_source_scope("auto", current_date=date(2026, 4, 20)) == "all"
+    assert resolve_source_scope("auto", current_date=date(2026, 4, 27)) == "core"
+
+
+def test_select_source_registry_excludes_watchlist_in_core_mode(tmp_path):
+    data_dir = tmp_path / "data" / "sources"
+    data_dir.mkdir(parents=True)
+    source_file = data_dir / "mixed.yaml"
+    source_file.write_text(
+        """
+        - id: "11111111-1111-4111-8111-111111111111"
+          organization: "Core Org"
+          program_name: "Core Programme"
+          source_url: "https://example.com/core"
+          source_type: "fund"
+          deadline_categories: ["funding_round"]
+          regions: ["Global"]
+          cadence: "annual"
+          coverage_priority: "must_have"
+          discovery_strategy: "official_program_page"
+        - id: "22222222-2222-4222-8222-222222222222"
+          organization: "Watchlist Org"
+          program_name: "Watchlist Programme"
+          source_url: "https://example.com/watchlist"
+          source_type: "other"
+          deadline_categories: ["other"]
+          regions: ["Global"]
+          cadence: "unknown"
+          coverage_priority: "watchlist"
+          discovery_strategy: "manual_watch"
+        """,
+        encoding="utf-8",
+    )
+
+    entries = load_source_registry([source_file])
+
+    assert [entry.organization for entry in select_source_registry(
+        entries,
+        current_date=date(2026, 4, 27),
+        scope="core",
+    )] == ["Core Org"]
+    assert [entry.organization for entry in select_source_registry(
+        entries,
+        current_date=date(2026, 4, 20),
+        scope="all",
+    )] == ["Core Org", "Watchlist Org"]
+
+
 def test_repository_must_have_source_registry_loads_cleanly():
     repo_root = Path(__file__).resolve().parents[1]
     source_file = repo_root / "data" / "sources" / "must-have.yaml"
@@ -97,5 +153,26 @@ def test_repository_must_have_source_registry_loads_cleanly():
             "Tribeca Festival",
             "Toronto International Film Festival",
             "Series Mania Forum",
+        }
+    )
+
+
+def test_repository_default_source_registry_loads_all_source_files():
+    repo_root = Path(__file__).resolve().parents[1]
+    source_files = resolve_source_files(None, root=repo_root)
+
+    entries = load_source_registry(source_files)
+
+    assert len(source_files) >= 4
+    assert {entry.organization for entry in entries}.issuperset(
+        {
+            "BBC Writersroom",
+            "Channel 4",
+            "Film London",
+            "Screen Scotland",
+            "Doc Society",
+            "BBC Studios",
+            "CPH:DOX",
+            "Doha Film Institute",
         }
     )

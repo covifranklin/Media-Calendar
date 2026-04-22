@@ -1,0 +1,227 @@
+- id: "8cd3f36e-802d-4ab5-b9b2-72d9a386130c"
+  organization: "BBC Studios"
+  program_name: "Company Watchlist"
+  source_url: "https://www.bbcstudios.com/"
+  source_type: "broadcaster_program"
+  deadline_categories: ["other", "industry_forum"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Major UK scripted, factual, documentary, and entertainment producer worth scanning for talent, partnerships, and initiative-based opportunities."
+
+- id: "f24c41eb-9873-479e-a2b4-8963b44fa9e8"
+  organization: "BBC Film"
+  program_name: "Company Watchlist"
+  source_url: "https://www.bbc.co.uk/bbcfilm"
+  source_type: "broadcaster_program"
+  deadline_categories: ["other"]
+  regions: ["United Kingdom"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "BBC's film arm; useful for independent feature relationships and UK film ecosystem credibility."
+
+- id: "82a2164d-c163-4977-86fa-b61afa33dad6"
+  organization: "Film4 Productions"
+  program_name: "Company Watchlist"
+  source_url: "https://www.film4productions.com/"
+  source_type: "broadcaster_program"
+  deadline_categories: ["other"]
+  regions: ["United Kingdom"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "One of the most important UK institutions for distinctive independent film talent."
+
+- id: "fc538466-0a5a-47f7-851f-0f8613f5e796"
+  organization: "Channel 4"
+  program_name: "Corporate Watchlist"
+  source_url: "https://www.channel4.com/"
+  source_type: "broadcaster_program"
+  deadline_categories: ["other", "industry_forum"]
+  regions: ["United Kingdom"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Key UK public-service broadcaster and commissioner with talent, new-voices, and underrepresented-creative access points."
+
+- id: "3d099e94-c863-458b-b1b9-23a151621607"
+  organization: "ITV Studios"
+  program_name: "Company Watchlist"
+  source_url: "https://www.itvstudios.com/"
+  source_type: "broadcaster_program"
+  deadline_categories: ["other", "industry_forum"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "One of the UK's biggest production groups, relevant across factual, entertainment, and potential talent-facing opportunities."
+
+- id: "bc01684d-30c7-4762-a7f3-36ee4cbce974"
+  organization: "All3Media"
+  program_name: "Company Watchlist"
+  source_url: "https://www.all3media.com/"
+  source_type: "other"
+  deadline_categories: ["other", "industry_forum"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Large UK-rooted production network spanning multiple companies and nonfiction/scripted labels."
+
+- id: "aa7075e9-2309-4ecd-93b4-26dd5e7aed20"
+  organization: "Banijay UK"
+  program_name: "Company Watchlist"
+  source_url: "https://www.banijayuk.com/"
+  source_type: "other"
+  deadline_categories: ["other", "industry_forum"]
+  regions: ["United Kingdom"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Major UK production network of independent labels, especially relevant for factual, entertainment, and formats."
+
+- id: "57cc1da7-5ea3-4059-b47f-cbce1e36e4bf"
+  organization: "Fremantle UK"
+  program_name: "Company Watchlist"
+  source_url: "https://www.fremantle.co.uk/"
+  source_type: "other"
+  deadline_categories: ["other", "industry_forum"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Major production group active across entertainment, documentary, drama, and film."
+
+- id: "9a4f6ccc-93a9-431f-83c9-dbd52f0dd965"
+  organization: "Sky Studios"
+  program_name: "Company Watchlist"
+  source_url: "https://www.skystudios.com/"
+  source_type: "broadcaster_program"
+  deadline_categories: ["other", "industry_forum"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Increasingly important producer and funder of premium UK originals across drama, comedy, and documentary."
+
+- id: "cde4b2a1-2696-4dc4-b248-a513b470f103"
+  organization: "STV Studios"
+  program_name: "Company Watchlist"
+  source_url: "https://www.stvstudios.com/"
+  source_type: "other"
+  deadline_categories: ["other", "industry_forum"]
+  regions: ["Scotland", "United Kingdom"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Scotland's biggest production company and a strong regional ecosystem player."
+
+- id: "c5171f1e-ea5d-4b29-ba14-33b74e35079e"
+  organization: "Bad Wolf"
+  program_name: "Company Watchlist"
+  source_url: "https://bad-wolf.com/"
+  source_type: "other"
+  deadline_categories: ["other"]
+  regions: ["Wales", "United Kingdom"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Major Wales-based high-end television producer relevant for regional production ecosystem building."
+
+- id: "118a0c5b-e024-4c80-a48e-1cf2ebc77042"
+  organization: "Eleven"
+  program_name: "Company Watchlist"
+  source_url: "https://elevenfilm.com/"
+  source_type: "other"
+  deadline_categories: ["other"]
+  regions: ["United Kingdom"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Respected scripted and documentary producer worth monitoring for talent-facing initiatives and partnerships."
+
+- id: "f0831705-aee7-4ebf-9aa3-26266fdbfc09"
+  organization: "Twofour"
+  program_name: "Company Watchlist"
+  source_url: "https://www.twofour.co.uk/"
+  source_type: "other"
+  deadline_categories: ["other", "industry_forum"]
+  regions: ["United Kingdom"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Leading UK television production company with strong factual and entertainment profile."
+
+- id: "54cd3966-df64-49c9-b18c-f4b64e6b992d"
+  organization: "SISTER"
+  program_name: "Company Watchlist"
+  source_url: "https://sister.co/"
+  source_type: "other"
+  deadline_categories: ["other"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Influential independent entertainment group producing and investing across film, television, and adjacent media."
+
+- id: "2900efc9-4c67-4ed1-aac0-66ecfdfb0a92"
+  organization: "See-Saw Films"
+  program_name: "Company Watchlist"
+  source_url: "https://www.seesawfilms.com/"
+  source_type: "other"
+  deadline_categories: ["other"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Prestige film and television producer worth tracking for development and talent relationships."
+
+- id: "736cac21-d13a-475f-a32f-6b6c0c84b357"
+  organization: "Warp Films"
+  program_name: "Company Watchlist"
+  source_url: "https://warpfilms.com/"
+  source_type: "other"
+  deadline_categories: ["other"]
+  regions: ["United Kingdom"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Respected independent UK film and television drama producer with a strong auteur identity."
+
+- id: "8ce6f207-efed-445e-992e-783a8093e5d0"
+  organization: "Raw TV"
+  program_name: "Company Watchlist"
+  source_url: "https://www.raw.co.uk/"
+  source_type: "other"
+  deadline_categories: ["other"]
+  regions: ["United Kingdom", "Global"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Award-winning documentary and factual producer worth scanning for nonfiction access and initiative-driven opportunities."
+
+- id: "ae54a5c1-ab07-4fc1-bdb2-04acd97e6fdf"
+  organization: "4Studio"
+  program_name: "Corporate Watchlist"
+  source_url: "https://www.channel4.com/4studio"
+  source_type: "broadcaster_program"
+  deadline_categories: ["other", "industry_forum"]
+  regions: ["United Kingdom"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Channel 4's social and digital studio arm, relevant for multiplatform and audience-facing opportunities."
+
+- id: "0f1da050-1406-4a8c-aed2-1a3c65581f58"
+  organization: "UKTV"
+  program_name: "Corporate Watchlist"
+  source_url: "https://corporate.uktv.co.uk/"
+  source_type: "broadcaster_program"
+  deadline_categories: ["other", "industry_forum"]
+  regions: ["United Kingdom"]
+  cadence: "unknown"
+  coverage_priority: "watchlist"
+  discovery_strategy: "manual_watch"
+  notes: "Relevant UK commissioner and broadcaster within the broader television ecosystem."

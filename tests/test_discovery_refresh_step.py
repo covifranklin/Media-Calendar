@@ -68,6 +68,10 @@ def test_orchestration_step_discovery_refresh_apply_mode_writes_yaml(tmp_path):
     written_file = tmp_path / "data" / "deadlines" / "2026.yaml"
     assert payload["step_name"] == "Refresh Discovery Pipeline"
     assert payload["mode"] == "apply"
+    assert payload["source_scope_requested"] == "auto"
+    assert payload["source_scope_effective"] == "all"
+    assert payload["selected_source_count"] == 1
+    assert payload["total_source_count"] == 1
     assert payload["applied_changes"] is True
     assert payload["promoted_new_count"] == 1
     assert payload["promoted_update_count"] == 0
@@ -309,3 +313,68 @@ def test_orchestration_step_discovery_refresh_apply_mode_prunes_past_deadlines(
     contents = written_file.read_text(encoding="utf-8")
     assert "Past Market" not in contents
     assert "Example Documentary Lab 2026" in contents
+
+
+def test_orchestration_step_discovery_refresh_auto_scope_skips_watchlist_on_core_weeks(
+    tmp_path,
+):
+    source_dir = tmp_path / "data" / "sources"
+    source_dir.mkdir(parents=True)
+    (source_dir / "mixed.yaml").write_text(
+        dedent(
+            """
+            - id: "11111111-1111-4111-8111-111111111111"
+              organization: "Core Labs"
+              program_name: "Open Calls"
+              source_url: "https://example.com/core"
+              source_type: "lab"
+              deadline_categories: ["lab_application"]
+              regions: ["Global"]
+              cadence: "annual"
+              coverage_priority: "must_have"
+              discovery_strategy: "official_program_page"
+            - id: "22222222-2222-4222-8222-222222222222"
+              organization: "Watchlist Media"
+              program_name: "Corporate Watchlist"
+              source_url: "https://example.com/watchlist"
+              source_type: "other"
+              deadline_categories: ["other"]
+              regions: ["Global"]
+              cadence: "unknown"
+              coverage_priority: "watchlist"
+              discovery_strategy: "manual_watch"
+            """
+        ).strip(),
+        encoding="utf-8",
+    )
+    (tmp_path / "data" / "deadlines").mkdir(parents=True)
+    fetched_urls = []
+
+    def fake_fetch_url(url: str):
+        fetched_urls.append(url)
+        return (
+            200,
+            "text/html",
+            "<html><body><p>Core Labs Open Call Deadline: June 1, 2026</p></body></html>",
+        )
+
+    def fake_calendar_generator(*, root_dir=None, deadline_files=None, current_date=None):
+        output_path = tmp_path / "build" / "calendar.html"
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text("<html></html>", encoding="utf-8")
+        return output_path
+
+    payload = orchestration_step_discovery_refresh(
+        root_dir=tmp_path,
+        current_date=date(2026, 4, 27),
+        mode="dry-run",
+        llm_mode="off",
+        source_scope="auto",
+        fetch_url=fake_fetch_url,
+        calendar_generator=fake_calendar_generator,
+    )
+
+    assert payload["source_scope_effective"] == "core"
+    assert payload["selected_source_count"] == 1
+    assert payload["total_source_count"] == 2
+    assert fetched_urls == ["https://example.com/core"]

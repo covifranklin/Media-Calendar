@@ -1,0 +1,107 @@
+- id: "0fb89792-2db2-44bb-8a42-3860ed97aa01"
+  organization: "Visions du Réel"
+  program_name: "Industry Activities"
+  source_url: "https://www.visionsdureel.ch/en/industry/"
+  source_type: "market"
+  deadline_categories: ["industry_forum", "funding_round", "fellowship"]
+  regions: ["Europe", "Global"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_program_page"
+  notes: "Top-tier international documentary festival and industry platform including VdR-Industry, pitching, and professional activity."
+
+- id: "44558507-8af2-4c96-8fd9-d3f7401c0f61"
+  organization: "Ji.hlava IDFF"
+  program_name: "Inspiration Forum and Industry"
+  source_url: "https://www.ji-hlava.com/industry"
+  source_type: "industry_forum"
+  deadline_categories: ["industry_forum", "fellowship", "other"]
+  regions: ["Europe", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Major central-European documentary festival and industry ecosystem spanning dialogue, networking, and professional access."
+
+- id: "4b61cd34-c6a5-41f0-a1e7-2007bd2a4db5"
+  organization: "Full Frame Documentary Film Festival"
+  program_name: "Festival and Passes"
+  source_url: "https://www.fullframefest.org/attend/"
+  source_type: "industry_forum"
+  deadline_categories: ["industry_forum", "other"]
+  regions: ["North America", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_application_page"
+  notes: "Major U.S. nonfiction festival with filmmaker attendance, panels, and access opportunities relevant to documentary professionals."
+
+- id: "b881ca3e-cceb-470d-b956-e772c46752d1"
+  organization: "DOC NYC"
+  program_name: "Industry Accreditation"
+  source_url: "https://www.docnyc.net/join-us/industry/"
+  source_type: "industry_forum"
+  deadline_categories: ["industry_forum", "other"]
+  regions: ["North America", "Global"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_application_page"
+  notes: "Major documentary festival and conference with explicit industry accreditation and DOC NYC PRO access."
+
+- id: "9e342577-adcf-4d12-81e8-6427b0502716"
+  organization: "Thessaloniki International Documentary Festival"
+  program_name: "Agora"
+  source_url: "https://www.filmfestival.gr/en/professionals/agora/overview"
+  source_type: "market"
+  deadline_categories: ["industry_forum", "funding_round", "fellowship"]
+  regions: ["Europe", "Global"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_program_page"
+  notes: "Major documentary-focused market and development platform including pitching, works in progress, and industry networking."
+
+- id: "985ea10e-53b2-448d-b747-96ff86dfdfed"
+  organization: "True/False"
+  program_name: "Festival"
+  source_url: "https://truefalse.org/"
+  source_type: "industry_forum"
+  deadline_categories: ["industry_forum", "other"]
+  regions: ["North America", "Global"]
+  cadence: "annual"
+  coverage_priority: "medium"
+  discovery_strategy: "official_program_page"
+  notes: "Prestige creative documentary festival worth scanning for passes, labs, and filmmaker-facing opportunities."
+
+- id: "cdd08825-25c0-4556-a264-5049861b117b"
+  organization: "One World Festival"
+  program_name: "Festival and Open Calls"
+  source_url: "https://www.oneworld.cz/festival/index_en.html"
+  source_type: "industry_forum"
+  deadline_categories: ["industry_forum", "other"]
+  regions: ["Europe", "Global"]
+  cadence: "annual"
+  coverage_priority: "high"
+  discovery_strategy: "official_program_page"
+  notes: "Major human-rights documentary festival with regular open calls and strong global nonfiction relevance."
+
+- id: "2f5f6f64-1f73-4223-82a8-a02270b5bd9b"
+  organization: "FIPADOC"
+  program_name: "FIPADOC PRO / Industry Days"
+  source_url: "https://www.fipadoc.com/en/fipadoc-pro"
+  source_type: "market"
+  deadline_categories: ["industry_forum", "funding_round", "lab_application"]
+  regions: ["Europe", "Global"]
+  cadence: "annual"
+  coverage_priority: "must_have"
+  discovery_strategy: "official_program_page"
+  notes: "Major international documentary industry platform with pitches, accreditation, impact and story labs, and professional networking."
+
+- id: "84b6aef4-f01e-4c13-a80d-9705b5743e54"
+  organization: "DokuFest"
+  program_name: "Short Film Forum and Industry"
+  source_url: "https://dokufest.com/en"
+  source_type: "industry_forum"
+  deadline_categories: ["industry_forum", "lab_application", "other"]
+  regions: ["Europe", "Global"]
+  cadence: "annual"
+  coverage_priority: "medium"
+  discovery_strategy: "official_program_page"
+  notes: "Important Southeast European documentary and short film festival with industry initiatives and periodic open calls."

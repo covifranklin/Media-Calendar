@@ -24,6 +24,8 @@ summaries from structured deadline data. Adapt tone to urgency:
 - 3-day reminders should feel urgent and action-oriented.
 - Weekly digests should be concise, scannable, and useful.
 - Annual refresh reminders should focus on verification and upkeep.
+- For weekly digests, group opportunities by category using clear section
+  headings so the reader can scan the full landscape quickly.
 
 Return only valid JSON matching this schema exactly:
 {
@@ -97,9 +99,21 @@ def _build_user_prompt(agent_input: NotificationComposerInput) -> str:
     """Serialize the agent input for the LLM user message."""
 
     serialized_input = agent_input.model_dump_json(indent=2)
+    notification_type = (
+        agent_input.deadlines[0].notification_type
+        if agent_input.deadlines
+        else "weekly_digest"
+    )
+    extra_instruction = ""
+    if notification_type == "weekly_digest":
+        extra_instruction = (
+            "For this weekly digest, break the email into category sections "
+            "with headings and keep each section easy to scan.\n"
+        )
     return (
         "Generate email content for the following notification request.\n"
         "Use the structured data to decide the right tone and urgency.\n\n"
+        f"{extra_instruction}"
         f"{serialized_input}"
     )
 

@@ -70,6 +70,16 @@ def main() -> int:
             "cannot be used."
         ),
     )
+    parser.add_argument(
+        "--source-scope",
+        choices=["auto", "core", "all"],
+        default="auto",
+        help=(
+            "Use `core` to skip watchlist sources, `all` to include every "
+            "registered source, or `auto` to include watchlist sources every "
+            "other ISO week."
+        ),
+    )
     args = parser.parse_args()
 
     load_dotenv_file(args.root_dir / ".env")
@@ -83,6 +93,7 @@ def main() -> int:
         current_date=current_date,
         mode=args.mode,
         llm_mode=args.llm_mode,
+        source_scope=args.source_scope,
     )
 
     print(
@@ -93,6 +104,12 @@ def main() -> int:
         f"{payload['rejected_uncertain_count']} rejected."
     )
     print(f"Refresh mode: {payload['mode']}")
+    print(
+        "Source scope: "
+        f"{payload['source_scope_requested']} "
+        f"(effective: {payload['source_scope_effective']}, "
+        f"{payload['selected_source_count']}/{payload['total_source_count']} sources)"
+    )
     print(
         "Updated deadline files: "
         f"{', '.join(payload['deadline_files']) if payload['deadline_files'] else 'None'}"

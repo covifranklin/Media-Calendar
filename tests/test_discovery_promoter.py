@@ -140,6 +140,31 @@ def test_auto_promote_discovery_results_updates_existing_deadline():
     assert batch.deadline_snapshot[0].last_verified_date == date(2026, 4, 21)
 
 
+def test_auto_promote_discovery_results_parses_ordinal_deadline_text():
+    candidate = build_candidate(
+        name="The Whickers Film & TV Funding Award",
+        category="funding_round",
+        organization="The Whickers",
+        source_url="https://www.whickerawards.com/apply/film-and-tv/",
+        confidence=0.93,
+        detected_deadline_text="30th January 2026",
+        raw_excerpt=(
+            "Applications are now open. 19th November 2025: Applications open. "
+            "30th January 2026: Applications close."
+        ),
+    )
+    comparison = build_comparison(candidate, classification="likely_new")
+
+    batch = auto_promote_discovery_results(
+        [comparison],
+        [],
+        current_date=date(2026, 4, 21),
+    )
+
+    assert batch.promoted_new_count == 1
+    assert batch.deadline_snapshot[0].deadline_date == date(2026, 1, 30)
+
+
 def test_auto_promote_discovery_results_ignores_high_confidence_duplicates():
     existing_deadline = build_deadline()
     candidate = build_candidate(confidence=0.92)

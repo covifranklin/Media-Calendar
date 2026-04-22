@@ -19,21 +19,21 @@ _DEADLINE_PATTERNS = [
     re.compile(
         r"\b(?:extended deadline|final deadline|apply by|"
         r"deadline to apply)\b[:\s-]*"
-        r"([A-Z][a-z]+ \d{1,2}, \d{4})",
+        r"([A-Z][a-z]+ \d{1,2}(?:st|nd|rd|th)?, \d{4})",
         re.IGNORECASE,
     ),
     re.compile(
         r"\b(?:extended deadline|final deadline|apply by|"
         r"deadline to apply)\b[:\s-]*"
-        r"(\d{1,2} [A-Z][a-z]+ \d{4})",
+        r"(\d{1,2}(?:st|nd|rd|th)? [A-Z][a-z]+ \d{4})",
         re.IGNORECASE,
     ),
     re.compile(
-        r"\bdeadline\b[:\s-]*([A-Z][a-z]+ \d{1,2}, \d{4})",
+        r"\bdeadline\b[:\s-]*([A-Z][a-z]+ \d{1,2}(?:st|nd|rd|th)?, \d{4})",
         re.IGNORECASE,
     ),
     re.compile(
-        r"\bdeadline\b[:\s-]*(\d{1,2} [A-Z][a-z]+ \d{4})",
+        r"\bdeadline\b[:\s-]*(\d{1,2}(?:st|nd|rd|th)? [A-Z][a-z]+ \d{4})",
         re.IGNORECASE,
     ),
 ]
@@ -41,19 +41,19 @@ _DEADLINE_PATTERNS = [
 _EARLY_DEADLINE_PATTERNS = [
     re.compile(
         r"\b(?:early deadline|early bird deadline|early application deadline)\b"
-        r"[:\s-]*([A-Z][a-z]+ \d{1,2}, \d{4})",
+        r"[:\s-]*([A-Z][a-z]+ \d{1,2}(?:st|nd|rd|th)?, \d{4})",
         re.IGNORECASE,
     ),
     re.compile(
         r"\b(?:early deadline|early bird deadline|early application deadline)\b"
-        r"[:\s-]*(\d{1,2} [A-Z][a-z]+ \d{4})",
+        r"[:\s-]*(\d{1,2}(?:st|nd|rd|th)? [A-Z][a-z]+ \d{4})",
         re.IGNORECASE,
     ),
 ]
 
 _GENERIC_DATE_PATTERNS = [
-    re.compile(r"\b([A-Z][a-z]+ \d{1,2}, \d{4})\b"),
-    re.compile(r"\b(\d{1,2} [A-Z][a-z]+ \d{4})\b"),
+    re.compile(r"\b([A-Z][a-z]+ \d{1,2}(?:st|nd|rd|th)?, \d{4})\b"),
+    re.compile(r"\b(\d{1,2}(?:st|nd|rd|th)? [A-Z][a-z]+ \d{4})\b"),
     re.compile(r"\b(\d{1,2}/\d{1,2}/\d{2,4})\b"),
 ]
 

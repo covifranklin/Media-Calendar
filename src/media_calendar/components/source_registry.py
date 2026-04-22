@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
+from datetime import date
 from pathlib import Path
-from typing import Iterable, List, Sequence
+from typing import Iterable, List, Literal, Sequence
 
 from media_calendar.models import SourceRegistryEntry
 
@@ -15,6 +16,7 @@ _PRIORITY_ORDER = {
     "medium": 2,
     "watchlist": 3,
 }
+SourceScope = Literal["auto", "core", "all"]
 
 
 def resolve_source_files(
@@ -63,6 +65,39 @@ def load_source_registry(source_files: Sequence[Path]) -> List[SourceRegistryEnt
         )
     )
     return entries
+
+
+def resolve_source_scope(
+    scope: SourceScope,
+    *,
+    current_date: date,
+) -> Literal["core", "all"]:
+    """Resolve automatic source scope into an effective core/all scope."""
+
+    if scope == "auto":
+        return "all" if current_date.isocalendar().week % 2 == 0 else "core"
+    return scope
+
+
+def select_source_registry(
+    entries: Sequence[SourceRegistryEntry],
+    *,
+    current_date: date,
+    scope: SourceScope,
+) -> List[SourceRegistryEntry]:
+    """Select sources for a refresh run based on scope and cadence policy."""
+
+    effective_scope = resolve_source_scope(
+        scope,
+        current_date=current_date,
+    )
+    if effective_scope == "all":
+        return list(entries)
+    return [
+        entry
+        for entry in entries
+        if entry.coverage_priority != "watchlist"
+    ]
 
 
 def import_yaml():

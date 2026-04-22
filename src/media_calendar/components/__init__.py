@@ -35,7 +35,9 @@ from media_calendar.components.source_freshness import (
 from media_calendar.components.source_health import build_source_health_report
 from media_calendar.components.source_registry import (
     load_source_registry,
+    resolve_source_scope,
     resolve_source_files,
+    select_source_registry,
 )
 from media_calendar.components.source_snapshotter import snapshot_fetch_results
 from media_calendar.components.source_text import extract_source_text
@@ -58,8 +60,10 @@ __all__ = [
     "generate_calendar",
     "load_deadlines",
     "load_source_registry",
+    "resolve_source_scope",
     "resolve_deadline_files",
     "resolve_source_files",
+    "select_source_registry",
     "snapshot_fetch_results",
     "write_source_coverage_report",
     "write_source_freshness_report",

@@ -22,6 +22,8 @@ from media_calendar.components import (
     load_source_registry,
     resolve_deadline_files,
     resolve_source_files,
+    resolve_source_scope,
+    select_source_registry,
     snapshot_fetch_results,
     write_deadlines,
     write_source_freshness_report,
@@ -54,6 +56,7 @@ CalendarGenerator = Callable[..., Path]
 ReportWriter = Callable[[dict], None]
 LlmMode = Literal["auto", "off", "required"]
 RefreshMode = Literal["dry-run", "apply"]
+SourceScope = Literal["auto", "core", "all"]
 
 
 def orchestration_step_discovery_refresh(
@@ -64,6 +67,7 @@ def orchestration_step_discovery_refresh(
     current_date: date | None = None,
     mode: RefreshMode = "dry-run",
     llm_mode: LlmMode = "auto",
+    source_scope: SourceScope = "auto",
     llm_client=None,
     fetch_url: FetchUrl | None = None,
     calendar_generator: CalendarGenerator = generate_calendar,
@@ -77,7 +81,16 @@ def orchestration_step_discovery_refresh(
     active_date = current_date or date.today()
     source_paths = resolve_source_files(source_files, root=root)
     deadline_paths = resolve_deadline_files(deadline_files, root=root)
-    source_entries = load_source_registry(source_paths)
+    all_source_entries = load_source_registry(source_paths)
+    effective_source_scope = resolve_source_scope(
+        source_scope,
+        current_date=active_date,
+    )
+    source_entries = select_source_registry(
+        all_source_entries,
+        current_date=active_date,
+        scope=source_scope,
+    )
     deadlines = load_deadlines(deadline_paths)
 
     fetch_results = fetch_sources(source_entries, fetch_url=fetch_url)
@@ -230,6 +243,10 @@ def orchestration_step_discovery_refresh(
         "error_handling": ERROR_HANDLING,
         "current_date": active_date.isoformat(),
         "mode": mode,
+        "source_scope_requested": source_scope,
+        "source_scope_effective": effective_source_scope,
+        "selected_source_count": len(source_entries),
+        "total_source_count": len(all_source_entries),
         "applied_changes": mode == "apply",
         "source_files": [str(path) for path in source_paths],
         "deadline_files": [str(path) for path in written_deadline_files],

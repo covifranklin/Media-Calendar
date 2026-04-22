@@ -82,6 +82,32 @@ def test_group_upcoming_notifications_sorts_digest_items_by_date():
     ]
 
 
+def test_group_upcoming_notifications_groups_digest_order_by_category_then_date():
+    current_date = date(2026, 5, 4)
+    fellowship = build_deadline(deadline_date=date(2026, 5, 20), windows=[30])
+    funding = build_deadline(deadline_date=date(2026, 5, 18), windows=[30]).model_copy(
+        update={"category": "funding_round"}
+    )
+    later_funding = build_deadline(
+        deadline_date=date(2026, 5, 22),
+        windows=[30],
+    ).model_copy(update={"category": "funding_round"})
+
+    grouped = group_upcoming_notifications(
+        [fellowship, later_funding, funding],
+        current_date=current_date,
+    )
+
+    assert [
+        (item.category, item.deadline_date)
+        for item in grouped["weekly_digest"]
+    ] == [
+        ("fellowship", date(2026, 5, 20)),
+        ("funding_round", date(2026, 5, 18)),
+        ("funding_round", date(2026, 5, 22)),
+    ]
+
+
 def test_load_dotenv_file_sets_environment(tmp_path, monkeypatch):
     dotenv_path = tmp_path / ".env"
     dotenv_path.write_text(
