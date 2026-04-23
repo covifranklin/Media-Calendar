@@ -24,6 +24,7 @@ The operations guide covers:
 - `notification_composer` and `data_curation_agent` agent implementations
 - deterministic static calendar generation
 - automated source discovery refresh with autonomy-first auto-promotion
+- review-only fortnightly open-web discovery sweep for missed opportunities
 - orchestration steps for notifications, data curation, and calendar generation
 - Resend API-backed notification sending
 - GitHub Actions for tests, GitHub Pages deployment, weekly discovery refresh, weekly notifications, and manual curation
@@ -139,6 +140,29 @@ Preview-only mode:
 python discover.py --mode dry-run --llm-mode off
 ```
 
+## Run the open-web discovery sweep locally
+
+This workflow runs a small, review-only internet search outside the monitored
+source list, fetches a capped set of result pages, checks them for opportunity
+signals, compares those signals with the existing deadline database, and writes
+reports without auto-promoting anything.
+
+```bash
+python search_discover.py
+```
+
+Optional caps:
+
+```bash
+python search_discover.py --max-results-per-query 2 --max-results-total 8
+```
+
+This writes:
+
+- `build/open-web-discovery.json`
+- `build/open-web-discovery.md`
+- `build/source_snapshots/*`
+
 To generate a source coverage snapshot separately:
 
 ```bash
@@ -216,7 +240,7 @@ And writes:
 
 ## GitHub Actions
 
-The repo now includes four workflows:
+The repo now includes five workflows:
 
 1. `.github/workflows/ci.yml`
    Runs `pytest` on pull requests and pushes, generates `build/calendar.html` on pushes to `main`, and deploys it to GitHub Pages.
@@ -226,6 +250,10 @@ The repo now includes four workflows:
    Runs weekly on Mondays and can also be started manually to compose/send notifications.
 4. `.github/workflows/curation.yml`
    Runs manually for a chosen year and uploads curation reports as workflow artifacts.
+5. `.github/workflows/open-web-discovery.yml`
+   Runs on a weekly schedule but only proceeds on alternating ISO weeks, giving you
+   a lightweight fortnightly open-web sweep. It writes review-only artifacts and
+   never auto-commits deadline data.
 
 For non-technical day-to-day use, see [docs/operations-guide.md](docs/operations-guide.md).
 
@@ -242,6 +270,11 @@ The discovery workflow uploads these artifacts on each run:
 - `discovery-refresh.json` and `discovery-refresh.md`
 - `discovery-metrics.json` and `discovery-metrics.md`
 - `discovery-log.jsonl`
+
+The open-web discovery workflow uploads these artifacts on each run:
+
+- `open-web-discovery.json`
+- `open-web-discovery.md`
 
 For notifications:
 

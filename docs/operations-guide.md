@@ -5,7 +5,7 @@ You do not need to read the code to use the project.
 
 ## What Happens Automatically
 
-Three GitHub Actions workflows matter for day-to-day operation:
+Four GitHub Actions workflows matter for day-to-day operation:
 
 1. `CI and Pages`
    Runs when code is pushed to `main`.
@@ -20,9 +20,13 @@ Three GitHub Actions workflows matter for day-to-day operation:
    Runs every Monday.
    It builds the weekly digest plus any urgent deadline alerts and sends email if the required Resend secrets are configured.
 
-There is also a fourth workflow:
+4. `Fortnightly Open-Web Discovery`
+   Runs on alternating Mondays.
+   It does a small internet search outside the monitored source list, fetches a capped set of result pages, and produces review-only reports for anything that might have been missed.
 
-4. `Manual Curation`
+There is also a fifth workflow:
+
+5. `Manual Curation`
    This does not run automatically.
    Use it only when you want a one-off annual review of an existing deadline year.
 
@@ -34,6 +38,8 @@ These outputs are created automatically by workflows:
   `build/calendar.html` during the Pages workflow, then published to GitHub Pages.
 - Discovery monitoring artifacts:
   uploaded from `build/` by the weekly discovery workflow.
+- Open-web discovery artifacts:
+  uploaded from `build/` by the fortnightly open-web discovery workflow.
 - Notification artifacts:
   uploaded from `build/` by the weekly notifications workflow.
 - Curation artifacts:
@@ -80,6 +86,13 @@ Important files inside that artifact:
 - `discovery-metrics.json`
 - `discovery-metrics.md`
 - `discovery-log.jsonl`
+
+Open-web sweep reports are stored as GitHub Actions artifacts on each `Fortnightly Open-Web Discovery` run.
+
+Important files inside that artifact:
+
+- `open-web-discovery.json`
+- `open-web-discovery.md`
 
 If you only want the easiest human-readable files, start with:
 
@@ -150,6 +163,20 @@ Recommendation:
 
 - Use `dry_run=true` whenever you are testing configuration or checking copy before a live send.
 
+### Run Open-Web Discovery Manually
+
+1. Go to `Actions`.
+2. Open `Fortnightly Open-Web Discovery`.
+3. Click `Run workflow`.
+4. If needed, turn on `run_anyway` to bypass the fortnight gate.
+5. Adjust the search caps only if you want a wider or narrower sweep.
+6. Click `Run workflow`.
+
+Recommendation:
+
+- Leave the caps small unless you are intentionally doing a deeper review.
+- Treat the results as suggestions for review, not automatic additions.
+
 ### Run Annual Curation Manually
 
 1. Go to `Actions`.
@@ -165,6 +192,7 @@ Every Monday:
 - `Weekly Discovery Refresh` checks monitored sources and uploads discovery/health reports.
 - `Weekly Discovery Refresh` also commits promoted deadline changes automatically when it finds them.
 - `Weekly Notifications` prepares the weekly digest and any urgent alerts.
+- `Fortnightly Open-Web Discovery` runs on alternating Mondays and uploads review-only sweep reports.
 
 The calendar website itself is not rebuilt on a timer.
 It rebuilds when `main` changes.
@@ -235,6 +263,7 @@ For a light-touch operator routine:
 1. Check the latest `Weekly Discovery Refresh` run.
 2. Download and skim:
    `coverage-report.md`, `source-freshness.md`, and `discovery-refresh.md`.
-3. Check the latest `Weekly Notifications` run.
-4. If needed, manually rerun notifications in `dry_run=true` first, then rerun with `dry_run=false`.
-5. Confirm the public calendar page looks correct after automated discovery changes.
+3. Check the latest `Fortnightly Open-Web Discovery` run when one was due, and skim `open-web-discovery.md`.
+4. Check the latest `Weekly Notifications` run.
+5. If needed, manually rerun notifications in `dry_run=true` first, then rerun with `dry_run=false`.
+6. Confirm the public calendar page looks correct after automated discovery changes.

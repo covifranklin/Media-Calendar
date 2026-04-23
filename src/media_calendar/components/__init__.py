@@ -15,6 +15,10 @@ from media_calendar.components.discovery_comparator import (
 from media_calendar.components.discovery_promoter import (
     auto_promote_discovery_results,
 )
+from media_calendar.components.open_web_search import (
+    build_open_web_queries,
+    search_open_web,
+)
 from media_calendar.components.source_coverage import (
     build_source_coverage_report,
     write_source_coverage_report,
@@ -47,6 +51,7 @@ __all__ = [
     "build_source_coverage_report",
     "build_source_freshness_report",
     "build_source_health_report",
+    "build_open_web_queries",
     "compare_candidate_batch",
     "compare_candidate_batches",
     "compare_candidates",
@@ -63,6 +68,7 @@ __all__ = [
     "resolve_source_scope",
     "resolve_deadline_files",
     "resolve_source_files",
+    "search_open_web",
     "select_source_registry",
     "snapshot_fetch_results",
     "write_source_coverage_report",

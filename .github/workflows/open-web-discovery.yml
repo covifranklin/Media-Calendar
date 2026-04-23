@@ -1,0 +1,85 @@
+name: Fortnightly Open-Web Discovery
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"
+  workflow_dispatch:
+    inputs:
+      run_anyway:
+        description: "Ignore fortnight gate and run immediately"
+        required: false
+        default: false
+        type: boolean
+      max_results_per_query:
+        description: "Per-query search result cap"
+        required: false
+        default: "3"
+        type: string
+      max_results_total:
+        description: "Total fetched result cap"
+        required: false
+        default: "12"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  discovery:
+    runs-on: ubuntu-latest
+    env:
+      RUN_ANYWAY: ${{ github.event.inputs.run_anyway || 'false' }}
+      MAX_RESULTS_PER_QUERY: ${{ github.event.inputs.max_results_per_query || '3' }}
+      MAX_RESULTS_TOTAL: ${{ github.event.inputs.max_results_total || '12' }}
+    steps:
+      - name: Check fortnight gate
+        id: gate
+        run: |
+          if [ "${RUN_ANYWAY}" = "true" ]; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          week_number="$(date -u +%V)"
+          if [ $((10#$week_number % 2)) -eq 0 ]; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Stop on off week
+        if: steps.gate.outputs.should_run != 'true'
+        run: |
+          echo "Skipping open-web discovery this week because the fortnight gate is closed."
+
+      - name: Check out repository
+        if: steps.gate.outputs.should_run == 'true'
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        if: steps.gate.outputs.should_run == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install project
+        if: steps.gate.outputs.should_run == 'true'
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+
+      - name: Run open-web discovery sweep
+        if: steps.gate.outputs.should_run == 'true'
+        run: |
+          python search_discover.py \
+            --max-results-per-query "${MAX_RESULTS_PER_QUERY}" \
+            --max-results-total "${MAX_RESULTS_TOTAL}"
+
+      - name: Upload open-web discovery artifacts
+        if: steps.gate.outputs.should_run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: open-web-discovery-artifacts
+          path: |
+            build/open-web-discovery.json
+            build/open-web-discovery.md
+            build/source_snapshots/
