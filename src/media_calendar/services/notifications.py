@@ -165,16 +165,18 @@ def dispatch_notification_queue(
     for queue_item in _prepare_queue_for_dispatch(queue):
         email_payload = queue_item["email"]
         notification_type = cast(NotificationType, queue_item["notification_type"])
-        logs = _build_notification_logs(
-            deadline_ids=queue_item["deadline_ids"],
-            notification_type=notification_type,
-            recipient_email=recipient_email,
-            status="sent" if dry_run else "failed",
-        )
-        result_status: str = "sent" if dry_run else "failed"
+        result_status: str
         error_message: str | None = None
 
-        if not dry_run:
+        if dry_run:
+            result_status = "sent"
+            logs = _build_notification_logs(
+                deadline_ids=queue_item["deadline_ids"],
+                notification_type=notification_type,
+                recipient_email=recipient_email,
+                status="sent",
+            )
+        else:
             if resend_settings is None:
                 raise ValueError(
                     "resend_settings are required when dry_run is False"
@@ -188,29 +190,22 @@ def dispatch_notification_queue(
                     resend_settings=resend_settings,
                 )
             except Exception as exc:
+                result_status = "failed"
+                error_message = str(exc)
                 logs = _build_notification_logs(
                     deadline_ids=queue_item["deadline_ids"],
                     notification_type=notification_type,
                     recipient_email=recipient_email,
                     status="failed",
                 )
-                result_status = "failed"
-                error_message = str(exc)
             else:
+                result_status = "sent"
                 logs = _build_notification_logs(
                     deadline_ids=queue_item["deadline_ids"],
                     notification_type=notification_type,
                     recipient_email=recipient_email,
                     status="sent",
                 )
-                result_status = "sent"
-        else:
-            logs = _build_notification_logs(
-                deadline_ids=queue_item["deadline_ids"],
-                notification_type=notification_type,
-                recipient_email=recipient_email,
-                status="sent",
-            )
 
         results.append(
             NotificationDispatchResult(
