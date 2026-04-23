@@ -449,3 +449,77 @@ def test_orchestration_step_discovery_refresh_merges_deterministic_and_llm_candi
     assert payload["llm_batches_used"] == 1
     assert payload["promoted_new_count"] == 1
     assert payload["rejected_uncertain_count"] == 0
+
+
+def test_orchestration_step_discovery_refresh_rewrites_generic_candidate_titles(
+    tmp_path,
+    monkeypatch,
+):
+    _write_source_registry(tmp_path)
+    (tmp_path / "data" / "deadlines").mkdir(parents=True)
+
+    def fake_fetch_url(url: str):
+        return (
+            200,
+            "text/html",
+            "<html><body><p>Example Labs Open Calls applications are open "
+            "Deadline: June 1, 2026</p></body></html>",
+        )
+
+    def fake_calendar_generator(*, root_dir=None, deadline_files=None, current_date=None):
+        output_path = tmp_path / "build" / "calendar.html"
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text("<html></html>", encoding="utf-8")
+        return output_path
+
+    def fake_discover(agent_input, *, client=None, max_attempts=3):
+        return DiscoveryCandidateBatch(
+            source_id=str(agent_input.source_entry.id),
+            source_url=agent_input.source_entry.source_url,
+            organization=agent_input.source_entry.organization,
+            program_name=agent_input.source_entry.program_name,
+            candidates=[
+                DiscoveryCandidate(
+                    id="22222222-2222-4222-8222-222222222222",
+                    source_id=agent_input.source_entry.id,
+                    source_url=agent_input.source_entry.source_url,
+                    organization=agent_input.source_entry.organization,
+                    name="Dates.",
+                    category="lab_application",
+                    candidate_type="new_opportunity",
+                    confidence=0.88,
+                    rationale="LLM found a future-dated opportunity.",
+                    detected_deadline_text="June 1, 2026",
+                    detected_early_deadline_text=None,
+                    detected_event_date_text=None,
+                    eligibility_notes=None,
+                    regions=["Global"],
+                    tags=["llm_reviewed"],
+                    raw_excerpt=(
+                        "Applications open now\n"
+                        "Deadline: June 1, 2026"
+                    ),
+                )
+            ],
+            notes="LLM returned a generic page label as the candidate name.",
+        )
+
+    monkeypatch.setattr(
+        "media_calendar.orchestration.discovery_refresh_step.discover_source_candidates",
+        fake_discover,
+    )
+
+    orchestration_step_discovery_refresh(
+        root_dir=tmp_path,
+        current_date=date(2026, 4, 21),
+        mode="apply",
+        llm_mode="auto",
+        llm_client=object(),
+        fetch_url=fake_fetch_url,
+        calendar_generator=fake_calendar_generator,
+    )
+
+    written_file = tmp_path / "data" / "deadlines" / "2026.yaml"
+    contents = written_file.read_text(encoding="utf-8")
+    assert "Dates." not in contents
+    assert "Example Labs - Open Calls" in contents

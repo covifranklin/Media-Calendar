@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import base64
 from calendar import month_name
 from datetime import date
 from html import escape
@@ -17,6 +18,7 @@ from media_calendar.models import Deadline
 
 DEFAULT_OUTPUT_PATH = Path("build/calendar.html")
 DEFAULT_INDEX_PATH = Path("build/index.html")
+_ASSET_ROOT = Path(__file__).resolve().parent.parent / "assets" / "goose"
 
 CATEGORY_LABELS = {
     "festival_submission": "Festival Submission",
@@ -52,6 +54,8 @@ def generate_calendar(
 
 
 def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
+    idle_sprite = _sprite_data_uri(_ASSET_ROOT / "Idle.png")
+    walk_sprite = _sprite_data_uri(_ASSET_ROOT / "Walk.png")
     category_options = "\n".join(
         f'<option value="{escape(category)}">{escape(label)}</option>'
         for category, label in CATEGORY_LABELS.items()
@@ -281,239 +285,63 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
       position: absolute;
       top: 0;
       left: 0;
-      width: 92px;
-      height: 92px;
+      width: 64px;
+      height: 64px;
       transform: translate3d(20px, 160px, 0);
-      transition: transform 1.8s cubic-bezier(0.22, 0.9, 0.24, 1);
+      transition: transform 1.75s cubic-bezier(0.22, 0.9, 0.24, 1);
       will-change: transform;
     }}
 
-    .goose-guide.is-waddling .goose {{
-      animation: goose-waddle 0.72s ease-in-out infinite alternate;
+    .goose-sprite {{
+      width: 64px;
+      height: 64px;
+      background-image: url("{walk_sprite}");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 256px 64px;
+      image-rendering: pixelated;
+      filter: drop-shadow(0 8px 10px rgba(27, 31, 35, 0.16));
+      transform-origin: 50% 78%;
     }}
 
-    .goose-guide.is-seated .goose {{
-      animation: goose-settle 0.9s ease-out forwards;
+    .goose-guide.is-waddling .goose-sprite {{
+      animation:
+        goose-walk-frames 0.76s steps(4) infinite,
+        goose-waddle 0.76s ease-in-out infinite alternate;
     }}
 
-    .goose-shadow {{
-      position: absolute;
-      left: 18px;
-      bottom: 10px;
-      width: 50px;
-      height: 12px;
-      border-radius: 999px;
-      background: rgba(27, 31, 35, 0.12);
-      filter: blur(1.5px);
-    }}
-
-    .goose {{
-      position: absolute;
-      inset: 0;
-      transform-origin: 50% 75%;
-    }}
-
-    .goose-body {{
-      position: absolute;
-      left: 20px;
-      top: 28px;
-      width: 46px;
-      height: 34px;
-      background: #fffdf8;
-      border: 2px solid #2f3d36;
-      border-radius: 58% 54% 48% 52%;
-    }}
-
-    .goose-wing {{
-      position: absolute;
-      left: 37px;
-      top: 36px;
-      width: 22px;
-      height: 16px;
-      background: #f3efe5;
-      border: 2px solid #2f3d36;
-      border-radius: 60% 70% 50% 70%;
-      transform: rotate(-14deg);
-    }}
-
-    .goose-neck {{
-      position: absolute;
-      left: 49px;
-      top: 10px;
-      width: 12px;
-      height: 28px;
-      background: #fffdf8;
-      border: 2px solid #2f3d36;
-      border-bottom: 0;
-      border-radius: 14px 14px 8px 8px;
-      transform: rotate(10deg);
-      transform-origin: bottom center;
-    }}
-
-    .goose-head {{
-      position: absolute;
-      left: 52px;
-      top: 4px;
-      width: 20px;
-      height: 18px;
-      background: #fffdf8;
-      border: 2px solid #2f3d36;
-      border-radius: 55% 50% 48% 52%;
-    }}
-
-    .goose-sunglasses {{
-      position: absolute;
-      left: 51px;
-      top: 7px;
-      width: 22px;
-      height: 10px;
-    }}
-
-    .goose-sunglasses::before,
-    .goose-sunglasses::after {{
-      content: "";
-      position: absolute;
-      top: 1px;
-      width: 8px;
-      height: 8px;
-      border: 2px solid #2f3d36;
-      border-radius: 50%;
-      background: #1b1f23;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
-    }}
-
-    .goose-sunglasses::before {{
-      left: 0;
-    }}
-
-    .goose-sunglasses::after {{
-      right: 0;
-    }}
-
-    .goose-sunglasses-bridge {{
-      position: absolute;
-      left: 60px;
-      top: 12px;
-      width: 4px;
-      height: 2px;
-      background: #2f3d36;
-      border-radius: 999px;
-    }}
-
-    .goose-eye {{
-      position: absolute;
-      left: 58px;
-      top: 15px;
-      width: 2px;
-      height: 2px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.55);
-      box-shadow: 8px 0 0 rgba(255, 255, 255, 0.55);
-    }}
-
-    .goose-beak {{
-      position: absolute;
-      left: 68px;
-      top: 11px;
-      width: 12px;
-      height: 8px;
-      background: #f2a343;
-      border: 2px solid #2f3d36;
-      border-left: 0;
-      clip-path: polygon(0 0, 100% 50%, 0 100%);
-    }}
-
-    .goose-leg {{
-      position: absolute;
-      top: 58px;
-      width: 3px;
-      height: 18px;
-      background: #d8802b;
-      border-radius: 3px;
-      transform-origin: top center;
-    }}
-
-    .goose-leg.left {{
-      left: 35px;
-    }}
-
-    .goose-leg.right {{
-      left: 48px;
-    }}
-
-    .goose-guide.is-waddling .goose-leg.left {{
-      animation: goose-step-left 0.72s ease-in-out infinite alternate;
-    }}
-
-    .goose-guide.is-waddling .goose-leg.right {{
-      animation: goose-step-right 0.72s ease-in-out infinite alternate;
-    }}
-
-    .goose-feet {{
-      position: absolute;
-      left: -3px;
-      bottom: -2px;
-      width: 10px;
-      height: 4px;
-      border-radius: 10px;
-      background: #d8802b;
-    }}
-
-    .goose-seat-label {{
-      position: absolute;
-      right: 18px;
-      top: 110px;
-      max-width: min(220px, calc(100% - 36px));
-      padding: 10px 12px;
-      border: 1px solid rgba(47, 61, 54, 0.18);
-      border-radius: 16px;
-      background: rgba(255, 253, 248, 0.92);
-      box-shadow: 0 14px 30px rgba(27, 31, 35, 0.12);
-      color: var(--muted);
-      font-size: 0.86rem;
-      line-height: 1.3;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.35s ease, transform 0.35s ease;
-      backdrop-filter: blur(4px);
-    }}
-
-    .goose-seat-label strong {{
-      display: block;
-      margin-bottom: 2px;
-      color: var(--ink);
-      font-size: 0.9rem;
-    }}
-
-    .goose-seat-label.is-visible {{
-      opacity: 1;
-      transform: translateY(0);
+    .goose-guide.is-seated .goose-sprite {{
+      background-image: url("{idle_sprite}");
+      background-size: 128px 64px;
+      animation:
+        goose-idle-frames 1.3s steps(2) infinite,
+        goose-settle 1.1s ease-out forwards;
     }}
 
     @keyframes goose-waddle {{
       from {{
-        transform: translateY(0) rotate(-3deg);
+        transform: translateY(0) rotate(-2deg);
       }}
       to {{
-        transform: translateY(-3px) rotate(3deg);
+        transform: translateY(-2px) rotate(2deg);
       }}
     }}
 
-    @keyframes goose-step-left {{
+    @keyframes goose-walk-frames {{
       from {{
-        transform: rotate(14deg);
+        background-position: 0 0;
       }}
       to {{
-        transform: rotate(-10deg);
+        background-position: -256px 0;
       }}
     }}
 
-    @keyframes goose-step-right {{
+    @keyframes goose-idle-frames {{
       from {{
-        transform: rotate(-10deg);
+        background-position: 0 0;
       }}
       to {{
-        transform: rotate(14deg);
+        background-position: -128px 0;
       }}
     }}
 
@@ -522,19 +350,17 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
         transform: rotate(0deg) translateY(0);
       }}
       55% {{
-        transform: rotate(-4deg) translateY(-2px);
+        transform: rotate(-3deg) translateY(-1px);
       }}
       100% {{
-        transform: rotate(-7deg) translateY(0);
+        transform: rotate(-4deg) translateY(0);
       }}
     }}
 
     @media (prefers-reduced-motion: reduce) {{
       .goose-guide,
-      .goose-guide.is-waddling .goose,
-      .goose-guide.is-waddling .goose-leg.left,
-      .goose-guide.is-waddling .goose-leg.right,
-      .goose-guide.is-seated .goose {{
+      .goose-guide.is-waddling .goose-sprite,
+      .goose-guide.is-seated .goose-sprite {{
         animation: none;
         transition-duration: 0.01ms;
       }}
@@ -591,23 +417,7 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
 
   <div class="goose-stage" aria-hidden="true">
     <div id="goose-guide" class="goose-guide">
-      <div class="goose-shadow"></div>
-      <div class="goose">
-        <div class="goose-body"></div>
-        <div class="goose-wing"></div>
-        <div class="goose-neck"></div>
-        <div class="goose-head"></div>
-        <div class="goose-sunglasses"></div>
-        <div class="goose-sunglasses-bridge"></div>
-        <div class="goose-eye"></div>
-        <div class="goose-beak"></div>
-        <div class="goose-leg left"><div class="goose-feet"></div></div>
-        <div class="goose-leg right"><div class="goose-feet"></div></div>
-      </div>
-    </div>
-    <div id="goose-seat-label" class="goose-seat-label">
-      <strong>Goose Watch</strong>
-      <span>Scanning the calendar for the next good seat.</span>
+      <div class="goose-sprite"></div>
     </div>
   </div>
 
@@ -618,7 +428,6 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
     const visibleCount = document.getElementById('visible-count');
     const resultsCopy = document.getElementById('results-copy');
     const gooseGuide = document.getElementById('goose-guide');
-    const gooseSeatLabel = document.getElementById('goose-seat-label');
     let gooseRouteTimeouts = [];
 
     function applyFilters() {{
@@ -667,7 +476,7 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
     function getGoosePerch() {{
       const cardWidth = 320;
       return {{
-        x: Math.max(14, Math.min(window.innerWidth - 150, cardWidth + 28)),
+        x: Math.max(18, Math.min(window.innerWidth - 92, cardWidth + 28)),
         y: 170,
       }};
     }}
@@ -687,27 +496,12 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
 
       return [
         {{ x: 18, y: 160 }},
-        {{ x: Math.max(42, Math.round(window.innerWidth * 0.22)), y: 205 }},
+        {{ x: Math.max(36, Math.round(window.innerWidth * 0.22)), y: 210 }},
         {{ x: scenicStopX, y: scenicStopY }},
-        {{ x: Math.max(68, Math.round(window.innerWidth * 0.48)), y: Math.min(pageHeight - 140, scenicStopY + 110) }},
-        {{ x: Math.max(36, Math.round(window.innerWidth * 0.18)), y: Math.max(190, Math.min(pageHeight - 180, scenicStopY - 65)) }},
+        {{ x: Math.max(64, Math.round(window.innerWidth * 0.48)), y: Math.min(pageHeight - 140, scenicStopY + 110) }},
+        {{ x: Math.max(32, Math.round(window.innerWidth * 0.18)), y: Math.max(190, Math.min(pageHeight - 180, scenicStopY - 65)) }},
         perch,
       ];
-    }}
-
-    function updateGooseSeatLabel(targetCard) {{
-      if (!gooseSeatLabel) {{
-        return;
-      }}
-
-      if (!targetCard) {{
-        gooseSeatLabel.innerHTML = '<strong>Goose Watch</strong><span>Scanning the calendar for the next good seat.</span>';
-      }} else {{
-        const eventName = targetCard.querySelector('h2')?.textContent || 'Calendar event';
-        gooseSeatLabel.innerHTML = `<strong>Goose Watch</strong><span>Camped out for ${{eventName}}.</span>`;
-      }}
-
-      gooseSeatLabel.classList.add('is-visible');
     }}
 
     function settleGooseOnVisibleCard() {{
@@ -722,7 +516,6 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
       const finalStop = route[route.length - 1];
 
       clearGooseRoute();
-      updateGooseSeatLabel(targetCard);
 
       if (!targetCard) {{
         gooseGuide.classList.remove('is-seated');
@@ -763,6 +556,11 @@ def _render_calendar_html(deadlines: Sequence[Deadline]) -> str:
 </body>
 </html>
 """
+
+
+def _sprite_data_uri(path: Path) -> str:
+    encoded = base64.b64encode(path.read_bytes()).decode("ascii")
+    return f"data:image/png;base64,{encoded}"
 
 
 def _render_deadline_card(deadline: Deadline) -> str:

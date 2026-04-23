@@ -79,6 +79,7 @@ def test_notify_cli_returns_nonzero_when_send_fails(tmp_path, monkeypatch, capsy
                 recipient_email=recipient_email,
                 status="failed",
                 logs=[failed_log],
+                error_message="resend unavailable",
             )
         ],
     )
@@ -98,6 +99,7 @@ def test_notify_cli_returns_nonzero_when_send_fails(tmp_path, monkeypatch, capsy
 
     assert exit_code == 1
     assert "failed" in captured.out.lower()
+    assert "resend unavailable" in captured.out
     log_path = tmp_path / "build" / "notification-log.jsonl"
     queue_path = tmp_path / "build" / "notification-queue.json"
     assert log_path.exists()

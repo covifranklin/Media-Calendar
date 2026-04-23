@@ -61,6 +61,30 @@ RefreshMode = Literal["dry-run", "apply"]
 SourceScope = Literal["auto", "core", "all"]
 _MERGED_CANDIDATE_NAMESPACE = UUID("7d4cf9e1-e633-4669-8c07-e29c035ba47c")
 _WORD_RE = re.compile(r"[a-z0-9]+")
+_GENERIC_TITLE_WORDS = {
+    "apply",
+    "application",
+    "applications",
+    "calendar",
+    "date",
+    "dates",
+    "deadline",
+    "deadlines",
+    "details",
+    "event",
+    "events",
+    "home",
+    "info",
+    "information",
+    "opportunity",
+    "opportunities",
+    "overview",
+    "register",
+    "submission",
+    "submissions",
+    "update",
+    "updates",
+}
 
 
 def orchestration_step_discovery_refresh(
@@ -152,6 +176,7 @@ def orchestration_step_discovery_refresh(
                 )
                 deterministic_fallback_batches += 1
 
+        effective_batch = _sanitize_candidate_batch(effective_batch)
         comparison_batch = compare_candidate_batch(effective_batch, current_deadlines)
         freshness_batches.append(effective_batch)
         promotion_batch = auto_promote_discovery_results(
@@ -290,6 +315,8 @@ def _merge_candidate_batches(
 ):
     """Keep deterministic coverage while letting LLM output enrich candidates."""
 
+    deterministic_batch = _sanitize_candidate_batch(deterministic_batch)
+    llm_batch = _sanitize_candidate_batch(llm_batch)
     merged_by_key = {}
     ordered_keys = []
 
@@ -388,6 +415,105 @@ def _prefer_richer_text(primary: str | None, secondary: str | None) -> str | Non
 
 def _normalize_identity_text(value: str) -> str:
     return " ".join(_WORD_RE.findall(value.lower()))
+
+
+def _sanitize_candidate_batch(batch):
+    sanitized_candidates = [
+        _sanitize_candidate(candidate, program_name=batch.program_name)
+        for candidate in batch.candidates
+    ]
+    return batch.model_copy(update={"candidates": sanitized_candidates})
+
+
+def _sanitize_candidate(candidate, *, program_name: str):
+    sanitized_name = _build_intuitive_candidate_name(candidate, program_name=program_name)
+    if sanitized_name == candidate.name:
+        return candidate
+    return candidate.model_copy(update={"name": sanitized_name})
+
+
+def _build_intuitive_candidate_name(candidate, *, program_name: str) -> str:
+    current_name = " ".join(candidate.name.split()).strip(" .:-")
+    if current_name and not _is_low_signal_title(current_name):
+        return current_name
+
+    excerpt_lines = [
+        " ".join(line.split()).strip(" .:-")
+        for line in (candidate.raw_excerpt or "").splitlines()
+        if line.strip()
+    ]
+    excerpt_lines = [
+        line
+        for line in excerpt_lines
+        if line
+        and not _looks_like_metadata_line(line)
+        and not _is_low_signal_title(line)
+    ]
+    if excerpt_lines:
+        return excerpt_lines[0]
+
+    normalized_program_name = " ".join(program_name.split()).strip(" .:-")
+    if normalized_program_name and not _is_low_signal_title(normalized_program_name):
+        if normalized_program_name.lower() in candidate.organization.lower():
+            return candidate.organization
+        return f"{candidate.organization} - {normalized_program_name}"
+
+    return candidate.organization
+
+
+def _is_low_signal_title(value: str) -> bool:
+    normalized_value = " ".join(value.split()).strip(" .:-")
+    if not normalized_value:
+        return True
+
+    lowered = normalized_value.lower()
+    if lowered in {
+        "home",
+        "dates",
+        "date",
+        "applications",
+        "application",
+        "apply",
+        "deadlines",
+        "deadline",
+        "opportunities",
+        "opportunity",
+        "details",
+        "information",
+        "overview",
+        "register",
+        "submissions",
+        "submission",
+        "events",
+        "event",
+    }:
+        return True
+
+    tokens = _WORD_RE.findall(lowered)
+    if not tokens:
+        return True
+    if len(tokens) <= 2 and all(token in _GENERIC_TITLE_WORDS for token in tokens):
+        return True
+    return False
+
+
+def _looks_like_metadata_line(value: str) -> bool:
+    lowered = value.lower()
+    return any(
+        lowered.startswith(prefix)
+        for prefix in (
+            "deadline",
+            "early deadline",
+            "final deadline",
+            "extended deadline",
+            "applications open",
+            "submissions open",
+            "event dates",
+            "dates",
+            "apply now",
+            "register now",
+        )
+    )
 
 
 def _write_metrics_reports(

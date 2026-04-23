@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Literal, Mapping, Optional, Sequence, cast
+from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 from uuid import UUID, uuid4
 
@@ -23,6 +24,7 @@ NotificationType = Literal[
 ]
 NotificationStatus = Literal["sent", "failed", "bounced"]
 RESEND_API_URL = "https://api.resend.com/emails"
+RESEND_USER_AGENT = "media-calendar/1.0"
 WEEKLY_DIGEST_LOOKAHEAD_DAYS = 30
 _NOTIFICATION_DISPATCH_ORDER: Dict[NotificationType, int] = {
     "upcoming_3d": 0,
@@ -46,6 +48,7 @@ class NotificationDispatchResult:
     recipient_email: str
     status: str
     logs: List[NotificationLog]
+    error_message: Optional[str] = None
 
 
 def load_dotenv_file(path: str | Path) -> dict:
@@ -169,6 +172,7 @@ def dispatch_notification_queue(
             status="sent" if dry_run else "failed",
         )
         result_status: str = "sent" if dry_run else "failed"
+        error_message: str | None = None
 
         if not dry_run:
             if resend_settings is None:
@@ -183,7 +187,7 @@ def dispatch_notification_queue(
                     recipient_email=recipient_email,
                     resend_settings=resend_settings,
                 )
-            except Exception:
+            except Exception as exc:
                 logs = _build_notification_logs(
                     deadline_ids=queue_item["deadline_ids"],
                     notification_type=notification_type,
@@ -191,6 +195,7 @@ def dispatch_notification_queue(
                     status="failed",
                 )
                 result_status = "failed"
+                error_message = str(exc)
             else:
                 logs = _build_notification_logs(
                     deadline_ids=queue_item["deadline_ids"],
@@ -213,6 +218,7 @@ def dispatch_notification_queue(
                 recipient_email=recipient_email,
                 status=result_status,
                 logs=logs,
+                error_message=error_message,
             )
         )
 
@@ -328,14 +334,47 @@ def _send_email_via_resend(
         headers={
             "Authorization": f"Bearer {resend_settings.api_key}",
             "Content-Type": "application/json",
+            "Accept": "application/json",
+            "User-Agent": RESEND_USER_AGENT,
         },
         method="POST",
     )
-    with urlopen(request, timeout=20) as response:
-        response.read()
+    try:
+        with urlopen(request, timeout=20) as response:
+            response.read()
+    except HTTPError as exc:
+        details = _extract_http_error_details(exc)
+        if details:
+            raise RuntimeError(f"HTTP Error {exc.code}: {details}") from exc
+        raise RuntimeError(f"HTTP Error {exc.code}: {exc.reason}") from exc
 
 
 def _build_from_value(resend_settings: ResendSettings) -> str:
     if resend_settings.from_name:
         return f"{resend_settings.from_name} <{resend_settings.from_email}>"
     return resend_settings.from_email
+
+
+def _extract_http_error_details(error: HTTPError) -> str | None:
+    try:
+        body = error.read().decode("utf-8").strip()
+    except Exception:
+        body = ""
+
+    if not body:
+        return error.reason
+
+    try:
+        payload = json.loads(body)
+    except ValueError:
+        return body
+
+    message = payload.get("message")
+    error_name = payload.get("name")
+    if isinstance(message, str) and isinstance(error_name, str):
+        return f"{message} ({error_name})"
+    if isinstance(message, str):
+        return message
+    if isinstance(error_name, str):
+        return error_name
+    return body

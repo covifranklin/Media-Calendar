@@ -53,6 +53,10 @@ Return only valid JSON matching this schema exactly:
 }
 
 Do not wrap the JSON in markdown fences.
+Candidate names must be intuitive human-facing opportunity titles, not page chrome
+or navigation labels. Avoid generic names like "Home", "Dates", "Applications",
+"Register", or "Overview". If the page text is ambiguous, prefer a title derived
+from the organization/program context over a generic label.
 """.strip()
 
 
@@ -151,7 +155,9 @@ def _build_user_prompt(agent_input: DiscoveryAgentInput) -> str:
         "Review the cleaned source text and identify likely film/TV opportunity "
         "candidates that should be tracked.\n"
         "Use deterministic candidates as hints, but improve them when the source "
-        "text clearly supports a stronger result.\n\n"
+        "text clearly supports a stronger result.\n"
+        "Return intuitive opportunity names, not breadcrumb labels or generic page "
+        "headings.\n\n"
         f"{serialized_input}"
     )
 

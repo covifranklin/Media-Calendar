@@ -1,5 +1,6 @@
 import json
 from datetime import date
+from urllib.error import HTTPError
 from uuid import uuid4
 
 import pytest
@@ -236,6 +237,7 @@ def test_dispatch_notification_queue_calls_resend_api(monkeypatch):
     assert captured["url"] == "https://api.resend.com/emails"
     assert captured["timeout"] == 20
     assert captured["headers"]["Authorization"] == "Bearer re_test"
+    assert captured["headers"]["User-agent"] == "media-calendar/1.0"
     assert payload["from"] == "Media Calendar <onboarding@resend.dev>"
     assert payload["to"] == ["friend@example.com"]
     assert payload["subject"] == "Upcoming deadline"
@@ -288,6 +290,107 @@ def test_dispatch_notification_queue_records_failed_send(monkeypatch):
     assert len(results) == 1
     assert results[0].status == "failed"
     assert results[0].logs[0].status == "failed"
+    assert results[0].error_message == "resend unavailable"
+
+
+def test_dispatch_notification_queue_surfaces_resend_error_body(monkeypatch):
+    def fake_send_email_via_resend(
+        *,
+        subject_line,
+        html_body,
+        plain_text_body,
+        recipient_email,
+        resend_settings,
+    ):
+        raise RuntimeError(
+            "HTTP Error 403: The send.guardgoosemedia.com domain is not verified. "
+            "Please, add and verify your domain. (validation_error)"
+        )
+
+    monkeypatch.setattr(
+        "media_calendar.services.notifications._send_email_via_resend",
+        fake_send_email_via_resend,
+    )
+
+    queue = [
+        {
+            "notification_type": "weekly_digest",
+            "deadline_ids": [str(uuid4())],
+            "email": {
+                "subject_line": "Weekly digest",
+                "html_body": "<p>Hello</p>",
+                "plain_text_body": "Hello",
+                "priority_level": "normal",
+            },
+        }
+    ]
+
+    results = dispatch_notification_queue(
+        queue,
+        recipient_email="friend@example.com",
+        resend_settings=load_resend_settings(
+            {
+                "RESEND_API_KEY": "re_test",
+                "RESEND_FROM_EMAIL": "honk@send.guardgoosemedia.com",
+            }
+        ),
+        dry_run=False,
+    )
+
+    assert results[0].status == "failed"
+    assert "domain is not verified" in (results[0].error_message or "")
+
+
+def test_dispatch_notification_queue_formats_http_error_details(monkeypatch):
+    class FakeHttpError(HTTPError):
+        def __init__(self):
+            super().__init__(
+                url="https://api.resend.com/emails",
+                code=403,
+                msg="Forbidden",
+                hdrs=None,
+                fp=None,
+            )
+
+        def read(self):
+            return (
+                b'{"message":"Access denied","name":"validation_error"}'
+            )
+
+    def fake_urlopen(request, timeout=20):
+        raise FakeHttpError()
+
+    monkeypatch.setattr("media_calendar.services.notifications.urlopen", fake_urlopen)
+
+    queue = [
+        {
+            "notification_type": "upcoming_14d",
+            "deadline_ids": [str(uuid4())],
+            "email": {
+                "subject_line": "Upcoming deadline",
+                "html_body": "<p>Hello</p>",
+                "plain_text_body": "Hello",
+                "priority_level": "normal",
+            },
+        }
+    ]
+
+    results = dispatch_notification_queue(
+        queue,
+        recipient_email="friend@example.com",
+        resend_settings=load_resend_settings(
+            {
+                "RESEND_API_KEY": "re_test",
+                "RESEND_FROM_EMAIL": "onboarding@resend.dev",
+            }
+        ),
+        dry_run=False,
+    )
+
+    assert results[0].status == "failed"
+    assert results[0].error_message == (
+        "HTTP Error 403: Access denied (validation_error)"
+    )
 
 
 def test_dispatch_notification_queue_deduplicates_and_prioritizes_urgent_sends(

@@ -118,6 +118,12 @@ def main() -> int:
     sent_count = len(results) - failed_count
     print(f"Sent {sent_count} notification email(s) to {recipient}.")
     if failed_count:
+        for result in results:
+            if result.status == "failed" and result.error_message:
+                print(
+                    "Notification send failed for "
+                    f"{result.queue_item['notification_type']}: {result.error_message}"
+                )
         print(
             f"{failed_count} notification email(s) failed. "
             "See build/notification-log.jsonl for details."
