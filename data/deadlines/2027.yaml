@@ -1,3 +1,33 @@
+- id: 0f3d714e-507f-548d-8cf2-0fb7386b47ce
+  name: "28 Jan \u2013 7 Feb 2027"
+  category: industry_forum
+  organization: International Film Festival Rotterdam
+  url: https://iffr.com/en/about-cinemart
+  deadline_date: '2027-02-07'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "28 Jan \u2013 7 Feb 2027 Home IFFR Pro CineMart CineMart CineMart\
+    \ is IFFR Pro\u2019s co-production market, where a highly curated lineup of remarkable\
+    \ projects from every corner of the world are presented to international industry\
+    \ representatives, each looking for financial and creative partners. Bold independent\
+    \ feature film projects are launched onto the market, along with select immersive\
+    \ media projects."
+  eligibility_notes: Premier co-production market and project-launch platform within
+    the IFFR ecosystem.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-27'
+  source_url: https://iffr.com/en/about-cinemart
+  tags:
+  - market
+  - must_have
+  - industry_forum
+  - new_opportunity
+  year: 2027
 - id: 146e0df2-e630-5314-8af9-2323c562fcb0
   name: CineMart 2027
   category: industry_forum
@@ -22,6 +52,31 @@
   tags:
   - market
   - must_have
+  - industry_forum
+  - new_opportunity
+  year: 2027
+- id: 05d7ae4f-d192-5fd0-9cfa-09b2f5c4608d
+  name: CineMart Co-production Market 2026
+  category: industry_forum
+  organization: IFFR Pro
+  url: https://iffr.com/en/iffr-pro
+  deadline_date: '2027-02-07'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: CineMart, a co-production market where filmmakers launch their ideas
+    to the international film industry.
+  eligibility_notes: Open to filmmakers and industry professionals; focuses on international
+    project co-production.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-04-27'
+  source_url: https://iffr.com/en/iffr-pro
+  tags:
+  - market
   - industry_forum
   - new_opportunity
   year: 2027
@@ -88,7 +143,7 @@
   name: Rotterdam Lab Application
   category: lab_application
   organization: IFFR Pro
-  url: https://iffr.com/en/iffr-pro
+  url: https://iffr.com/en/iffr-pro/talent-development/rotterdam-lab
   deadline_date: '2027-02-07'
   early_deadline_date: null
   event_start_date: null
@@ -97,20 +152,24 @@
     \ programmes, including Rotterdam Lab, IFFR Pro is integral to IFFR\u2019s ambition\
     \ to nurture talent, providing them with the tools and networks to develop their\
     \ projects and careers."
-  eligibility_notes: Supports promising emerging talent from around the world.
+  eligibility_notes: Emerging producers who have produced at least one or two short
+    films and no more than two feature films.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-22'
-  source_url: https://iffr.com/en/iffr-pro
+  last_verified_date: '2026-04-27'
+  source_url: https://iffr.com/en/iffr-pro/talent-development/rotterdam-lab
   tags:
   - market
   - high
   - lab_application
   - new_opportunity
   - training
+  - fellowship
+  - producer workshop
+  - international
   year: 2027
 - id: d70c2b68-5c07-5163-8400-ae32e059152e
   name: Berlinale Co-Production Market - European Film Market
@@ -174,20 +233,21 @@
   event_end_date: '2027-02-16'
   description: The accreditation for the European Film Market 2026 is now open. Industry
     professionals travelling to Berlin will be able to apply for a Market Badge.
-  eligibility_notes: Professionals in the film industry, including filmmakers, producers,
-    actors, and consultants, can apply, provided they meet specific activity requirements.
+  eligibility_notes: Applicants must demonstrate current professional activity in
+    the film industry.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-22'
+  last_verified_date: '2026-04-27'
   source_url: https://www.efm-berlinale.de/en/services/accreditation/accreditation.html
   tags:
   - market
   - high
   - industry_forum
   - new_opportunity
+  - accreditation
   year: 2027
 - id: e62a52d9-82eb-5cd1-a537-c231b2c009ef
   name: CPH:FORUM 2027
@@ -233,7 +293,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-22'
+  last_verified_date: '2026-04-27'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
