@@ -6,7 +6,7 @@ from uuid import uuid4
 
 from media_calendar.models import Deadline, NotificationLog
 from media_calendar.services import NotificationDispatchResult
-from notify import main
+from notify import _resolve_current_date, main
 
 
 def _build_deadline() -> Deadline:
@@ -25,6 +25,26 @@ def _build_deadline() -> Deadline:
         tags=["artists"],
         year=2026,
     )
+
+
+def test_resolve_current_date_uses_latest_monday_when_requested():
+    resolved = _resolve_current_date(
+        None,
+        use_latest_monday=True,
+        today=date(2026, 4, 29),
+    )
+
+    assert resolved == date(2026, 4, 27)
+
+
+def test_resolve_current_date_prefers_explicit_override():
+    resolved = _resolve_current_date(
+        "2026-05-04",
+        use_latest_monday=True,
+        today=date(2026, 4, 29),
+    )
+
+    assert resolved == date(2026, 5, 4)
 
 
 def test_notify_cli_returns_nonzero_when_send_fails(tmp_path, monkeypatch, capsys):

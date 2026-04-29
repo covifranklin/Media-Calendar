@@ -46,6 +46,8 @@ jobs:
           args=()
           if [ -n "${{ github.event.inputs.notification_date }}" ]; then
             args+=(--date "${{ github.event.inputs.notification_date }}")
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            args+=(--use-latest-monday)
           fi
 
           if [ "${{ github.event.inputs.dry_run || 'false' }}" = "true" ]; then

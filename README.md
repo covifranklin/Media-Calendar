@@ -247,7 +247,7 @@ The repo now includes five workflows:
 2. `.github/workflows/discovery-refresh.yml`
    Runs weekly in `apply` mode so discovered deadline updates are committed back to `main` automatically. It also uploads monitoring artifacts, including coverage, source freshness, discovery refresh, and discovery metrics reports. Manual runs can still switch to `dry-run` if you want a preview.
 3. `.github/workflows/notifications.yml`
-   Runs weekly on Mondays and can also be started manually to compose/send notifications. Manual runs can optionally override the notification date so you can replay a missed Monday send window.
+   Runs weekly on Mondays and can also be started manually to compose/send notifications. Manual runs now default to the most recent Monday so they still produce the weekly digest midweek, and you can optionally override the notification date to replay a specific Monday send window.
 4. `.github/workflows/curation.yml`
    Runs manually for a chosen year and uploads curation reports as workflow artifacts.
 5. `.github/workflows/open-web-discovery.yml`

@@ -157,7 +157,7 @@ Recommendation:
 4. Choose whether to use `dry_run`.
    `true` previews the run without sending email.
    `false` actually sends email.
-5. If you need to replay a missed scheduled send, enter the original Monday in `notification_date`.
+5. Leave `notification_date` blank to use the most recent Monday automatically, or enter the original Monday if you need to replay a specific scheduled send.
 6. Click `Run workflow`.
 
 Recommendation:

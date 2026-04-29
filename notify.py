@@ -6,7 +6,7 @@ import argparse
 import json
 import os
 import sys
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent
@@ -16,6 +16,21 @@ SRC_PATH = PROJECT_ROOT / "src"
 def _ensure_src_path() -> None:
     if str(SRC_PATH) not in sys.path:
         sys.path.insert(0, str(SRC_PATH))
+
+
+def _resolve_current_date(
+    current_date_override: str | None,
+    *,
+    use_latest_monday: bool = False,
+    today: date | None = None,
+) -> date:
+    if current_date_override:
+        return date.fromisoformat(current_date_override)
+
+    resolved_today = today or date.today()
+    if use_latest_monday:
+        return resolved_today - timedelta(days=resolved_today.weekday())
+    return resolved_today
 
 
 def main() -> int:
@@ -55,6 +70,14 @@ def main() -> int:
         help="Override current date in YYYY-MM-DD format.",
     )
     parser.add_argument(
+        "--use-latest-monday",
+        action="store_true",
+        help=(
+            "When no --date is provided, evaluate notifications using the most "
+            "recent Monday. Intended for manual workflow replays."
+        ),
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Generate queue output without sending email.",
@@ -66,8 +89,9 @@ def main() -> int:
     args = parser.parse_args()
 
     load_dotenv_file(args.root_dir / ".env")
-    current_date = (
-        date.fromisoformat(args.current_date) if args.current_date else date.today()
+    current_date = _resolve_current_date(
+        args.current_date,
+        use_latest_monday=args.use_latest_monday,
     )
     deadline_paths = resolve_deadline_files(args.inputs, root=args.root_dir)
     deadlines = load_deadlines(deadline_paths)
