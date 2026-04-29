@@ -79,7 +79,7 @@ def main() -> int:
     if not grouped:
         queue_path = build_dir / "notification-queue.json"
         queue_path.write_text("[]\n", encoding="utf-8")
-        print("No notifications to send today.")
+        print(f"No notifications to send on {current_date.isoformat()}.")
         print(f"Wrote empty queue: {queue_path}")
         return 0
 
@@ -112,7 +112,11 @@ def main() -> int:
     print(f"Wrote notification log: {log_path}")
     failed_count = sum(1 for result in results if result.status != "sent")
     if args.dry_run:
-        print(f"Dry run complete for {recipient}. No emails were sent.")
+        previewed_count = sum(1 for result in results if result.status == "previewed")
+        print(
+            f"Dry run complete for {recipient}. "
+            f"Previewed {previewed_count} notification email(s). No emails were sent."
+        )
         return 0
 
     sent_count = len(results) - failed_count

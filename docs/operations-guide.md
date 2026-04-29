@@ -157,11 +157,13 @@ Recommendation:
 4. Choose whether to use `dry_run`.
    `true` previews the run without sending email.
    `false` actually sends email.
-5. Click `Run workflow`.
+5. If you need to replay a missed scheduled send, enter the original Monday in `notification_date`.
+6. Click `Run workflow`.
 
 Recommendation:
 
 - Use `dry_run=true` whenever you are testing configuration or checking copy before a live send.
+- If a Monday send was suppressed, rerun with `dry_run=false` and set `notification_date` to that Monday so the same digest window is evaluated again.
 
 ### Run Open-Web Discovery Manually
 

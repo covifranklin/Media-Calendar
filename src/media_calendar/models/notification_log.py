@@ -25,4 +25,4 @@ class NotificationLog(BaseModel):
     ]
     sent_at: datetime
     recipient_email: str
-    status: Literal["sent", "failed", "bounced"]
+    status: Literal["sent", "failed", "bounced", "previewed"]

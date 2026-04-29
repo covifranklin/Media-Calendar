@@ -159,8 +159,9 @@ def test_dispatch_notification_queue_supports_dry_run():
     )
 
     assert len(results) == 1
-    assert results[0].status == "sent"
+    assert results[0].status == "previewed"
     assert results[0].recipient_email == "friend@example.com"
+    assert results[0].logs[0].status == "previewed"
 
 
 def test_dispatch_notification_queue_requires_resend_settings_without_dry_run():

@@ -10,6 +10,11 @@ on:
         required: false
         default: true
         type: boolean
+      notification_date:
+        description: "Optional notification date override in YYYY-MM-DD format"
+        required: false
+        default: ""
+        type: string
 
 jobs:
   notify:
@@ -38,11 +43,16 @@ jobs:
 
       - name: Run notifications
         run: |
-          if [ "${{ github.event.inputs.dry_run || 'false' }}" = "true" ]; then
-            python notify.py --dry-run
-          else
-            python notify.py
+          args=()
+          if [ -n "${{ github.event.inputs.notification_date }}" ]; then
+            args+=(--date "${{ github.event.inputs.notification_date }}")
           fi
+
+          if [ "${{ github.event.inputs.dry_run || 'false' }}" = "true" ]; then
+            args+=(--dry-run)
+          fi
+
+          python notify.py "${args[@]}"
 
       - name: Upload notification artifacts
         if: always()

@@ -22,7 +22,7 @@ NotificationType = Literal[
     "weekly_digest",
     "annual_refresh_reminder",
 ]
-NotificationStatus = Literal["sent", "failed", "bounced"]
+NotificationStatus = Literal["sent", "failed", "bounced", "previewed"]
 RESEND_API_URL = "https://api.resend.com/emails"
 RESEND_USER_AGENT = "media-calendar/1.0"
 WEEKLY_DIGEST_LOOKAHEAD_DAYS = 30
@@ -169,12 +169,12 @@ def dispatch_notification_queue(
         error_message: str | None = None
 
         if dry_run:
-            result_status = "sent"
+            result_status = "previewed"
             logs = _build_notification_logs(
                 deadline_ids=queue_item["deadline_ids"],
                 notification_type=notification_type,
                 recipient_email=recipient_email,
-                status="sent",
+                status="previewed",
             )
         else:
             if resend_settings is None:
