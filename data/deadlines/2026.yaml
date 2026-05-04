@@ -1,130 +1,3 @@
-- id: e1f7ce2b-c654-5f45-8616-628ac75f350b
-  name: Hot Docs Forum
-  category: industry_forum
-  organization: Hot Docs
-  url: https://hotdocs.ca/industry/conference/register
-  deadline_date: '2026-04-27'
-  early_deadline_date: null
-  event_start_date: '2026-04-27'
-  event_end_date: '2026-04-29'
-  description: Pitch at North America's most effective international documentary market.
-    Applications for 2026 Hot Docs Forum & Deal Maker are closed.
-  eligibility_notes: Open to industry professionals looking to network and gain insights.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-22'
-  source_url: https://hotdocs.ca/industry/conference/register
-  tags:
-  - forum
-  - pitching
-  - financing
-  - new_opportunity
-  - industry_forum
-  year: 2026
-- id: 5fd95483-3294-56e5-bea4-83a1959837a5
-  name: Introduction to Short Filmmaking
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-04-27'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Short course An Introduction to Short Filmmaking Cymru Wales 07 May/26
-    Application deadline 27 Apr 2026
-  eligibility_notes: Large catalogue of professional skill-building opportunities
-    across film, TV, factual, and craft disciplines.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-27'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  year: 2026
-- id: 1ed77836-c9a1-5465-ac69-460fdbcaa1ca
-  name: Short course
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-05-01'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Short course An Introduction to Short Filmmaking An Introduction to
-    Short Filmmaking Cymru Wales 07 May/26 Application deadline 27 Apr 2026
-  eligibility_notes: Large catalogue of professional skill-building opportunities
-    across film, TV, factual, and craft disciplines.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-27'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  year: 2026
-- id: 7d142f2f-8d32-59b6-b82a-b94552d64c16
-  name: Writing the TV Pilot
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-05-01'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'Writing the TV Pilot Cymru Wales 11 May/26 Application deadline: 1st
-    May 2026'
-  eligibility_notes: Large catalogue of professional skill-building opportunities
-    across film, TV, factual, and craft disciplines.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-27'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  year: 2026
-- id: 6f3b5496-bfc5-5159-92be-8346743f1d80
-  name: Hot Docs Festival
-  category: festival_submission
-  organization: Hot Docs
-  url: https://hotdocs.ca/industry/conference/hot-docs-forum
-  deadline_date: '2026-05-03'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 115 films from 51 countries will screen at Hot Docs Festival April
-    23 to May 3, 2026.
-  eligibility_notes: Top-tier documentary pitching and financing forum within the
-    Hot Docs industry programme.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-21'
-  source_url: https://hotdocs.ca/industry/conference/hot-docs-forum
-  tags:
-  - market
-  - must_have
-  - festival_submission
-  - new_opportunity
-  year: 2026
 - id: 8076d1e3-93f1-588a-97a3-1544fbb8c1ed
   name: SFFILM Documentary Film Fund - SFFILM
   category: festival_submission
@@ -352,42 +225,13 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-27'
+  last_verified_date: '2026-05-04'
   source_url: https://sffilm.org/rainin-grant/
   tags:
   - fund
   - high
   - funding_round
   - new_opportunity
-  year: 2026
-- id: f77cd1ce-af6a-528e-8bd8-3d44d5e412f7
-  name: SFFILM Rainin Grant
-  category: funding_round
-  organization: SFFILM
-  url: https://sffilm.org/rainin-grant/
-  deadline_date: '2026-05-22'
-  early_deadline_date: '2026-05-08'
-  event_start_date: null
-  event_end_date: null
-  description: The SFFILM Rainin Grant program is the largest granting body for independent
-    narrative feature films in the US. Grants support films that address social justice
-    issues...Awards are made to 15-20 projects once a year in the fall, for screenwriting,
-    development, or post-production.
-  eligibility_notes: Filmmakers must be at least 18 years old and in a key creative
-    role.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-27'
-  source_url: https://sffilm.org/rainin-grant/
-  tags:
-  - fund
-  - high
-  - grant
-  - narrative_feature
-  - social_justice
   year: 2026
 - id: 2b2b2444-4f77-5bb2-b263-574c0ee4bc15
   name: 'Film London Labs: The Script Sessions'
@@ -724,14 +568,14 @@
   event_end_date: '2026-06-24'
   description: Join 37th edition of Sunny Side of the Doc, the international marketplace
     for documentary taking place on 22-24 June 2026, La Rochelle.
-  eligibility_notes: Open to decision makers, producers, and filmmakers in the documentary
+  eligibility_notes: Open to producers, creators, and filmmakers in the documentary
     industry.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-22'
+  last_verified_date: '2026-05-04'
   source_url: https://www.sunnysideofthedoc.com/
   tags:
   - market
@@ -761,6 +605,33 @@
   tags:
   - fellowship
   - high
+  - new_opportunity
+  year: 2026
+- id: d9c15562-02af-5a2a-9f2e-7d515f0d4c87
+  name: SFFILM Documentary Film Fund
+  category: funding_round
+  organization: SFFILM
+  url: https://sffilm.org/documentary-film-fund/
+  deadline_date: '2026-07-07'
+  early_deadline_date: '2026-06-09'
+  event_start_date: null
+  event_end_date: null
+  description: The SFFILM Documentary Film Fund (DFF) supports engaging documentaries
+    in post-production which exhibit compelling stories, intriguing characters, and
+    an original, innovative visual approach.
+  eligibility_notes: Open to filmmakers internationally, projects must be feature-length
+    documentaries in post-production.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-05-04'
+  source_url: https://sffilm.org/documentary-film-fund/
+  tags:
+  - funding
+  - documentary
+  - post-production
   - new_opportunity
   year: 2026
 - id: 92f9181f-9828-5905-a0ee-549bd5db747e
@@ -889,23 +760,47 @@
   - high
   - new_opportunity
   year: 2026
-- id: ea90cbce-4081-51f5-8b9e-4cec8dbd58bb
-  name: Fiction Producing Lab 2026
-  category: lab_application
-  organization: Film Independent
-  url: https://www.filmindependent.org/programs/applications/
-  deadline_date: '2026-07-27'
-  early_deadline_date: '2026-05-04'
-  event_start_date: null
-  event_end_date: null
-  description: 'Fiction Producing Lab 2026 Applications open: March 9, 2026'
-  eligibility_notes: High-signal Film Independent program targeting episodic directors.
+- id: 01e76ed6-78b6-59f2-a956-0760c9597042
+  name: DokuFest 2026 - Industry Forum Participation
+  category: industry_forum
+  organization: DokuFest
+  url: https://dokufest.com/en
+  deadline_date: '2026-08-07'
+  early_deadline_date: null
+  event_start_date: '2026-08-07'
+  event_end_date: '2026-08-15'
+  description: DokuFest hosts the Short Film Forum and various industry initiatives.
+  eligibility_notes: Open to participants interested in documentary and short films.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-27'
+  last_verified_date: '2026-05-04'
+  source_url: https://dokufest.com/en
+  tags:
+  - industry_forum
+  - new_opportunity
+  - documentary
+  - short_film
+  year: 2026
+- id: ea90cbce-4081-51f5-8b9e-4cec8dbd58bb
+  name: Fiction Producing Lab 2026
+  category: lab_application
+  organization: Film Independent
+  url: https://www.filmindependent.org/programs/applications/
+  deadline_date: '2026-09-28'
+  early_deadline_date: '2026-05-04'
+  event_start_date: null
+  event_end_date: null
+  description: 'Fiction Producing Lab 2026 Applications open: March 9, 2026'
+  eligibility_notes: Open to emerging filmmakers and directors.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-05-04'
   source_url: https://www.filmindependent.org/programs/applications/
   tags:
   - lab
@@ -921,61 +816,35 @@
   - episodic
   - project
   - involve
+  - Documentary Producing Lab
+  - Episodic Directing Intensive
+  - Fast Track
+  - Project Involve
   year: 2026
-- id: 682013be-698d-5e1c-b6e2-60c42207bfa5
-  name: 3. Locations and services of the Venice Production Bridge
-  category: festival_submission
-  organization: Venice Biennale Cinema
-  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  deadline_date: '2026-09-12'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "The type of accreditation and the number of accreditations issued\
-    \ for each company are at the sole discretion of La Biennale di Venezia. 3. Locations\
-    \ and services of the Venice Production Bridge On the occasion of the upcoming\
-    \ 83 rd edition of the Venice International Film Festival (2\u201312 September\
-    \ 2026), the Venice Production Bridge (3-9 September, 2026) will organize programmes\
-    \ such as the Venice"
-  eligibility_notes: Tracks Venice industry accreditation windows and access into
-    Venice Production Bridge programs, screenings, and market activity.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-22'
-  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  tags:
-  - industry_forum
-  - high
-  - festival_submission
-  - new_opportunity
-  year: 2026
-- id: a2c92f73-8bd0-5c91-8d7e-dc39b311b204
-  name: Venice Production Bridge Programs and Services
+- id: e7920d92-edb2-52f6-a9be-2d3f85cfdc6b
+  name: Practical Info
   category: industry_forum
-  organization: Venice Biennale Cinema
-  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  deadline_date: '2026-09-12'
+  organization: MIPCOM CANNES
+  url: https://www.mipcom.com/
+  deadline_date: '2026-10-15'
   early_deadline_date: null
   event_start_date: null
   event_end_date: null
-  description: "On the occasion of the upcoming 83rd edition of the Venice International\
-    \ Film Festival (2\u201312 September 2026), the Venice Production Bridge (3-9\
-    \ September, 2026) will organize programmes such as the Venice Gap-Financing Market."
-  eligibility_notes: Open to film industry professionals and those engaged in artistic
-    or technical activities within the audiovisual sector.
+  description: 'Practical Info FAQ Networking with Participants Directory 12-15 October
+    2026 Palais des Festivals, Cannes, France The #1 Global Content Market'
+  eligibility_notes: Major international television and streaming content market spanning
+    buyers, creators, commissioners, and distributors.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-27'
-  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  last_verified_date: '2026-05-04'
+  source_url: https://www.mipcom.com/
   tags:
+  - market
+  - must_have
   - industry_forum
-  - high
   - new_opportunity
   year: 2026
 - id: 584a122a-0f38-56d3-9273-3e46b64b5eb7

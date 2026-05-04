@@ -171,6 +171,33 @@
   - producer workshop
   - international
   year: 2027
+- id: afab6b77-16a1-512f-82dd-f96b649d708a
+  name: Rotterdam Lab Producer Training Workshop
+  category: fellowship
+  organization: IFFR Pro
+  url: https://iffr.com/en/iffr-pro/talent-development/rotterdam-lab
+  deadline_date: '2027-02-07'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Rotterdam Lab is a training workshop for producers at the start of
+    their career, with the aim of offering emerging international professionals the
+    means to build and develop their network.
+  eligibility_notes: Participants are emerging producers who have produced at least
+    one or two short films and no more than two feature films.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-05-04'
+  source_url: https://iffr.com/en/iffr-pro/talent-development/rotterdam-lab
+  tags:
+  - fellowship
+  - lab_application
+  - producer_training
+  - networking
+  year: 2027
 - id: d70c2b68-5c07-5163-8400-ae32e059152e
   name: Berlinale Co-Production Market - European Film Market
   category: industry_forum
@@ -274,6 +301,31 @@
   - industry_forum
   - new_opportunity
   year: 2027
+- id: 83aa1e4a-8f9a-577a-a517-dc50b5ffd469
+  name: CPH:FORUM 2027 Submission
+  category: funding_round
+  organization: CPH:DOX
+  url: https://cphdox.dk/cphforum/
+  deadline_date: '2027-03-10'
+  early_deadline_date: null
+  event_start_date: '2027-03-10'
+  event_end_date: '2027-03-21'
+  description: CPH:FORUM is our long-standing financing and co-production event dedicated
+    to visually strong creative documentary projects with international potential.
+  eligibility_notes: Open to documentary projects seeking co-production partners and
+    financiers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-05-04'
+  source_url: https://cphdox.dk/cphforum/
+  tags:
+  - market
+  - funding_round
+  - new_opportunity
+  year: 2027
 - id: 6a720e1d-b5f9-5940-81c5-07a9bf7c930b
   name: DATES
   category: festival_submission
@@ -293,7 +345,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-27'
+  last_verified_date: '2026-05-04'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -352,4 +404,30 @@
   - must_have
   - festival_submission
   - new_opportunity
+  year: 2027
+- id: aa8671d2-48dd-5326-81b6-ec96bd370cbf
+  name: 2026 Full Frame Documentary Film Festival
+  category: festival_submission
+  organization: Full Frame Documentary Film Festival
+  url: https://www.fullframefest.org/attend/
+  deadline_date: '2027-04-01'
+  early_deadline_date: null
+  event_start_date: '2027-04-01'
+  event_end_date: '2027-04-04'
+  description: "Join us for the 28th annual Full Frame Documentary Film Festival,\
+    \ taking place April 1\u20134, 2027, in downtown Durham, NC. The annual festival\
+    \ is a celebration of nonfiction films, showcasing more than 60 films alongside\
+    \ parties, panels, and more."
+  eligibility_notes: Open to filmmakers and participants in the documentary field.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-05-04'
+  source_url: https://www.fullframefest.org/attend/
+  tags:
+  - film festival
+  - documentary
+  - submissions
   year: 2027
