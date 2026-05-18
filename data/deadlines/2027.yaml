@@ -80,6 +80,30 @@
   - industry_forum
   - new_opportunity
   year: 2027
+- id: 3ee27f14-c9b1-5a27-829c-4ba8f386dc6f
+  name: Darkroom - Work-in-Progress Programme
+  category: lab_application
+  organization: IFFR Pro
+  url: https://iffr.com/en/iffr-pro
+  deadline_date: '2027-02-07'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: A tailor-made work-in-progress programme for CineMart and HBF-backed
+    projects.
+  eligibility_notes: Primarily for filmmakers with projects in development.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-05-18'
+  source_url: https://iffr.com/en/iffr-pro
+  tags:
+  - market
+  - high
+  - lab_application
+  year: 2027
 - id: 6f0a4e7d-dfb4-55e6-9a77-84c86a7b052c
   name: English
   category: lab_application
@@ -345,7 +369,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-05-11'
+  last_verified_date: '2026-05-18'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -430,4 +454,28 @@
   - film festival
   - documentary
   - submissions
+  year: 2027
+- id: 30b9aec1-f6b5-5008-8ade-83b113103418
+  name: Skoll World Forum 2027
+  category: industry_forum
+  organization: Skoll Foundation
+  url: https://skoll.org/skoll-world-forum/
+  deadline_date: '2027-04-06'
+  early_deadline_date: null
+  event_start_date: '2027-04-06'
+  event_end_date: '2027-04-09'
+  description: "The next Skoll World Forum will take place April 6\u20139, 2027."
+  eligibility_notes: Curated invitations aimed at social entrepreneurs and innovators.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-05-18'
+  source_url: https://skoll.org/skoll-world-forum/
+  tags:
+  - social impact
+  - innovation
+  - documentary
+  - storytelling
   year: 2027
