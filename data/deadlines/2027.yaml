@@ -362,20 +362,24 @@
   description: "DATES CPH:DOX FESTIVAL: March 10-21, 2027 CPH:INDUSTRY: March 14-18,\
     \ 2027 CONTACT If you have any questions, please don\u2019t hesitate to send an\
     \ email to forum@cphdox.dk"
-  eligibility_notes: Major international documentary co-financing and pitching platform
-    for creative nonfiction projects.
+  eligibility_notes: Open to visually strong creative documentary projects with international
+    potential.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-05-18'
+  last_verified_date: '2026-05-25'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
   - must_have
   - festival_submission
   - new_opportunity
+  - festival
+  - documentary
+  - pitching
+  - co-financing
   year: 2027
 - id: 2200eaed-d0ae-55c1-b992-4a954d6dab68
   name: Press Registrations for Series Mania Forum
@@ -454,6 +458,30 @@
   - film festival
   - documentary
   - submissions
+  year: 2027
+- id: ac64222a-3968-5f6b-adab-f612eb6d998b
+  name: Full Frame Documentary Film Festival 2026
+  category: industry_forum
+  organization: Full Frame Documentary Film Festival
+  url: https://www.fullframefest.org/attend/
+  deadline_date: '2027-04-01'
+  early_deadline_date: null
+  event_start_date: '2027-04-01'
+  event_end_date: '2027-04-04'
+  description: "Join us for the 28th annual Full Frame Documentary Film Festival,\
+    \ taking place April 16\u201319, 2026, in downtown Durham, NC."
+  eligibility_notes: Open to filmmakers, industry professionals, and film fans globally.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-05-25'
+  source_url: https://www.fullframefest.org/attend/
+  tags:
+  - film festival
+  - documentary
+  - networking
   year: 2027
 - id: 30b9aec1-f6b5-5008-8ade-83b113103418
   name: Skoll World Forum 2027
