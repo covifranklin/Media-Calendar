@@ -1,3 +1,57 @@
+- id: 9a93b37a-8a19-58db-b0a8-c8691715f3aa
+  name: Feature Film Development Fund - February 2027 Deadline
+  category: funding_round
+  organization: Ffilm Cymru Wales
+  url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
+  deadline_date: '2027-02-02'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 2nd February 2027, midday
+  eligibility_notes: Wales-based or Wales-born writers, directors, and producers are
+    eligible.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-01'
+  source_url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
+  tags:
+  - fund
+  - development
+  - feature_film
+  - funding_round
+  year: 2027
+- id: 4eef8678-4f97-5669-ba6c-e44f57ee329d
+  name: Ffilm Cymru Wales - Feature Film Development
+  category: funding_round
+  organization: Ffilm Cymru Wales
+  url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
+  deadline_date: '2027-02-02'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Ffilm Cymru Wales develops live-action, documentary, and animated
+    feature films for cinema audiences led by Wales born or based writers, directors,
+    and producers. Deadlines You can submit your application at any time but applications
+    will be reviewed around the following deadlines: 2nd July 2026, midday 2nd October
+    2026, midday 2nd February 2027, midday'
+  eligibility_notes: Feature and documentary development fund for Wales-based or Wales-born
+    writers, directors, and producers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-01'
+  source_url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
+  tags:
+  - fund
+  - high
+  - funding_round
+  - new_opportunity
+  year: 2027
 - id: 0f3d714e-507f-548d-8cf2-0fb7386b47ce
   name: "28 Jan \u2013 7 Feb 2027"
   category: industry_forum
@@ -284,14 +338,14 @@
   event_end_date: '2027-02-16'
   description: The accreditation for the European Film Market 2026 is now open. Industry
     professionals travelling to Berlin will be able to apply for a Market Badge.
-  eligibility_notes: Applicants must demonstrate current professional activity in
-    the film industry.
+  eligibility_notes: Applicants must provide proof of current professional activity
+    in the film industry.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-27'
+  last_verified_date: '2026-06-01'
   source_url: https://www.efm-berlinale.de/en/services/accreditation/accreditation.html
   tags:
   - market
@@ -299,6 +353,9 @@
   - industry_forum
   - new_opportunity
   - accreditation
+  - EFM
+  - badge application
+  - film industry
   year: 2027
 - id: e62a52d9-82eb-5cd1-a537-c231b2c009ef
   name: CPH:FORUM 2027
@@ -362,14 +419,14 @@
   description: "DATES CPH:DOX FESTIVAL: March 10-21, 2027 CPH:INDUSTRY: March 14-18,\
     \ 2027 CONTACT If you have any questions, please don\u2019t hesitate to send an\
     \ email to forum@cphdox.dk"
-  eligibility_notes: Open to visually strong creative documentary projects with international
-    potential.
+  eligibility_notes: Major international documentary co-financing and pitching platform
+    for creative nonfiction projects.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-05-25'
+  last_verified_date: '2026-06-01'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -506,4 +563,53 @@
   - innovation
   - documentary
   - storytelling
+  year: 2027
+- id: d5857220-2046-54f0-9c71-1f05e4477b92
+  name: 2027 Hot Docs Forum Pitch
+  category: industry_forum
+  organization: Hot Docs
+  url: https://hotdocs.ca/industry/conference/hot-docs-forum
+  deadline_date: '2027-04-27'
+  early_deadline_date: null
+  event_start_date: '2027-04-27'
+  event_end_date: '2027-04-27'
+  description: Applications for 2027 Hot Docs Forum & Deal Maker will open in October
+    2026.
+  eligibility_notes: Must have a Trigger Financier for projects in the Regular Category.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-01'
+  source_url: https://hotdocs.ca/industry/conference/hot-docs-forum
+  tags:
+  - documentary
+  - pitching
+  - funding
+  year: 2027
+- id: 89018870-bd3f-5fa9-ab90-fbb5b8a389f0
+  name: Hot Docs Forum Wild Card Pitch
+  category: industry_forum
+  organization: Hot Docs
+  url: https://hotdocs.ca/industry/conference/hot-docs-forum
+  deadline_date: '2027-04-27'
+  early_deadline_date: null
+  event_start_date: '2027-04-27'
+  event_end_date: '2027-04-27'
+  description: Registered delegates attending the Forum are welcome to submit their
+    name on Day 1 of the Forum for this pitch slot.
+  eligibility_notes: Participants must be present at the selection time and pitch
+    on the next day.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-01'
+  source_url: https://hotdocs.ca/industry/conference/hot-docs-forum
+  tags:
+  - live pitch
+  - opportunity
+  - documentary
   year: 2027

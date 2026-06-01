@@ -1,105 +1,25 @@
-- id: 2b2b2444-4f77-5bb2-b263-574c0ee4bc15
-  name: 'Film London Labs: The Script Sessions'
-  category: lab_application
-  organization: Film London
-  url: https://filmlondon.org.uk/film-london-labs
-  deadline_date: '2026-05-26'
-  early_deadline_date: null
-  event_start_date: '2026-05-26'
-  event_end_date: '2026-05-28'
-  description: "An exciting lab for scriptwriters, delivered by writer/producer Angeli\
-    \ Macfarlane! The Script Sessions offers writers, directors and other creatives\
-    \ the opportunity to dive more deeply into feature film script writing techniques.\
-    \ This year\u2019s focus will be on the relationship between ideas, world building\
-    \ and placing your characters in the right structure to tell your story."
-  eligibility_notes: 'Open to writers, directors, and creatives '
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-22'
-  source_url: https://filmlondon.org.uk/film-london-labs
-  tags:
-  - scriptwriting
-  - training
-  - emerging talent
-  year: 2026
-- id: 1ed77836-c9a1-5465-ac69-460fdbcaa1ca
-  name: Short course
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-05-28'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Short course Introduction to the Role of Junior Casting Assistant Introduction
-    to the Role of Junior Casting Assistant Cymru Wales 02 Jun/26 Application deadline
-    24 May 2026
-  eligibility_notes: Large catalogue of professional skill-building opportunities
-    across film, TV, factual, and craft disciplines.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-05-25'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  year: 2026
-- id: 37bb5c0a-699e-57fc-b343-2f8139a2e5a2
-  name: 2 Days
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-05-29'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 2 Days Full-time In person Cymru Wales 06 Jul/26 Application deadline
-    28 Jun 2026
-  eligibility_notes: Large catalogue of professional skill-building opportunities
-    across film, TV, factual, and craft disciplines.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-05-25'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  year: 2026
-- id: d8eb6fc9-8047-5a62-9468-ae2320711815
-  name: Introduction to Podcasting
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-05-29'
+- id: b9ca395c-2555-52cf-9877-bc31319c4638
+  name: Beacons Short Film Fund Roundtable
+  category: other
+  organization: Ffilm Cymru Wales
+  url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
+  deadline_date: '2026-06-02'
   early_deadline_date: null
   event_start_date: '2026-06-02'
   event_end_date: '2026-06-02'
-  description: 'Short course 4Skills: Introduction to Podcasting Scotland 21 Jul/26
-    Application deadline 20 Jul 2026'
-  eligibility_notes: Large catalogue of professional skill-building opportunities
-    across film, TV, factual, and craft disciplines.
+  description: Beacons Short Film Fund Roundtable - Join us for this free online round
+    table discussion to find out more about Beacons.
+  eligibility_notes: null
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-05-25'
-  source_url: https://nfts.co.uk/courses/short-courses
+  last_verified_date: '2026-06-01'
+  source_url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
   tags:
-  - fellowship
-  - high
-  - new_opportunity
+  - event
+  - funding_round
   year: 2026
 - id: 7769e7fd-7550-5ccd-987d-fae536ed7895
   name: Tribeca Creators Market 2025
@@ -318,13 +238,14 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-22'
+  last_verified_date: '2026-06-01'
   source_url: https://ffilmcymruwales.com/funding-and-training/beacons-short-film-funding
   tags:
   - fund
   - medium
   - funding_round
   - new_opportunity
+  - high
   year: 2026
 - id: 5a1f9bf9-79fa-532c-8605-e83ba47d4a0b
   name: Directing sample
@@ -622,32 +543,6 @@
   - funding_round
   - new_opportunity
   year: 2026
-- id: e93d9d61-97d4-5871-a4c0-51db0b88cfea
-  name: Documentary Producing Lab 2026 Extended Deadline
-  category: lab_application
-  organization: Film Independent
-  url: https://www.filmindependent.org/programs/applications/
-  deadline_date: '2026-06-22'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'Film Independent Member Extended Deadline: May 18, 2026'
-  eligibility_notes: High-signal Film Independent documentary producer development
-    programme with concrete annual application timing.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-05-25'
-  source_url: https://www.filmindependent.org/programs/applications/
-  tags:
-  - lab
-  - update_signal
-  - documentary
-  - production
-  - fast_track
-  year: 2026
 - id: 5d9eb442-d86a-5b70-9347-8b0ba61ebde8
   name: Meet & Match Call for Projects 2026
   category: lab_application
@@ -722,6 +617,31 @@
   - documentary
   - artistic
   year: 2026
+- id: 37bb5c0a-699e-57fc-b343-2f8139a2e5a2
+  name: 2 Days
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-06-28'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 2 Days Full-time In person Cymru Wales 06 Jul/26 Application deadline
+    28 Jun 2026
+  eligibility_notes: Large catalogue of professional skill-building opportunities
+    across film, TV, factual, and craft disciplines.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-01'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - high
+  - new_opportunity
+  year: 2026
 - id: aaf24859-ab19-5e6b-99ef-a3793a759b98
   name: DOK Co-Pro Market
   category: industry_forum
@@ -753,6 +673,57 @@
   - industry_forum
   - new_opportunity
   - animation
+  year: 2026
+- id: 4f89c645-e336-5fab-8005-9fbc21a2fd8d
+  name: Grants Programme Call for Submissions
+  category: funding_round
+  organization: Doha Film Institute
+  url: https://www.dohafilminstitute.com/financing/grants
+  deadline_date: '2026-07-02'
+  early_deadline_date: '2026-06-22'
+  event_start_date: null
+  event_end_date: null
+  description: Grants Programme Call for Submissions Open from 22 June - 2 July 2026
+  eligibility_notes: Internationally relevant grants for feature films, shorts, documentaries,
+    and some series projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-01'
+  source_url: https://www.dohafilminstitute.com/financing/grants
+  tags:
+  - fund
+  - must_have
+  - grant
+  - new_opportunity
+  year: 2026
+- id: b4144e8a-570a-59f1-9bcd-2fccdb26c86d
+  name: Learning
+  category: festival_submission
+  organization: Doha Film Institute
+  url: https://www.dohafilminstitute.com/financing/grants
+  deadline_date: '2026-07-02'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Learning Series Lab (Online) Apply Now Grants Programme Call for Submissions
+    Open from 22 June - 2 July 2026
+  eligibility_notes: Internationally relevant grants programme for feature films,
+    shorts, documentaries, and some series projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-01'
+  source_url: https://www.dohafilminstitute.com/financing/grants
+  tags:
+  - fund
+  - must_have
+  - festival_submission
+  - new_opportunity
   year: 2026
 - id: 1f733ae5-f519-5368-9554-b3c58f38dba9
   name: Boost IT Lab 2026
@@ -858,6 +829,32 @@
   - lab_application
   - new_opportunity
   year: 2026
+- id: dbef4754-d005-5ebc-89c4-0be123887fb2
+  name: SFFILM Documentary Film Fund - Grant Application
+  category: funding_round
+  organization: SFFILM
+  url: https://sffilm.org/documentary-film-fund/
+  deadline_date: '2026-07-07'
+  early_deadline_date: '2026-06-09'
+  event_start_date: null
+  event_end_date: null
+  description: "The SFFILM Documentary Film Fund grants its support to approximately\
+    \ 3\u20134 projects each year with grants of $10,000\u2013$20,000."
+  eligibility_notes: Open to international filmmakers in a key creative role and projects
+    should be in post-production.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-01'
+  source_url: https://sffilm.org/documentary-film-fund/
+  tags:
+  - funding
+  - documentary
+  - post-production
+  - new_opportunity
+  year: 2026
 - id: 92f9181f-9828-5905-a0ee-549bd5db747e
   name: Feature Film Producers Lab
   category: lab_application
@@ -930,30 +927,78 @@
   - laboratory
   - new_opportunity
   year: 2026
-- id: d456d53d-2081-5eda-a072-e74b36391bed
-  name: Project Involve 2027 Applications Open
-  category: lab_application
-  organization: Film Independent
-  url: https://www.filmindependent.org/programs/applications/
-  deadline_date: '2026-07-27'
-  early_deadline_date: '2026-07-13'
-  event_start_date: null
-  event_end_date: null
-  description: 'Applications Open: May 18, 2026'
-  eligibility_notes: Aims to support underrepresented filmmakers.
+- id: d8eb6fc9-8047-5a62-9468-ae2320711815
+  name: Introduction to Podcasting
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-07-20'
+  early_deadline_date: null
+  event_start_date: '2026-06-02'
+  event_end_date: '2026-06-02'
+  description: 'Short course 4Skills: Introduction to Podcasting Scotland 21 Jul/26
+    Application deadline 20 Jul 2026'
+  eligibility_notes: Open to those interested in audio storytelling and podcast creation.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-05-25'
-  source_url: https://www.filmindependent.org/programs/applications/
+  last_verified_date: '2026-06-01'
+  source_url: https://nfts.co.uk/courses/short-courses
   tags:
-  - lab
+  - fellowship
+  - high
   - new_opportunity
-  - Diversity
-  - Inclusion
-  - Project
+  - podcasting
+  year: 2026
+- id: d026670b-d0ed-5a52-a006-9108c15c06c1
+  name: Staff Applications for DokuFest 25th Edition
+  category: other
+  organization: DokuFest
+  url: https://dokufest.com/en
+  deadline_date: '2026-08-07'
+  early_deadline_date: null
+  event_start_date: '2026-08-07'
+  event_end_date: '2026-08-15'
+  description: Staff applications are now open! Join the Team Behind the 25th Edition
+    of DokuFest
+  eligibility_notes: Opportunity available for those interested in working at a film
+    festival.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-01'
+  source_url: https://dokufest.com/en
+  tags:
+  - employment
+  - film_festival
+  - new_opportunity
+  year: 2026
+- id: 1fba80a9-b8e1-58b7-bf54-c2282eabc8ec
+  name: Volunteer Applications for DokuFest 25th Edition
+  category: other
+  organization: DokuFest
+  url: https://dokufest.com/en
+  deadline_date: '2026-08-07'
+  early_deadline_date: null
+  event_start_date: '2026-08-07'
+  event_end_date: '2026-08-15'
+  description: Volunteer applications are now open! Join the 25th Edition of DokuFest
+  eligibility_notes: Volunteers needed for festival events.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-01'
+  source_url: https://dokufest.com/en
+  tags:
+  - volunteering
+  - film_festival
+  - new_opportunity
   year: 2026
 - id: 682013be-698d-5e1c-b6e2-60c42207bfa5
   name: 3. Locations and services of the Venice Production Bridge
@@ -985,6 +1030,31 @@
   - festival_submission
   - new_opportunity
   year: 2026
+- id: a2c92f73-8bd0-5c91-8d7e-dc39b311b204
+  name: Venice Production Bridge Programs and Services
+  category: industry_forum
+  organization: Venice Biennale Cinema
+  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  deadline_date: '2026-09-12'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 3. Locations and services of the Venice Production Bridge...will organize
+    programmes such as the Venice Gap-Financing Market...
+  eligibility_notes: Accreditation is for industry professionals engaged in artistic
+    or technical activities in the audiovisual sector.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-01'
+  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  tags:
+  - industry_forum
+  - high
+  - new_opportunity
+  year: 2026
 - id: 3f7508ca-b7fc-52d3-a033-58ef9c6db0e3
   name: More Information
   category: lab_application
@@ -1004,7 +1074,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-05-25'
+  last_verified_date: '2026-06-01'
   source_url: https://www.filmindependent.org/programs/applications/
   tags:
   - lab
