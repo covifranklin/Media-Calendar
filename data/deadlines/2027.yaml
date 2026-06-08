@@ -357,6 +357,30 @@
   - badge application
   - film industry
   year: 2027
+- id: 5d6a0a95-8460-5fde-a241-e848cf35b535
+  name: True/False Film Festival 2027
+  category: festival_submission
+  organization: True/False
+  url: https://truefalse.org/
+  deadline_date: '2027-03-04'
+  early_deadline_date: null
+  event_start_date: '2027-03-04'
+  event_end_date: '2027-03-07'
+  description: Save the date - March 4 - 7, 2027
+  eligibility_notes: null
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-08'
+  source_url: https://truefalse.org/
+  tags:
+  - film festival
+  - documentary
+  - submissions
+  - networking
+  year: 2027
 - id: e62a52d9-82eb-5cd1-a537-c231b2c009ef
   name: CPH:FORUM 2027
   category: industry_forum
@@ -426,7 +450,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-06-01'
+  last_verified_date: '2026-06-08'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -437,6 +461,63 @@
   - documentary
   - pitching
   - co-financing
+  year: 2027
+- id: 8a465003-e7e9-5ac4-8d0a-333e5eba107c
+  name: Confirmation of 2027 Program Costs
+  category: festival_submission
+  organization: Sundance Institute
+  url: https://www.sundance.org/programs/episodic-storytelling/
+  deadline_date: '2027-03-15'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'When will final decisions be made? Applicants will receive email notification
+    approximately mid February 2027 through FilmFreeway. If you do not hear about
+    your status by March 15th, 2027 you may reach out to the Episodic Program Team
+    by emailing:'
+  eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
+    series creators and writers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-08'
+  source_url: https://www.sundance.org/programs/episodic-storytelling/
+  tags:
+  - lab
+  - high
+  - festival_submission
+  - new_opportunity
+  year: 2027
+- id: 2b9cd331-f849-5227-95c6-14ab2a250315
+  name: Sundance Institute - Episodic Program
+  category: festival_submission
+  organization: Sundance Institute
+  url: https://www.sundance.org/programs/episodic-storytelling/
+  deadline_date: '2027-03-15'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: What does the program cost? Aside from an application fee of $50, participation
+    in the Episodic Lab, including travel, food, and accommodations, is no cost to
+    the Artists. Does the Sundance Institute own my pilot? No. The Sundance Institute
+    is a 501(c)(3) nonprofit organization and does not have an ownership stake in
+    any projects that are submitted to, or selected for, the lab, nor are we attached
+  eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
+    series creators and writers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-08'
+  source_url: https://www.sundance.org/programs/episodic-storytelling/
+  tags:
+  - lab
+  - high
+  - festival_submission
+  - new_opportunity
   year: 2027
 - id: 2200eaed-d0ae-55c1-b992-4a954d6dab68
   name: Press Registrations for Series Mania Forum
@@ -540,6 +621,87 @@
   - documentary
   - networking
   year: 2027
+- id: 78eb8d98-ff96-5e05-9579-a8fc96d859b3
+  name: Filmmaker Prep Program
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/catalyst/
+  deadline_date: '2027-04-03'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "Filmmaker Prep Program\u2014 January \u2013 March 2027"
+  eligibility_notes: Sundance's financing initiative for independent filmmakers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-08'
+  source_url: https://www.sundance.org/initiatives/catalyst/
+  tags:
+  - market
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2027
+- id: ccd96bec-866e-500c-8cb9-d554d62f8ae7
+  name: "Filmmaker Prep Program\u2014 January \u2013 March 2027"
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/catalyst/
+  deadline_date: '2027-04-03'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "Filmmaker Prep Program\u2014 January \u2013 March 2027 Catalyst Forum\u2014\
+    \ March 31 \u2013 April 3, 2027 To inquire about the program please contact catalyst@sundance.org\
+    \ . Catalyst Forum Project Criteria"
+  eligibility_notes: Sundance's financing initiative for independent filmmakers, including
+    pre-application and forum timelines for projects seeking investment.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-08'
+  source_url: https://www.sundance.org/initiatives/catalyst/
+  tags:
+  - market
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2027
+- id: 7aadbe70-8009-5e71-b4c6-413d667c3921
+  name: "Projects Selected\u2014 December 2026"
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/catalyst/
+  deadline_date: '2027-04-03'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "Invitations to submit an Official Application are issued on a rolling\
+    \ basis during the Pre-Application Period. We strongly encourage film teams to\
+    \ submit their Pre-Applications by the Regular Deadline. Official Application\
+    \ Opens\u2014 August 13, 2026 Official Application Deadline\u2014 September 23,\
+    \ 2026 Projects Selected\u2014 December 2026 Filmmaker Prep Program\u2014 January\
+    \ \u2013 March 2027 Catalyst Forum\u2014 March 31 \u2013"
+  eligibility_notes: Sundance's financing initiative for independent filmmakers, including
+    pre-application and forum timelines for projects seeking investment.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-08'
+  source_url: https://www.sundance.org/initiatives/catalyst/
+  tags:
+  - market
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2027
 - id: 30b9aec1-f6b5-5008-8ade-83b113103418
   name: Skoll World Forum 2027
   category: industry_forum
@@ -612,4 +774,55 @@
   - live pitch
   - opportunity
   - documentary
+  year: 2027
+- id: fe1530cb-bb69-51ec-a2e3-20fe98c1e285
+  name: 2027 Episodic Lab
+  category: festival_submission
+  organization: Sundance Institute
+  url: https://www.sundance.org/programs/episodic-storytelling/
+  deadline_date: '2027-07-13'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "2027 Episodic Lab Dunaway Gardens April 15 \u2013 20, 2027 2027 Episodic\
+    \ Lab Submission Window FilmFreeway July 13, 2027"
+  eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
+    series creators and writers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-08'
+  source_url: https://www.sundance.org/programs/episodic-storytelling/
+  tags:
+  - lab
+  - high
+  - festival_submission
+  - new_opportunity
+  year: 2027
+- id: 8b5f1cc2-96c2-5d11-9679-3fb8efc721c0
+  name: 2027 Episodic Lab Submission Window
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/programs/episodic-storytelling/
+  deadline_date: '2027-07-13'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 2027 Episodic Lab Submission Window FilmFreeway July 13, 2027
+  eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
+    series creators and writers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-08'
+  source_url: https://www.sundance.org/programs/episodic-storytelling/
+  tags:
+  - lab
+  - high
+  - lab_application
+  - new_opportunity
   year: 2027
