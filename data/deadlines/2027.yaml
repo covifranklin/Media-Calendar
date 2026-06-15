@@ -1,3 +1,28 @@
+- id: c8ddf34f-f2ca-5c02-a722-cffcbfa51a02
+  name: FIPADOC Industry Days 2027
+  category: industry_forum
+  organization: FIPADOC
+  url: https://www.fipadoc.com/en/fipadoc-pro
+  deadline_date: '2027-01-25'
+  early_deadline_date: null
+  event_start_date: '2027-01-25'
+  event_end_date: '2027-01-28'
+  description: 'WELCOME TO THE INDUSTRY DAYS 2027 EDITION : 25 to 28 JANUARY'
+  eligibility_notes: Open to documentary industry professionals, including producers,
+    broadcasters, and directors.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-15'
+  source_url: https://www.fipadoc.com/en/fipadoc-pro
+  tags:
+  - documentary
+  - networking
+  - pitching sessions
+  - industry forum
+  year: 2027
 - id: 9a93b37a-8a19-58db-b0a8-c8691715f3aa
   name: Feature Film Development Fund - February 2027 Deadline
   category: funding_round
@@ -431,6 +456,34 @@
   - funding_round
   - new_opportunity
   year: 2027
+- id: 08fec8f2-7947-571d-91df-8d213b1be0cf
+  name: CPH:FORUM 2027 Submission
+  category: festival_submission
+  organization: CPH:DOX
+  url: https://cphdox.dk/cphforum/
+  deadline_date: '2027-03-10'
+  early_deadline_date: null
+  event_start_date: '2027-03-10'
+  event_end_date: '2027-03-21'
+  description: CPH:FORUM is our long-standing financing and co-production event dedicated
+    to visually strong creative documentary projects with international potential.
+    The next edition of CPH:FORUM... takes place during the Industry week of CPH:DOX
+    2027 (March 10-21).
+  eligibility_notes: Open to visually strong creative documentary projects with international
+    potential.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-15'
+  source_url: https://cphdox.dk/cphforum/
+  tags:
+  - market
+  - must_have
+  - festival_submission
+  - new_opportunity
+  year: 2027
 - id: 6a720e1d-b5f9-5940-81c5-07a9bf7c930b
   name: DATES
   category: festival_submission
@@ -450,7 +503,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-06-08'
+  last_verified_date: '2026-06-15'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -556,20 +609,20 @@
   event_end_date: '2027-03-25'
   description: Series Mania Forum LILLE / HAUTS-DE-FRANCE /// March 23 to 25, 2027
     Festival Forum Institute FR
-  eligibility_notes: Open to series developers and creators looking for pitching and
-    financing opportunities.
+  eligibility_notes: Open to creators and producers interested in co-production opportunities.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-21'
+  last_verified_date: '2026-06-15'
   source_url: https://seriesmania.com/forum/en/
   tags:
   - market
   - must_have
   - festival_submission
   - new_opportunity
+  - co-production
   year: 2027
 - id: aa8671d2-48dd-5326-81b6-ec96bd370cbf
   name: 2026 Full Frame Documentary Film Festival
@@ -725,6 +778,32 @@
   - innovation
   - documentary
   - storytelling
+  year: 2027
+- id: 317a0368-dcab-55b2-b5fe-0fdf27dcfb27
+  name: "Visions du R\xE9el Industry Activities 2027"
+  category: industry_forum
+  organization: "Visions du R\xE9el"
+  url: https://www.visionsdureel.ch/en/industry/
+  deadline_date: '2027-04-14'
+  early_deadline_date: null
+  event_start_date: '2027-04-14'
+  event_end_date: '2027-04-22'
+  description: "VdR\u2013Industry will take place from April 14 to April 22... a high-end\
+    \ projects selection carefully crafted by VdR\u2013Industry will bring together\
+    \ a broad spectrum of international professionals."
+  eligibility_notes: Open to international professionals in the documentary film sector.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-15'
+  source_url: https://www.visionsdureel.ch/en/industry/
+  tags:
+  - documentary
+  - industry
+  - pitching
+  - professional development
   year: 2027
 - id: d5857220-2046-54f0-9c71-1f05e4477b92
   name: 2027 Hot Docs Forum Pitch
