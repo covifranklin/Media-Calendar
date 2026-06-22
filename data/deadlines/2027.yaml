@@ -23,6 +23,31 @@
   - pitching sessions
   - industry forum
   year: 2027
+- id: 116afa2f-6653-590d-a5d6-fe191b25f2f0
+  name: FIPADOC Pitching Sessions
+  category: lab_application
+  organization: FIPADOC
+  url: https://www.fipadoc.com/en/fipadoc-pro
+  deadline_date: '2027-01-25'
+  early_deadline_date: null
+  event_start_date: '2027-01-25'
+  event_end_date: '2027-01-28'
+  description: "Numerous pitching sessions: our international pitches of course, but\
+    \ also DOC \xC0 LA PAGE..."
+  eligibility_notes: Open to documentary filmmakers and producers seeking to pitch
+    their projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-22'
+  source_url: https://www.fipadoc.com/en/fipadoc-pro
+  tags:
+  - pitching
+  - funding
+  - project development
+  year: 2027
 - id: 9a93b37a-8a19-58db-b0a8-c8691715f3aa
   name: Feature Film Development Fund - February 2027 Deadline
   category: funding_round
@@ -132,6 +157,33 @@
   - market
   - must_have
   - industry_forum
+  - new_opportunity
+  year: 2027
+- id: 899964fa-2a48-5f3f-88d5-2de250d2142e
+  name: CineMart 2027 Submission
+  category: lab_application
+  organization: IFFR Pro
+  url: https://iffr.com/en/iffr-pro
+  deadline_date: '2027-02-07'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "CineMart, Pro Hub and talent development programmes, including Rotterdam\
+    \ Lab, IFFR Pro is integral to IFFR\u2019s ambition to nurture talent, providing\
+    \ them with the tools and networks to develop their projects and careers."
+  eligibility_notes: Available for filmmakers and industry professionals looking to
+    launch their projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-22'
+  source_url: https://iffr.com/en/iffr-pro
+  tags:
+  - market
+  - high
+  - lab_application
   - new_opportunity
   year: 2027
 - id: 05d7ae4f-d192-5fd0-9cfa-09b2f5c4608d
@@ -363,14 +415,14 @@
   event_end_date: '2027-02-16'
   description: The accreditation for the European Film Market 2026 is now open. Industry
     professionals travelling to Berlin will be able to apply for a Market Badge.
-  eligibility_notes: Applicants must provide proof of current professional activity
-    in the film industry.
+  eligibility_notes: Proof of current professional activity in the film industry is
+    required for accreditation.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-06-01'
+  last_verified_date: '2026-06-22'
   source_url: https://www.efm-berlinale.de/en/services/accreditation/accreditation.html
   tags:
   - market
@@ -571,6 +623,31 @@
   - high
   - festival_submission
   - new_opportunity
+  year: 2027
+- id: 15dd68e3-df5a-5de3-9108-244ab0defb3c
+  name: SXSW 2027 Film & TV Track Conference
+  category: industry_forum
+  organization: SXSW Film & TV Festival
+  url: https://www.sxsw.com/conference/film-and-tv-industry/
+  deadline_date: '2027-03-15'
+  early_deadline_date: null
+  event_start_date: '2027-03-15'
+  event_end_date: '2027-03-20'
+  description: This track is a survival guide for the independent film & TV industry,
+    offering practical insights on storytelling, production, and new technology.
+  eligibility_notes: Open to all film and TV professionals, regardless of experience
+    level.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-22'
+  source_url: https://www.sxsw.com/conference/film-and-tv-industry/
+  tags:
+  - conference
+  - networking
+  - education
   year: 2027
 - id: 2200eaed-d0ae-55c1-b992-4a954d6dab68
   name: Press Registrations for Series Mania Forum
@@ -786,24 +863,25 @@
   url: https://www.visionsdureel.ch/en/industry/
   deadline_date: '2027-04-14'
   early_deadline_date: null
-  event_start_date: '2027-04-14'
-  event_end_date: '2027-04-22'
+  event_start_date: '2027-04-09'
+  event_end_date: '2027-04-18'
   description: "VdR\u2013Industry will take place from April 14 to April 22... a high-end\
     \ projects selection carefully crafted by VdR\u2013Industry will bring together\
     \ a broad spectrum of international professionals."
-  eligibility_notes: Open to international professionals in the documentary film sector.
+  eligibility_notes: Open to international professionals in the documentary film industry.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-06-15'
+  last_verified_date: '2026-06-22'
   source_url: https://www.visionsdureel.ch/en/industry/
   tags:
   - documentary
   - industry
   - pitching
   - professional development
+  - networking
   year: 2027
 - id: d5857220-2046-54f0-9c71-1f05e4477b92
   name: 2027 Hot Docs Forum Pitch

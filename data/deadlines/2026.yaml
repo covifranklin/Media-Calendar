@@ -1,87 +1,3 @@
-- id: 5bdafdbc-3cae-5c65-baca-4c9c8d93b558
-  name: Documentary Film Producers Lab
-  category: festival_submission
-  organization: Sundance Institute
-  url: https://www.sundance.org/documentary-fund/
-  deadline_date: '2026-06-15'
-  early_deadline_date: null
-  event_start_date: '2026-07-20'
-  event_end_date: '2026-07-25'
-  description: Documentary Film Producers Lab Ucross, Wyoming July 20-25, 2026 Awards
-    & Grants Feature Film and Documentary Film Producing fellows each receive a grant
-    that may be applied to personal expenses and unsupported costs for project advancement.
-    The Sundance Institute | Amazon MGM Studios Producers Awards recognize two producers
-    (and/or producing teams) with films premiering at the Sundance Film Festiv
-  eligibility_notes: High-priority Sundance funding opportunity for nonfiction projects
-    worldwide, with clear annual open-call timing.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-05-11'
-  source_url: https://www.sundance.org/documentary-fund/
-  tags:
-  - lab
-  - must_have
-  - festival_submission
-  - new_opportunity
-  - fund
-  year: 2026
-- id: e7beb2c3-f449-5c36-93e6-ad903a131e6a
-  name: Documentary Fund Application
-  category: funding_round
-  organization: Sundance Institute
-  url: https://www.sundance.org/documentary-fund/
-  deadline_date: '2026-06-15'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: The Sundance Institute Documentary Fund supports filmmakers worldwide
-    in the development, production, and post-production of cinematic documentaries
-    on a wide range of contemporary topics and themes.
-  eligibility_notes: Open to filmmakers worldwide for documentaries that elevate cultural
-    dialogue and have the potential for social impact.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-21'
-  source_url: https://www.sundance.org/documentary-fund/
-  tags:
-  - fund
-  - must_have
-  - funding_round
-  year: 2026
-- id: 322889ca-ae79-581f-9cf5-4155f437c63e
-  name: "\xA9 2025 Sundance.org"
-  category: festival_submission
-  organization: Sundance Institute
-  url: https://www.sundance.org/documentary-fund/
-  deadline_date: '2026-06-15'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "\xA9 2025 Sundance.org Please ensure Javascript is enabled for purposes\
-    \ of website accessibility Frequently Asked Questions Deadlines & Review Timeline\
-    \ The Sundance Institute Documentary Fund accepts submissions through an annual\
-    \ open call. Our next open call will launch on May 18 and close on June 15, 2026."
-  eligibility_notes: High-priority Sundance funding opportunity for nonfiction projects
-    worldwide, with clear annual open-call timing.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-22'
-  source_url: https://www.sundance.org/documentary-fund/
-  tags:
-  - fund
-  - must_have
-  - festival_submission
-  - new_opportunity
-  year: 2026
 - id: aa8db8c3-a9a1-5165-a2cb-cd2d214a731d
   name: Berlinale
   category: funding_round
@@ -134,6 +50,38 @@
   - documentary
   - networking
   year: 2026
+- id: 3f7508ca-b7fc-52d3-a033-58ef9c6db0e3
+  name: More Information
+  category: lab_application
+  organization: Film Independent
+  url: https://www.filmindependent.org/programs/applications/
+  deadline_date: '2026-06-22'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "Applications accepted on a rolling basis. More Information \u2022\
+    \ Applications currently closed Episodic Directing Intensive 2027 Applications\
+    \ Open: July 27, 2026 Non-Member Deadline: September 28, 2026"
+  eligibility_notes: High-signal Film Independent documentary producer development
+    programme with concrete annual application timing.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-22'
+  source_url: https://www.filmindependent.org/programs/applications/
+  tags:
+  - lab
+  - high
+  - lab_application
+  - new_opportunity
+  - update_signal
+  - documentary
+  - fiction
+  - episodic
+  - project_involve
+  year: 2026
 - id: 37a51cea-05cb-5530-97d9-3a4d209607ea
   name: Sunny Side of the Doc 2026 Call for Projects
   category: funding_round
@@ -182,31 +130,6 @@
   - networking
   - documentary
   - co-production
-  year: 2026
-- id: c5063c6d-3fba-51cd-9d56-28d025b0065d
-  name: World Cinema Fund Production Support
-  category: funding_round
-  organization: World Cinema Fund
-  url: https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html
-  deadline_date: '2026-06-22'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Next call for funding applications opens on June 22, 2026.
-  eligibility_notes: Supports artistic feature and documentary projects from regions
-    with weaker film infrastructure.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-05-18'
-  source_url: https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html
-  tags:
-  - fund
-  - production
-  - documentary
-  - artistic
   year: 2026
 - id: 04737049-b762-5874-a0ea-8d8573d77302
   name: BFI NETWORK Development Programme
@@ -321,29 +244,31 @@
   - festival_submission
   - new_opportunity
   year: 2026
-- id: 737fd3ca-3d8b-50dd-b116-b80cf341ec77
-  name: Directing Your First Documentary
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
+- id: faae654a-b36d-53b1-a879-762d68a29f08
+  name: Breadcrumb
+  category: funding_round
+  organization: Ffilm Cymru Wales
+  url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
   deadline_date: '2026-07-02'
   early_deadline_date: null
-  event_start_date: '2026-07-20'
-  event_end_date: '2026-07-20'
-  description: Directing Your First Documentary Main Campus 20 Jul/26 Application
-    deadline 15 Jun 2026
-  eligibility_notes: Open to those wanting to explore documentary direction.
+  event_start_date: null
+  event_end_date: null
+  description: 'Breadcrumb Home Funding and Training Feature Film Development Feature
+    Film Development Next Deadline: 2 July 2026'
+  eligibility_notes: Feature and documentary development fund for Wales-based or Wales-born
+    writers, directors, and producers.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-06-15'
-  source_url: https://nfts.co.uk/courses/short-courses
+  last_verified_date: '2026-06-22'
+  source_url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
   tags:
-  - fellowship
-  - new_opportunity
+  - fund
   - high
+  - funding_round
+  - new_opportunity
   year: 2026
 - id: 3d171e8d-4061-5ad4-8eb2-b164b22d8d59
   name: Feature Film Development Fund - July Deadline
@@ -447,6 +372,32 @@
   - lab_application
   - new_opportunity
   year: 2026
+- id: e53d51e0-1176-5d2c-8ab9-2a10e3d87cb0
+  name: Projects
+  category: lab_application
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-07-03'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Projects Find your TFL activity Hot now Call for applications open
+    TFL Next - TV Series 2026 Deadline to apply: 3 July 2026'
+  eligibility_notes: Important international lab ecosystem covering feature film,
+    series, and co-production support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-22'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2026
 - id: 07f86297-e19e-5a17-944a-69644e18a9f4
   name: SHORT TERM
   category: lab_application
@@ -474,6 +425,32 @@
   - lab_application
   - new_opportunity
   year: 2026
+- id: 24264ed9-b616-504a-b097-9a4b52495826
+  name: SHORT TERM
+  category: festival_submission
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-07-03'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "SHORT TERM Deadline to apply: 3 July 2026 LATEST NEWS May 28, 2026\
+    \ FESTIVALS & RELEASES TFL in Cannes: wrap up of the festival\u2019s 79th edition"
+  eligibility_notes: Important international lab ecosystem covering feature film,
+    series, and co-production support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-22'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - festival_submission
+  - new_opportunity
+  year: 2026
 - id: 38395716-ba9a-5d22-a933-f249b7c9bead
   name: TFL Next - TV Series 2026
   category: lab_application
@@ -497,31 +474,6 @@
   - lab
   - must_have
   - lab_application
-  - new_opportunity
-  year: 2026
-- id: e6a9d302-755b-5613-8fe5-95c8160a1f05
-  name: Application Deadline for Documentary Film Fund
-  category: funding_round
-  organization: SFFILM
-  url: https://sffilm.org/documentary-film-fund/
-  deadline_date: '2026-07-07'
-  early_deadline_date: '2026-06-09'
-  event_start_date: null
-  event_end_date: null
-  description: Regular Deadline June 9, 2026 (Application Fee $30) Final Deadline
-    July 7, 2026 (Application Fee $50).
-  eligibility_notes: Filmmakers must adhere to submission deadlines to qualify for
-    funding.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-15'
-  source_url: https://sffilm.org/documentary-film-fund/
-  tags:
-  - fund
-  - deadline
   - new_opportunity
   year: 2026
 - id: 38baf28b-fd25-53b9-9ac0-055dde4b454f
@@ -549,6 +501,31 @@
   - fund
   - documentary
   - post-production
+  - new_opportunity
+  year: 2026
+- id: 16e6cc5b-e7b7-5adf-a69d-f275437d4662
+  name: Episodic Program Insight Session
+  category: industry_forum
+  organization: Sundance Institute
+  url: https://www.sundance.org/programs/episodic-storytelling/
+  deadline_date: '2026-07-10'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "Free Insider Session collab.sundance.org Friday, July 10, 10:00AM\
+    \ \u2013 11:00AM (PST)"
+  eligibility_notes: Open to all interested creators.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-22'
+  source_url: https://www.sundance.org/programs/episodic-storytelling/
+  tags:
+  - lab
+  - high
+  - industry_forum
   - new_opportunity
   year: 2026
 - id: 0809b3e0-d93c-5dcc-8b56-f4c058c5c09f
@@ -656,6 +633,31 @@
   - lab_application
   - new_opportunity
   year: 2026
+- id: 737fd3ca-3d8b-50dd-b116-b80cf341ec77
+  name: Directing Your First Documentary
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-07-19'
+  early_deadline_date: null
+  event_start_date: '2026-07-20'
+  event_end_date: '2026-07-20'
+  description: Directing Your First Documentary Main Campus 20 Jul/26 Application
+    deadline 15 Jun 2026
+  eligibility_notes: Large catalogue of professional skill-building opportunities
+    across film, TV, factual, and craft disciplines.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-22'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - new_opportunity
+  - high
+  year: 2026
 - id: a15c99b2-32c1-5c75-bf53-82ea39bc1689
   name: Documentary Film Producers Lab
   category: lab_application
@@ -703,6 +705,59 @@
   - high
   - new_opportunity
   - podcasting
+  year: 2026
+- id: 1115c0aa-14bf-505f-984f-37cc2263ab34
+  name: Please read the guidelines of the respective funding programmes (
+  category: festival_submission
+  organization: World Cinema Fund
+  url: https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html
+  deadline_date: '2026-07-24'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Please read the guidelines of the respective funding programmes (
+    WCF Classic / WCF Europe ) carefully before applying. Deadline for submissions:
+    July 24, 2026'
+  eligibility_notes: Important international fund supporting artistic feature and
+    documentary projects from regions with weaker film infrastructure.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-22'
+  source_url: https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html
+  tags:
+  - fund
+  - high
+  - festival_submission
+  - new_opportunity
+  year: 2026
+- id: c5063c6d-3fba-51cd-9d56-28d025b0065d
+  name: World Cinema Fund Production Support
+  category: funding_round
+  organization: World Cinema Fund
+  url: https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html
+  deadline_date: '2026-07-24'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Next call for funding applications opens on June 22, 2026.
+  eligibility_notes: Open to artistic feature and documentary projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-06-22'
+  source_url: https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html
+  tags:
+  - fund
+  - production
+  - documentary
+  - artistic
+  - post-production
+  - global
   year: 2026
 - id: d026670b-d0ed-5a52-a006-9108c15c06c1
   name: Staff Applications for DokuFest 25th Edition
@@ -866,90 +921,6 @@
   - high
   - festival_submission
   - new_opportunity
-  year: 2026
-- id: 682013be-698d-5e1c-b6e2-60c42207bfa5
-  name: 3. Locations and services of the Venice Production Bridge
-  category: festival_submission
-  organization: Venice Biennale Cinema
-  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  deadline_date: '2026-09-12'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "The type of accreditation and the number of accreditations issued\
-    \ for each company are at the sole discretion of La Biennale di Venezia. 3. Locations\
-    \ and services of the Venice Production Bridge On the occasion of the upcoming\
-    \ 83 rd edition of the Venice International Film Festival (2\u201312 September\
-    \ 2026), the Venice Production Bridge (3-9 September, 2026) will organize programmes\
-    \ such as the Venice"
-  eligibility_notes: Tracks Venice industry accreditation windows and access into
-    Venice Production Bridge programs, screenings, and market activity.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-05-11'
-  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  tags:
-  - industry_forum
-  - high
-  - festival_submission
-  - new_opportunity
-  year: 2026
-- id: 09a7fcba-2d62-58b7-b5e3-ee2539fdc7ac
-  name: Venice Production Bridge Programs and Market Activities
-  category: industry_forum
-  organization: Venice Biennale Cinema
-  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  deadline_date: '2026-09-12'
-  early_deadline_date: null
-  event_start_date: '2026-09-02'
-  event_end_date: '2026-09-12'
-  description: "On the occasion of the upcoming 83rd edition of the Venice International\
-    \ Film Festival (2\u201312 September 2026), the Venice Production Bridge (3-9\
-    \ September, 2026) will organize programmes such as the Venice Gap-Financing Market..."
-  eligibility_notes: Availability for industry professionals and activities such as
-    market screenings, gap-financing, and adaptation rights markets.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-15'
-  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  tags:
-  - industry_forum
-  - high
-  - new_opportunity
-  year: 2026
-- id: 3f7508ca-b7fc-52d3-a033-58ef9c6db0e3
-  name: More Information
-  category: lab_application
-  organization: Film Independent
-  url: https://www.filmindependent.org/programs/applications/
-  deadline_date: '2026-09-14'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "Applications accepted on a rolling basis. More Information \u2022\
-    \ Applications currently closed Episodic Directing Intensive 2027 Applications\
-    \ Open: July 27, 2026 Non-Member Deadline: September 28, 2026"
-  eligibility_notes: High-signal Film Independent documentary producer development
-    programme with concrete annual application timing.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-15'
-  source_url: https://www.filmindependent.org/programs/applications/
-  tags:
-  - lab
-  - high
-  - lab_application
-  - new_opportunity
-  - update_signal
   year: 2026
 - id: 7a92ec81-5e9e-5384-8549-55f03613d868
   name: Catalyst Forum Application Deadline
