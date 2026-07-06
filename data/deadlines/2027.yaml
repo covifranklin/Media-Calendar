@@ -8,20 +8,22 @@
   event_start_date: '2027-01-25'
   event_end_date: '2027-01-28'
   description: 'WELCOME TO THE INDUSTRY DAYS 2027 EDITION : 25 to 28 JANUARY'
-  eligibility_notes: Open to documentary industry professionals, including producers,
-    broadcasters, and directors.
+  eligibility_notes: Open to documentary professionals including authors, producers,
+    and broadcasters.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-06-15'
+  last_verified_date: '2026-07-06'
   source_url: https://www.fipadoc.com/en/fipadoc-pro
   tags:
   - documentary
   - networking
   - pitching sessions
   - industry forum
+  - pitching
+  - Biarritz
   year: 2027
 - id: 116afa2f-6653-590d-a5d6-fe191b25f2f0
   name: FIPADOC Pitching Sessions
@@ -458,6 +460,32 @@
   - submissions
   - networking
   year: 2027
+- id: f5eb2ba2-958b-524e-b869-38aa95cd350e
+  name: CHANGE Development Co-Production Program
+  category: lab_application
+  organization: CPH:DOX
+  url: https://cphdox.dk/cphforum/
+  deadline_date: '2027-03-10'
+  early_deadline_date: null
+  event_start_date: '2027-03-10'
+  event_end_date: '2027-03-21'
+  description: CHANGE is our development co-production training program featuring
+    documentary projects in development from Armenia, Azerbaijan, Belarus, Georgia,
+    Moldova and Ukraine.
+  eligibility_notes: Documentary projects in development from Armenia, Azerbaijan,
+    Belarus, Georgia, Moldova, and Ukraine.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-06'
+  source_url: https://cphdox.dk/cphforum/
+  tags:
+  - development
+  - co-production
+  - lab_application
+  year: 2027
 - id: e62a52d9-82eb-5cd1-a537-c231b2c009ef
   name: CPH:FORUM 2027
   category: industry_forum
@@ -469,19 +497,20 @@
   event_end_date: '2027-03-21'
   description: The next edition of CPH:FORUM (including CPH:ROUGHCUT and CHANGE) takes
     place during the Industry week of CPH:DOX 2027 (March 10-21).
-  eligibility_notes: Focuses on creative nonfiction projects with international potential.
+  eligibility_notes: Documentary projects at the rough cut stage are eligible.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-22'
+  last_verified_date: '2026-07-06'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
   - must_have
   - industry_forum
   - new_opportunity
+  - roughcut
   year: 2027
 - id: 83aa1e4a-8f9a-577a-a517-dc50b5ffd469
   name: CPH:FORUM 2027 Submission
