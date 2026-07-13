@@ -1,28 +1,3 @@
-- id: 16e6cc5b-e7b7-5adf-a69d-f275437d4662
-  name: Episodic Program Insight Session
-  category: industry_forum
-  organization: Sundance Institute
-  url: https://www.sundance.org/programs/episodic-storytelling/
-  deadline_date: '2026-07-10'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "Free Insider Session collab.sundance.org Friday, July 10, 10:00AM\
-    \ \u2013 11:00AM (PST)"
-  eligibility_notes: Open to all interested creators.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-22'
-  source_url: https://www.sundance.org/programs/episodic-storytelling/
-  tags:
-  - lab
-  - high
-  - industry_forum
-  - new_opportunity
-  year: 2026
 - id: 0809b3e0-d93c-5dcc-8b56-f4c058c5c09f
   name: 2027 Annual Pitch Parlor
   category: lab_application
@@ -102,6 +77,31 @@
   - laboratory
   - new_opportunity
   year: 2026
+- id: d8eb6fc9-8047-5a62-9468-ae2320711815
+  name: Introduction to Podcasting
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-07-13'
+  early_deadline_date: null
+  event_start_date: '2026-06-02'
+  event_end_date: '2026-06-02'
+  description: 'Short course 4Skills: Introduction to Podcasting Scotland 21 Jul/26
+    Application deadline 20 Jul 2026'
+  eligibility_notes: Workshop to develop intimacy coordination skills in film settings.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-13'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - high
+  - new_opportunity
+  - podcasting
+  year: 2026
 - id: 119f2b58-ebbb-5353-912d-97a465458912
   name: Opportunities
   category: lab_application
@@ -126,6 +126,60 @@
   - lab
   - must_have
   - lab_application
+  - new_opportunity
+  year: 2026
+- id: c6280106-f4a7-5128-a835-d4b66a812962
+  name: Reframing audiovisual landscapes
+  category: funding_round
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-07-13'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Reframing audiovisual landscapes TorinoFilmLab is an international
+    audiovisual lab supporting talents from all over the world through training, development,
+    funding and networking activities. Find your TFL activity About TFL LATEST NEWS
+    July 13, 2026
+  eligibility_notes: Important international lab ecosystem covering feature film,
+    series, and co-production support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-13'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - funding_round
+  - new_opportunity
+  year: 2026
+- id: d56cca98-657d-5a84-b8a0-cdae105dd109
+  name: Reframing Audiovisual Landscapes Funding Round
+  category: funding_round
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-07-13'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Reframing audiovisual landscapes TorinoFilmLab is an international
+    audiovisual lab supporting talents from all over the world through training, development,
+    funding and networking activities.
+  eligibility_notes: Covers feature film, series, and co-production support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-13'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - funding_round
   - new_opportunity
   year: 2026
 - id: a15c99b2-32c1-5c75-bf53-82ea39bc1689
@@ -180,31 +234,6 @@
   - festival_submission
   - new_opportunity
   year: 2026
-- id: d8eb6fc9-8047-5a62-9468-ae2320711815
-  name: Introduction to Podcasting
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-07-20'
-  early_deadline_date: null
-  event_start_date: '2026-06-02'
-  event_end_date: '2026-06-02'
-  description: 'Short course 4Skills: Introduction to Podcasting Scotland 21 Jul/26
-    Application deadline 20 Jul 2026'
-  eligibility_notes: Open to those interested in audio storytelling and podcast creation.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-01'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  - podcasting
-  year: 2026
 - id: 1115c0aa-14bf-505f-984f-37cc2263ab34
   name: Please read the guidelines of the respective funding programmes (
   category: festival_submission
@@ -257,6 +286,29 @@
   - artistic
   - post-production
   - global
+  year: 2026
+- id: 332dd4ea-7b27-515a-a63d-acd1054b44af
+  name: Episodic Directing Intensive 2027
+  category: lab_application
+  organization: Film Independent
+  url: https://www.filmindependent.org/programs/applications/
+  deadline_date: '2026-07-27'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Applications Open: July 27, 2026'
+  eligibility_notes: Open to North American filmmakers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-13'
+  source_url: https://www.filmindependent.org/programs/applications/
+  tags:
+  - lab
+  - lab_application
+  - new_opportunity
   year: 2026
 - id: d026670b-d0ed-5a52-a006-9108c15c06c1
   name: Staff Applications for DokuFest 25th Edition
@@ -360,6 +412,29 @@
   - submission
   - short film
   - '2026'
+  year: 2026
+- id: 76c2c695-84f4-546d-adc5-ff005c2aa110
+  name: Register for SXSW 2027
+  category: other
+  organization: SXSW Film & TV Festival
+  url: https://www.sxsw.com/conference/film-and-tv-industry/
+  deadline_date: '2026-08-18'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Sign up now for 10% off your 2027 SXSW Badge before registration opens
+    on August 18.
+  eligibility_notes: null
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-13'
+  source_url: https://www.sxsw.com/conference/film-and-tv-industry/
+  tags:
+  - registration
+  - conference
   year: 2026
 - id: b6c8496e-ae10-5724-93fb-58f71a024779
   name: Catalyst Pre-Application
@@ -476,6 +551,62 @@
   - festival_submission
   - new_opportunity
   year: 2026
+- id: beae9306-4413-571f-a555-a704c9169395
+  name: Berlinale Talents - Applications and Eligibility
+  category: lab_application
+  organization: Berlinale Talents
+  url: https://www.berlinale-talents.de/bt/page/c/faq
+  deadline_date: '2026-09-02'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: . If you have particular accessibility requirements, please get in
+    touch with us at talents@berlinale.de so that we can answer your questions. When
+    can I apply for the next edition of Berlinale Talents? Applications for Berlinale
+    Talents 2027 open in early July, 2026, and close on September 2, 2026. If you
+    apply before August 19, 2026, you benefit from our Early Bird Rate. We recommend
+    that you su
+  eligibility_notes: Important global talent-development entry point tied to Berlinale,
+    with application timing, eligibility, lab, and project-market details.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-13'
+  source_url: https://www.berlinale-talents.de/bt/page/c/faq
+  tags:
+  - fellowship
+  - high
+  - lab_application
+  - new_opportunity
+  year: 2026
+- id: b703d5c0-f03f-5bbc-a286-622f041ebc1e
+  name: Berlinale Talents 2027 Application
+  category: lab_application
+  organization: Berlinale Talents
+  url: https://www.berlinale-talents.de/bt/page/c/faq
+  deadline_date: '2026-09-02'
+  early_deadline_date: '2026-08-19'
+  event_start_date: '2027-02-12'
+  event_end_date: '2027-02-17'
+  description: Applications for Berlinale Talents 2027 open in early July, 2026, and
+    close on September 2, 2026. If you apply before August 19, 2026, you benefit from
+    our Early Bird Rate.
+  eligibility_notes: Open to film and television professionals with an existing track
+    record. Students admitted in exceptional cases.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-13'
+  source_url: https://www.berlinale-talents.de/bt/page/c/faq
+  tags:
+  - fellowship
+  - lab_application
+  - talent_development
+  year: 2026
 - id: 7f746b21-1231-5c7c-8244-da6f7b8fa353
   name: 2027 Four Nations Mentoring Scheme Applications
   category: fellowship
@@ -529,64 +660,32 @@
   - high
   - new_opportunity
   year: 2026
-- id: 682013be-698d-5e1c-b6e2-60c42207bfa5
-  name: 3. Locations and services of the Venice Production Bridge
-  category: festival_submission
-  organization: Venice Biennale Cinema
-  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  deadline_date: '2026-09-12'
+- id: 3f7508ca-b7fc-52d3-a033-58ef9c6db0e3
+  name: More Information
+  category: lab_application
+  organization: Film Independent
+  url: https://www.filmindependent.org/programs/applications/
+  deadline_date: '2026-09-14'
   early_deadline_date: null
   event_start_date: null
   event_end_date: null
-  description: "The type of accreditation and the number of accreditations issued\
-    \ for each company are at the sole discretion of La Biennale di Venezia. 3. Locations\
-    \ and services of the Venice Production Bridge On the occasion of the upcoming\
-    \ 83 rd edition of the Venice International Film Festival (2\u201312 September\
-    \ 2026), the Venice Production Bridge (3-9 September, 2026) will organize programmes\
-    \ such as the Venice"
-  eligibility_notes: Tracks Venice industry accreditation windows and access into
-    Venice Production Bridge programs, screenings, and market activity.
+  description: "More Information \u2022 Applications currently closed Fiction Producing\
+    \ Lab 2026 Applications open: March 9, 2026 Non-Member Deadline: May 4, 2026"
+  eligibility_notes: High-signal Film Independent documentary producer development
+    programme with concrete annual application timing.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-06'
-  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  last_verified_date: '2026-07-13'
+  source_url: https://www.filmindependent.org/programs/applications/
   tags:
-  - industry_forum
+  - lab
   - high
-  - festival_submission
+  - lab_application
   - new_opportunity
-  year: 2026
-- id: 65f6156d-6cb1-5645-a1e3-f72a8b4e4916
-  name: Venice Production Bridge Services
-  category: industry_forum
-  organization: Venice Biennale Cinema
-  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  deadline_date: '2026-09-12'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "The type of accreditation and the number of accreditations issued\
-    \ for each company are at the sole discretion of La Biennale di Venezia. 3. Locations\
-    \ and services of the Venice Production Bridge On the occasion of the upcoming\
-    \ 83rd edition of the Venice International Film Festival (2\u201312 September\
-    \ 2026), the Venice Production Bridge (3-9 September, 2026) will organize programmes\
-    \ such as the Venice "
-  eligibility_notes: Tracks Venice industry accreditation windows and access into
-    Venice Production Bridge programs, screenings, and market activity.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-06'
-  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  tags:
-  - industry_forum
-  - high
-  - new_opportunity
+  - update_signal
   year: 2026
 - id: 7a92ec81-5e9e-5384-8549-55f03613d868
   name: Catalyst Forum Application Deadline
@@ -665,31 +764,6 @@
   - market
   - must_have
   - industry_forum
-  - new_opportunity
-  year: 2026
-- id: 941fadf4-f258-5d76-8fc0-38bc93b62f0f
-  name: Feature Film Development Fund - October Deadline
-  category: funding_round
-  organization: Ffilm Cymru Wales
-  url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
-  deadline_date: '2026-10-02'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'You can submit your application at any time but applications will
-    be reviewed around the following deadlines: 2nd October 2026, midday.'
-  eligibility_notes: For Wales-based or Wales-born writers, directors, and producers.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-08'
-  source_url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
-  tags:
-  - fund
-  - high
-  - funding_round
   - new_opportunity
   year: 2026
 - id: 94ce0775-ed6e-5911-9003-c30ebf5578d2

@@ -417,14 +417,14 @@
   event_end_date: '2027-02-16'
   description: The accreditation for the European Film Market 2026 is now open. Industry
     professionals travelling to Berlin will be able to apply for a Market Badge.
-  eligibility_notes: Proof of current professional activity in the film industry is
-    required for accreditation.
+  eligibility_notes: Applicants must provide proof of current professional activity
+    in the film industry.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-06-22'
+  last_verified_date: '2026-07-13'
   source_url: https://www.efm-berlinale.de/en/services/accreditation/accreditation.html
   tags:
   - market
@@ -485,32 +485,6 @@
   - development
   - co-production
   - lab_application
-  year: 2027
-- id: e62a52d9-82eb-5cd1-a537-c231b2c009ef
-  name: CPH:FORUM 2027
-  category: industry_forum
-  organization: CPH:DOX
-  url: https://cphdox.dk/cphforum/
-  deadline_date: '2027-03-10'
-  early_deadline_date: null
-  event_start_date: '2027-03-10'
-  event_end_date: '2027-03-21'
-  description: The next edition of CPH:FORUM (including CPH:ROUGHCUT and CHANGE) takes
-    place during the Industry week of CPH:DOX 2027 (March 10-21).
-  eligibility_notes: Documentary projects at the rough cut stage are eligible.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-06'
-  source_url: https://cphdox.dk/cphforum/
-  tags:
-  - market
-  - must_have
-  - industry_forum
-  - new_opportunity
-  - roughcut
   year: 2027
 - id: 83aa1e4a-8f9a-577a-a517-dc50b5ffd469
   name: CPH:FORUM 2027 Submission
@@ -596,6 +570,32 @@
   - pitching
   - co-financing
   year: 2027
+- id: 8700e633-e763-546d-a3b8-a04f7c3d10eb
+  name: here
+  category: festival_submission
+  organization: CPH:DOX
+  url: https://cphdox.dk/cphforum/
+  deadline_date: '2027-03-10'
+  early_deadline_date: null
+  event_start_date: '2027-03-10'
+  event_end_date: '2027-03-21'
+  description: 'here . DATES CPH:DOX FESTIVAL: March 10-21, 2027 CPH:INDUSTRY: March
+    14-18, 2027 CPH:FORUM: March 16-18, 2027'
+  eligibility_notes: Major international documentary co-financing and pitching platform
+    for creative nonfiction projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-13'
+  source_url: https://cphdox.dk/cphforum/
+  tags:
+  - market
+  - must_have
+  - festival_submission
+  - new_opportunity
+  year: 2027
 - id: 8a465003-e7e9-5ac4-8d0a-333e5eba107c
   name: Confirmation of 2027 Program Costs
   category: festival_submission
@@ -623,6 +623,33 @@
   - high
   - festival_submission
   - new_opportunity
+  year: 2027
+- id: e62a52d9-82eb-5cd1-a537-c231b2c009ef
+  name: CPH:FORUM 2027
+  category: industry_forum
+  organization: CPH:DOX
+  url: https://cphdox.dk/cphforum/
+  deadline_date: '2027-03-15'
+  early_deadline_date: null
+  event_start_date: '2027-03-10'
+  event_end_date: '2027-03-21'
+  description: The next edition of CPH:FORUM (including CPH:ROUGHCUT and CHANGE) takes
+    place during the Industry week of CPH:DOX 2027 (March 10-21).
+  eligibility_notes: Major international documentary co-financing and pitching platform
+    for creative nonfiction projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-13'
+  source_url: https://cphdox.dk/cphforum/
+  tags:
+  - market
+  - must_have
+  - industry_forum
+  - new_opportunity
+  - roughcut
   year: 2027
 - id: 2b9cd331-f849-5227-95c6-14ab2a250315
   name: Sundance Institute - Episodic Program
