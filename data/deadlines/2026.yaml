@@ -1,187 +1,3 @@
-- id: 0809b3e0-d93c-5dcc-8b56-f4c058c5c09f
-  name: 2027 Annual Pitch Parlor
-  category: lab_application
-  organization: Sundance Institute
-  url: https://www.sundance.org/programs/episodic-storytelling/
-  deadline_date: '2026-07-13'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: The next submission season will open in July 13, 2026 for an in-person
-    Lab taking place in 2027.
-  eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
-    series creators and writers.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-08'
-  source_url: https://www.sundance.org/programs/episodic-storytelling/
-  tags:
-  - lab
-  - high
-  - lab_application
-  - new_opportunity
-  year: 2026
-- id: 3cbc1bd6-148f-5001-9dcd-5e0116fe2008
-  name: Annual Pitch Parlor
-  category: lab_application
-  organization: Sundance Institute
-  url: https://www.sundance.org/programs/episodic-storytelling/
-  deadline_date: '2026-07-13'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Annual Pitch Parlor Taking place annually each Spring in Los Angeles,
-    Pitch Parlor will feature select Fellows and alumni from the most recent Labs
-    who will present seven-minute pitches in front of invited TV producers, showrunners,
-    managers, agents, and studio and network executives with the intention to celebrate
-    and further introduce the work and writers with the wider industry. Still have
-    ques
-  eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
-    series creators and writers.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-08'
-  source_url: https://www.sundance.org/programs/episodic-storytelling/
-  tags:
-  - lab
-  - high
-  - lab_application
-  - new_opportunity
-  year: 2026
-- id: 92f9181f-9828-5905-a0ee-549bd5db747e
-  name: Feature Film Producers Lab
-  category: lab_application
-  organization: Sundance Institute
-  url: https://www.sundance.org/initiatives/producers-program/
-  deadline_date: '2026-07-13'
-  early_deadline_date: null
-  event_start_date: '2026-07-13'
-  event_end_date: '2026-07-18'
-  description: Feature Film Producers Lab Ucross, Wyoming July 13-18, 2026
-  eligibility_notes: Producers working on feature-length projects in fiction and nonfiction.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-21'
-  source_url: https://www.sundance.org/initiatives/producers-program/
-  tags:
-  - lab
-  - laboratory
-  - new_opportunity
-  year: 2026
-- id: d8eb6fc9-8047-5a62-9468-ae2320711815
-  name: Introduction to Podcasting
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-07-13'
-  early_deadline_date: null
-  event_start_date: '2026-06-02'
-  event_end_date: '2026-06-02'
-  description: 'Short course 4Skills: Introduction to Podcasting Scotland 21 Jul/26
-    Application deadline 20 Jul 2026'
-  eligibility_notes: Workshop to develop intimacy coordination skills in film settings.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-13'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  - podcasting
-  year: 2026
-- id: 119f2b58-ebbb-5353-912d-97a465458912
-  name: Opportunities
-  category: lab_application
-  organization: Sundance Institute
-  url: https://www.sundance.org/initiatives/producers-program/
-  deadline_date: '2026-07-13'
-  early_deadline_date: null
-  event_start_date: '2026-07-13'
-  event_end_date: '2026-07-18'
-  description: Opportunities Location Details Dates Feature Film Producers Lab Ucross,
-    Wyoming July 13-18, 2026
-  eligibility_notes: Important Sundance pathway for fiction and nonfiction producers
-    across labs, fellowships, networking, and producer-focused support.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-22'
-  source_url: https://www.sundance.org/initiatives/producers-program/
-  tags:
-  - lab
-  - must_have
-  - lab_application
-  - new_opportunity
-  year: 2026
-- id: c6280106-f4a7-5128-a835-d4b66a812962
-  name: Reframing audiovisual landscapes
-  category: funding_round
-  organization: TorinoFilmLab
-  url: https://www.torinofilmlab.it/
-  deadline_date: '2026-07-13'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Reframing audiovisual landscapes TorinoFilmLab is an international
-    audiovisual lab supporting talents from all over the world through training, development,
-    funding and networking activities. Find your TFL activity About TFL LATEST NEWS
-    July 13, 2026
-  eligibility_notes: Important international lab ecosystem covering feature film,
-    series, and co-production support.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-13'
-  source_url: https://www.torinofilmlab.it/
-  tags:
-  - lab
-  - must_have
-  - funding_round
-  - new_opportunity
-  year: 2026
-- id: d56cca98-657d-5a84-b8a0-cdae105dd109
-  name: Reframing Audiovisual Landscapes Funding Round
-  category: funding_round
-  organization: TorinoFilmLab
-  url: https://www.torinofilmlab.it/
-  deadline_date: '2026-07-13'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Reframing audiovisual landscapes TorinoFilmLab is an international
-    audiovisual lab supporting talents from all over the world through training, development,
-    funding and networking activities.
-  eligibility_notes: Covers feature film, series, and co-production support.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-13'
-  source_url: https://www.torinofilmlab.it/
-  tags:
-  - lab
-  - must_have
-  - funding_round
-  - new_opportunity
-  year: 2026
 - id: a15c99b2-32c1-5c75-bf53-82ea39bc1689
   name: Documentary Film Producers Lab
   category: lab_application
@@ -309,6 +125,55 @@
   - lab
   - lab_application
   - new_opportunity
+  year: 2026
+- id: d8eb6fc9-8047-5a62-9468-ae2320711815
+  name: Introduction to Podcasting
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-08-03'
+  early_deadline_date: null
+  event_start_date: '2026-06-02'
+  event_end_date: '2026-06-02'
+  description: 'Short course 4Skills: Introduction to Podcasting Scotland 21 Jul/26
+    Application deadline 20 Jul 2026'
+  eligibility_notes: Wide range of professional skill-building across film and TV.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-20'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - high
+  - new_opportunity
+  - podcasting
+  year: 2026
+- id: 62f69b4e-f926-5799-a580-c59cc33a1825
+  name: DokuLab Application
+  category: lab_application
+  organization: DokuFest
+  url: https://dokufest.com/en
+  deadline_date: '2026-08-07'
+  early_deadline_date: null
+  event_start_date: '2026-08-07'
+  event_end_date: '2026-08-15'
+  description: DokuFest has important Southeast European documentary and short film
+    festival with industry initiatives and periodic open calls.
+  eligibility_notes: null
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-20'
+  source_url: https://dokufest.com/en
+  tags:
+  - filmmaking
+  - documentary
+  - short film
   year: 2026
 - id: d026670b-d0ed-5a52-a006-9108c15c06c1
   name: Staff Applications for DokuFest 25th Edition
@@ -607,6 +472,33 @@
   - lab_application
   - talent_development
   year: 2026
+- id: 6e5d2096-cfd8-50b4-9331-7c84882e9cff
+  name: Berlinale Talents 2027 Applications
+  category: fellowship
+  organization: Berlinale Talents
+  url: https://www.berlinale-talents.de/bt/page/c/faq
+  deadline_date: '2026-09-02'
+  early_deadline_date: '2026-08-19'
+  event_start_date: '2027-02-12'
+  event_end_date: '2027-02-17'
+  description: When can I apply for the next edition of Berlinale Talents? Applications
+    for Berlinale Talents 2027 open in early July, 2026, and close on September 2,
+    2026. If you apply before August 19, 2026, you benefit from our Early Bird Rate.
+  eligibility_notes: Designed for film and television professionals with prior experience.
+    Specific eligibility criteria apply.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-20'
+  source_url: https://www.berlinale-talents.de/bt/page/c/faq
+  tags:
+  - fellowship
+  - film
+  - TV
+  - talent_development
+  year: 2026
 - id: 7f746b21-1231-5c7c-8244-da6f7b8fa353
   name: 2027 Four Nations Mentoring Scheme Applications
   category: fellowship
@@ -660,6 +552,86 @@
   - high
   - new_opportunity
   year: 2026
+- id: 1a2c69fd-18e7-57c0-ac3c-4ffd7a28f615
+  name: SSD26 Guide to Decision Makers
+  category: funding_round
+  organization: Sunny Side of the Doc
+  url: https://www.sunnysideofthedoc.com/
+  deadline_date: '2026-09-09'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Access the most wanted guide within documentary industry...help you
+    pitch smarter, find the right partners and grow your documentary business.
+  eligibility_notes: Available to participants seeking to improve their pitching and
+    partnership opportunities.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-20'
+  source_url: https://www.sunnysideofthedoc.com/
+  tags:
+  - funding
+  - pitching
+  - decision makers
+  year: 2026
+- id: 682013be-698d-5e1c-b6e2-60c42207bfa5
+  name: 3. Locations and services of the Venice Production Bridge
+  category: festival_submission
+  organization: Venice Biennale Cinema
+  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  deadline_date: '2026-09-12'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "The type of accreditation and the number of accreditations issued\
+    \ for each company are at the sole discretion of La Biennale di Venezia. 3. Locations\
+    \ and services of the Venice Production Bridge On the occasion of the upcoming\
+    \ 83 rd edition of the Venice International Film Festival (2\u201312 September\
+    \ 2026), the Venice Production Bridge (3-9 September, 2026) will organize programmes\
+    \ such as the Venice"
+  eligibility_notes: Tracks Venice industry accreditation windows and access into
+    Venice Production Bridge programs, screenings, and market activity.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-20'
+  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  tags:
+  - industry_forum
+  - high
+  - festival_submission
+  - new_opportunity
+  year: 2026
+- id: 4b5d9562-a208-579a-bdd8-a396eafd996f
+  name: Venice Production Bridge Programs
+  category: industry_forum
+  organization: Venice Biennale Cinema
+  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  deadline_date: '2026-09-12'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "On the occasion of the upcoming 83rd edition of the Venice International\
+    \ Film Festival (2\u201312 September 2026), the Venice Production Bridge (3-9\
+    \ September, 2026) will organize programmes such as the Venice Gap-Financing Market."
+  eligibility_notes: Open to film industry professionals with proper accreditation.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-20'
+  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  tags:
+  - industry_forum
+  - high
+  - new_opportunity
+  year: 2026
 - id: 3f7508ca-b7fc-52d3-a033-58ef9c6db0e3
   name: More Information
   category: lab_application
@@ -678,7 +650,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-13'
+  last_verified_date: '2026-07-20'
   source_url: https://www.filmindependent.org/programs/applications/
   tags:
   - lab
@@ -764,6 +736,58 @@
   - market
   - must_have
   - industry_forum
+  - new_opportunity
+  year: 2026
+- id: faae654a-b36d-53b1-a879-762d68a29f08
+  name: Breadcrumb
+  category: funding_round
+  organization: Ffilm Cymru Wales
+  url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
+  deadline_date: '2026-10-02'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Breadcrumb Home Funding and Training Feature Film Development Feature
+    Film Development Next Deadline: 2 October 2026'
+  eligibility_notes: Feature and documentary development fund for Wales-based or Wales-born
+    writers, directors, and producers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-20'
+  source_url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
+  tags:
+  - fund
+  - high
+  - funding_round
+  - new_opportunity
+  year: 2026
+- id: 6c403a0a-8646-588c-a9c7-266837b4b736
+  name: Feature Film Development Fund - October 2026 Deadline
+  category: funding_round
+  organization: Ffilm Cymru Wales
+  url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
+  deadline_date: '2026-10-02'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'You can submit your application at any time but applications will
+    be reviewed around the following deadlines: 2nd October 2026, midday.'
+  eligibility_notes: Feature and documentary development fund for Wales-based or Wales-born
+    writers, directors, and producers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-20'
+  source_url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
+  tags:
+  - fund
+  - high
+  - funding_round
   - new_opportunity
   year: 2026
 - id: 94ce0775-ed6e-5911-9003-c30ebf5578d2
@@ -868,6 +892,33 @@
   - networking
   - pitch training
   year: 2026
+- id: e27a6569-98db-5cc4-bd61-c8542376f998
+  name: BFI NETWORK Talent Development Programme
+  category: fellowship
+  organization: BFI NETWORK
+  url: https://www.bfi.org.uk/get-funding-support/bfi-network/bfi-networklff
+  deadline_date: '2026-10-08'
+  early_deadline_date: null
+  event_start_date: '2026-10-08'
+  event_end_date: '2026-10-12'
+  description: Now in its 13th year, BFI NETWORK@LFF is a professional development
+    programme that supports early career writers, directors and producers working
+    towards their debut feature film.
+  eligibility_notes: Open to writers, directors, and producers from all backgrounds
+    with a creative track record.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-20'
+  source_url: https://www.bfi.org.uk/get-funding-support/bfi-network/bfi-networklff
+  tags:
+  - fellowship
+  - film
+  - development
+  - networking
+  year: 2026
 - id: 28034370-59cd-5ce0-b89c-57f4a48167aa
   name: BFI
   category: festival_submission
@@ -922,6 +973,31 @@
   - industry_forum
   - content_creation
   - new_opportunity
+  year: 2026
+- id: 5ff3b6f5-974f-5319-a9eb-aa95e36528d6
+  name: MIP BrandWorks Launch 2026
+  category: other
+  organization: MIPCOM CANNES
+  url: https://www.mipcom.com/
+  deadline_date: '2026-10-12'
+  early_deadline_date: null
+  event_start_date: '2026-10-12'
+  event_end_date: '2026-10-15'
+  description: MIP BrandWorks launches at MIPCOM CANNES 2026, connecting brands and
+    agencies with studios, creators and rights holders.
+  eligibility_notes: Open to brands and agencies to connect with studios and rights
+    holders.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-20'
+  source_url: https://www.mipcom.com/
+  tags:
+  - branding
+  - content_creation
+  - market
   year: 2026
 - id: 432444f9-3ebb-502c-b31a-438a0633e2c5
   name: MIP BrandWorks Marketplace

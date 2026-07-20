@@ -1,3 +1,28 @@
+- id: bacad161-ed73-5031-9e3a-02ee5f21393e
+  name: Upcoming Opportunities in Documentary Lab
+  category: lab_application
+  organization: Film Independent
+  url: https://www.filmindependent.org/programs/applications/
+  deadline_date: '2027-01-04'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Member Extended Deadline: January 4, 2027'
+  eligibility_notes: High-signal Film Independent documentary producer development
+    programme with concrete annual application timing.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-20'
+  source_url: https://www.filmindependent.org/programs/applications/
+  tags:
+  - lab
+  - high
+  - lab_application
+  - update_signal
+  year: 2027
 - id: c8ddf34f-f2ca-5c02-a722-cffcbfa51a02
   name: FIPADOC Industry Days 2027
   category: industry_forum
@@ -8,14 +33,13 @@
   event_start_date: '2027-01-25'
   event_end_date: '2027-01-28'
   description: 'WELCOME TO THE INDUSTRY DAYS 2027 EDITION : 25 to 28 JANUARY'
-  eligibility_notes: Open to documentary professionals including authors, producers,
-    and broadcasters.
+  eligibility_notes: Open to documentary project submissions from professionals.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-06'
+  last_verified_date: '2026-07-20'
   source_url: https://www.fipadoc.com/en/fipadoc-pro
   tags:
   - documentary
@@ -24,6 +48,7 @@
   - industry forum
   - pitching
   - Biarritz
+  - international
   year: 2027
 - id: 116afa2f-6653-590d-a5d6-fe191b25f2f0
   name: FIPADOC Pitching Sessions
@@ -36,19 +61,23 @@
   event_end_date: '2027-01-28'
   description: "Numerous pitching sessions: our international pitches of course, but\
     \ also DOC \xC0 LA PAGE..."
-  eligibility_notes: Open to documentary filmmakers and producers seeking to pitch
-    their projects.
+  eligibility_notes: Targeted at professionals with documentary projects seeking to
+    enhance their impact strategies.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-06-22'
+  last_verified_date: '2026-07-20'
   source_url: https://www.fipadoc.com/en/fipadoc-pro
   tags:
   - pitching
   - funding
   - project development
+  - documentary
+  - impact
+  - workshop
+  - audience engagement
   year: 2027
 - id: 9a93b37a-8a19-58db-b0a8-c8691715f3aa
   name: Feature Film Development Fund - February 2027 Deadline
@@ -642,7 +671,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-13'
+  last_verified_date: '2026-07-20'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -987,6 +1016,34 @@
   - live pitch
   - opportunity
   - documentary
+  year: 2027
+- id: 26a63a0a-6aa9-5a07-9d40-7527421f1642
+  name: MeetMarket 2027 Documentary Marketplace
+  category: industry_forum
+  organization: Sheffield DocFest
+  url: https://www.sheffdocfest.com/meetmarket
+  deadline_date: '2027-06-09'
+  early_deadline_date: null
+  event_start_date: '2027-06-09'
+  event_end_date: '2027-06-14'
+  description: "The MeetMarket is one of the world\u2019s largest documentary markets...\
+    \ open to all documentary makers, local and international, and we welcome applications\
+    \ from established, emerging as well as first-time filmmakers."
+  eligibility_notes: Open to documentary makers from all backgrounds, welcoming projects
+    in various development stages, especially those rooted in podcast storytelling.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-20'
+  source_url: https://www.sheffdocfest.com/meetmarket
+  tags:
+  - documentary
+  - market
+  - pitch
+  - funding
+  - broadcast
   year: 2027
 - id: fe1530cb-bb69-51ec-a2e3-20fe98c1e285
   name: 2027 Episodic Lab
