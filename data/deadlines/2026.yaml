@@ -1,61 +1,9 @@
-- id: a15c99b2-32c1-5c75-bf53-82ea39bc1689
-  name: Documentary Film Producers Lab
-  category: lab_application
-  organization: Sundance Institute
-  url: https://www.sundance.org/initiatives/producers-program/
-  deadline_date: '2026-07-20'
-  early_deadline_date: null
-  event_start_date: '2026-07-20'
-  event_end_date: '2026-07-25'
-  description: Documentary Film Producers Lab Ucross, Wyoming July 20-25, 2026
-  eligibility_notes: Producers working on documentary feature-length projects.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-04-21'
-  source_url: https://www.sundance.org/initiatives/producers-program/
-  tags:
-  - lab
-  - laboratory
-  - new_opportunity
-  year: 2026
-- id: 5bdafdbc-3cae-5c65-baca-4c9c8d93b558
-  name: Documentary Film Producers Lab
-  category: festival_submission
-  organization: Sundance Institute
-  url: https://www.sundance.org/initiatives/producers-program/
-  deadline_date: '2026-07-20'
-  early_deadline_date: null
-  event_start_date: '2026-07-20'
-  event_end_date: '2026-07-25'
-  description: Documentary Film Producers Lab Ucross, Wyoming July 20-25, 2026 Awards
-    & Grants Feature Film and Documentary Film Producing fellows each receive a grant
-    that may be applied to personal expenses and unsupported costs for project advancement.
-    The Sundance Institute | Amazon MGM Studios Producers Awards recognize two producers
-    (and/or producing teams) with films premiering at the Sundance Film Festiv
-  eligibility_notes: Important Sundance pathway for fiction and nonfiction producers
-    across labs, fellowships, networking, and producer-focused support.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-06'
-  source_url: https://www.sundance.org/initiatives/producers-program/
-  tags:
-  - lab
-  - must_have
-  - festival_submission
-  - new_opportunity
-  year: 2026
 - id: 1115c0aa-14bf-505f-984f-37cc2263ab34
   name: Please read the guidelines of the respective funding programmes (
   category: festival_submission
   organization: World Cinema Fund
   url: https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html
-  deadline_date: '2026-07-24'
+  deadline_date: '2026-07-31'
   early_deadline_date: null
   event_start_date: null
   event_end_date: null
@@ -69,31 +17,33 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-06-22'
+  last_verified_date: '2026-07-27'
   source_url: https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html
   tags:
   - fund
   - high
   - festival_submission
   - new_opportunity
+  - update_signal
   year: 2026
 - id: c5063c6d-3fba-51cd-9d56-28d025b0065d
   name: World Cinema Fund Production Support
   category: funding_round
   organization: World Cinema Fund
   url: https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html
-  deadline_date: '2026-07-24'
+  deadline_date: '2026-07-31'
   early_deadline_date: null
   event_start_date: null
   event_end_date: null
   description: Next call for funding applications opens on June 22, 2026.
-  eligibility_notes: Open to artistic feature and documentary projects.
+  eligibility_notes: Supports artistic feature and documentary projects from regions
+    with weaker film infrastructure.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-06-22'
+  last_verified_date: '2026-07-27'
   source_url: https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html
   tags:
   - fund
@@ -102,13 +52,15 @@
   - artistic
   - post-production
   - global
+  - high
+  - production_support
   year: 2026
 - id: 332dd4ea-7b27-515a-a63d-acd1054b44af
   name: Episodic Directing Intensive 2027
   category: lab_application
   organization: Film Independent
   url: https://www.filmindependent.org/programs/applications/
-  deadline_date: '2026-07-27'
+  deadline_date: '2026-08-03'
   early_deadline_date: null
   event_start_date: null
   event_end_date: null
@@ -119,37 +71,39 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-13'
+  last_verified_date: '2026-07-27'
   source_url: https://www.filmindependent.org/programs/applications/
   tags:
   - lab
   - lab_application
   - new_opportunity
+  - directing
   year: 2026
-- id: d8eb6fc9-8047-5a62-9468-ae2320711815
-  name: Introduction to Podcasting
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-08-03'
+- id: 61afd3ed-8f6a-54ce-8b96-8383cc2659f5
+  name: DokuFest Industry Forum 2026
+  category: industry_forum
+  organization: DokuFest
+  url: https://dokufest.com/en
+  deadline_date: '2026-08-07'
   early_deadline_date: null
-  event_start_date: '2026-06-02'
-  event_end_date: '2026-06-02'
-  description: 'Short course 4Skills: Introduction to Podcasting Scotland 21 Jul/26
-    Application deadline 20 Jul 2026'
-  eligibility_notes: Wide range of professional skill-building across film and TV.
+  event_start_date: '2026-08-07'
+  event_end_date: '2026-08-15'
+  description: Important Southeast European documentary and short film festival with
+    industry initiatives and periodic open calls.
+  eligibility_notes: Open to filmmakers, producers, and industry professionals, with
+    a focus on documentary and short films.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-20'
-  source_url: https://nfts.co.uk/courses/short-courses
+  last_verified_date: '2026-07-27'
+  source_url: https://dokufest.com/en
   tags:
-  - fellowship
-  - high
-  - new_opportunity
-  - podcasting
+  - documentary
+  - short film
+  - industry forum
+  - '2026'
   year: 2026
 - id: 62f69b4e-f926-5799-a580-c59cc33a1825
   name: DokuLab Application
@@ -559,78 +513,26 @@
   url: https://www.sunnysideofthedoc.com/
   deadline_date: '2026-09-09'
   early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
+  event_start_date: '2026-06-22'
+  event_end_date: '2026-06-24'
   description: Access the most wanted guide within documentary industry...help you
     pitch smarter, find the right partners and grow your documentary business.
-  eligibility_notes: Available to participants seeking to improve their pitching and
-    partnership opportunities.
+  eligibility_notes: Open to filmmakers, producers, and creators from the documentary
+    and factual industry.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-20'
+  last_verified_date: '2026-07-27'
   source_url: https://www.sunnysideofthedoc.com/
   tags:
   - funding
   - pitching
   - decision makers
-  year: 2026
-- id: 682013be-698d-5e1c-b6e2-60c42207bfa5
-  name: 3. Locations and services of the Venice Production Bridge
-  category: festival_submission
-  organization: Venice Biennale Cinema
-  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  deadline_date: '2026-09-12'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "The type of accreditation and the number of accreditations issued\
-    \ for each company are at the sole discretion of La Biennale di Venezia. 3. Locations\
-    \ and services of the Venice Production Bridge On the occasion of the upcoming\
-    \ 83 rd edition of the Venice International Film Festival (2\u201312 September\
-    \ 2026), the Venice Production Bridge (3-9 September, 2026) will organize programmes\
-    \ such as the Venice"
-  eligibility_notes: Tracks Venice industry accreditation windows and access into
-    Venice Production Bridge programs, screenings, and market activity.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-20'
-  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  tags:
-  - industry_forum
-  - high
-  - festival_submission
-  - new_opportunity
-  year: 2026
-- id: 4b5d9562-a208-579a-bdd8-a396eafd996f
-  name: Venice Production Bridge Programs
-  category: industry_forum
-  organization: Venice Biennale Cinema
-  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  deadline_date: '2026-09-12'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "On the occasion of the upcoming 83rd edition of the Venice International\
-    \ Film Festival (2\u201312 September 2026), the Venice Production Bridge (3-9\
-    \ September, 2026) will organize programmes such as the Venice Gap-Financing Market."
-  eligibility_notes: Open to film industry professionals with proper accreditation.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-20'
-  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  tags:
-  - industry_forum
-  - high
-  - new_opportunity
+  - documentary
+  - international
+  - co-production
   year: 2026
 - id: 3f7508ca-b7fc-52d3-a033-58ef9c6db0e3
   name: More Information
@@ -650,7 +552,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-20'
+  last_verified_date: '2026-07-27'
   source_url: https://www.filmindependent.org/programs/applications/
   tags:
   - lab
@@ -658,6 +560,82 @@
   - lab_application
   - new_opportunity
   - update_signal
+  year: 2026
+- id: 1e591a20-a293-53bc-96bd-1c2cf46079dd
+  name: About TFL
+  category: lab_application
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-09-18'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'About TFL OPEN CALL Call for applications open Green Film Lab - Rome
+    2026 SHORT TERM Deadline to apply: 18 September 2026'
+  eligibility_notes: Important international lab ecosystem covering feature film,
+    series, and co-production support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-27'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2026
+- id: 3584c223-6de0-599d-ae70-26c06f7140c8
+  name: Green Film Lab - Rome 2026
+  category: lab_application
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-09-18'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'OPEN CALL: Green Film Lab - Rome 2026 Deadline to apply: 18 September
+    2026'
+  eligibility_notes: Open to international talents focusing on sustainable film production.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-27'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - sustainability
+  - new_opportunity
+  year: 2026
+- id: e53d51e0-1176-5d2c-8ab9-2a10e3d87cb0
+  name: Projects
+  category: lab_application
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-09-18'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Projects Find your TFL activity Hot now Call for applications open
+    Green Film Lab - Rome 2026 Deadline to apply: 18 September 2026'
+  eligibility_notes: Important international lab ecosystem covering feature film,
+    series, and co-production support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-27'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - lab_application
+  - new_opportunity
   year: 2026
 - id: 7a92ec81-5e9e-5384-8549-55f03613d868
   name: Catalyst Forum Application Deadline
@@ -749,32 +727,6 @@
   event_end_date: null
   description: 'Breadcrumb Home Funding and Training Feature Film Development Feature
     Film Development Next Deadline: 2 October 2026'
-  eligibility_notes: Feature and documentary development fund for Wales-based or Wales-born
-    writers, directors, and producers.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-20'
-  source_url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
-  tags:
-  - fund
-  - high
-  - funding_round
-  - new_opportunity
-  year: 2026
-- id: 6c403a0a-8646-588c-a9c7-266837b4b736
-  name: Feature Film Development Fund - October 2026 Deadline
-  category: funding_round
-  organization: Ffilm Cymru Wales
-  url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
-  deadline_date: '2026-10-02'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'You can submit your application at any time but applications will
-    be reviewed around the following deadlines: 2nd October 2026, midday.'
   eligibility_notes: Feature and documentary development fund for Wales-based or Wales-born
     writers, directors, and producers.
   notification_windows:
@@ -1120,4 +1072,28 @@
   - co-financing
   - co-production
   - networking
+  year: 2026
+- id: c34f5aaf-2716-5dbe-a00c-cf985140b746
+  name: TFL Meeting Event 2026
+  category: industry_forum
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-11-26'
+  early_deadline_date: null
+  event_start_date: '2026-11-26'
+  event_end_date: '2026-11-28'
+  description: 26 - 27 - 28 November 2026, Turin - Italy TFL Meeting Event 2026
+  eligibility_notes: Relevant for filmmakers and industry professionals attending
+    the event in Turin.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-07-27'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - networking
+  - forum
+  - industry_event
   year: 2026

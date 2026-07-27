@@ -660,18 +660,18 @@
   url: https://cphdox.dk/cphforum/
   deadline_date: '2027-03-15'
   early_deadline_date: null
-  event_start_date: '2027-03-10'
-  event_end_date: '2027-03-21'
+  event_start_date: '2027-03-16'
+  event_end_date: '2027-03-18'
   description: The next edition of CPH:FORUM (including CPH:ROUGHCUT and CHANGE) takes
     place during the Industry week of CPH:DOX 2027 (March 10-21).
-  eligibility_notes: Major international documentary co-financing and pitching platform
-    for creative nonfiction projects.
+  eligibility_notes: Focused on documentary projects in development; offers tailored
+    meetings and pitch preparation.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-20'
+  last_verified_date: '2026-07-27'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -679,6 +679,8 @@
   - industry_forum
   - new_opportunity
   - roughcut
+  - pitching
+  - development
   year: 2027
 - id: 2b9cd331-f849-5227-95c6-14ab2a250315
   name: Sundance Institute - Episodic Program
