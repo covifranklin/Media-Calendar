@@ -664,14 +664,13 @@
   event_end_date: '2027-03-18'
   description: The next edition of CPH:FORUM (including CPH:ROUGHCUT and CHANGE) takes
     place during the Industry week of CPH:DOX 2027 (March 10-21).
-  eligibility_notes: Focused on documentary projects in development; offers tailored
-    meetings and pitch preparation.
+  eligibility_notes: Projects in development from specific Eastern European countries.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-27'
+  last_verified_date: '2026-08-03'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -1071,30 +1070,5 @@
   - lab
   - high
   - festival_submission
-  - new_opportunity
-  year: 2027
-- id: 8b5f1cc2-96c2-5d11-9679-3fb8efc721c0
-  name: 2027 Episodic Lab Submission Window
-  category: lab_application
-  organization: Sundance Institute
-  url: https://www.sundance.org/programs/episodic-storytelling/
-  deadline_date: '2027-07-13'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 2027 Episodic Lab Submission Window FilmFreeway July 13, 2027
-  eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
-    series creators and writers.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-08'
-  source_url: https://www.sundance.org/programs/episodic-storytelling/
-  tags:
-  - lab
-  - high
-  - lab_application
   - new_opportunity
   year: 2027

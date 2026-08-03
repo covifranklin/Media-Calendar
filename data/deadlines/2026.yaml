@@ -1,83 +1,27 @@
-- id: 1115c0aa-14bf-505f-984f-37cc2263ab34
-  name: Please read the guidelines of the respective funding programmes (
-  category: festival_submission
-  organization: World Cinema Fund
-  url: https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html
-  deadline_date: '2026-07-31'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'Please read the guidelines of the respective funding programmes (
-    WCF Classic / WCF Europe ) carefully before applying. Deadline for submissions:
-    July 24, 2026'
-  eligibility_notes: Important international fund supporting artistic feature and
-    documentary projects from regions with weaker film infrastructure.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-27'
-  source_url: https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html
-  tags:
-  - fund
-  - high
-  - festival_submission
-  - new_opportunity
-  - update_signal
-  year: 2026
-- id: c5063c6d-3fba-51cd-9d56-28d025b0065d
-  name: World Cinema Fund Production Support
-  category: funding_round
-  organization: World Cinema Fund
-  url: https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html
-  deadline_date: '2026-07-31'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Next call for funding applications opens on June 22, 2026.
-  eligibility_notes: Supports artistic feature and documentary projects from regions
-    with weaker film infrastructure.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-27'
-  source_url: https://www.berlinale.de/en/wcf/funding-programmes/production-support/all-programmes.html
-  tags:
-  - fund
-  - production
-  - documentary
-  - artistic
-  - post-production
-  - global
-  - high
-  - production_support
-  year: 2026
-- id: 332dd4ea-7b27-515a-a63d-acd1054b44af
-  name: Episodic Directing Intensive 2027
-  category: lab_application
-  organization: Film Independent
-  url: https://www.filmindependent.org/programs/applications/
+- id: d8eb6fc9-8047-5a62-9468-ae2320711815
+  name: Introduction to Podcasting
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
   deadline_date: '2026-08-03'
   early_deadline_date: null
   event_start_date: null
   event_end_date: null
-  description: 'Applications Open: July 27, 2026'
-  eligibility_notes: Open to North American filmmakers.
+  description: Short course Introduction to Podcasting Scotland 09 Sep/26 Application
+    deadline 3 Aug 2026
+  eligibility_notes: Part of a large catalogue of opportunities across film, TV, factual,
+    and craft disciplines.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-27'
-  source_url: https://www.filmindependent.org/programs/applications/
+  last_verified_date: '2026-08-03'
+  source_url: https://nfts.co.uk/courses/short-courses
   tags:
-  - lab
-  - lab_application
+  - fellowship
+  - high
   - new_opportunity
-  - directing
   year: 2026
 - id: 61afd3ed-8f6a-54ce-8b96-8383cc2659f5
   name: DokuFest Industry Forum 2026
@@ -340,6 +284,81 @@
   - lab_application
   - new_opportunity
   year: 2026
+- id: 071bc9ea-2d7b-500b-a465-e55e6a02650a
+  name: The Film Producers' Toolkit
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-08-19'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: The Film Producers' Toolkit The Film Producers' Toolkit Scotland 14
+    Sep/26 Application deadline 19 Aug 2026 Two Days
+  eligibility_notes: Large catalogue of professional skill-building opportunities
+    across film, TV, factual, and craft disciplines.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-03'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - high
+  - new_opportunity
+  year: 2026
+- id: 7d142f2f-8d32-59b6-b82a-b94552d64c16
+  name: Writing the TV Pilot
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-08-19'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Short course Writing the TV Pilot Scotland 14 Sep/26 Application deadline
+    19 Aug 2026
+  eligibility_notes: Part of a large catalogue of opportunities across film, TV, factual,
+    and craft disciplines.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-03'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - high
+  - new_opportunity
+  year: 2026
+- id: 8b5f1cc2-96c2-5d11-9679-3fb8efc721c0
+  name: 2027 Episodic Lab Submission Window
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/programs/episodic-storytelling/
+  deadline_date: '2026-08-25'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 2027 Episodic Lab Submission Window FilmFreeway July 13, 2027
+  eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
+    series creators and writers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-03'
+  source_url: https://www.sundance.org/programs/episodic-storytelling/
+  tags:
+  - lab
+  - high
+  - lab_application
+  - new_opportunity
+  year: 2026
 - id: 0c395a9b-933f-56c3-be9f-c8921eba4990
   name: Have technical questions regarding the submission site? Email support@filmfreeway.com
   category: festival_submission
@@ -368,6 +387,58 @@
   - lab
   - high
   - festival_submission
+  - new_opportunity
+  year: 2026
+- id: 839934b3-b145-5272-ab62-2ebc11cc3c5f
+  name: Director Prep Lab
+  category: lab_application
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-08-31'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Short course Director Prep Lab Cymru Wales 09 Sep/26 Application deadline
+    31 Aug 2026
+  eligibility_notes: Part of a large catalogue of opportunities across film, TV, factual,
+    and craft disciplines.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-03'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - high
+  - lab_application
+  - new_opportunity
+  year: 2026
+- id: b5314e86-828e-5f14-8e07-8570b3d7aae1
+  name: Short course
+  category: lab_application
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-08-31'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Short course Director Prep Lab Director Prep Lab Cymru Wales 09 Sep/26
+    Application deadline 31 Aug 2026
+  eligibility_notes: Large catalogue of professional skill-building opportunities
+    across film, TV, factual, and craft disciplines.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-03'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - high
+  - lab_application
   - new_opportunity
   year: 2026
 - id: beae9306-4413-571f-a555-a704c9169395
@@ -506,6 +577,56 @@
   - high
   - new_opportunity
   year: 2026
+- id: bdf1d096-f8e2-52a8-8343-5e59b8cca4f3
+  name: Camera Trainee Workshop
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-09-07'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Camera Trainee Workshop Scotland 15 Sep/26 Application deadline 7 Sep
+    2026
+  eligibility_notes: Part of a large catalogue of opportunities across film, TV, factual,
+    and craft disciplines.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-03'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - high
+  - new_opportunity
+  year: 2026
+- id: 8f197b6c-d80b-5cb0-8a1c-0e44af179ea8
+  name: Full-time
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-09-07'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 2 days Full-time In person North 15 Sep/26 Application deadline 7 Sep
+    2026
+  eligibility_notes: Large catalogue of professional skill-building opportunities
+    across film, TV, factual, and craft disciplines.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-03'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - high
+  - new_opportunity
+  year: 2026
 - id: 1a2c69fd-18e7-57c0-ac3c-4ffd7a28f615
   name: SSD26 Guide to Decision Makers
   category: funding_round
@@ -517,14 +638,14 @@
   event_end_date: '2026-06-24'
   description: Access the most wanted guide within documentary industry...help you
     pitch smarter, find the right partners and grow your documentary business.
-  eligibility_notes: Open to filmmakers, producers, and creators from the documentary
-    and factual industry.
+  eligibility_notes: Open to documentary filmmakers and producers from around the
+    world.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-27'
+  last_verified_date: '2026-08-03'
   source_url: https://www.sunnysideofthedoc.com/
   tags:
   - funding
@@ -533,6 +654,64 @@
   - documentary
   - international
   - co-production
+  - marketplace
+  - networking
+  year: 2026
+- id: 682013be-698d-5e1c-b6e2-60c42207bfa5
+  name: 3. Locations and services of the Venice Production Bridge
+  category: festival_submission
+  organization: Venice Biennale Cinema
+  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  deadline_date: '2026-09-12'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "The type of accreditation and the number of accreditations issued\
+    \ for each company are at the sole discretion of La Biennale di Venezia. 3. Locations\
+    \ and services of the Venice Production Bridge On the occasion of the upcoming\
+    \ 83 rd edition of the Venice International Film Festival (2\u201312 September\
+    \ 2026), the Venice Production Bridge (3-9 September, 2026) will organize programmes\
+    \ such as the Venice"
+  eligibility_notes: Tracks Venice industry accreditation windows and access into
+    Venice Production Bridge programs, screenings, and market activity.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-03'
+  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  tags:
+  - industry_forum
+  - high
+  - festival_submission
+  - new_opportunity
+  year: 2026
+- id: 77a9fa7b-20c3-5d01-bc79-e63fd7240f23
+  name: Venice Production Bridge Events & Services
+  category: industry_forum
+  organization: Venice Biennale Cinema
+  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  deadline_date: '2026-09-12'
+  early_deadline_date: null
+  event_start_date: '2026-09-02'
+  event_end_date: '2026-09-12'
+  description: "On the occasion of the upcoming 83rd edition of the Venice International\
+    \ Film Festival (2\u201312 September 2026), the Venice Production Bridge will\
+    \ organize programmes such as the Venice Gap-Financing Market..."
+  eligibility_notes: Eligibility focuses on film industry professionals engaged in
+    various sectors during the Venice International Film Festival.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-03'
+  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  tags:
+  - industry_forum
+  - high
+  - new_opportunity
   year: 2026
 - id: 3f7508ca-b7fc-52d3-a033-58ef9c6db0e3
   name: More Information
@@ -552,7 +731,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-27'
+  last_verified_date: '2026-08-03'
   source_url: https://www.filmindependent.org/programs/applications/
   tags:
   - lab
@@ -715,6 +894,34 @@
   - must_have
   - industry_forum
   - new_opportunity
+  year: 2026
+- id: 78d8589c-d209-5797-af02-3f99a37ed2c1
+  name: Darkroom 2027 Submission
+  category: industry_forum
+  organization: IFFR Pro
+  url: https://iffr.com/en/iffr-pro/darkroom
+  deadline_date: '2026-10-01'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Darkroom offers a platform for the international industry to access
+    exclusive previews of recently or nearly completed films seeking completion or
+    gap funding, sales agents and festival selections. Submissions for the next edition
+    of Darkroom close on 1 October.
+  eligibility_notes: Eligibility is limited to projects supported by the Hubert Bals
+    Fund, previously presented at CineMart or featuring Rotterdam Lab alumni.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-03'
+  source_url: https://iffr.com/en/iffr-pro/darkroom
+  tags:
+  - festival_submission
+  - work-in-progress
+  - funding
+  - industry_forum
   year: 2026
 - id: faae654a-b36d-53b1-a879-762d68a29f08
   name: Breadcrumb
@@ -901,6 +1108,35 @@
   - festival_submission
   - new_opportunity
   year: 2026
+- id: 332dd4ea-7b27-515a-a63d-acd1054b44af
+  name: Episodic Directing Intensive 2027
+  category: lab_application
+  organization: Film Independent
+  url: https://www.filmindependent.org/programs/applications/
+  deadline_date: '2026-10-12'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Applications Open: July 27, 2026'
+  eligibility_notes: High-signal Film Independent documentary producer development
+    programme with concrete annual application timing.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-03'
+  source_url: https://www.filmindependent.org/programs/applications/
+  tags:
+  - lab
+  - lab_application
+  - new_opportunity
+  - directing
+  - Episodic
+  - Directing
+  - update_signal
+  - high
+  year: 2026
 - id: d6f298d9-f74c-5581-96d0-63045e2550f7
   name: MIP AI Entertainment Forum
   category: industry_forum
@@ -937,19 +1173,22 @@
   event_end_date: '2026-10-15'
   description: MIP BrandWorks launches at MIPCOM CANNES 2026, connecting brands and
     agencies with studios, creators and rights holders.
-  eligibility_notes: Open to brands and agencies to connect with studios and rights
-    holders.
+  eligibility_notes: Creators and producers interested in innovative content formats.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-20'
+  last_verified_date: '2026-08-03'
   source_url: https://www.mipcom.com/
   tags:
   - branding
   - content_creation
   - market
+  - microdrama
+  - vertical_content
+  - program
+  - innovation
   year: 2026
 - id: 432444f9-3ebb-502c-b31a-438a0633e2c5
   name: MIP BrandWorks Marketplace
