@@ -664,13 +664,14 @@
   event_end_date: '2027-03-18'
   description: The next edition of CPH:FORUM (including CPH:ROUGHCUT and CHANGE) takes
     place during the Industry week of CPH:DOX 2027 (March 10-21).
-  eligibility_notes: Projects in development from specific Eastern European countries.
+  eligibility_notes: Major international documentary co-financing and pitching platform
+    for creative nonfiction projects.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-03'
+  last_verified_date: '2026-08-10'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -1017,6 +1018,32 @@
   - live pitch
   - opportunity
   - documentary
+  year: 2027
+- id: 94bba8da-7126-5587-ab5d-23f4eff284c6
+  name: Festivals
+  category: festival_submission
+  organization: Hot Docs
+  url: https://hotdocs.ca/industry/conference/register
+  deadline_date: '2027-05-02'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Festivals Hot Docs Festival Curious Minds Festival Hot Docs Festival
+    will return April 23 to May 2, 2027 Industry Festival Conference & Market
+  eligibility_notes: Film and documentary submissions eligible for review.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-10'
+  source_url: https://hotdocs.ca/industry/conference/register
+  tags:
+  - market
+  - must_have
+  - festival_submission
+  - new_opportunity
+  - industry_forum
   year: 2027
 - id: 26a63a0a-6aa9-5a07-9d40-7527421f1642
   name: MeetMarket 2027 Documentary Marketplace

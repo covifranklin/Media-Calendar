@@ -1,126 +1,3 @@
-- id: d8eb6fc9-8047-5a62-9468-ae2320711815
-  name: Introduction to Podcasting
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-08-03'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Short course Introduction to Podcasting Scotland 09 Sep/26 Application
-    deadline 3 Aug 2026
-  eligibility_notes: Part of a large catalogue of opportunities across film, TV, factual,
-    and craft disciplines.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-03'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  year: 2026
-- id: 61afd3ed-8f6a-54ce-8b96-8383cc2659f5
-  name: DokuFest Industry Forum 2026
-  category: industry_forum
-  organization: DokuFest
-  url: https://dokufest.com/en
-  deadline_date: '2026-08-07'
-  early_deadline_date: null
-  event_start_date: '2026-08-07'
-  event_end_date: '2026-08-15'
-  description: Important Southeast European documentary and short film festival with
-    industry initiatives and periodic open calls.
-  eligibility_notes: Open to filmmakers, producers, and industry professionals, with
-    a focus on documentary and short films.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-27'
-  source_url: https://dokufest.com/en
-  tags:
-  - documentary
-  - short film
-  - industry forum
-  - '2026'
-  year: 2026
-- id: 62f69b4e-f926-5799-a580-c59cc33a1825
-  name: DokuLab Application
-  category: lab_application
-  organization: DokuFest
-  url: https://dokufest.com/en
-  deadline_date: '2026-08-07'
-  early_deadline_date: null
-  event_start_date: '2026-08-07'
-  event_end_date: '2026-08-15'
-  description: DokuFest has important Southeast European documentary and short film
-    festival with industry initiatives and periodic open calls.
-  eligibility_notes: null
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-20'
-  source_url: https://dokufest.com/en
-  tags:
-  - filmmaking
-  - documentary
-  - short film
-  year: 2026
-- id: d026670b-d0ed-5a52-a006-9108c15c06c1
-  name: Staff Applications for DokuFest 25th Edition
-  category: other
-  organization: DokuFest
-  url: https://dokufest.com/en
-  deadline_date: '2026-08-07'
-  early_deadline_date: null
-  event_start_date: '2026-08-07'
-  event_end_date: '2026-08-15'
-  description: Staff applications are now open! Join the Team Behind the 25th Edition
-    of DokuFest
-  eligibility_notes: Opportunity available for those interested in working at a film
-    festival.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-01'
-  source_url: https://dokufest.com/en
-  tags:
-  - employment
-  - film_festival
-  - new_opportunity
-  year: 2026
-- id: 1fba80a9-b8e1-58b7-bf54-c2282eabc8ec
-  name: Volunteer Applications for DokuFest 25th Edition
-  category: other
-  organization: DokuFest
-  url: https://dokufest.com/en
-  deadline_date: '2026-08-07'
-  early_deadline_date: null
-  event_start_date: '2026-08-07'
-  event_end_date: '2026-08-15'
-  description: Volunteer applications are now open! Join the 25th Edition of DokuFest
-  eligibility_notes: Volunteers needed for festival events.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-01'
-  source_url: https://dokufest.com/en
-  tags:
-  - volunteering
-  - film_festival
-  - new_opportunity
-  year: 2026
 - id: 828e6683-7574-5c54-874c-2bace0919b27
   name: Continue Reading
   category: festival_submission
@@ -351,7 +228,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-03'
+  last_verified_date: '2026-08-10'
   source_url: https://www.sundance.org/programs/episodic-storytelling/
   tags:
   - lab
@@ -657,62 +534,6 @@
   - marketplace
   - networking
   year: 2026
-- id: 682013be-698d-5e1c-b6e2-60c42207bfa5
-  name: 3. Locations and services of the Venice Production Bridge
-  category: festival_submission
-  organization: Venice Biennale Cinema
-  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  deadline_date: '2026-09-12'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "The type of accreditation and the number of accreditations issued\
-    \ for each company are at the sole discretion of La Biennale di Venezia. 3. Locations\
-    \ and services of the Venice Production Bridge On the occasion of the upcoming\
-    \ 83 rd edition of the Venice International Film Festival (2\u201312 September\
-    \ 2026), the Venice Production Bridge (3-9 September, 2026) will organize programmes\
-    \ such as the Venice"
-  eligibility_notes: Tracks Venice industry accreditation windows and access into
-    Venice Production Bridge programs, screenings, and market activity.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-03'
-  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  tags:
-  - industry_forum
-  - high
-  - festival_submission
-  - new_opportunity
-  year: 2026
-- id: 77a9fa7b-20c3-5d01-bc79-e63fd7240f23
-  name: Venice Production Bridge Events & Services
-  category: industry_forum
-  organization: Venice Biennale Cinema
-  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  deadline_date: '2026-09-12'
-  early_deadline_date: null
-  event_start_date: '2026-09-02'
-  event_end_date: '2026-09-12'
-  description: "On the occasion of the upcoming 83rd edition of the Venice International\
-    \ Film Festival (2\u201312 September 2026), the Venice Production Bridge will\
-    \ organize programmes such as the Venice Gap-Financing Market..."
-  eligibility_notes: Eligibility focuses on film industry professionals engaged in
-    various sectors during the Venice International Film Festival.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-03'
-  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  tags:
-  - industry_forum
-  - high
-  - new_opportunity
-  year: 2026
 - id: 3f7508ca-b7fc-52d3-a033-58ef9c6db0e3
   name: More Information
   category: lab_application
@@ -731,7 +552,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-03'
+  last_verified_date: '2026-08-10'
   source_url: https://www.filmindependent.org/programs/applications/
   tags:
   - lab
@@ -949,6 +770,32 @@
   - funding_round
   - new_opportunity
   year: 2026
+- id: 6eaa032d-f65e-5ffa-b1d8-a44206a48118
+  name: Feature Film Development Fund Deadline - 2 October 2026
+  category: funding_round
+  organization: Ffilm Cymru Wales
+  url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
+  deadline_date: '2026-10-02'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Next Deadline: 2 October 2026 Ffilm Cymru Wales develops live-action,
+    documentary, and animated feature films for cinema audiences led by Wales born
+    or based writers, directors, and producers.'
+  eligibility_notes: Wales-based or Wales-born writers, directors, and producers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-10'
+  source_url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
+  tags:
+  - fund
+  - high
+  - funding_round
+  - new_opportunity
+  year: 2026
 - id: 94ce0775-ed6e-5911-9003-c30ebf5578d2
   name: New Talent Strand at PFM 2026
   category: industry_forum
@@ -1107,35 +954,6 @@
   - high
   - festival_submission
   - new_opportunity
-  year: 2026
-- id: 332dd4ea-7b27-515a-a63d-acd1054b44af
-  name: Episodic Directing Intensive 2027
-  category: lab_application
-  organization: Film Independent
-  url: https://www.filmindependent.org/programs/applications/
-  deadline_date: '2026-10-12'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'Applications Open: July 27, 2026'
-  eligibility_notes: High-signal Film Independent documentary producer development
-    programme with concrete annual application timing.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-03'
-  source_url: https://www.filmindependent.org/programs/applications/
-  tags:
-  - lab
-  - lab_application
-  - new_opportunity
-  - directing
-  - Episodic
-  - Directing
-  - update_signal
-  - high
   year: 2026
 - id: d6f298d9-f74c-5581-96d0-63045e2550f7
   name: MIP AI Entertainment Forum
@@ -1335,4 +1153,59 @@
   - networking
   - forum
   - industry_event
+  year: 2026
+- id: df6437db-2b09-509a-ba80-67acd04b4a38
+  name: DOC NYC 2026 Industry Accreditation
+  category: industry_forum
+  organization: DOC NYC
+  url: https://www.docnyc.net/join-us/industry/
+  deadline_date: '2026-11-29'
+  early_deadline_date: null
+  event_start_date: '2026-11-11'
+  event_end_date: '2026-11-19'
+  description: Members of the documentary community are invited to apply for accreditation
+    to the 17th edition of DOC NYC, running in-person November 11-19, and online until
+    November 29, 2026.
+  eligibility_notes: Open to the documentary community seeking accreditation for industry
+    access.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-10'
+  source_url: https://www.docnyc.net/join-us/industry/
+  tags:
+  - industry_forum
+  - must_have
+  - new_opportunity
+  year: 2026
+- id: 77b80781-b5b0-5783-a621-25d11d77a9e4
+  name: INDUSTRY ACCREDITATION
+  category: lab_application
+  organization: DOC NYC
+  url: https://www.docnyc.net/join-us/industry/
+  deadline_date: '2026-11-29'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'INDUSTRY ACCREDITATION Welcome to DOC NYC 2026! Members of the documentary
+    community are invited to apply for accreditation to the 17th edition of DOC NYC,
+    running in-person November 11-19, and online until November 29, 2026. Industry
+    Pass holders enjoy : *Complimentary rush access to the DOC NYC PRO conference
+    (excluding the Solutions Lab which is a standalone ticket)'
+  eligibility_notes: Major documentary festival and conference with explicit industry
+    accreditation and DOC NYC PRO access.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-10'
+  source_url: https://www.docnyc.net/join-us/industry/
+  tags:
+  - industry_forum
+  - must_have
+  - lab_application
+  - new_opportunity
   year: 2026
