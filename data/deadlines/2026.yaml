@@ -1,58 +1,3 @@
-- id: 828e6683-7574-5c54-874c-2bace0919b27
-  name: Continue Reading
-  category: festival_submission
-  organization: DokuFest
-  url: https://dokufest.com/en
-  deadline_date: '2026-08-15'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "~ The performer out there takes the risk. If the lights should go\
-    \ out, if the roof, the electricity, the sound fail, I can still perform and hold\
-    \ the audience in the dark, without any trimmings. It\u2019s a fascinating, lonely\
-    \ place. Continue Reading SHORT FILM FORUM SELECTED PROJECTS ~ DokuFest is getting\
-    \ ready for a very special year: the 25th edition of the festival, taking place\
-    \ from 7\u201315 August 20"
-  eligibility_notes: Important Southeast European documentary and short film festival
-    with industry initiatives and periodic open calls.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-06'
-  source_url: https://dokufest.com/en
-  tags:
-  - industry_forum
-  - medium
-  - festival_submission
-  - new_opportunity
-  year: 2026
-- id: cfd52313-30a2-5f6e-8f7d-bbd351f95f9e
-  name: Submit Your Short Film to DokuFest 2026
-  category: festival_submission
-  organization: DokuFest
-  url: https://dokufest.com/en
-  deadline_date: '2026-08-15'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "DokuFest is getting ready for a very special year: the 25th edition\
-    \ of the festival, taking place from 7\u201315 August 2026 in Prizren."
-  eligibility_notes: Open to filmmakers with short documentaries and narrative shorts.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-06'
-  source_url: https://dokufest.com/en
-  tags:
-  - festival
-  - submission
-  - short film
-  - '2026'
-  year: 2026
 - id: 76c2c695-84f4-546d-adc5-ff005c2aa110
   name: Register for SXSW 2027
   category: other
@@ -228,7 +173,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-10'
+  last_verified_date: '2026-08-17'
   source_url: https://www.sundance.org/programs/episodic-storytelling/
   tags:
   - lab
@@ -279,32 +224,6 @@
     31 Aug 2026
   eligibility_notes: Part of a large catalogue of opportunities across film, TV, factual,
     and craft disciplines.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-03'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - lab_application
-  - new_opportunity
-  year: 2026
-- id: b5314e86-828e-5f14-8e07-8570b3d7aae1
-  name: Short course
-  category: lab_application
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-08-31'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Short course Director Prep Lab Director Prep Lab Cymru Wales 09 Sep/26
-    Application deadline 31 Aug 2026
-  eligibility_notes: Large catalogue of professional skill-building opportunities
-    across film, TV, factual, and craft disciplines.
   notification_windows:
   - 30
   - 14
@@ -534,6 +453,36 @@
   - marketplace
   - networking
   year: 2026
+- id: 682013be-698d-5e1c-b6e2-60c42207bfa5
+  name: 3. Locations and services of the Venice Production Bridge
+  category: festival_submission
+  organization: Venice Biennale Cinema
+  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  deadline_date: '2026-09-12'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "The type of accreditation and the number of accreditations issued\
+    \ for each company are at the sole discretion of La Biennale di Venezia. 3. Locations\
+    \ and services of the Venice Production Bridge On the occasion of the upcoming\
+    \ 83 rd edition of the Venice International Film Festival (2\u201312 September\
+    \ 2026), the Venice Production Bridge (3-9 September, 2026) will organize programmes\
+    \ such as the Venice"
+  eligibility_notes: Tracks Venice industry accreditation windows and access into
+    Venice Production Bridge programs, screenings, and market activity.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-17'
+  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
+  tags:
+  - industry_forum
+  - high
+  - festival_submission
+  - new_opportunity
+  year: 2026
 - id: 3f7508ca-b7fc-52d3-a033-58ef9c6db0e3
   name: More Information
   category: lab_application
@@ -552,7 +501,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-10'
+  last_verified_date: '2026-08-17'
   source_url: https://www.filmindependent.org/programs/applications/
   tags:
   - lab
