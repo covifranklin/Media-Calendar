@@ -1,171 +1,14 @@
-- id: 76c2c695-84f4-546d-adc5-ff005c2aa110
-  name: Register for SXSW 2027
+- id: a2a0924b-dbe3-5b94-a9b5-e4f8c51ebcbc
+  name: Free Insider Session for Episodic Lab
   category: other
-  organization: SXSW Film & TV Festival
-  url: https://www.sxsw.com/conference/film-and-tv-industry/
-  deadline_date: '2026-08-18'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Sign up now for 10% off your 2027 SXSW Badge before registration opens
-    on August 18.
-  eligibility_notes: null
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-13'
-  source_url: https://www.sxsw.com/conference/film-and-tv-industry/
-  tags:
-  - registration
-  - conference
-  year: 2026
-- id: b6c8496e-ae10-5724-93fb-58f71a024779
-  name: Catalyst Pre-Application
-  category: lab_application
-  organization: Sundance Institute
-  url: https://www.sundance.org/initiatives/catalyst/
-  deadline_date: '2026-08-19'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'Catalyst Forum requires a two-step application process. Step 1: Submit
-    a Pre-Application, open to all filmmakers.'
-  eligibility_notes: Sundance's financing initiative for independent filmmakers.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-08'
-  source_url: https://www.sundance.org/initiatives/catalyst/
-  tags:
-  - market
-  - must_have
-  - lab_application
-  - new_opportunity
-  year: 2026
-- id: aafaf9a7-b1dd-591e-8c76-316ea7f740fc
-  name: Step 1
-  category: lab_application
-  organization: Sundance Institute
-  url: https://www.sundance.org/initiatives/catalyst/
-  deadline_date: '2026-08-19'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'Catalyst Forum requires a two-step application process. Step 1: Submit
-    a Pre-Application, open to all filmmakers. This form is used to determine project
-    eligibility and ensure applicants have a path to the final program. Step 2: Submit
-    an Official Catalyst Forum Application, solicited by invitation only. The program
-    invites a select group of Pre-Applicants to move to the next stage and submit
-    an O'
-  eligibility_notes: Sundance's financing initiative for independent filmmakers, including
-    pre-application and forum timelines for projects seeking investment.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-08'
-  source_url: https://www.sundance.org/initiatives/catalyst/
-  tags:
-  - market
-  - must_have
-  - lab_application
-  - new_opportunity
-  year: 2026
-- id: c48ea72c-4851-5616-9bdb-cf303b9fbc59
-  name: Step 2
-  category: lab_application
-  organization: Sundance Institute
-  url: https://www.sundance.org/initiatives/catalyst/
-  deadline_date: '2026-08-19'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'Submit a Pre-Application, open to all filmmakers. This form is used
-    to determine project eligibility and ensure applicants have a path to the final
-    program. Step 2: Submit an Official Catalyst Forum Application, solicited by invitation
-    only. The program invites a select group of Pre-Applicants to move to the next
-    stage and submit an Official Catalyst Forum Application. Please note the following
-    ap'
-  eligibility_notes: Sundance's financing initiative for independent filmmakers, including
-    pre-application and forum timelines for projects seeking investment.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-08'
-  source_url: https://www.sundance.org/initiatives/catalyst/
-  tags:
-  - market
-  - must_have
-  - lab_application
-  - new_opportunity
-  year: 2026
-- id: 071bc9ea-2d7b-500b-a465-e55e6a02650a
-  name: The Film Producers' Toolkit
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-08-19'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: The Film Producers' Toolkit The Film Producers' Toolkit Scotland 14
-    Sep/26 Application deadline 19 Aug 2026 Two Days
-  eligibility_notes: Large catalogue of professional skill-building opportunities
-    across film, TV, factual, and craft disciplines.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-03'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  year: 2026
-- id: 7d142f2f-8d32-59b6-b82a-b94552d64c16
-  name: Writing the TV Pilot
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-08-19'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Short course Writing the TV Pilot Scotland 14 Sep/26 Application deadline
-    19 Aug 2026
-  eligibility_notes: Part of a large catalogue of opportunities across film, TV, factual,
-    and craft disciplines.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-03'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  year: 2026
-- id: 8b5f1cc2-96c2-5d11-9679-3fb8efc721c0
-  name: 2027 Episodic Lab Submission Window
-  category: lab_application
   organization: Sundance Institute
   url: https://www.sundance.org/programs/episodic-storytelling/
   deadline_date: '2026-08-25'
   early_deadline_date: null
   event_start_date: null
   event_end_date: null
-  description: 2027 Episodic Lab Submission Window FilmFreeway July 13, 2027
+  description: Free Insider Session collab.sundance.org Free On Demand until August
+    25th.
   eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
     series creators and writers.
   notification_windows:
@@ -173,12 +16,12 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-17'
+  last_verified_date: '2026-08-24'
   source_url: https://www.sundance.org/programs/episodic-storytelling/
   tags:
   - lab
   - high
-  - lab_application
+  - festival_submission
   - new_opportunity
   year: 2026
 - id: 0c395a9b-933f-56c3-be9f-c8921eba4990
@@ -222,14 +65,14 @@
   event_end_date: null
   description: Short course Director Prep Lab Cymru Wales 09 Sep/26 Application deadline
     31 Aug 2026
-  eligibility_notes: Part of a large catalogue of opportunities across film, TV, factual,
-    and craft disciplines.
+  eligibility_notes: Large catalogue of professional skill-building opportunities
+    across film, TV, factual, and craft disciplines.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-03'
+  last_verified_date: '2026-08-24'
   source_url: https://nfts.co.uk/courses/short-courses
   tags:
   - fellowship
@@ -434,14 +277,13 @@
   event_end_date: '2026-06-24'
   description: Access the most wanted guide within documentary industry...help you
     pitch smarter, find the right partners and grow your documentary business.
-  eligibility_notes: Open to documentary filmmakers and producers from around the
-    world.
+  eligibility_notes: Open to documentary filmmakers, producers, and creatives.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-03'
+  last_verified_date: '2026-08-24'
   source_url: https://www.sunnysideofthedoc.com/
   tags:
   - funding
@@ -452,22 +294,20 @@
   - co-production
   - marketplace
   - networking
+  - project pitch
   year: 2026
-- id: 682013be-698d-5e1c-b6e2-60c42207bfa5
-  name: 3. Locations and services of the Venice Production Bridge
-  category: festival_submission
+- id: a2c92f73-8bd0-5c91-8d7e-dc39b311b204
+  name: Venice Production Bridge Programs and Services
+  category: industry_forum
   organization: Venice Biennale Cinema
   url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
   deadline_date: '2026-09-12'
   early_deadline_date: null
   event_start_date: null
   event_end_date: null
-  description: "The type of accreditation and the number of accreditations issued\
-    \ for each company are at the sole discretion of La Biennale di Venezia. 3. Locations\
-    \ and services of the Venice Production Bridge On the occasion of the upcoming\
-    \ 83 rd edition of the Venice International Film Festival (2\u201312 September\
-    \ 2026), the Venice Production Bridge (3-9 September, 2026) will organize programmes\
-    \ such as the Venice"
+  description: "On the occasion of the upcoming 83rd edition of the Venice International\
+    \ Film Festival (2\u201312 September 2026), the Venice Production Bridge will\
+    \ organize programmes such as the Venice Gap-Financing Market..."
   eligibility_notes: Tracks Venice industry accreditation windows and access into
     Venice Production Bridge programs, screenings, and market activity.
   notification_windows:
@@ -475,16 +315,15 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-17'
+  last_verified_date: '2026-08-24'
   source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
   tags:
   - industry_forum
   - high
-  - festival_submission
   - new_opportunity
   year: 2026
-- id: 3f7508ca-b7fc-52d3-a033-58ef9c6db0e3
-  name: More Information
+- id: 2164dc6b-96be-5fa4-99f9-158216b31d64
+  name: Screenwriting Lab 2027 - Member Extended Deadline
   category: lab_application
   organization: Film Independent
   url: https://www.filmindependent.org/programs/applications/
@@ -492,8 +331,7 @@
   early_deadline_date: null
   event_start_date: null
   event_end_date: null
-  description: "More Information \u2022 Applications currently closed Fiction Producing\
-    \ Lab 2026 Applications open: March 9, 2026 Non-Member Deadline: May 4, 2026"
+  description: 'Film Independent Member Extended Deadline: September 14, 2026'
   eligibility_notes: High-signal Film Independent documentary producer development
     programme with concrete annual application timing.
   notification_windows:
@@ -501,13 +339,12 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-17'
+  last_verified_date: '2026-08-24'
   source_url: https://www.filmindependent.org/programs/applications/
   tags:
   - lab
   - high
   - lab_application
-  - new_opportunity
   - update_signal
   year: 2026
 - id: 1e591a20-a293-53bc-96bd-1c2cf46079dd
@@ -584,30 +421,6 @@
   - lab
   - must_have
   - lab_application
-  - new_opportunity
-  year: 2026
-- id: 7a92ec81-5e9e-5384-8549-55f03613d868
-  name: Catalyst Forum Application Deadline
-  category: industry_forum
-  organization: Sundance Institute
-  url: https://www.sundance.org/initiatives/catalyst/
-  deadline_date: '2026-09-23'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "Official Application Deadline\u2014 September 23, 2026"
-  eligibility_notes: Sundance's financing initiative for independent filmmakers.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-06-08'
-  source_url: https://www.sundance.org/initiatives/catalyst/
-  tags:
-  - market
-  - must_have
-  - industry_forum
   - new_opportunity
   year: 2026
 - id: d99c9565-db16-5f00-9541-4f520cd29f4f
@@ -692,6 +505,31 @@
   - work-in-progress
   - funding
   - industry_forum
+  year: 2026
+- id: a2bde44f-c10c-564d-8856-a535ec839172
+  name: Darkroom 2027 Submission
+  category: funding_round
+  organization: IFFR Pro
+  url: https://iffr.com/en/iffr-pro/darkroom
+  deadline_date: '2026-10-01'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Submissions for the next edition of Darkroom close on 1 October.
+  eligibility_notes: Eligible for projects supported by the Hubert Bals Fund or completed
+    at CineMart.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-24'
+  source_url: https://iffr.com/en/iffr-pro/darkroom
+  tags:
+  - market
+  - high
+  - funding_round
+  - new_opportunity
   year: 2026
 - id: faae654a-b36d-53b1-a879-762d68a29f08
   name: Breadcrumb

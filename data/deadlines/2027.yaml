@@ -384,6 +384,63 @@
   - producer_training
   - networking
   year: 2027
+- id: 97dd0afb-199d-5fe9-ae40-e8c029bf707b
+  name: Programme
+  category: funding_round
+  organization: Berlinale / European Film Market
+  url: https://www.efm-berlinale.de/en/copro-market/coproduction-market.html
+  deadline_date: '2027-02-13'
+  early_deadline_date: null
+  event_start_date: '2027-02-13'
+  event_end_date: '2027-02-16'
+  description: Programme Archive Partners Berlinale Co-Production Market Project Submission
+    for 2027 opens At the 24th edition of the Berlinale Co-Production Market (February
+    13 to 16, 2027) a selection of 30-35 promising feature-film projects and 10 drama
+    series projects from around the world will meet with a wide range of potential
+    international co-production and funding partners. Applications are open from Au
+  eligibility_notes: Top-tier co-production market for feature film and drama series
+    projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-24'
+  source_url: https://www.efm-berlinale.de/en/copro-market/coproduction-market.html
+  tags:
+  - market
+  - must_have
+  - funding_round
+  - new_opportunity
+  year: 2027
+- id: 502c01e2-058b-5545-a385-5580853be855
+  name: Project Submission Open for Berlinale 2027
+  category: funding_round
+  organization: Berlinale / European Film Market
+  url: https://www.efm-berlinale.de/en/copro-market/coproduction-market.html
+  deadline_date: '2027-02-13'
+  early_deadline_date: null
+  event_start_date: '2027-02-13'
+  event_end_date: '2027-02-16'
+  description: Project Submission for 2027 opens... At the 24th edition of the Berlinale
+    Co-Production Market (February 13 to 16, 2027) a selection of 30-35 promising
+    feature-film projects and 10 drama series projects from around the world will
+    meet with a wide range of potential international co-production and funding partners.
+  eligibility_notes: Top-tier co-production market for feature film and drama series
+    projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-08-24'
+  source_url: https://www.efm-berlinale.de/en/copro-market/coproduction-market.html
+  tags:
+  - market
+  - must_have
+  - funding_round
+  - new_opportunity
+  year: 2027
 - id: d70c2b68-5c07-5163-8400-ae32e059152e
   name: Berlinale Co-Production Market - European Film Market
   category: industry_forum
@@ -671,7 +728,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-17'
+  last_verified_date: '2026-08-24'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -1057,14 +1114,14 @@
   description: "The MeetMarket is one of the world\u2019s largest documentary markets...\
     \ open to all documentary makers, local and international, and we welcome applications\
     \ from established, emerging as well as first-time filmmakers."
-  eligibility_notes: Open to documentary makers from all backgrounds, welcoming projects
-    in various development stages, especially those rooted in podcast storytelling.
+  eligibility_notes: Open to all documentary makers, including established, emerging,
+    and first-time filmmakers. Specific encouragement for podcast-derived projects.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-20'
+  last_verified_date: '2026-08-24'
   source_url: https://www.sheffdocfest.com/meetmarket
   tags:
   - documentary
@@ -1072,6 +1129,7 @@
   - pitch
   - funding
   - broadcast
+  - pitching
   year: 2027
 - id: fe1530cb-bb69-51ec-a2e3-20fe98c1e285
   name: 2027 Episodic Lab
