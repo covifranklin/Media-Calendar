@@ -33,13 +33,14 @@
   event_start_date: '2027-01-25'
   event_end_date: '2027-01-28'
   description: 'WELCOME TO THE INDUSTRY DAYS 2027 EDITION : 25 to 28 JANUARY'
-  eligibility_notes: Open to documentary project submissions from professionals.
+  eligibility_notes: Open to documentary professionals including directors, producers,
+    and broadcasters.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-20'
+  last_verified_date: '2026-08-31'
   source_url: https://www.fipadoc.com/en/fipadoc-pro
   tags:
   - documentary
@@ -228,19 +229,19 @@
   event_end_date: null
   description: CineMart, a co-production market where filmmakers launch their ideas
     to the international film industry.
-  eligibility_notes: Open to filmmakers and industry professionals; focuses on international
-    project co-production.
+  eligibility_notes: Open to promising emerging talent from around the world.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-04-27'
+  last_verified_date: '2026-08-31'
   source_url: https://iffr.com/en/iffr-pro
   tags:
   - market
   - industry_forum
   - new_opportunity
+  - talent_development
   year: 2027
 - id: 3ee27f14-c9b1-5a27-829c-4ba8f386dc6f
   name: Darkroom - Work-in-Progress Programme
@@ -728,7 +729,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-24'
+  last_verified_date: '2026-08-31'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -1115,13 +1116,13 @@
     \ open to all documentary makers, local and international, and we welcome applications\
     \ from established, emerging as well as first-time filmmakers."
   eligibility_notes: Open to all documentary makers, including established, emerging,
-    and first-time filmmakers. Specific encouragement for podcast-derived projects.
+    and first-time filmmakers. Especially encourages podcast-origin documentaries.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-24'
+  last_verified_date: '2026-08-31'
   source_url: https://www.sheffdocfest.com/meetmarket
   tags:
   - documentary
@@ -1130,6 +1131,8 @@
   - funding
   - broadcast
   - pitching
+  - industry
+  - networking
   year: 2027
 - id: fe1530cb-bb69-51ec-a2e3-20fe98c1e285
   name: 2027 Episodic Lab
