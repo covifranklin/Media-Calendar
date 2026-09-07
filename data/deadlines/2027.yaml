@@ -1,28 +1,3 @@
-- id: bacad161-ed73-5031-9e3a-02ee5f21393e
-  name: Upcoming Opportunities in Documentary Lab
-  category: lab_application
-  organization: Film Independent
-  url: https://www.filmindependent.org/programs/applications/
-  deadline_date: '2027-01-04'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'Member Extended Deadline: January 4, 2027'
-  eligibility_notes: High-signal Film Independent documentary producer development
-    programme with concrete annual application timing.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-20'
-  source_url: https://www.filmindependent.org/programs/applications/
-  tags:
-  - lab
-  - high
-  - lab_application
-  - update_signal
-  year: 2027
 - id: c8ddf34f-f2ca-5c02-a722-cffcbfa51a02
   name: FIPADOC Industry Days 2027
   category: industry_forum
@@ -729,7 +704,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-31'
+  last_verified_date: '2026-09-07'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -896,6 +871,30 @@
   - documentary
   - networking
   year: 2027
+- id: 5429f58e-e82a-5eb9-ac58-7dd5b4aa1db3
+  name: Catalyst Forum Event Date
+  category: industry_forum
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/catalyst/
+  deadline_date: '2027-04-03'
+  early_deadline_date: null
+  event_start_date: '2027-04-03'
+  event_end_date: '2027-04-03'
+  description: "Catalyst Forum March 31 \u2013 April 3, 2027"
+  eligibility_notes: Spotlight on projects seeking independent film financing.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-07'
+  source_url: https://www.sundance.org/initiatives/catalyst/
+  tags:
+  - market
+  - must_have
+  - industry_forum
+  - new_opportunity
+  year: 2027
 - id: 78eb8d98-ff96-5e05-9579-a8fc96d859b3
   name: Filmmaker Prep Program
   category: lab_application
@@ -947,6 +946,31 @@
   - lab_application
   - new_opportunity
   year: 2027
+- id: ef032946-4652-5638-9580-112c06790e06
+  name: Guidelines for Catalyst Forum Application
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/catalyst/
+  deadline_date: '2027-04-03'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: What to prepare for a Catalyst Forum Application
+  eligibility_notes: Preparation for filmmakers involves specific criteria to improve
+    application chances.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-07'
+  source_url: https://www.sundance.org/initiatives/catalyst/
+  tags:
+  - market
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2027
 - id: 7aadbe70-8009-5e71-b4c6-413d667c3921
   name: "Projects Selected\u2014 December 2026"
   category: lab_application
@@ -970,6 +994,35 @@
   - 3
   status: confirmed
   last_verified_date: '2026-06-08'
+  source_url: https://www.sundance.org/initiatives/catalyst/
+  tags:
+  - market
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2027
+- id: 96e4c7df-70f5-5ba1-beb1-584562b724e4
+  name: What to prepare for a Catalyst Forum Application
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/catalyst/
+  deadline_date: '2027-04-03'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "March 31 \u2013 April 3, 2027 *Invitations to submit an Official Application\
+    \ are issued on a rolling basis during the Pre-Application Period. We strongly\
+    \ encourage film teams to submit their Pre-Applications by the Regular Deadline.\
+    \ What to prepare for a Catalyst Forum Application FAQs Support for the Catalyst\
+    \ Program TBD"
+  eligibility_notes: Sundance's financing initiative for independent filmmakers, including
+    pre-application and forum timelines for projects seeking investment.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-07'
   source_url: https://www.sundance.org/initiatives/catalyst/
   tags:
   - market
@@ -1158,5 +1211,33 @@
   - lab
   - high
   - festival_submission
+  - new_opportunity
+  year: 2027
+- id: 8145c8bf-9244-5070-809d-3d9ed2b75a40
+  name: "April 15 \u2013 20, 2027"
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/programs/episodic-storytelling/
+  deadline_date: '2027-07-27'
+  early_deadline_date: null
+  event_start_date: '2027-07-27'
+  event_end_date: '2027-07-28'
+  description: "When is the 2027 Episodic Lab taking place? April 15 \u2013 20, 2027\
+    \ . The Episodic Fellows begin with a few weeks of pre-lab development that includes\
+    \ virtual workshops preparing the writers and their materials leading up to the\
+    \ in-person Lab. When is the Virtual Intensive taking place? July 27- 28, 2027"
+  eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
+    series creators and writers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-07'
+  source_url: https://www.sundance.org/programs/episodic-storytelling/
+  tags:
+  - lab
+  - high
+  - lab_application
   - new_opportunity
   year: 2027
