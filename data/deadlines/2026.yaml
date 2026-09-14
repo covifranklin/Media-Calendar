@@ -1,165 +1,3 @@
-- id: bdf1d096-f8e2-52a8-8343-5e59b8cca4f3
-  name: Camera Trainee Workshop
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-09-07'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Camera Trainee Workshop Scotland 15 Sep/26 Application deadline 7 Sep
-    2026
-  eligibility_notes: Part of a large catalogue of opportunities across film, TV, factual,
-    and craft disciplines.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-03'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  year: 2026
-- id: 8f197b6c-d80b-5cb0-8a1c-0e44af179ea8
-  name: Full-time
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-09-07'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 2 days Full-time In person North 15 Sep/26 Application deadline 7 Sep
-    2026
-  eligibility_notes: Large catalogue of professional skill-building opportunities
-    across film, TV, factual, and craft disciplines.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-03'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  year: 2026
-- id: 19b2a088-b432-52bb-becd-75408f0f4f5b
-  name: 'Screen Craft Pathways: Assisting Camera'
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-09-07'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 2 days Full-time In person North 15 Sep/26 Application deadline 7 Sep
-    2026
-  eligibility_notes: Large catalogue of professional skill-building opportunities
-    across film, TV, factual, and craft disciplines.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-31'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  year: 2026
-- id: 1a2c69fd-18e7-57c0-ac3c-4ffd7a28f615
-  name: SSD26 Guide to Decision Makers
-  category: funding_round
-  organization: Sunny Side of the Doc
-  url: https://www.sunnysideofthedoc.com/
-  deadline_date: '2026-09-09'
-  early_deadline_date: null
-  event_start_date: '2026-06-22'
-  event_end_date: '2026-06-24'
-  description: Access the most wanted guide within documentary industry...help you
-    pitch smarter, find the right partners and grow your documentary business.
-  eligibility_notes: Open to filmmakers and producers in the documentary field.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-09-07'
-  source_url: https://www.sunnysideofthedoc.com/
-  tags:
-  - funding
-  - pitching
-  - decision makers
-  - documentary
-  - international
-  - co-production
-  - marketplace
-  - networking
-  - project pitch
-  - pitch
-  year: 2026
-- id: 682013be-698d-5e1c-b6e2-60c42207bfa5
-  name: 3. Locations and services of the Venice Production Bridge
-  category: festival_submission
-  organization: Venice Biennale Cinema
-  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  deadline_date: '2026-09-12'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "The type of accreditation and the number of accreditations issued\
-    \ for each company are at the sole discretion of La Biennale di Venezia. 3. Locations\
-    \ and services of the Venice Production Bridge On the occasion of the upcoming\
-    \ 83 rd edition of the Venice International Film Festival (2\u201312 September\
-    \ 2026), the Venice Production Bridge (3-9 September, 2026) will organize programmes\
-    \ such as the Venice"
-  eligibility_notes: Tracks Venice industry accreditation windows and access into
-    Venice Production Bridge programs, screenings, and market activity.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-31'
-  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  tags:
-  - industry_forum
-  - high
-  - festival_submission
-  - new_opportunity
-  year: 2026
-- id: 4b5d9562-a208-579a-bdd8-a396eafd996f
-  name: Venice Production Bridge Programs
-  category: industry_forum
-  organization: Venice Biennale Cinema
-  url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  deadline_date: '2026-09-12'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "On the occasion of the upcoming 83rd edition of the Venice International\
-    \ Film Festival (2\u201312 September 2026), the Venice Production Bridge (3-9\
-    \ September, 2026) will organize programmes such as the Venice Gap-Financing Market."
-  eligibility_notes: Film industry professionals and those engaged in technical activities
-    within the audio-visual sector.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-09-07'
-  source_url: https://www.labiennale.org/en/cinema/2026/industry-accreditation
-  tags:
-  - industry_forum
-  - high
-  - new_opportunity
-  year: 2026
 - id: 3f7508ca-b7fc-52d3-a033-58ef9c6db0e3
   name: More Information
   category: lab_application
@@ -178,7 +16,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-09-07'
+  last_verified_date: '2026-09-14'
   source_url: https://www.filmindependent.org/programs/applications/
   tags:
   - lab
@@ -186,6 +24,7 @@
   - lab_application
   - new_opportunity
   - update_signal
+  - project_involve
   year: 2026
 - id: bacad161-ed73-5031-9e3a-02ee5f21393e
   name: Upcoming Opportunities in Documentary Lab
@@ -264,62 +103,6 @@
   tags:
   - lab
   - sustainability
-  - new_opportunity
-  year: 2026
-- id: e53d51e0-1176-5d2c-8ab9-2a10e3d87cb0
-  name: Projects
-  category: lab_application
-  organization: TorinoFilmLab
-  url: https://www.torinofilmlab.it/
-  deadline_date: '2026-09-18'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'Projects Find your TFL activity Hot now Call for applications open
-    Green Film Lab - Rome 2026 Deadline to apply: 18 September 2026'
-  eligibility_notes: Important international lab ecosystem covering feature film,
-    series, and co-production support.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-27'
-  source_url: https://www.torinofilmlab.it/
-  tags:
-  - lab
-  - must_have
-  - lab_application
-  - new_opportunity
-  year: 2026
-- id: 3eb59eef-8bb9-5ccd-9634-f7e8b468152f
-  name: "Projects Selected\u2014 December 2026"
-  category: industry_forum
-  organization: Sundance Institute
-  url: https://www.sundance.org/initiatives/catalyst/
-  deadline_date: '2026-09-23'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "Pre-Application Regular Deadline: July 24 Pre-Application Late Deadline:\
-    \ August 19 Invitations to submit an Official Application are issued on a rolling\
-    \ basis during the Pre-Application Period. We strongly encourage film teams to\
-    \ submit their Pre-Applications by the Regular Deadline. Official Application\
-    \ Opens\u2014 August 13, 2026 Official Application Deadline\u2014 September 23,\
-    \ 2026 Projects Selected\u2014 De"
-  eligibility_notes: Filmmakers must have a director and producer attached to their
-    projects.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-09-07'
-  source_url: https://www.sundance.org/initiatives/catalyst/
-  tags:
-  - market
-  - must_have
-  - industry_forum
   - new_opportunity
   year: 2026
 - id: 73a454f9-e400-584b-9f8b-206f42553407
@@ -854,6 +637,89 @@
   - festival_submission
   - new_opportunity
   year: 2026
+- id: 72da2826-097a-5cde-a544-68056ce725bc
+  name: About
+  category: festival_submission
+  organization: The Whickers
+  url: https://www.whickerawards.com/apply/the-podcast-pitch/
+  deadline_date: '2026-11-05'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "About The Podcast Pitch is a joint initiative with Sheffield DocFest\
+    \ to fund original audio documentary. Unlike our Film & TV Award, you do not have\
+    \ to be a first time creator in order to apply. The Whickers are giving a \xA3\
+    15,000 production award to the winner and \xA35,000 to a runner up. Six finalists\
+    \ will also receive a free pass to Sheffield Documentary Festival in June 2026,\
+    \ 3 nights accommodatio"
+  eligibility_notes: Official Whickers audio-documentary funding programme with a
+    clear annual pitch cycle and Sheffield DocFest tie-in.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-14'
+  source_url: https://www.whickerawards.com/apply/the-podcast-pitch/
+  tags:
+  - fellowship
+  - high
+  - festival_submission
+  - new_opportunity
+  year: 2026
+- id: 8b4b8a49-ac3c-5a8a-93f6-7919778bc46e
+  name: Podcast Pitch Applications Open
+  category: festival_submission
+  organization: The Whickers
+  url: https://www.whickerawards.com/apply/the-podcast-pitch/
+  deadline_date: '2026-11-05'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: The Podcast Pitch is a joint initiative with Sheffield DocFest to fund
+    original audio documentary. Unlike our Film & TV Award, you do not have to be
+    a first time creator in order to apply.
+  eligibility_notes: Open to independent podcast makers, not limited to first-time
+    creators.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-14'
+  source_url: https://www.whickerawards.com/apply/the-podcast-pitch/
+  tags:
+  - fellowship
+  - high
+  - festival_submission
+  - new_opportunity
+  year: 2026
+- id: e53d51e0-1176-5d2c-8ab9-2a10e3d87cb0
+  name: Projects
+  category: lab_application
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-11-05'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Projects Find your TFL activity Hot now Call for applications open
+    Green Film Lab - Rome 2026 Deadline to apply: 18 September 2026'
+  eligibility_notes: Important international lab ecosystem covering feature film,
+    series, and co-production support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-14'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2026
 - id: a336400f-1818-5536-baef-398d6f2517d4
   name: IDFA Forum 2026
   category: industry_forum
@@ -879,6 +745,61 @@
   - co-financing
   - co-production
   - networking
+  year: 2026
+- id: 61bb5598-6ee0-5fef-8be0-66837effa775
+  name: 2027 Film & TV Funding Award Application Open
+  category: funding_round
+  organization: The Whickers
+  url: https://www.whickerawards.com/apply/film-and-tv/
+  deadline_date: '2026-11-23'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Key dates for 2027 : 23rd November 2026: Applications open'
+  eligibility_notes: Open to emerging filmmakers worldwide for director-led documentary
+    projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-14'
+  source_url: https://www.whickerawards.com/apply/film-and-tv/
+  tags:
+  - fund
+  - high
+  - funding_round
+  - new_opportunity
+  year: 2026
+- id: d470e702-74da-5bc7-8249-86f601e5acbb
+  name: Key dates for 2027
+  category: funding_round
+  organization: The Whickers
+  url: https://www.whickerawards.com/apply/film-and-tv/
+  deadline_date: '2026-11-23'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "The Film & TV Funding Award is awarded annually to an emerging filmmaker\
+    \ from anywhere in the world with the most promising pitch for a director-led\
+    \ documentary which fulfils the core criteria detailed below. With a main award\
+    \ worth \xA3120,000 and a development award for the runner-up of \xA325,000, The\
+    \ Whickers Film & TV Funding Award is one of the most significant documentary\
+    \ awards in the world. Key"
+  eligibility_notes: Director-led documentary funding award with clear annual application
+    windows and DocFest-linked pitch timeline.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-14'
+  source_url: https://www.whickerawards.com/apply/film-and-tv/
+  tags:
+  - fund
+  - high
+  - funding_round
+  - new_opportunity
   year: 2026
 - id: c34f5aaf-2716-5dbe-a00c-cf985140b746
   name: TFL Meeting Event 2026

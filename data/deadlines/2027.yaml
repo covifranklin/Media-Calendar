@@ -697,14 +697,13 @@
   event_end_date: '2027-03-18'
   description: The next edition of CPH:FORUM (including CPH:ROUGHCUT and CHANGE) takes
     place during the Industry week of CPH:DOX 2027 (March 10-21).
-  eligibility_notes: Major international documentary co-financing and pitching platform
-    for creative nonfiction projects.
+  eligibility_notes: Includes tailored meetings with potential partners and financiers.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-09-07'
+  last_verified_date: '2026-09-14'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -1105,6 +1104,31 @@
   - pitching
   - funding
   year: 2027
+- id: 5c569e32-02ee-574b-83cb-8e8d9cafbaa2
+  name: CMF-Hot Docs Forum Canadian Pitch Prize
+  category: funding_round
+  organization: Hot Docs
+  url: https://hotdocs.ca/industry/conference/hot-docs-forum
+  deadline_date: '2027-04-27'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: CMF-Hot Docs Forum Canadian Pitch Prize is a $10,000 cash prize awarded
+    to the best Canadian pitch at the Hot Docs Forum.
+  eligibility_notes: Must be produced by a Canadian-controlled corporation based in
+    Canada.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-14'
+  source_url: https://hotdocs.ca/industry/conference/hot-docs-forum
+  tags:
+  - funding
+  - prize
+  - canadian
+  year: 2027
 - id: 89018870-bd3f-5fa9-ab90-fbb5b8a389f0
   name: Hot Docs Forum Wild Card Pitch
   category: industry_forum
@@ -1168,14 +1192,14 @@
   description: "The MeetMarket is one of the world\u2019s largest documentary markets...\
     \ open to all documentary makers, local and international, and we welcome applications\
     \ from established, emerging as well as first-time filmmakers."
-  eligibility_notes: Open to all documentary makers, including established, emerging,
-    and first-time filmmakers. Especially encourages podcast-origin documentaries.
+  eligibility_notes: Open to all documentary makers, including first-time filmmakers;
+    especially encourages projects rooted in podcast storytelling.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-31'
+  last_verified_date: '2026-09-14'
   source_url: https://www.sheffdocfest.com/meetmarket
   tags:
   - documentary
@@ -1186,6 +1210,7 @@
   - pitching
   - industry
   - networking
+  - meetings
   year: 2027
 - id: fe1530cb-bb69-51ec-a2e3-20fe98c1e285
   name: 2027 Episodic Lab
