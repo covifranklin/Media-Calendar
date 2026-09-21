@@ -498,6 +498,52 @@
   - badge application
   - film industry
   year: 2027
+- id: 51376844-ea7a-5255-a4a0-43bfc1d4d01f
+  name: Confluence Fellowship
+  category: fellowship
+  organization: True/False
+  url: https://truefalse.org/
+  deadline_date: '2027-03-04'
+  early_deadline_date: null
+  event_start_date: '2027-03-04'
+  event_end_date: '2027-03-07'
+  description: Confluence Fellowship
+  eligibility_notes: null
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-21'
+  source_url: https://truefalse.org/
+  tags:
+  - fellowship
+  - filmmaking
+  - documentary
+  year: 2027
+- id: 499ba342-7d82-52f5-9bc2-1424e552b408
+  name: Rough Cut Retreat
+  category: lab_application
+  organization: True/False
+  url: https://truefalse.org/
+  deadline_date: '2027-03-04'
+  early_deadline_date: null
+  event_start_date: '2027-03-04'
+  event_end_date: '2027-03-07'
+  description: Rough Cut Retreat
+  eligibility_notes: null
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-21'
+  source_url: https://truefalse.org/
+  tags:
+  - documentary
+  - filmmaking
+  - retreat
+  year: 2027
 - id: 5d6a0a95-8460-5fde-a241-e848cf35b535
   name: True/False Film Festival 2027
   category: festival_submission
@@ -697,13 +743,14 @@
   event_end_date: '2027-03-18'
   description: The next edition of CPH:FORUM (including CPH:ROUGHCUT and CHANGE) takes
     place during the Industry week of CPH:DOX 2027 (March 10-21).
-  eligibility_notes: Includes tailored meetings with potential partners and financiers.
+  eligibility_notes: Major international documentary co-financing and pitching platform
+    for creative nonfiction projects.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-09-14'
+  last_verified_date: '2026-09-21'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -1192,14 +1239,14 @@
   description: "The MeetMarket is one of the world\u2019s largest documentary markets...\
     \ open to all documentary makers, local and international, and we welcome applications\
     \ from established, emerging as well as first-time filmmakers."
-  eligibility_notes: Open to all documentary makers, including first-time filmmakers;
-    especially encourages projects rooted in podcast storytelling.
+  eligibility_notes: Open to all documentary makers, including established, emerging,
+    and first-time filmmakers. Encouragement for projects originating from podcasts.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-09-14'
+  last_verified_date: '2026-09-21'
   source_url: https://www.sheffdocfest.com/meetmarket
   tags:
   - documentary
@@ -1211,6 +1258,7 @@
   - industry
   - networking
   - meetings
+  - filmmaking
   year: 2027
 - id: fe1530cb-bb69-51ec-a2e3-20fe98c1e285
   name: 2027 Episodic Lab

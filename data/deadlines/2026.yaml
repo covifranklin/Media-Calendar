@@ -1,108 +1,81 @@
-- id: 3f7508ca-b7fc-52d3-a033-58ef9c6db0e3
-  name: More Information
-  category: lab_application
-  organization: Film Independent
-  url: https://www.filmindependent.org/programs/applications/
-  deadline_date: '2026-09-14'
+- id: e49dcb47-160f-53a2-89d5-306f3cf1eec5
+  name: Fee
+  category: funding_round
+  organization: Channel 4
+  url: https://careers.channel4.com/4skills/talent-schemes/4screenwriting
+  deadline_date: '2026-09-21'
   early_deadline_date: null
   event_start_date: null
   event_end_date: null
-  description: "More Information \u2022 Applications currently closed Fiction Producing\
-    \ Lab 2026 Applications open: March 9, 2026 Non-Member Deadline: May 4, 2026"
-  eligibility_notes: High-signal Film Independent documentary producer development
-    programme with concrete annual application timing.
+  description: 'do not have a broadcast credit as a television writer or theatrical
+    release as a feature film writer may apply (this does not include any produced
+    short films of 20 minutes or less). Fee Writers will be paid a fee for participating
+    in the course and for completing two drafts of a one hour script. All writers
+    will be required to grant Shelley Productions a first option for Channel 4 to
+    acquire all '
+  eligibility_notes: Structured drama-writing development route for writers new to
+    television drama.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-09-14'
-  source_url: https://www.filmindependent.org/programs/applications/
+  last_verified_date: '2026-09-21'
+  source_url: https://careers.channel4.com/4skills/talent-schemes/4screenwriting
   tags:
-  - lab
+  - broadcaster_program
   - high
-  - lab_application
+  - funding_round
   - new_opportunity
-  - update_signal
-  - project_involve
   year: 2026
-- id: bacad161-ed73-5031-9e3a-02ee5f21393e
-  name: Upcoming Opportunities in Documentary Lab
-  category: lab_application
-  organization: Film Independent
-  url: https://www.filmindependent.org/programs/applications/
-  deadline_date: '2026-09-14'
+- id: 2538297c-69fd-52f1-9b0d-67ca839fdfe6
+  name: Catalyst Official Application Opens
+  category: industry_forum
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/catalyst/
+  deadline_date: '2026-09-23'
   early_deadline_date: null
   event_start_date: null
   event_end_date: null
-  description: 'Member Extended Deadline: January 4, 2027'
-  eligibility_notes: Various deadlines for both types of applicants.
+  description: Official Application Opens (Invitation Only) August 13, 2026
+  eligibility_notes: Invitation-only post pre-application approval.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-09-07'
-  source_url: https://www.filmindependent.org/programs/applications/
+  last_verified_date: '2026-09-21'
+  source_url: https://www.sundance.org/initiatives/catalyst/
   tags:
-  - lab
-  - high
-  - lab_application
-  - update_signal
-  - documentary
-  - story
-  - project_involve
-  - opportunity
-  - screenwriting
-  year: 2026
-- id: 1e591a20-a293-53bc-96bd-1c2cf46079dd
-  name: About TFL
-  category: lab_application
-  organization: TorinoFilmLab
-  url: https://www.torinofilmlab.it/
-  deadline_date: '2026-09-18'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'About TFL OPEN CALL Call for applications open Green Film Lab - Rome
-    2026 SHORT TERM Deadline to apply: 18 September 2026'
-  eligibility_notes: Important international lab ecosystem covering feature film,
-    series, and co-production support.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-27'
-  source_url: https://www.torinofilmlab.it/
-  tags:
-  - lab
+  - market
   - must_have
-  - lab_application
+  - industry_forum
   - new_opportunity
   year: 2026
-- id: 3584c223-6de0-599d-ae70-26c06f7140c8
-  name: Green Film Lab - Rome 2026
-  category: lab_application
-  organization: TorinoFilmLab
-  url: https://www.torinofilmlab.it/
-  deadline_date: '2026-09-18'
+- id: 439635cc-a737-5951-8ca4-ea06c3cd2cb2
+  name: Directing TV Drama
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-09-23'
   early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'OPEN CALL: Green Film Lab - Rome 2026 Deadline to apply: 18 September
-    2026'
-  eligibility_notes: Open to international talents focusing on sustainable film production.
+  event_start_date: '2026-09-23'
+  event_end_date: '2026-09-23'
+  description: Directing TV Drama 23 Sep/26 PLACES AVAILABLE
+  eligibility_notes: Participants can enhance their directing skills, particularly
+    for TV Drama.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-27'
-  source_url: https://www.torinofilmlab.it/
+  last_verified_date: '2026-09-21'
+  source_url: https://nfts.co.uk/courses/short-courses
   tags:
-  - lab
-  - sustainability
+  - fellowship
+  - film
+  - TV
+  - directing
   - new_opportunity
   year: 2026
 - id: 73a454f9-e400-584b-9f8b-206f42553407
@@ -271,30 +244,33 @@
   - funding_round
   - new_opportunity
   year: 2026
-- id: 6eaa032d-f65e-5ffa-b1d8-a44206a48118
-  name: Feature Film Development Fund Deadline - 2 October 2026
-  category: funding_round
-  organization: Ffilm Cymru Wales
-  url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
-  deadline_date: '2026-10-02'
-  early_deadline_date: null
+- id: d80ab86e-af20-5f31-8ef7-873a0f28d02e
+  name: 4Screenwriting Course for New Writers
+  category: lab_application
+  organization: Channel 4
+  url: https://careers.channel4.com/4skills/talent-schemes/4screenwriting
+  deadline_date: '2026-10-05'
+  early_deadline_date: '2026-09-21'
   event_start_date: null
   event_end_date: null
-  description: 'Next Deadline: 2 October 2026 Ffilm Cymru Wales develops live-action,
-    documentary, and animated feature films for cinema audiences led by Wales born
-    or based writers, directors, and producers.'
-  eligibility_notes: Wales-based or Wales-born writers, directors, and producers.
+  description: Only writers who do not have a broadcast credit as a television writer
+    or theatrical release as a feature film writer may apply. Fee Writers will be
+    paid a fee for participating in the course and for completing two drafts of a
+    one hour script. Opening Date Monday 21st September 2026 at 9:00am Closing Date
+    Monday 5th October 2026 at 5:00pm
+  eligibility_notes: Only writers without a broadcast credit as a television writer
+    are eligible to apply.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-10'
-  source_url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
+  last_verified_date: '2026-09-21'
+  source_url: https://careers.channel4.com/4skills/talent-schemes/4screenwriting
   tags:
-  - fund
+  - broadcaster_program
   - high
-  - funding_round
+  - lab_application
   - new_opportunity
   year: 2026
 - id: 94ce0775-ed6e-5911-9003-c30ebf5578d2
@@ -454,6 +430,32 @@
   - fellowship
   - high
   - festival_submission
+  - new_opportunity
+  year: 2026
+- id: d6f298d9-f74c-5581-96d0-63045e2550f7
+  name: MIP AI Entertainment Forum
+  category: industry_forum
+  organization: MIPCOM CANNES
+  url: https://www.mipcom.com/
+  deadline_date: '2026-10-12'
+  early_deadline_date: null
+  event_start_date: '2026-10-12'
+  event_end_date: '2026-10-15'
+  description: The AI Entertainment Forum connects AI innovators with the world's
+    leading content companies to explore practical applications across creation, production,
+    localisation, rights and workflow.
+  eligibility_notes: Targeted towards professionals in AI and content industries.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-21'
+  source_url: https://www.mipcom.com/
+  tags:
+  - AI
+  - innovation
+  - forum
   - new_opportunity
   year: 2026
 - id: 5ff3b6f5-974f-5319-a9eb-aa95e36528d6
@@ -667,6 +669,57 @@
   - festival_submission
   - new_opportunity
   year: 2026
+- id: 1e591a20-a293-53bc-96bd-1c2cf46079dd
+  name: About TFL
+  category: lab_application
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-11-05'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'About TFL OPEN CALL Call for applications open Green Film Lab - Rome
+    2026 SHORT TERM Deadline to apply: 18 September 2026'
+  eligibility_notes: Important international lab ecosystem covering feature film,
+    series, and co-production support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-21'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2026
+- id: 94fc4fd7-a7a2-5c57-99c8-e38e5e925221
+  name: Agora Industry Forum
+  category: industry_forum
+  organization: Thessaloniki International Documentary Festival
+  url: https://www.filmfestival.gr/en/professionals/agora/overview
+  deadline_date: '2026-11-05'
+  early_deadline_date: null
+  event_start_date: '2026-11-05'
+  event_end_date: '2026-11-15'
+  description: Major documentary-focused market and development platform including
+    pitching, works in progress, and industry networking.
+  eligibility_notes: null
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-21'
+  source_url: https://www.filmfestival.gr/en/professionals/agora/overview
+  tags:
+  - documentary
+  - industry
+  - networking
+  - pitching
+  year: 2026
 - id: 8b4b8a49-ac3c-5a8a-93f6-7919778bc46e
   name: Podcast Pitch Applications Open
   category: festival_submission
@@ -745,31 +798,6 @@
   - co-financing
   - co-production
   - networking
-  year: 2026
-- id: 61bb5598-6ee0-5fef-8be0-66837effa775
-  name: 2027 Film & TV Funding Award Application Open
-  category: funding_round
-  organization: The Whickers
-  url: https://www.whickerawards.com/apply/film-and-tv/
-  deadline_date: '2026-11-23'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'Key dates for 2027 : 23rd November 2026: Applications open'
-  eligibility_notes: Open to emerging filmmakers worldwide for director-led documentary
-    projects.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-09-14'
-  source_url: https://www.whickerawards.com/apply/film-and-tv/
-  tags:
-  - fund
-  - high
-  - funding_round
-  - new_opportunity
   year: 2026
 - id: d470e702-74da-5bc7-8249-86f601e5acbb
   name: Key dates for 2027
@@ -899,6 +927,36 @@
   - 3
   status: confirmed
   last_verified_date: '2026-09-07'
+  source_url: https://www.sundance.org/programs/episodic-storytelling/
+  tags:
+  - lab
+  - high
+  - funding_round
+  - new_opportunity
+  year: 2026
+- id: c13fce6d-40dd-57b0-9361-6c36d8bb6ed7
+  name: Sundance Institute - Episodic Program
+  category: funding_round
+  organization: Sundance Institute
+  url: https://www.sundance.org/programs/episodic-storytelling/
+  deadline_date: '2026-12-14'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "The project must be the applicant\u2019s original creation or adapted\
+    \ from optioned source material or material in the public domain. The project\
+    \ shall not infringe the copyright or any other proprietary right of another individual\
+    \ or entity. The creator/applicant is responsible for all rights pertaining to\
+    \ the project. Projects cannot currently have contractual ownership with a third\
+    \ party. What makes"
+  eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
+    series creators and writers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-21'
   source_url: https://www.sundance.org/programs/episodic-storytelling/
   tags:
   - lab
