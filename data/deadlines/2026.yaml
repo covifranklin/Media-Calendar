@@ -1,140 +1,3 @@
-- id: e49dcb47-160f-53a2-89d5-306f3cf1eec5
-  name: Fee
-  category: funding_round
-  organization: Channel 4
-  url: https://careers.channel4.com/4skills/talent-schemes/4screenwriting
-  deadline_date: '2026-09-21'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'do not have a broadcast credit as a television writer or theatrical
-    release as a feature film writer may apply (this does not include any produced
-    short films of 20 minutes or less). Fee Writers will be paid a fee for participating
-    in the course and for completing two drafts of a one hour script. All writers
-    will be required to grant Shelley Productions a first option for Channel 4 to
-    acquire all '
-  eligibility_notes: Structured drama-writing development route for writers new to
-    television drama.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-09-21'
-  source_url: https://careers.channel4.com/4skills/talent-schemes/4screenwriting
-  tags:
-  - broadcaster_program
-  - high
-  - funding_round
-  - new_opportunity
-  year: 2026
-- id: 2538297c-69fd-52f1-9b0d-67ca839fdfe6
-  name: Catalyst Official Application Opens
-  category: industry_forum
-  organization: Sundance Institute
-  url: https://www.sundance.org/initiatives/catalyst/
-  deadline_date: '2026-09-23'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Official Application Opens (Invitation Only) August 13, 2026
-  eligibility_notes: Invitation-only post pre-application approval.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-09-21'
-  source_url: https://www.sundance.org/initiatives/catalyst/
-  tags:
-  - market
-  - must_have
-  - industry_forum
-  - new_opportunity
-  year: 2026
-- id: 439635cc-a737-5951-8ca4-ea06c3cd2cb2
-  name: Directing TV Drama
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-09-23'
-  early_deadline_date: null
-  event_start_date: '2026-09-23'
-  event_end_date: '2026-09-23'
-  description: Directing TV Drama 23 Sep/26 PLACES AVAILABLE
-  eligibility_notes: Participants can enhance their directing skills, particularly
-    for TV Drama.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-09-21'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - film
-  - TV
-  - directing
-  - new_opportunity
-  year: 2026
-- id: 73a454f9-e400-584b-9f8b-206f42553407
-  name: Production Finance Sessions 2026
-  category: lab_application
-  organization: Film London
-  url: https://filmlondon.org.uk/film-london-labs
-  deadline_date: '2026-09-25'
-  early_deadline_date: null
-  event_start_date: '2026-09-21'
-  event_end_date: '2026-09-25'
-  description: The Production Finance Sessions are back for 2026! After the immense
-    popularity of our past Production Finance labs, this week-long online lab is geared
-    towards producers and filmmakers working on financing their first or second feature
-    films.
-  eligibility_notes: Open to producers and filmmakers working on financing their first
-    or second feature films.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-31'
-  source_url: https://filmlondon.org.uk/film-london-labs
-  tags:
-  - lab
-  - finance
-  - new_opportunity
-  year: 2026
-- id: 65c15d01-80d3-58a0-b705-74f0c15e26d3
-  name: Taking place on
-  category: lab_application
-  organization: Film London
-  url: https://filmlondon.org.uk/film-london-labs
-  deadline_date: '2026-09-25'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "Taking place on 21-25 September 2026, online on Zoom. BOOK NOW. Film\
-    \ London Labs: The Script Sessions This lab was delivered by Angeli Macfarlane,\
-    \ story editor, writer and producer. Designed for writers, directors and creatives\
-    \ developing their first feature script draft to help strengthen participants\u2019\
-    \ screenwriting practice. She delved into structuring their feature, exploring\
-    \ how to shape narra"
-  eligibility_notes: Umbrella development and training platform covering producer,
-    writer, IP, and market-readiness opportunities.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-31'
-  source_url: https://filmlondon.org.uk/film-london-labs
-  tags:
-  - lab
-  - high
-  - lab_application
-  - new_opportunity
-  year: 2026
 - id: ffaec112-dc4d-56d4-8476-26b0336d15d4
   name: Completion Support and Festival Showcase for Recent Films
   category: industry_forum
@@ -273,6 +136,29 @@
   - lab_application
   - new_opportunity
   year: 2026
+- id: cc0375cb-2d9f-58bb-aec3-27acbbcaf4b3
+  name: Documentary Story Lab 2027 - Applications Open
+  category: lab_application
+  organization: Film Independent
+  url: https://www.filmindependent.org/programs/applications/
+  deadline_date: '2026-10-05'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Documentary Story Lab 2027 Applications Open: October 5, 2026'
+  eligibility_notes: For filmmakers focusing on storytelling in documentaries.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-28'
+  source_url: https://www.filmindependent.org/programs/applications/
+  tags:
+  - lab
+  - documentary
+  - new_opportunity
+  year: 2026
 - id: 94ce0775-ed6e-5911-9003-c30ebf5578d2
   name: New Talent Strand at PFM 2026
   category: industry_forum
@@ -375,6 +261,32 @@
   - networking
   - pitch training
   year: 2026
+- id: 87ac1c50-e302-50de-889f-0f8b77ba7d9d
+  name: BFI London Film Festival Industry Forum 2026
+  category: industry_forum
+  organization: BFI London Film Festival
+  url: https://www.bfi.org.uk/explore-our-festivals/industry-forum-bfi-london-film-festival
+  deadline_date: '2026-10-07'
+  early_deadline_date: null
+  event_start_date: '2026-10-07'
+  event_end_date: '2026-10-18'
+  description: This October we invite UK and international film professionals and
+    press to join us for the Industry Forum at BFI London Film Festival 2026.
+  eligibility_notes: Open to UK and international film professionals, including filmmakers
+    and industry press.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-28'
+  source_url: https://www.bfi.org.uk/explore-our-festivals/industry-forum-bfi-london-film-festival
+  tags:
+  - film festival
+  - industry networking
+  - panels
+  - screenings
+  year: 2026
 - id: e27a6569-98db-5cc4-bd61-c8542376f998
   name: BFI NETWORK Talent Development Programme
   category: fellowship
@@ -430,32 +342,6 @@
   - fellowship
   - high
   - festival_submission
-  - new_opportunity
-  year: 2026
-- id: d6f298d9-f74c-5581-96d0-63045e2550f7
-  name: MIP AI Entertainment Forum
-  category: industry_forum
-  organization: MIPCOM CANNES
-  url: https://www.mipcom.com/
-  deadline_date: '2026-10-12'
-  early_deadline_date: null
-  event_start_date: '2026-10-12'
-  event_end_date: '2026-10-15'
-  description: The AI Entertainment Forum connects AI innovators with the world's
-    leading content companies to explore practical applications across creation, production,
-    localisation, rights and workflow.
-  eligibility_notes: Targeted towards professionals in AI and content industries.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-09-21'
-  source_url: https://www.mipcom.com/
-  tags:
-  - AI
-  - innovation
-  - forum
   - new_opportunity
   year: 2026
 - id: 5ff3b6f5-974f-5319-a9eb-aa95e36528d6
@@ -588,6 +474,32 @@
   - female_director
   - documentary
   year: 2026
+- id: 439635cc-a737-5951-8ca4-ea06c3cd2cb2
+  name: Directing TV Drama
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-11-02'
+  early_deadline_date: null
+  event_start_date: '2026-09-23'
+  event_end_date: '2026-09-23'
+  description: Directing TV Drama 23 Sep/26 PLACES AVAILABLE
+  eligibility_notes: Filmmakers looking to explore short form storytelling.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-28'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - film
+  - TV
+  - directing
+  - new_opportunity
+  - high
+  year: 2026
 - id: 3b32ae1d-8282-55b4-b1b1-033cd57868d8
   name: CPH:FORUM Project Submission
   category: festival_submission
@@ -636,6 +548,61 @@
   tags:
   - market
   - must_have
+  - festival_submission
+  - new_opportunity
+  year: 2026
+- id: d03e59f4-36b3-5faa-aafb-6b64b8cbd160
+  name: Premium Pass
+  category: festival_submission
+  organization: Hot Docs
+  url: https://hotdocs.ca/industry/conference/register
+  deadline_date: '2026-11-04'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Registration for the 2027 Festival will open on November 4, 2026.
+    The below information is about the 2026 Festival, for reference only. Premium
+    Pass Experience everything Hot Docs Festival has to offer including networking
+    opportunities, and in-depth sessions designed to help you adapt and thrive in
+    the current industry landscape. This pass includes access to: Observe all Hot
+    Docs Forum'
+  eligibility_notes: Tracks Hot Docs industry pass windows, conference access, networking,
+    and market participation dates.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-28'
+  source_url: https://hotdocs.ca/industry/conference/register
+  tags:
+  - industry_forum
+  - high
+  - festival_submission
+  - new_opportunity
+  year: 2026
+- id: 58f16245-8952-5119-a746-149ec5a219dc
+  name: Premium Pass Registration for 2027 Festival
+  category: festival_submission
+  organization: Hot Docs
+  url: https://hotdocs.ca/industry/conference/register
+  deadline_date: '2026-11-04'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Registration for the 2027 Festival will open on November 4, 2026.
+  eligibility_notes: Tracks Hot Docs industry pass windows, conference access, networking,
+    and market participation dates.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-28'
+  source_url: https://hotdocs.ca/industry/conference/register
+  tags:
+  - industry_forum
+  - high
   - festival_submission
   - new_opportunity
   year: 2026
@@ -720,6 +687,31 @@
   - networking
   - pitching
   year: 2026
+- id: b33e8fe3-479f-5f65-a2f4-97da34a8f0a1
+  name: FeatureLab 2027 Applications
+  category: lab_application
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-11-05'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'OPEN CALL: FeatureLab 2027 | Deadline for applications: 5 November
+    2026'
+  eligibility_notes: Targeting talents exploring feature film and series projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-28'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2026
 - id: 8b4b8a49-ac3c-5a8a-93f6-7919778bc46e
   name: Podcast Pitch Applications Open
   category: festival_submission
@@ -799,36 +791,6 @@
   - co-production
   - networking
   year: 2026
-- id: d470e702-74da-5bc7-8249-86f601e5acbb
-  name: Key dates for 2027
-  category: funding_round
-  organization: The Whickers
-  url: https://www.whickerawards.com/apply/film-and-tv/
-  deadline_date: '2026-11-23'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "The Film & TV Funding Award is awarded annually to an emerging filmmaker\
-    \ from anywhere in the world with the most promising pitch for a director-led\
-    \ documentary which fulfils the core criteria detailed below. With a main award\
-    \ worth \xA3120,000 and a development award for the runner-up of \xA325,000, The\
-    \ Whickers Film & TV Funding Award is one of the most significant documentary\
-    \ awards in the world. Key"
-  eligibility_notes: Director-led documentary funding award with clear annual application
-    windows and DocFest-linked pitch timeline.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-09-14'
-  source_url: https://www.whickerawards.com/apply/film-and-tv/
-  tags:
-  - fund
-  - high
-  - funding_round
-  - new_opportunity
-  year: 2026
 - id: c34f5aaf-2716-5dbe-a00c-cf985140b746
   name: TFL Meeting Event 2026
   category: industry_forum
@@ -906,6 +868,32 @@
   - industry_forum
   - must_have
   - lab_application
+  - new_opportunity
+  year: 2026
+- id: a54af91a-ce0b-5282-80d5-2b7d6d876b71
+  name: Hot Docs Forum & Deal Maker Submission
+  category: festival_submission
+  organization: Hot Docs
+  url: https://hotdocs.ca/industry/conference/hot-docs-forum
+  deadline_date: '2026-12-10'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Submissions for the 2027 Hot Docs Forum & Deal Maker are open with
+    a deadline of December 10, 2026.
+  eligibility_notes: Top-tier documentary pitching and financing forum within the
+    Hot Docs industry programme.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-28'
+  source_url: https://hotdocs.ca/industry/conference/hot-docs-forum
+  tags:
+  - market
+  - must_have
+  - festival_submission
   - new_opportunity
   year: 2026
 - id: 24cdf14e-d26e-5d2e-a1fb-847cd47070da

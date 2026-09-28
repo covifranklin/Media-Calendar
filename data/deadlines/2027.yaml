@@ -1,3 +1,32 @@
+- id: ee6f3b11-9829-5302-86a8-2c749504e81a
+  name: Four Nations Mentoring Scheme 2027
+  category: fellowship
+  organization: Women in Film & TV (UK)
+  url: https://www.wftv.org.uk/mentoring/mentees
+  deadline_date: '2027-01-14'
+  early_deadline_date: null
+  event_start_date: '2027-01-14'
+  event_end_date: '2027-01-15'
+  description: The WFTV Four Nations Mentoring Scheme is a programme designed for
+    women looking to take a significant step in their career. The six-month scheme
+    is open to mid-career women in film, television, and digital media and it offers
+    one-to-one mentoring.
+  eligibility_notes: Open to women with five to seven years of industry experience,
+    and alternative provisions exist for d/Deaf or disabled applicants.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-28'
+  source_url: https://www.wftv.org.uk/mentoring/mentees
+  tags:
+  - mentoring
+  - women
+  - film
+  - television
+  - digital media
+  year: 2027
 - id: c8ddf34f-f2ca-5c02-a722-cffcbfa51a02
   name: FIPADOC Industry Days 2027
   category: industry_forum
@@ -544,6 +573,30 @@
   - filmmaking
   - retreat
   year: 2027
+- id: b55b55f7-2783-5b52-82aa-abdad566d7c9
+  name: True/False Film Fest 2027
+  category: industry_forum
+  organization: True/False
+  url: https://truefalse.org/
+  deadline_date: '2027-03-04'
+  early_deadline_date: null
+  event_start_date: '2027-03-04'
+  event_end_date: '2027-03-07'
+  description: "True/False Film Fest is supported, in part, by Columbia\u2019s Year-Round\
+    \ Arthouse Cinema. A project of Ragtag Film Society. March 4 - 7, 2027."
+  eligibility_notes: Open to filmmakers and industry professionals.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-28'
+  source_url: https://truefalse.org/
+  tags:
+  - festival
+  - documentary
+  - networking
+  year: 2027
 - id: 5d6a0a95-8460-5fde-a241-e848cf35b535
   name: True/False Film Festival 2027
   category: festival_submission
@@ -739,8 +792,8 @@
   url: https://cphdox.dk/cphforum/
   deadline_date: '2027-03-15'
   early_deadline_date: null
-  event_start_date: '2027-03-16'
-  event_end_date: '2027-03-18'
+  event_start_date: '2027-03-10'
+  event_end_date: '2027-03-21'
   description: The next edition of CPH:FORUM (including CPH:ROUGHCUT and CHANGE) takes
     place during the Industry week of CPH:DOX 2027 (March 10-21).
   eligibility_notes: Major international documentary co-financing and pitching platform
@@ -750,7 +803,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-09-21'
+  last_verified_date: '2026-09-28'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -1208,17 +1261,18 @@
   url: https://hotdocs.ca/industry/conference/register
   deadline_date: '2027-05-02'
   early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
+  event_start_date: '2027-04-26'
+  event_end_date: '2027-04-29'
   description: Festivals Hot Docs Festival Curious Minds Festival Hot Docs Festival
     will return April 23 to May 2, 2027 Industry Festival Conference & Market
-  eligibility_notes: Film and documentary submissions eligible for review.
+  eligibility_notes: Tracks Hot Docs industry pass windows, conference access, networking,
+    and market participation dates.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-08-10'
+  last_verified_date: '2026-09-28'
   source_url: https://hotdocs.ca/industry/conference/register
   tags:
   - market
@@ -1226,6 +1280,33 @@
   - festival_submission
   - new_opportunity
   - industry_forum
+  - high
+  year: 2027
+- id: fa11d3dd-edfe-5ff8-99bf-64f2104201e9
+  name: Hot Docs Industry Conference and Market 2027
+  category: festival_submission
+  organization: Hot Docs
+  url: https://hotdocs.ca/industry/conference/register
+  deadline_date: '2027-05-02'
+  early_deadline_date: null
+  event_start_date: '2027-04-26'
+  event_end_date: '2027-04-29'
+  description: The Hot Docs Industry Conference and Market events will take place
+    April 26 to 29, 2027.
+  eligibility_notes: Tracks Hot Docs industry pass windows, conference access, networking,
+    and market participation dates.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-09-28'
+  source_url: https://hotdocs.ca/industry/conference/register
+  tags:
+  - industry_forum
+  - high
+  - festival_submission
+  - new_opportunity
   year: 2027
 - id: 26a63a0a-6aa9-5a07-9d40-7527421f1642
   name: MeetMarket 2027 Documentary Marketplace
@@ -1239,14 +1320,14 @@
   description: "The MeetMarket is one of the world\u2019s largest documentary markets...\
     \ open to all documentary makers, local and international, and we welcome applications\
     \ from established, emerging as well as first-time filmmakers."
-  eligibility_notes: Open to all documentary makers, including established, emerging,
-    and first-time filmmakers. Encouragement for projects originating from podcasts.
+  eligibility_notes: Open to all documentary makers, including emerging and first-time
+    filmmakers. Focus on projects in development and production.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-09-21'
+  last_verified_date: '2026-09-28'
   source_url: https://www.sheffdocfest.com/meetmarket
   tags:
   - documentary
