@@ -1,112 +1,3 @@
-- id: ffaec112-dc4d-56d4-8476-26b0336d15d4
-  name: Completion Support and Festival Showcase for Recent Films
-  category: industry_forum
-  organization: IFFR Pro
-  url: https://iffr.com/en/iffr-pro/darkroom
-  deadline_date: '2026-10-01'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "Darkroom is IFFR\u2019s work-in-progress programme that takes place\
-    \ during CineMart. Darkroom is a platform for recently completed or nearly finished\
-    \ films \u2013 eligibility is limited to projects supported by the Hubert Bals\
-    \ Fund, formerly presented at CineMart or with a Rotterdam Lab alumni attached."
-  eligibility_notes: Eligibility is limited to projects supported by the Hubert Bals
-    Fund, those previously presented at CineMart, or with a Rotterdam Lab alumnus
-    attached.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-31'
-  source_url: https://iffr.com/en/iffr-pro/darkroom
-  tags:
-  - market
-  - funding
-  - festival
-  - industry_forum
-  - new_opportunity
-  year: 2026
-- id: 78d8589c-d209-5797-af02-3f99a37ed2c1
-  name: Darkroom 2027 Submission
-  category: industry_forum
-  organization: IFFR Pro
-  url: https://iffr.com/en/iffr-pro/darkroom
-  deadline_date: '2026-10-01'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Darkroom offers a platform for the international industry to access
-    exclusive previews of recently or nearly completed films seeking completion or
-    gap funding, sales agents and festival selections. Submissions for the next edition
-    of Darkroom close on 1 October.
-  eligibility_notes: Eligibility is limited to projects supported by the Hubert Bals
-    Fund, previously presented at CineMart or featuring Rotterdam Lab alumni.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-03'
-  source_url: https://iffr.com/en/iffr-pro/darkroom
-  tags:
-  - festival_submission
-  - work-in-progress
-  - funding
-  - industry_forum
-  year: 2026
-- id: a2bde44f-c10c-564d-8856-a535ec839172
-  name: Darkroom 2027 Submission
-  category: funding_round
-  organization: IFFR Pro
-  url: https://iffr.com/en/iffr-pro/darkroom
-  deadline_date: '2026-10-01'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Submissions for the next edition of Darkroom close on 1 October.
-  eligibility_notes: Eligible for projects supported by the Hubert Bals Fund or completed
-    at CineMart.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-08-24'
-  source_url: https://iffr.com/en/iffr-pro/darkroom
-  tags:
-  - market
-  - high
-  - funding_round
-  - new_opportunity
-  year: 2026
-- id: faae654a-b36d-53b1-a879-762d68a29f08
-  name: Breadcrumb
-  category: funding_round
-  organization: Ffilm Cymru Wales
-  url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
-  deadline_date: '2026-10-02'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'Breadcrumb Home Funding and Training Feature Film Development Feature
-    Film Development Next Deadline: 2 October 2026'
-  eligibility_notes: Feature and documentary development fund for Wales-based or Wales-born
-    writers, directors, and producers.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-07-20'
-  source_url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
-  tags:
-  - fund
-  - high
-  - funding_round
-  - new_opportunity
-  year: 2026
 - id: d80ab86e-af20-5f31-8ef7-873a0f28d02e
   name: 4Screenwriting Course for New Writers
   category: lab_application
@@ -146,18 +37,23 @@
   event_start_date: null
   event_end_date: null
   description: 'Documentary Story Lab 2027 Applications Open: October 5, 2026'
-  eligibility_notes: For filmmakers focusing on storytelling in documentaries.
+  eligibility_notes: Opens to all interested applicants.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-09-28'
+  last_verified_date: '2026-10-05'
   source_url: https://www.filmindependent.org/programs/applications/
   tags:
   - lab
   - documentary
   - new_opportunity
+  - high
+  - lab_application
+  - update_signal
+  - application
+  - fiction
   year: 2026
 - id: 94ce0775-ed6e-5911-9003-c30ebf5578d2
   name: New Talent Strand at PFM 2026
@@ -272,20 +168,23 @@
   event_end_date: '2026-10-18'
   description: This October we invite UK and international film professionals and
     press to join us for the Industry Forum at BFI London Film Festival 2026.
-  eligibility_notes: Open to UK and international film professionals, including filmmakers
-    and industry press.
+  eligibility_notes: Open to UK and international filmmakers and press working in
+    a professional capacity.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-09-28'
+  last_verified_date: '2026-10-05'
   source_url: https://www.bfi.org.uk/explore-our-festivals/industry-forum-bfi-london-film-festival
   tags:
   - film festival
   - industry networking
   - panels
   - screenings
+  - Film Industry
+  - Networking
+  - Panels
   year: 2026
 - id: e27a6569-98db-5cc4-bd61-c8542376f998
   name: BFI NETWORK Talent Development Programme
@@ -427,6 +326,59 @@
   - social_issues
   - documentary
   year: 2026
+- id: 9191f334-a7ba-5d68-bbaf-86d2615719ab
+  name: DOK Co-Pro Market 2026 - Creative Documentary and Animation
+  category: industry_forum
+  organization: DOK Leipzig
+  url: https://www.dok-leipzig.de/en/co-pro-market
+  deadline_date: '2026-11-01'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: International co-financing and networking event for creative documentary
+    and animated documentary projects.
+  eligibility_notes: Open to creative documentary and animated documentary projects
+    targeting professional producers and financiers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-05'
+  source_url: https://www.dok-leipzig.de/en/co-pro-market
+  tags:
+  - co-production
+  - networking
+  - documentary
+  - animation
+  year: 2026
+- id: 503dc2f3-2719-55e4-83b2-170487aadd46
+  name: "DOK Co-Pro Market \xB7 DOK Leipzig"
+  category: festival_submission
+  organization: DOK Leipzig
+  url: https://www.dok-leipzig.de/en/co-pro-market
+  deadline_date: '2026-11-01'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "DOK Co-Pro Market \xB7 DOK Leipzig Skip to main content International\
+    \ Leipzig Festival for Documentary and Animated Film 26 October to 1 November\
+    \ 2026 de en"
+  eligibility_notes: International co-financing and networking event for creative
+    documentary and animated documentary projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-05'
+  source_url: https://www.dok-leipzig.de/en/co-pro-market
+  tags:
+  - market
+  - high
+  - festival_submission
+  - new_opportunity
+  year: 2026
 - id: 0029ebe6-a723-5506-b5df-d05c9aebffad
   name: DOK Leipzig Film Festival Dates
   category: other
@@ -484,13 +436,14 @@
   event_start_date: '2026-09-23'
   event_end_date: '2026-09-23'
   description: Directing TV Drama 23 Sep/26 PLACES AVAILABLE
-  eligibility_notes: Filmmakers looking to explore short form storytelling.
+  eligibility_notes: Large catalogue of professional skill-building opportunities
+    across film, TV, factual, and craft disciplines.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-09-28'
+  last_verified_date: '2026-10-05'
   source_url: https://nfts.co.uk/courses/short-courses
   tags:
   - fellowship
@@ -499,6 +452,57 @@
   - directing
   - new_opportunity
   - high
+  year: 2026
+- id: c98d06b2-cde6-5626-918b-c774f4945ff1
+  name: Location Sound Recording
+  category: lab_application
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2026-11-02'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Location Sound Recording North 07 Oct/26 10.00am - 5.00pm 2 Days Part-time
+    In person Cymru Wales 16 Nov/26 Application deadline 2 Nov 2026
+  eligibility_notes: Ideal for individuals pursuing careers in sound production.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-05'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - lab_application
+  - new_opportunity
+  - film
+  - TV
+  year: 2026
+- id: 1e591a20-a293-53bc-96bd-1c2cf46079dd
+  name: About TFL
+  category: lab_application
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-11-03'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'About TFL OPEN CALL Call for applications open Green Film Lab - Rome
+    2026 SHORT TERM Deadline to apply: 18 September 2026'
+  eligibility_notes: Important international lab ecosystem covering feature film,
+    series, and co-production support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-05'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - lab_application
+  - new_opportunity
   year: 2026
 - id: 3b32ae1d-8282-55b4-b1b1-033cd57868d8
   name: CPH:FORUM Project Submission
@@ -636,32 +640,6 @@
   - festival_submission
   - new_opportunity
   year: 2026
-- id: 1e591a20-a293-53bc-96bd-1c2cf46079dd
-  name: About TFL
-  category: lab_application
-  organization: TorinoFilmLab
-  url: https://www.torinofilmlab.it/
-  deadline_date: '2026-11-05'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'About TFL OPEN CALL Call for applications open Green Film Lab - Rome
-    2026 SHORT TERM Deadline to apply: 18 September 2026'
-  eligibility_notes: Important international lab ecosystem covering feature film,
-    series, and co-production support.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-09-21'
-  source_url: https://www.torinofilmlab.it/
-  tags:
-  - lab
-  - must_have
-  - lab_application
-  - new_opportunity
-  year: 2026
 - id: 94fc4fd7-a7a2-5c57-99c8-e38e5e925221
   name: Agora Industry Forum
   category: industry_forum
@@ -686,31 +664,6 @@
   - industry
   - networking
   - pitching
-  year: 2026
-- id: b33e8fe3-479f-5f65-a2f4-97da34a8f0a1
-  name: FeatureLab 2027 Applications
-  category: lab_application
-  organization: TorinoFilmLab
-  url: https://www.torinofilmlab.it/
-  deadline_date: '2026-11-05'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'OPEN CALL: FeatureLab 2027 | Deadline for applications: 5 November
-    2026'
-  eligibility_notes: Targeting talents exploring feature film and series projects.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-09-28'
-  source_url: https://www.torinofilmlab.it/
-  tags:
-  - lab
-  - must_have
-  - lab_application
-  - new_opportunity
   year: 2026
 - id: 8b4b8a49-ac3c-5a8a-93f6-7919778bc46e
   name: Podcast Pitch Applications Open
@@ -739,32 +692,6 @@
   - festival_submission
   - new_opportunity
   year: 2026
-- id: e53d51e0-1176-5d2c-8ab9-2a10e3d87cb0
-  name: Projects
-  category: lab_application
-  organization: TorinoFilmLab
-  url: https://www.torinofilmlab.it/
-  deadline_date: '2026-11-05'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'Projects Find your TFL activity Hot now Call for applications open
-    Green Film Lab - Rome 2026 Deadline to apply: 18 September 2026'
-  eligibility_notes: Important international lab ecosystem covering feature film,
-    series, and co-production support.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-09-14'
-  source_url: https://www.torinofilmlab.it/
-  tags:
-  - lab
-  - must_have
-  - lab_application
-  - new_opportunity
-  year: 2026
 - id: a336400f-1818-5536-baef-398d6f2517d4
   name: IDFA Forum 2026
   category: industry_forum
@@ -790,6 +717,91 @@
   - co-financing
   - co-production
   - networking
+  year: 2026
+- id: 21941567-212e-5e98-94fc-504338dfecee
+  name: Producers Program page
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/producers-program/
+  deadline_date: '2026-11-17'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "is a yearlong program designed to nurture emerging producers with\
+    \ project-specific support through the Producers Lab, year-round mentorship from\
+    \ a dedicated industry mentor, film industry networking opportunities, professional\
+    \ development and project advancement strategy workshops, and ongoing support\
+    \ from Sundance Institute staff. The program is designed to hone emerging producers\u2019\
+    \ creative insti"
+  eligibility_notes: Important Sundance pathway for fiction and nonfiction producers
+    across labs, fellowships, networking, and producer-focused support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-05'
+  source_url: https://www.sundance.org/initiatives/producers-program/
+  tags:
+  - lab
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2026
+- id: dd02e903-8a0b-56c2-8836-d52e4be14b81
+  name: 2027 Film & TV Funding Award Applications Open
+  category: funding_round
+  organization: The Whickers
+  url: https://www.whickerawards.com/apply/film-and-tv/
+  deadline_date: '2026-11-24'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Key dates for 2027 : 24th November 2026: Applications open'
+  eligibility_notes: Director-led documentary funding award for emerging filmmakers.
+    Must be the first 50+ minute documentary for the filmmakers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-05'
+  source_url: https://www.whickerawards.com/apply/film-and-tv/
+  tags:
+  - fund
+  - high
+  - funding_round
+  - new_opportunity
+  year: 2026
+- id: d470e702-74da-5bc7-8249-86f601e5acbb
+  name: Key dates for 2027
+  category: funding_round
+  organization: The Whickers
+  url: https://www.whickerawards.com/apply/film-and-tv/
+  deadline_date: '2026-11-24'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "The Film & TV Funding Award is awarded annually to an emerging filmmaker\
+    \ from anywhere in the world with the most promising pitch for a director-led\
+    \ documentary which fulfils the core criteria detailed below. With a main award\
+    \ worth \xA3120,000 and a development award for the runner-up of \xA325,000, The\
+    \ Whickers Film & TV Funding Award is one of the most significant documentary\
+    \ awards in the world. Key"
+  eligibility_notes: Director-led documentary funding award with clear annual application
+    windows and DocFest-linked pitch timeline.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-05'
+  source_url: https://www.whickerawards.com/apply/film-and-tv/
+  tags:
+  - fund
+  - high
+  - funding_round
+  - new_opportunity
   year: 2026
 - id: c34f5aaf-2716-5dbe-a00c-cf985140b746
   name: TFL Meeting Event 2026
@@ -870,6 +882,32 @@
   - lab_application
   - new_opportunity
   year: 2026
+- id: 24cdf14e-d26e-5d2e-a1fb-847cd47070da
+  name: Alfred P. Sloan Science Grant Opportunity
+  category: funding_round
+  organization: Sundance Institute
+  url: https://www.sundance.org/programs/episodic-storytelling/
+  deadline_date: '2026-12-03'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "The project must be the applicant\u2019s original creation...Deadline\
+    \ to submit has been extended until December 14, 2026."
+  eligibility_notes: Projects must be original or adapted from eligible source material.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-05'
+  source_url: https://www.sundance.org/programs/episodic-storytelling/
+  tags:
+  - lab
+  - high
+  - funding_round
+  - new_opportunity
+  - funding
+  year: 2026
 - id: a54af91a-ce0b-5282-80d5-2b7d6d876b71
   name: Hot Docs Forum & Deal Maker Submission
   category: festival_submission
@@ -894,32 +932,6 @@
   - market
   - must_have
   - festival_submission
-  - new_opportunity
-  year: 2026
-- id: 24cdf14e-d26e-5d2e-a1fb-847cd47070da
-  name: Alfred P. Sloan Science Grant Opportunity
-  category: funding_round
-  organization: Sundance Institute
-  url: https://www.sundance.org/programs/episodic-storytelling/
-  deadline_date: '2026-12-14'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "The project must be the applicant\u2019s original creation...Deadline\
-    \ to submit has been extended until December 14, 2026."
-  eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
-    series creators and writers.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-09-07'
-  source_url: https://www.sundance.org/programs/episodic-storytelling/
-  tags:
-  - lab
-  - high
-  - funding_round
   - new_opportunity
   year: 2026
 - id: c13fce6d-40dd-57b0-9361-6c36d8bb6ed7
@@ -950,5 +962,56 @@
   - lab
   - high
   - funding_round
+  - new_opportunity
+  year: 2026
+- id: b33e8fe3-479f-5f65-a2f4-97da34a8f0a1
+  name: FeatureLab 2027 Applications
+  category: lab_application
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-12-16'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'OPEN CALL: FeatureLab 2027 | Deadline for applications: 5 November
+    2026'
+  eligibility_notes: Focus on editing and storytelling refinement for series.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-05'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2026
+- id: e53d51e0-1176-5d2c-8ab9-2a10e3d87cb0
+  name: Projects
+  category: lab_application
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-12-16'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Projects Find your TFL activity Hot now Call for applications open
+    Green Film Lab - Rome 2026 Deadline to apply: 18 September 2026'
+  eligibility_notes: Important international lab ecosystem covering feature film,
+    series, and co-production support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-05'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - lab_application
   - new_opportunity
   year: 2026

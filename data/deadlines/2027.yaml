@@ -389,6 +389,32 @@
   - producer_training
   - networking
   year: 2027
+- id: e9ec8771-24a5-521e-a501-c2644fa71276
+  name: Producers Lab Dates
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/producers-program/
+  deadline_date: '2027-02-10'
+  early_deadline_date: null
+  event_start_date: '2027-07-19'
+  event_end_date: '2027-07-24'
+  description: 'Application Deadline : Wednesday, February 10, 2027, 9 a.m. PT Producers
+    Lab Dates : July 19-24, 2027 Number of Fellows : Five'
+  eligibility_notes: Important Sundance pathway for fiction and nonfiction producers
+    across labs, fellowships, networking, and producer-focused support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-05'
+  source_url: https://www.sundance.org/initiatives/producers-program/
+  tags:
+  - lab
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2027
 - id: 97dd0afb-199d-5fe9-ae40-e8c029bf707b
   name: Programme
   category: funding_round
@@ -508,14 +534,14 @@
   event_end_date: '2027-02-16'
   description: The accreditation for the European Film Market 2026 is now open. Industry
     professionals travelling to Berlin will be able to apply for a Market Badge.
-  eligibility_notes: Applicants must provide proof of current professional activity
+  eligibility_notes: Applicants must provide evidence of their professional activity
     in the film industry.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-07-13'
+  last_verified_date: '2026-10-05'
   source_url: https://www.efm-berlinale.de/en/services/accreditation/accreditation.html
   tags:
   - market
@@ -803,7 +829,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-09-28'
+  last_verified_date: '2026-10-05'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -1180,6 +1206,31 @@
   - professional development
   - networking
   year: 2027
+- id: ab579fcd-a676-5eac-8827-bc98e69848e5
+  name: One World International Human Rights Film Festival Submission
+  category: festival_submission
+  organization: One World Festival
+  url: https://www.oneworld.cz/festival/index_en.html
+  deadline_date: '2027-04-19'
+  early_deadline_date: null
+  event_start_date: '2027-04-19'
+  event_end_date: '2027-04-23'
+  description: The One World International Human Rights Film Festival has been an
+    integral part of the activities of the Czech humanitarian and human rights organization
+    People in Need.
+  eligibility_notes: null
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-05'
+  source_url: https://www.oneworld.cz/festival/index_en.html
+  tags:
+  - film festival
+  - human rights
+  - documentary
+  year: 2027
 - id: d5857220-2046-54f0-9c71-1f05e4477b92
   name: 2027 Hot Docs Forum Pitch
   category: industry_forum
@@ -1308,6 +1359,61 @@
   - festival_submission
   - new_opportunity
   year: 2027
+- id: 228718d5-af79-5861-af91-9e90a3deb07f
+  name: 2027 Tribeca Creators Market
+  category: industry_forum
+  organization: Tribeca Festival
+  url: https://www.tribecafilm.com/creatorsmarket
+  deadline_date: '2027-06-03'
+  early_deadline_date: null
+  event_start_date: '2027-06-03'
+  event_end_date: '2027-06-12'
+  description: The Tribeca Creators Market features a highly curated selection of
+    storytellers pitching new feature, episodic and audio projects to an array of
+    companies and influential industry leaders.
+  eligibility_notes: By invitation only for selected creators and industry representatives.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-05'
+  source_url: https://www.tribecafilm.com/creatorsmarket
+  tags:
+  - film
+  - TV
+  - documentary
+  - audio
+  - storytelling
+  - diversity
+  year: 2027
+- id: af827475-d45c-5538-8623-5dc8bbc133f9
+  name: Works in Progress Showcase 2027
+  category: industry_forum
+  organization: Tribeca Festival
+  url: https://www.tribecafilm.com/creatorsmarket
+  deadline_date: '2027-06-08'
+  early_deadline_date: null
+  event_start_date: '2027-06-08'
+  event_end_date: '2027-06-08'
+  description: The Market kicks off with the Works in Progress showcase on Monday,
+    June 8th, with its participants having largely been culled from an open call of
+    submissions.
+  eligibility_notes: Participants are selected from an open call of submissions.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-05'
+  source_url: https://www.tribecafilm.com/creatorsmarket
+  tags:
+  - showcase
+  - pitch
+  - industry professionals
+  - feature
+  - documentary
+  year: 2027
 - id: 26a63a0a-6aa9-5a07-9d40-7527421f1642
   name: MeetMarket 2027 Documentary Marketplace
   category: industry_forum
@@ -1367,31 +1473,27 @@
   - festival_submission
   - new_opportunity
   year: 2027
-- id: 8145c8bf-9244-5070-809d-3d9ed2b75a40
-  name: "April 15 \u2013 20, 2027"
+- id: a7b9be2b-7309-5aeb-bd51-9ed6055d2ed5
+  name: Documentary Film Producers Lab
   category: lab_application
   organization: Sundance Institute
-  url: https://www.sundance.org/programs/episodic-storytelling/
-  deadline_date: '2027-07-27'
+  url: https://www.sundance.org/initiatives/producers-program/
+  deadline_date: '2027-07-19'
   early_deadline_date: null
-  event_start_date: '2027-07-27'
-  event_end_date: '2027-07-28'
-  description: "When is the 2027 Episodic Lab taking place? April 15 \u2013 20, 2027\
-    \ . The Episodic Fellows begin with a few weeks of pre-lab development that includes\
-    \ virtual workshops preparing the writers and their materials leading up to the\
-    \ in-person Lab. When is the Virtual Intensive taking place? July 27- 28, 2027"
-  eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
-    series creators and writers.
+  event_start_date: '2027-07-19'
+  event_end_date: '2027-07-24'
+  description: Documentary Film Producers Lab - Ucross, Wyoming - July 19-24, 2027
+  eligibility_notes: Open to producers working on nonfiction documentaries.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-09-07'
-  source_url: https://www.sundance.org/programs/episodic-storytelling/
+  last_verified_date: '2026-10-05'
+  source_url: https://www.sundance.org/initiatives/producers-program/
   tags:
   - lab
-  - high
+  - must_have
   - lab_application
   - new_opportunity
   year: 2027
