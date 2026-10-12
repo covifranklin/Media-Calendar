@@ -829,7 +829,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-10-05'
+  last_verified_date: '2026-10-12'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -945,6 +945,62 @@
   - festival_submission
   - new_opportunity
   - co-production
+  year: 2027
+- id: 53626afa-c13d-5e39-bc05-1476b0c39baa
+  name: Producers Fellowship Application
+  category: fellowship
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/producers-program/
+  deadline_date: '2027-03-25'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "All applicants will receive notification of their application\u2019\
+    s first-round status via email no later than March 25, 2027."
+  eligibility_notes: Geared toward independent producers with significant experience
+    and a work-in-progress project.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-12'
+  source_url: https://www.sundance.org/initiatives/producers-program/
+  tags:
+  - fellowship
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2027
+- id: bfcc85f7-1426-526a-87d2-37ba098349e6
+  name: Sundance Institute - Producers Program
+  category: fellowship
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/producers-program/
+  deadline_date: '2027-03-25'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: You may submit up to three projects, but we encourage you to choose
+    two projects that are your priority in terms of moving forward. Please note that
+    for each project, you must complete a separate application and submit a separate
+    application fee. Do I need to have the rights to the script or underlying material
+    in order to apply? In order to apply, you will need the approval of your director
+    and w
+  eligibility_notes: Important Sundance pathway for fiction and nonfiction producers
+    across labs, fellowships, networking, and producer-focused support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-12'
+  source_url: https://www.sundance.org/initiatives/producers-program/
+  tags:
+  - lab
+  - must_have
+  - fellowship
+  - new_opportunity
   year: 2027
 - id: aa8671d2-48dd-5326-81b6-ec96bd370cbf
   name: 2026 Full Frame Documentary Film Festival
@@ -1231,6 +1287,31 @@
   - human rights
   - documentary
   year: 2027
+- id: d5d116ff-62bc-5307-9fd5-3dac334302a2
+  name: Industry Conference Registration
+  category: industry_forum
+  organization: Hot Docs
+  url: https://hotdocs.ca/industry/conference/register
+  deadline_date: '2027-04-26'
+  early_deadline_date: null
+  event_start_date: '2027-04-26'
+  event_end_date: '2027-04-29'
+  description: The Hot Docs Industry Conference and Market events will take place
+    April 26 to 29, 2027.
+  eligibility_notes: Tracks Hot Docs industry pass windows, conference access, networking,
+    and market participation dates.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-12'
+  source_url: https://hotdocs.ca/industry/conference/register
+  tags:
+  - industry_forum
+  - high
+  - new_opportunity
+  year: 2027
 - id: d5857220-2046-54f0-9c71-1f05e4477b92
   name: 2027 Hot Docs Forum Pitch
   category: industry_forum
@@ -1359,6 +1440,31 @@
   - festival_submission
   - new_opportunity
   year: 2027
+- id: 2e7f566a-345a-51ae-9b7a-5ac6424e8b57
+  name: '4Skills: Pathways to Self-Shooting for Factual TV Production'
+  category: fellowship
+  organization: NFTS
+  url: https://nfts.co.uk/courses/short-courses
+  deadline_date: '2027-05-19'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Short course 4Skills | NFTS Pathways to Self-Shooting for Factual TV
+    production 4Skills | NFTS Pathways to Self-Shooting for Factual TV production
+    North 19 May/27 Application deadline 19 May 2027
+  eligibility_notes: Intended for new entrants to the factual TV production field.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-12'
+  source_url: https://nfts.co.uk/courses/short-courses
+  tags:
+  - fellowship
+  - high
+  - new_opportunity
+  year: 2027
 - id: 228718d5-af79-5861-af91-9e90a3deb07f
   name: 2027 Tribeca Creators Market
   category: industry_forum
@@ -1447,6 +1553,36 @@
   - meetings
   - filmmaking
   year: 2027
+- id: a2903142-34a7-50ca-8cb9-a647a021a381
+  name: Directing sample
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/initiatives/producers-program/
+  deadline_date: '2027-06-11'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: '(optional): If you have visual materials such as a lookbook or project
+    deck, you may upload a PDF of no more than 40 MB. Directing sample : You will
+    be asked to provide a link (and password, if applicable) to one directing sample
+    for the director attached to your project. This sample should be recent and relevant
+    to the project you are submitting, and it should also be a complete work (i.e.,
+    not a'
+  eligibility_notes: Important Sundance pathway for fiction and nonfiction producers
+    across labs, fellowships, networking, and producer-focused support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-12'
+  source_url: https://www.sundance.org/initiatives/producers-program/
+  tags:
+  - lab
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2027
 - id: fe1530cb-bb69-51ec-a2e3-20fe98c1e285
   name: 2027 Episodic Lab
   category: festival_submission
@@ -1494,6 +1630,34 @@
   tags:
   - lab
   - must_have
+  - lab_application
+  - new_opportunity
+  year: 2027
+- id: 8145c8bf-9244-5070-809d-3d9ed2b75a40
+  name: "April 15 \u2013 20, 2027"
+  category: lab_application
+  organization: Sundance Institute
+  url: https://www.sundance.org/programs/episodic-storytelling/
+  deadline_date: '2027-07-22'
+  early_deadline_date: null
+  event_start_date: '2027-07-22'
+  event_end_date: '2027-07-23'
+  description: "April 15 \u2013 20, 2027 . The Episodic Fellows begin with a few weeks\
+    \ of pre-lab development that includes virtual workshops preparing the writers\
+    \ and their materials leading up to the in-person Lab. When is the Virtual Intensive\
+    \ taking place? July 22- 23, 2027 Who is eligible for the lab?"
+  eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
+    series creators and writers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-12'
+  source_url: https://www.sundance.org/programs/episodic-storytelling/
+  tags:
+  - lab
+  - high
   - lab_application
   - new_opportunity
   year: 2027
