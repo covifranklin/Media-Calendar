@@ -1,3 +1,32 @@
+- id: 11238335-181b-5f07-8b50-3b1a16a63897
+  name: Documentary Producing Lab 2026
+  category: lab_application
+  organization: Film Independent
+  url: https://www.filmindependent.org/programs/applications/
+  deadline_date: '2027-01-04'
+  early_deadline_date: '2026-05-04'
+  event_start_date: null
+  event_end_date: null
+  description: 'Documentary Producing Lab 2026 Applications Open: March 9, 2026 Non-Member
+    Deadline: May 4, 2026'
+  eligibility_notes: High-signal Film Independent documentary producer development
+    programme with concrete annual application timing.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-19'
+  source_url: https://www.filmindependent.org/programs/applications/
+  tags:
+  - lab
+  - documentary
+  - producing
+  - '2026'
+  - high
+  - lab_application
+  - update_signal
+  year: 2027
 - id: ee6f3b11-9829-5302-86a8-2c749504e81a
   name: Four Nations Mentoring Scheme 2027
   category: fellowship
@@ -393,27 +422,28 @@
   name: Producers Lab Dates
   category: lab_application
   organization: Sundance Institute
-  url: https://www.sundance.org/initiatives/producers-program/
+  url: https://www.sundance.org/programs/episodic-storytelling/
   deadline_date: '2027-02-10'
   early_deadline_date: null
-  event_start_date: '2027-07-19'
-  event_end_date: '2027-07-24'
+  event_start_date: '2027-07-22'
+  event_end_date: '2027-07-23'
   description: 'Application Deadline : Wednesday, February 10, 2027, 9 a.m. PT Producers
     Lab Dates : July 19-24, 2027 Number of Fellows : Five'
-  eligibility_notes: Important Sundance pathway for fiction and nonfiction producers
-    across labs, fellowships, networking, and producer-focused support.
+  eligibility_notes: Tracks the Sundance Episodic Lab and related intensives for original
+    series creators and writers.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-10-05'
-  source_url: https://www.sundance.org/initiatives/producers-program/
+  last_verified_date: '2026-10-19'
+  source_url: https://www.sundance.org/programs/episodic-storytelling/
   tags:
   - lab
   - must_have
   - lab_application
   - new_opportunity
+  - high
   year: 2027
 - id: 97dd0afb-199d-5fe9-ae40-e8c029bf707b
   name: Programme
@@ -534,14 +564,14 @@
   event_end_date: '2027-02-16'
   description: The accreditation for the European Film Market 2026 is now open. Industry
     professionals travelling to Berlin will be able to apply for a Market Badge.
-  eligibility_notes: Applicants must provide evidence of their professional activity
-    in the film industry.
+  eligibility_notes: Open to film industry professionals. Requires proof of current
+    activity within the industry.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-10-05'
+  last_verified_date: '2026-10-19'
   source_url: https://www.efm-berlinale.de/en/services/accreditation/accreditation.html
   tags:
   - market
@@ -829,7 +859,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-10-12'
+  last_verified_date: '2026-10-19'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
@@ -931,13 +961,13 @@
   event_end_date: '2027-03-25'
   description: Series Mania Forum LILLE / HAUTS-DE-FRANCE /// March 23 to 25, 2027
     Festival Forum Institute FR
-  eligibility_notes: Open to creators and producers interested in co-production opportunities.
+  eligibility_notes: Open for series projects as part of the Series Mania Forum.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-06-15'
+  last_verified_date: '2026-10-19'
   source_url: https://seriesmania.com/forum/en/
   tags:
   - market
@@ -1319,22 +1349,26 @@
   url: https://hotdocs.ca/industry/conference/hot-docs-forum
   deadline_date: '2027-04-27'
   early_deadline_date: null
-  event_start_date: '2027-04-27'
-  event_end_date: '2027-04-27'
+  event_start_date: '2027-04-26'
+  event_end_date: '2027-04-29'
   description: Applications for 2027 Hot Docs Forum & Deal Maker will open in October
     2026.
-  eligibility_notes: Must have a Trigger Financier for projects in the Regular Category.
+  eligibility_notes: Top-tier documentary pitching and financing forum within the
+    Hot Docs industry programme.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-06-01'
+  last_verified_date: '2026-10-19'
   source_url: https://hotdocs.ca/industry/conference/hot-docs-forum
   tags:
   - documentary
   - pitching
   - funding
+  - industry_forum
+  - market
+  - must_have
   year: 2027
 - id: 5c569e32-02ee-574b-83cb-8e8d9cafbaa2
   name: CMF-Hot Docs Forum Canadian Pitch Prize
@@ -1659,5 +1693,59 @@
   - lab
   - high
   - lab_application
+  - new_opportunity
+  year: 2027
+- id: f0192eb9-9f3a-5d1d-89ea-892fefcb1651
+  name: LATEST ANNOUNCEMENTS
+  category: industry_forum
+  organization: MIPCOM CANNES
+  url: https://www.mipcom.com/
+  deadline_date: '2027-10-21'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: LATEST ANNOUNCEMENTS LATEST ANNOUNCEMENTS Read Latest Press Releases
+    MIPCOM CANNES to return 18-21 October 2027 MIPCOM CANNES REFLECTS THE TRANSFORMATION
+    OF THE GLOBAL ENTERTAINMENT INDUSTRY AS ESTABLISHED AND EMERGING BUSINESSES COME
+    TOGETHER ON THE CROISETTE Major industry announcements, international deals, high-profile
+    interviews, world premieres and a raft of new entertainment players highlig
+  eligibility_notes: Major international television and streaming content market spanning
+    buyers, creators, commissioners, and distributors.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-19'
+  source_url: https://www.mipcom.com/
+  tags:
+  - market
+  - must_have
+  - industry_forum
+  - new_opportunity
+  year: 2027
+- id: 9db733a8-c9be-5bc0-ba15-aa6e5d92b8ec
+  name: MIPCOM 2027
+  category: industry_forum
+  organization: MIPCOM CANNES
+  url: https://www.mipcom.com/
+  deadline_date: '2027-10-21'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: MIPCOM CANNES to return 18-21 October 2027
+  eligibility_notes: Major international television and streaming content market spanning
+    buyers, creators, commissioners, and distributors.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-19'
+  source_url: https://www.mipcom.com/
+  tags:
+  - market
+  - must_have
+  - industry_forum
   - new_opportunity
   year: 2027
