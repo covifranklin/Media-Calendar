@@ -1,31 +1,28 @@
-- id: 11238335-181b-5f07-8b50-3b1a16a63897
-  name: Documentary Producing Lab 2026
-  category: lab_application
-  organization: Film Independent
-  url: https://www.filmindependent.org/programs/applications/
-  deadline_date: '2027-01-04'
-  early_deadline_date: '2026-05-04'
+- id: bbe43628-7d68-5e43-a03a-6db00c0ea8f3
+  name: Projects
+  category: funding_round
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2027-01-13'
+  early_deadline_date: null
   event_start_date: null
   event_end_date: null
-  description: 'Documentary Producing Lab 2026 Applications Open: March 9, 2026 Non-Member
-    Deadline: May 4, 2026'
-  eligibility_notes: High-signal Film Independent documentary producer development
-    programme with concrete annual application timing.
+  description: 'Projects Find your TFL activity Hot now Call for applications open
+    TFL Audience Design Fund 2027 Deadline for applications: 13 January 2027'
+  eligibility_notes: Important international lab ecosystem covering feature film,
+    series, and co-production support.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-10-19'
-  source_url: https://www.filmindependent.org/programs/applications/
+  last_verified_date: '2026-10-26'
+  source_url: https://www.torinofilmlab.it/
   tags:
   - lab
-  - documentary
-  - producing
-  - '2026'
-  - high
-  - lab_application
-  - update_signal
+  - must_have
+  - funding_round
+  - new_opportunity
   year: 2027
 - id: ee6f3b11-9829-5302-86a8-2c749504e81a
   name: Four Nations Mentoring Scheme 2027
@@ -583,6 +580,63 @@
   - badge application
   - film industry
   year: 2027
+- id: e62a52d9-82eb-5cd1-a537-c231b2c009ef
+  name: CPH:FORUM 2027
+  category: industry_forum
+  organization: CPH:DOX
+  url: https://cphdox.dk/cphforum/
+  deadline_date: '2027-03-01'
+  early_deadline_date: null
+  event_start_date: '2027-03-10'
+  event_end_date: '2027-03-21'
+  description: The next edition of CPH:FORUM (including CPH:ROUGHCUT and CHANGE) takes
+    place during the Industry week of CPH:DOX 2027 (March 10-21).
+  eligibility_notes: Major international documentary co-financing and pitching platform
+    for creative nonfiction projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-26'
+  source_url: https://cphdox.dk/cphforum/
+  tags:
+  - market
+  - must_have
+  - industry_forum
+  - new_opportunity
+  - roughcut
+  - pitching
+  - development
+  year: 2027
+- id: 9f1f776a-f70a-5221-8633-6e1c261b9db6
+  name: REGISTER HERE
+  category: industry_forum
+  organization: CPH:DOX
+  url: https://cphdox.dk/cphforum/
+  deadline_date: '2027-03-01'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "To apply for a CPH:FORUM accreditation, please create or log into\
+    \ your CPH:DOX profile and press \u201Crequest accreditation\u201D to fill in\
+    \ the application form. REGISTER HERE For more information on accreditations,\
+    \ click here . Deadline: March 1, 2027."
+  eligibility_notes: Major international documentary co-financing and pitching platform
+    for creative nonfiction projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-10-26'
+  source_url: https://cphdox.dk/cphforum/
+  tags:
+  - market
+  - must_have
+  - industry_forum
+  - new_opportunity
+  year: 2027
 - id: 51376844-ea7a-5255-a4a0-43bfc1d4d01f
   name: Confluence Fellowship
   category: fellowship
@@ -841,17 +895,20 @@
   - festival_submission
   - new_opportunity
   year: 2027
-- id: e62a52d9-82eb-5cd1-a537-c231b2c009ef
-  name: CPH:FORUM 2027
-  category: industry_forum
+- id: 36248062-3564-52f6-80fb-5f1e7c6617fc
+  name: 'Late registration: a fee of 250 DKK will apply to all accreditations submitted
+    later than February 20, 2027'
+  category: festival_submission
   organization: CPH:DOX
   url: https://cphdox.dk/cphforum/
   deadline_date: '2027-03-15'
   early_deadline_date: null
   event_start_date: '2027-03-10'
   event_end_date: '2027-03-21'
-  description: The next edition of CPH:FORUM (including CPH:ROUGHCUT and CHANGE) takes
-    place during the Industry week of CPH:DOX 2027 (March 10-21).
+  description: 'Late registration: a fee of 250 DKK will apply to all accreditations
+    submitted later than February 20, 2027. DATES CPH:DOX FESTIVAL: March 10-21, 2027
+    CPH:INDUSTRY: March 14-18, 2027 CPH:FORUM: March 16-18, 2027 CHANGE and ROUGHCUT
+    presentations: March 15, 2027'
   eligibility_notes: Major international documentary co-financing and pitching platform
     for creative nonfiction projects.
   notification_windows:
@@ -859,16 +916,13 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-10-19'
+  last_verified_date: '2026-10-26'
   source_url: https://cphdox.dk/cphforum/
   tags:
   - market
   - must_have
-  - industry_forum
+  - festival_submission
   - new_opportunity
-  - roughcut
-  - pitching
-  - development
   year: 2027
 - id: 2b9cd331-f849-5227-95c6-14ab2a250315
   name: Sundance Institute - Episodic Program
@@ -1650,16 +1704,16 @@
   url: https://www.sundance.org/initiatives/producers-program/
   deadline_date: '2027-07-19'
   early_deadline_date: null
-  event_start_date: '2027-07-19'
-  event_end_date: '2027-07-24'
+  event_start_date: '2027-07-12'
+  event_end_date: '2027-07-17'
   description: Documentary Film Producers Lab - Ucross, Wyoming - July 19-24, 2027
-  eligibility_notes: Open to producers working on nonfiction documentaries.
+  eligibility_notes: Open to emerging producers focused on feature films.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-10-05'
+  last_verified_date: '2026-10-26'
   source_url: https://www.sundance.org/initiatives/producers-program/
   tags:
   - lab
