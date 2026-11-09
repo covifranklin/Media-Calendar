@@ -53,6 +53,34 @@
   - television
   - digital media
   year: 2027
+- id: 9c8035c1-7b50-52f3-8ab4-cc1e404564a1
+  name: 2027 Film & TV Funding Award Application
+  category: funding_round
+  organization: The Whickers
+  url: https://www.whickerawards.com/apply/film-and-tv/
+  deadline_date: '2027-01-22'
+  early_deadline_date: '2026-11-24'
+  event_start_date: null
+  event_end_date: null
+  description: 'The Film & TV Funding Award is awarded annually to an emerging filmmaker
+    from anywhere in the world with the most promising pitch for a director-led documentary...
+    Key dates for 2027: 24th November 2026: Applications open, 22nd January 2027:
+    Applications close.'
+  eligibility_notes: Open to filmmakers worldwide, focusing on first-time documentary
+    directors with complete criteria outlined.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-11-09'
+  source_url: https://www.whickerawards.com/apply/film-and-tv/
+  tags:
+  - fund
+  - funding_round
+  - documentary
+  - emerging_filmmakers
+  year: 2027
 - id: c8ddf34f-f2ca-5c02-a722-cffcbfa51a02
   name: FIPADOC Industry Days 2027
   category: industry_forum
@@ -433,7 +461,7 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-10-19'
+  last_verified_date: '2026-11-09'
   source_url: https://www.sundance.org/programs/episodic-storytelling/
   tags:
   - lab
@@ -497,6 +525,61 @@
   - market
   - must_have
   - funding_round
+  - new_opportunity
+  year: 2027
+- id: 843bdbd0-3306-5107-afcc-9246365ee94c
+  name: Buyers Status
+  category: festival_submission
+  organization: Berlinale
+  url: https://www.efm-berlinale.de/en/services/accreditation/accreditation.html
+  deadline_date: '2027-02-15'
+  early_deadline_date: null
+  event_start_date: '2027-02-15'
+  event_end_date: '2027-02-16'
+  description: Buyers Status , offering priority access to market screenings and EFM
+    locations. Professionals wishing to attend both the EFM and the Berlinale can
+    opt for the combined Festival Accreditation and Market Badge , which also includes
+    access to festival screenings and selected Berlinale events. The Online Market
+    Badge provides access to Online Market Screenings, selected industry content and
+    online se
+  eligibility_notes: Tracks European Film Market badge windows and access rules for
+    one of the most important global film-business gatherings.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-11-09'
+  source_url: https://www.efm-berlinale.de/en/services/accreditation/accreditation.html
+  tags:
+  - market
+  - high
+  - festival_submission
+  - new_opportunity
+  year: 2027
+- id: 9ee51015-5bc8-5ed1-bf95-66059b81e10b
+  name: Buyers Status Application
+  category: festival_submission
+  organization: Berlinale
+  url: https://www.efm-berlinale.de/en/services/accreditation/accreditation.html
+  deadline_date: '2027-02-15'
+  early_deadline_date: null
+  event_start_date: '2027-02-15'
+  event_end_date: '2027-02-16'
+  description: Buyers Status, offering priority access to market screenings and EFM
+    locations.
+  eligibility_notes: Must hold industry accreditation with a focus on acquiring content.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-11-09'
+  source_url: https://www.efm-berlinale.de/en/services/accreditation/accreditation.html
+  tags:
+  - market
+  - high
+  - festival_submission
   - new_opportunity
   year: 2027
 - id: d70c2b68-5c07-5163-8400-ae32e059152e
