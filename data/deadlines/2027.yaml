@@ -24,6 +24,31 @@
   - funding_round
   - new_opportunity
   year: 2027
+- id: be61529e-7eb5-5009-955e-aeb1a69ec8d5
+  name: TFL Audience Design Fund 2027 Application
+  category: funding_round
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2027-01-13'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Call for applications open TFL Audience Design Fund 2027 SHORT TERM
+    Deadline for applications: 13 January 2027'
+  eligibility_notes: Eligible projects should focus on audience engagement strategies.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-11-16'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - funding_round
+  - new_opportunity
+  year: 2027
 - id: ee6f3b11-9829-5302-86a8-2c749504e81a
   name: Four Nations Mentoring Scheme 2027
   category: fellowship
@@ -137,6 +162,32 @@
   - impact
   - workshop
   - audience engagement
+  year: 2027
+- id: 1c64c494-a62b-5b7b-a518-40ba1574db49
+  name: Breadcrumb
+  category: funding_round
+  organization: Ffilm Cymru Wales
+  url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
+  deadline_date: '2027-02-02'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'Breadcrumb Home Funding and Training Feature Film Development Feature
+    Film Development Next Deadline: 2 February 2027'
+  eligibility_notes: Feature and documentary development fund for Wales-based or Wales-born
+    writers, directors, and producers.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-11-16'
+  source_url: https://ffilmcymruwales.com/funding-and-training/feature-film-development
+  tags:
+  - fund
+  - high
+  - funding_round
+  - new_opportunity
   year: 2027
 - id: 9a93b37a-8a19-58db-b0a8-c8691715f3aa
   name: Feature Film Development Fund - February 2027 Deadline
@@ -662,6 +713,35 @@
   - EFM
   - badge application
   - film industry
+  year: 2027
+- id: 9705495d-34d1-578c-965a-9248e2d9b2f0
+  name: Podcast Pitch 2027
+  category: festival_submission
+  organization: The Whickers
+  url: https://www.whickerawards.com/apply/the-podcast-pitch/
+  deadline_date: '2027-02-26'
+  early_deadline_date: '2026-11-05'
+  event_start_date: null
+  event_end_date: null
+  description: 'The Podcast Pitch is a joint initiative with Sheffield DocFest to
+    fund original audio documentary... Applications are now open. Key dates for 2027
+    round: 5th November 2026 : Applications open 26th February 2027 (12pm midday GMT)
+    Applications close April 2027: Shortlisted projects announced June 2027: Finalists
+    pitch their projects at Sheffield DocFest.'
+  eligibility_notes: Open to all independent podcast makers, with a focus on innovative
+    audio storytelling.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-11-16'
+  source_url: https://www.whickerawards.com/apply/the-podcast-pitch/
+  tags:
+  - fellowship
+  - high
+  - festival_submission
+  - new_opportunity
   year: 2027
 - id: e62a52d9-82eb-5cd1-a537-c231b2c009ef
   name: CPH:FORUM 2027
@@ -1611,31 +1691,6 @@
   - festival_submission
   - new_opportunity
   year: 2027
-- id: 2e7f566a-345a-51ae-9b7a-5ac6424e8b57
-  name: '4Skills: Pathways to Self-Shooting for Factual TV Production'
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2027-05-19'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Short course 4Skills | NFTS Pathways to Self-Shooting for Factual TV
-    production 4Skills | NFTS Pathways to Self-Shooting for Factual TV production
-    North 19 May/27 Application deadline 19 May 2027
-  eligibility_notes: Intended for new entrants to the factual TV production field.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-10-12'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  year: 2027
 - id: 228718d5-af79-5861-af91-9e90a3deb07f
   name: 2027 Tribeca Creators Market
   category: industry_forum
@@ -1703,14 +1758,15 @@
   description: "The MeetMarket is one of the world\u2019s largest documentary markets...\
     \ open to all documentary makers, local and international, and we welcome applications\
     \ from established, emerging as well as first-time filmmakers."
-  eligibility_notes: Open to all documentary makers, including emerging and first-time
-    filmmakers. Focus on projects in development and production.
+  eligibility_notes: Open to all documentary makers, including established, emerging,
+    and first-time filmmakers. Projects must not be completed works that have already
+    premiered or short films.
   notification_windows:
   - 30
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-09-28'
+  last_verified_date: '2026-11-16'
   source_url: https://www.sheffdocfest.com/meetmarket
   tags:
   - documentary
@@ -1723,6 +1779,7 @@
   - networking
   - meetings
   - filmmaking
+  - marketplace
   year: 2027
 - id: a2903142-34a7-50ca-8cb9-a647a021a381
   name: Directing sample
@@ -1884,5 +1941,59 @@
   - market
   - must_have
   - industry_forum
+  - new_opportunity
+  year: 2027
+- id: 0cbf3db3-75d8-598b-8c69-a630b94e3b5e
+  name: DOK Co-Pro Market 2027
+  category: industry_forum
+  organization: DOK Leipzig
+  url: https://www.dok-leipzig.de/en/co-pro-market
+  deadline_date: '2027-10-31'
+  early_deadline_date: null
+  event_start_date: '2027-10-26'
+  event_end_date: '2027-10-27'
+  description: International co-financing and networking event for creative documentary
+    and animated documentary projects.
+  eligibility_notes: Open to teams behind documentary and animated feature-length
+    projects in development or early production.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-11-16'
+  source_url: https://www.dok-leipzig.de/en/co-pro-market
+  tags:
+  - co-production
+  - funding
+  - networking
+  - animation
+  - documentary
+  year: 2027
+- id: c82b53e9-46a2-5f55-93a9-a262a7035fc6
+  name: "DOK Co-Pro Market \xB7 DOK Leipzig"
+  category: festival_submission
+  organization: DOK Leipzig
+  url: https://www.dok-leipzig.de/en/co-pro-market
+  deadline_date: '2027-10-31'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: "DOK Co-Pro Market \xB7 DOK Leipzig Skip to main content International\
+    \ Leipzig Festival for Documentary and Animated Film 25 October to 31 October\
+    \ 2027 de en"
+  eligibility_notes: International co-financing and networking event for creative
+    documentary and animated documentary projects.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-11-16'
+  source_url: https://www.dok-leipzig.de/en/co-pro-market
+  tags:
+  - market
+  - high
+  - festival_submission
   - new_opportunity
   year: 2027
