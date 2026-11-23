@@ -1,57 +1,3 @@
-- id: 21941567-212e-5e98-94fc-504338dfecee
-  name: Producers Program page
-  category: lab_application
-  organization: Sundance Institute
-  url: https://www.sundance.org/initiatives/producers-program/
-  deadline_date: '2026-11-17'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: "is a yearlong program designed to nurture emerging producers with\
-    \ project-specific support through the Producers Lab, year-round mentorship from\
-    \ a dedicated industry mentor, film industry networking opportunities, professional\
-    \ development and project advancement strategy workshops, and ongoing support\
-    \ from Sundance Institute staff. The program is designed to hone emerging producers\u2019\
-    \ creative insti"
-  eligibility_notes: Important Sundance pathway for fiction and nonfiction producers
-    across labs, fellowships, networking, and producer-focused support.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-10-19'
-  source_url: https://www.sundance.org/initiatives/producers-program/
-  tags:
-  - lab
-  - must_have
-  - lab_application
-  - new_opportunity
-  year: 2026
-- id: f9f88cbd-7b32-56da-abaf-b7dbfed8ebe0
-  name: Directing The Comedy
-  category: fellowship
-  organization: NFTS
-  url: https://nfts.co.uk/courses/short-courses
-  deadline_date: '2026-11-22'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: Short course Directing The Comedy Directing The Comedy Cymru Wales
-    30 Nov/26 Application deadline 22 Nov 2026
-  eligibility_notes: Perfect for emerging directors interested in comedy.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-11-16'
-  source_url: https://nfts.co.uk/courses/short-courses
-  tags:
-  - fellowship
-  - high
-  - new_opportunity
-  year: 2026
 - id: d470e702-74da-5bc7-8249-86f601e5acbb
   name: Key dates for 2027
   category: funding_round
@@ -161,6 +107,32 @@
   - lab_application
   - new_opportunity
   year: 2026
+- id: 1e591a20-a293-53bc-96bd-1c2cf46079dd
+  name: About TFL
+  category: lab_application
+  organization: TorinoFilmLab
+  url: https://www.torinofilmlab.it/
+  deadline_date: '2026-11-30'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: 'About TFL OPEN CALL Call for applications open Green Film Lab - Rome
+    2026 SHORT TERM Deadline to apply: 18 September 2026'
+  eligibility_notes: Important international lab ecosystem covering feature film,
+    series, and co-production support.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-11-23'
+  source_url: https://www.torinofilmlab.it/
+  tags:
+  - lab
+  - must_have
+  - lab_application
+  - new_opportunity
+  year: 2026
 - id: 8c8fa5f1-d1eb-5577-bc8b-5aa4d1107cbe
   name: ComedyLab 2027
   category: lab_application
@@ -241,32 +213,6 @@
   - high
   - funding_round
   - new_opportunity
-  year: 2026
-- id: b33e8fe3-479f-5f65-a2f4-97da34a8f0a1
-  name: FeatureLab 2027 Applications
-  category: lab_application
-  organization: TorinoFilmLab
-  url: https://www.torinofilmlab.it/
-  deadline_date: '2026-12-04'
-  early_deadline_date: null
-  event_start_date: null
-  event_end_date: null
-  description: 'OPEN CALL: FeatureLab 2027 | Deadline for applications: 5 November
-    2026'
-  eligibility_notes: Projects that explore ecological themes are particularly welcomed.
-  notification_windows:
-  - 30
-  - 14
-  - 3
-  status: confirmed
-  last_verified_date: '2026-11-16'
-  source_url: https://www.torinofilmlab.it/
-  tags:
-  - lab
-  - must_have
-  - lab_application
-  - new_opportunity
-  - scriptwriting
   year: 2026
 - id: abb5be7f-cf23-500a-90e1-076ecf9fd30a
   name: Agora Industry Forum 2026
@@ -423,17 +369,17 @@
   - industry_forum
   - new_opportunity
   year: 2026
-- id: 1e591a20-a293-53bc-96bd-1c2cf46079dd
-  name: About TFL
+- id: b33e8fe3-479f-5f65-a2f4-97da34a8f0a1
+  name: FeatureLab 2027 Applications
   category: lab_application
   organization: TorinoFilmLab
   url: https://www.torinofilmlab.it/
-  deadline_date: '2026-12-11'
+  deadline_date: '2026-12-16'
   early_deadline_date: null
   event_start_date: null
   event_end_date: null
-  description: 'About TFL OPEN CALL Call for applications open Green Film Lab - Rome
-    2026 SHORT TERM Deadline to apply: 18 September 2026'
+  description: 'OPEN CALL: FeatureLab 2027 | Deadline for applications: 5 November
+    2026'
   eligibility_notes: Important international lab ecosystem covering feature film,
     series, and co-production support.
   notification_windows:
@@ -441,13 +387,14 @@
   - 14
   - 3
   status: confirmed
-  last_verified_date: '2026-11-16'
+  last_verified_date: '2026-11-23'
   source_url: https://www.torinofilmlab.it/
   tags:
   - lab
   - must_have
   - lab_application
   - new_opportunity
+  - scriptwriting
   year: 2026
 - id: e53d51e0-1176-5d2c-8ab9-2a10e3d87cb0
   name: Projects
@@ -473,5 +420,31 @@
   - lab
   - must_have
   - lab_application
+  - new_opportunity
+  year: 2026
+- id: a4c60c0a-5a4a-54e9-a494-3a1b470f556e
+  name: Live Pitch Forum
+  category: industry_forum
+  organization: Together Films
+  url: https://togetherfilms.org/lab/
+  deadline_date: '2026-12-18'
+  early_deadline_date: null
+  event_start_date: null
+  event_end_date: null
+  description: Live Pitch Forum Tues 30th June 2026 Programme Close & Feedback Session
+    Fri 18th Dec 2026 Final Report Due Stipends
+  eligibility_notes: Tracks Together Films' impact-focused producer lab and pitch
+    programme for socially resonant scripted features.
+  notification_windows:
+  - 30
+  - 14
+  - 3
+  status: confirmed
+  last_verified_date: '2026-11-23'
+  source_url: https://togetherfilms.org/lab/
+  tags:
+  - lab
+  - high
+  - industry_forum
   - new_opportunity
   year: 2026
